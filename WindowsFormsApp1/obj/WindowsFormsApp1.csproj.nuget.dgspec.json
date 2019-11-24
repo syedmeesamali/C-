@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SYED\\source\\repos\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SYED\\source\\repos\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SYED\\source\\repos\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+        "projectName": "WindowsFormsApp1",
+        "projectPath": "C:\\Users\\SYED\\source\\repos\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\SYED\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SYED\\source\\repos\\CSharp\\WindowsFormsApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SYED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
