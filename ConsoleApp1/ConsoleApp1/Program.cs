@@ -6,13 +6,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int a; double b, c;
-            a = 20;
-            b = 13.5;
-            c = a + b;
-            Console.WriteLine("sum is = " + c);
-            Console.WriteLine(int.MaxValue);
-
+            int opt;
+            Console.WriteLine("1. Add 2. Mult 3. Divide");
+            opt = int.Parse(Console.ReadLine());
+            int a = 25;
+            int b = 35;
+            switch(opt)
+            {
+                case 2:
+                    Console.WriteLine("Multiplication is {0} x {1}: {2}",a,b, a * b);
+                    break;
+                case 1:
+                    Console.WriteLine("Addition is {0} + {1}: {2}", a, b, a + b);
+                    break;
+                case 3:
+                    Console.WriteLine("Division is {0} / {1}: {2}", a, b, a / b);
+                    break;
+            }
+            Console.ReadLine();
         }
     }
 }
