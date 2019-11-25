@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsControlLibrary1
 {
-    partial class UserControl1
+    partial class myForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,13 +50,13 @@
             this.progressBar1.TabIndex = 1;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
-            // UserControl1
+            // myForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnOne);
-            this.Name = "UserControl1";
+            this.Name = "myForm";
             this.Size = new System.Drawing.Size(610, 294);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
