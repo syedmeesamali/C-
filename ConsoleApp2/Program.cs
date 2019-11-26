@@ -6,13 +6,15 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string firstName = "syed";
-            int age = 34;
-            DateTime birthDate;
-            birthDate = new DateTime(1986, 6, 1);
-            Console.WriteLine(firstName);
-            Console.WriteLine(age);
-            Console.WriteLine(birthDate);
+            for (int counter=0; counter <= 10; counter++)
+            {
+                Console.WriteLine(counter);
+                if (counter == 3)
+                {
+                    Console.WriteLine("Will break here");
+                    break;
+                }
+            }
         }
     }
 }
