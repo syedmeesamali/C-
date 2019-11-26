@@ -1,0 +1,14 @@
+C:\Users\SYED\source\repos\CSharp\WPF01\bin\Debug\WPF01.exe.config
+C:\Users\SYED\source\repos\CSharp\WPF01\bin\Debug\WPF01.exe
+C:\Users\SYED\source\repos\CSharp\WPF01\bin\Debug\WPF01.pdb
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.csprojAssemblyReference.cache
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\MainWindow.g.cs
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\App.g.cs
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01_MarkupCompile.cache
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01_MarkupCompile.lref
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\MainWindow.baml
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.g.resources
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.Properties.Resources.resources
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.csproj.GenerateResource.cache
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.exe
+C:\Users\SYED\source\repos\CSharp\WPF01\obj\Debug\WPF01.pdb
