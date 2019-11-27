@@ -6,15 +6,10 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            for (int counter=0; counter <= 10; counter++)
-            {
-                Console.WriteLine(counter);
-                if (counter == 3)
-                {
-                    Console.WriteLine("Will break here");
-                    break;
-                }
-            }
+            //Creating instance of our own defined class Humans
+            Humans ali = new Humans();
+            ali.firstName = "Meesam Ali";
+            ali.intro();
         }
     }
 }
