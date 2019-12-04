@@ -6,13 +6,10 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string firstName = "syed";
-            int age = 34;
-            DateTime birthDate;
-            birthDate = new DateTime(1986, 6, 1);
-            Console.WriteLine(firstName);
-            Console.WriteLine(age);
-            Console.WriteLine(birthDate);
+            //Creating instance of our own defined class Humans
+            Humans ali = new Humans();
+            ali.firstName = "Meesam Ali";
+            ali.intro();
         }
     }
 }

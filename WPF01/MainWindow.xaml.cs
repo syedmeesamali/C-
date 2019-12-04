@@ -12,17 +12,36 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 
-namespace WPF01
+namespace my_paint
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        ArrayList ListofPoints;  //Arraylist to store various points
+        bool penDown;            //Check if pen is down
+
         public MainWindow()
         {
             InitializeComponent();
+            ListofPoints = new ArrayList();
+            penDown = false;
+        }
+
+        private void MainWindow_LeftButtonDown(object sender, MouseEventArgs e)
+        {
+
+            MessageBox.Show("Mouse pressed!");
+            penDown = true;
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Mouse pressed!");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
