@@ -1,0 +1,14 @@
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\bin\Debug\IMS_System.exe.config
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\bin\Debug\IMS_System.exe
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\bin\Debug\IMS_System.pdb
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\App.g.cs
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System_MarkupCompile.cache
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System_MarkupCompile.lref
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.g.resources
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Properties.Resources.resources
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.GenerateResource.cache
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.exe
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.pdb
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csprojAssemblyReference.cache
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\Loginform.g.cs
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\Loginform.baml
