@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="My Paint Program" Height="450" Width="800">
     <Grid Margin="0,0,-31,-31">
+<<<<<<< HEAD
+        <Button Content="Click Me" Height="50" Width="200" Click="Button_Click"></Button>
+=======
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
@@ -15,6 +18,7 @@
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="240" Margin="180,35,0,0" VerticalAlignment="Top" Width="490"/>
         <Button Grid.ColumnSpan="3" Content="Button" HorizontalAlignment="Left" Height="40" Margin="271,332,0,0" VerticalAlignment="Top" Width="244" Click="Button_Click"/>
 
+>>>>>>> 04839dbd71494f197eb3a5380b6f02b19194ce5f
 
     </Grid>
 </Window>

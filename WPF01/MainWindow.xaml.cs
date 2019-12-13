@@ -43,5 +43,10 @@ namespace my_paint
         {
             MessageBox.Show("Mouse pressed!");
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
