@@ -24,5 +24,38 @@ namespace IMS_System
         {
             InitializeComponent();
         }
+
+        private void cmdExit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }//Exit application click
+
+        private void cmdLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsValid())
+                {
+                MessageBox.Show("Login Successful!");
+            };
+        }//Login button click
+    
+        private bool IsValid()
+        {
+            if(userName.Text.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("User name is required!", "Error");
+                return false;
+            }
+
+            if (passBox.Password.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("Password is required!", "Error");
+                return false;
+            }
+
+            return true;
+        }
+            
+    
+    
     }
 }
