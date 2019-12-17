@@ -23,25 +23,38 @@ namespace IMS_System
     /// </summary>
     public partial class Loginform : Window
     {
-        public Loginform()
+        public Loginform() //Main loging form initialization function
         {
             InitializeComponent();
         }
 
+        //Exit command button press
         private void cmdExit_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
-        }//Exit application click
+        }
 
+        //Login command button functionality
         private void cmdLogin_Click(object sender, RoutedEventArgs e)
         {
             if (IsValid())
                 {
-                string constring = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString;
-                MessageBox.Show(constring);
+                //using (string constring = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString) ;
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionString)) ;
+                {
+                    using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", con))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserName", userName.Text.TrimStart());
+                        cmd.Parameters.AddWithValue("@Password", passBox.Password.TrimStart());
+                        con.open();
+
+                    }
+                }
             };
-        }//Login button click
-    
+        }
+
+        //Function to check if the input fields are empty or filled
         private bool IsValid()
         {
             if(userName.Text.TrimStart() == string.Empty)
@@ -50,6 +63,7 @@ namespace IMS_System
                 return false;
             }
 
+            //Check password box
             if (passBox.Password.TrimStart() == string.Empty)
             {
                 MessageBox.Show("Password is required!", "Error");
@@ -57,9 +71,7 @@ namespace IMS_System
             }
 
             return true;
-        }
-            
     
-    
-    }
-}
+        } //End of isValid function
+    }//End of Login form class
+} //End of main IMS system namespace
