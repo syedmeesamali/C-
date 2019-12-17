@@ -40,19 +40,32 @@ namespace IMS_System
             if (IsValid())
                 {
                 //using (string constring = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString) ;
-                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionString)) ;
+                string dat1 = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rbx"].ConnectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", con))
+                    using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@UserName", userName.Text.TrimStart());
                         cmd.Parameters.AddWithValue("@Password", passBox.Password.TrimStart());
-                        con.open();
-
-                    }
-                }
-            };
-        }
+                        conn.Open();    //Open DB connection
+                        
+                        //MessageBox.Show(dat1);
+                        SqlDataReader sdr = cmd.ExecuteReader();
+                        if (sdr.Read())
+                        {
+                            MessageBox.Show("Welcome!");
+                        } else
+                        {
+                            MessageBox.Show("Username or password is wrong!", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    
+                    } //End of sqlCommand
+                        
+                } //End of usingSql
+                
+            } //End of isValid()
+        } //End of cmdLogin
 
         //Function to check if the input fields are empty or filled
         private bool IsValid()
