@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
 using System.Data.SqlClient;
+using IMS_System.Screens;
 
 
 namespace IMS_System
@@ -55,6 +56,10 @@ namespace IMS_System
                         if (sdr.Read())
                         {
                             MessageBox.Show("Welcome!");
+                            this.Hide();
+                            DashboardForm df = new DashboardForm();
+                            df.Show();
+                            
                         } else
                         {
                             MessageBox.Show("Username or password is wrong!", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
