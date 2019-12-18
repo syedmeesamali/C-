@@ -26,3 +26,8 @@ C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\Loginform.baml
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.g.resources
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Properties.Resources.resources
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.GenerateResource.cache
+C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\bin\Debug\MetroFramework.dll
+C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.DashboardForm.resources
+C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.CopyComplete
+C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.Products.DefineProducts.resources

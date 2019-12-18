@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace IMS_System.Screens
 {
-    public partial class DashboardForm : Form
+    public partial class DashboardForm : MetroFramework.Forms.MetroForm
     {
         public DashboardForm()
         {
             InitializeComponent();
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
