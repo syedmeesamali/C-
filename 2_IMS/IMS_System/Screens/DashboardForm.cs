@@ -24,7 +24,7 @@ namespace IMS_System.Screens
 
         private void cmdExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

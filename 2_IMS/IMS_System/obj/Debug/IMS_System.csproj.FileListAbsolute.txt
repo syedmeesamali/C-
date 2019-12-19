@@ -31,3 +31,8 @@ C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\bin\Debug\MetroFramework.Fonts.d
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.DashboardForm.resources
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.CopyComplete
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.Products.DefineProducts.resources
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\bin\Debug\MetroFramework.dll
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.DashboardForm.resources
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Screens.Products.DefineProducts.resources
+C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.CopyComplete
