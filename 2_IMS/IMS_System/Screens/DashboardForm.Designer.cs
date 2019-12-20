@@ -55,6 +55,7 @@
             this.cmdDefine.Text = "Define Products";
             this.cmdDefine.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdDefine.UseVisualStyleBackColor = false;
+            this.cmdDefine.Click += new System.EventHandler(this.cmdDefine_Click);
             // 
             // cmdManage
             // 

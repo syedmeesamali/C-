@@ -35,7 +35,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 290);
+            this.MaximizeBox = false;
             this.Name = "DefineProducts";
+            this.Resizable = false;
+            this.ShowInTaskbar = false;
             this.Text = "Product Definition";
             this.Load += new System.EventHandler(this.DefineProducts_Load);
             this.ResumeLayout(false);
