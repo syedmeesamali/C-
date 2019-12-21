@@ -30,6 +30,7 @@ namespace IMS_System.Screens
         private void cmdDefine_Click(object sender, EventArgs e)
         {
             DefineProducts dps = new DefineProducts();
+            dps.show();
 
         }
     }

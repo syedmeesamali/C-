@@ -8,12 +8,12 @@
         Title="Login System" Height="367.5" Width="596" ResizeMode="NoResize">
     <Grid Margin="0,0,58,-415">
         <Label Content="Login-Form" HorizontalAlignment="Left" Margin="56,42,0,0" VerticalAlignment="Top" Height="48" Width="148" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
-        <Label Content="User Name:" HorizontalAlignment="Left" Height="34" Margin="128,118,0,0" VerticalAlignment="Top" Width="122"/>
-        <TextBox x:Name="userName" HorizontalAlignment="Left" Height="30" Margin="299,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
-        <Button x:Name="cmdLogin" Content="Login" HorizontalAlignment="Left" Height="30" Margin="140,231,0,0" VerticalAlignment="Top" Width="90" Click="cmdLogin_Click"/>
+        <Label Content="User Name:" HorizontalAlignment="Left" Height="34" Margin="128,118,0,0" VerticalAlignment="Top" Width="122" TabIndex="0"/>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Height="30" Margin="299,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" TabIndex="1"/>
+        <Button x:Name="cmdLogin" Content="Login" HorizontalAlignment="Left" Height="30" Margin="140,231,0,0" VerticalAlignment="Top" Width="90" Click="cmdLogin_Click" TabIndex="3"/>
         <Label Content="Password:" HorizontalAlignment="Left" Height="34" Margin="126,162,0,0" VerticalAlignment="Top" Width="122"/>
-        <Button x:Name="cmdExit" Content="Exit Application" HorizontalAlignment="Left" Height="30" Margin="292,231,0,0" VerticalAlignment="Top" Width="169" Click="cmdExit_Click"/>
-        <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Height="31" Margin="300,162,0,0" VerticalAlignment="Top" Width="174" MaxLength="6" PasswordChar="#"/>
+        <Button x:Name="cmdExit" Content="Exit Application" HorizontalAlignment="Left" Height="30" Margin="292,231,0,0" VerticalAlignment="Top" Width="169" Click="cmdExit_Click" TabIndex="4"/>
+        <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Height="31" Margin="300,162,0,0" VerticalAlignment="Top" Width="174" MaxLength="6" PasswordChar="#" TabIndex="2"/>
 
     </Grid>
 </Window>

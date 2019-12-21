@@ -110,7 +110,7 @@
             this.cmdCustomers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmdCustomers.Location = new System.Drawing.Point(42, 328);
             this.cmdCustomers.Name = "cmdCustomers";
-            this.cmdCustomers.Size = new System.Drawing.Size(427, 118);
+            this.cmdCustomers.Size = new System.Drawing.Size(427, 130);
             this.cmdCustomers.TabIndex = 4;
             this.cmdCustomers.Text = "Customer Management";
             this.cmdCustomers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -137,7 +137,7 @@
             this.cmdExit.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExit.Image = ((System.Drawing.Image)(resources.GetObject("cmdExit.Image")));
             this.cmdExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cmdExit.Location = new System.Drawing.Point(719, 328);
+            this.cmdExit.Location = new System.Drawing.Point(719, 342);
             this.cmdExit.Name = "cmdExit";
             this.cmdExit.Size = new System.Drawing.Size(184, 116);
             this.cmdExit.TabIndex = 9;
@@ -153,7 +153,7 @@
             this.cmdCustomReports.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCustomReports.Image = ((System.Drawing.Image)(resources.GetObject("cmdCustomReports.Image")));
             this.cmdCustomReports.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cmdCustomReports.Location = new System.Drawing.Point(517, 328);
+            this.cmdCustomReports.Location = new System.Drawing.Point(517, 342);
             this.cmdCustomReports.Name = "cmdCustomReports";
             this.cmdCustomReports.Size = new System.Drawing.Size(180, 116);
             this.cmdCustomReports.TabIndex = 8;
@@ -170,7 +170,7 @@
             this.cmdChangePassword.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmdChangePassword.Location = new System.Drawing.Point(719, 206);
             this.cmdChangePassword.Name = "cmdChangePassword";
-            this.cmdChangePassword.Size = new System.Drawing.Size(184, 116);
+            this.cmdChangePassword.Size = new System.Drawing.Size(184, 130);
             this.cmdChangePassword.TabIndex = 7;
             this.cmdChangePassword.Text = "Change Password";
             this.cmdChangePassword.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -184,7 +184,7 @@
             this.cmdOrdersRecord.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmdOrdersRecord.Location = new System.Drawing.Point(517, 206);
             this.cmdOrdersRecord.Name = "cmdOrdersRecord";
-            this.cmdOrdersRecord.Size = new System.Drawing.Size(180, 116);
+            this.cmdOrdersRecord.Size = new System.Drawing.Size(180, 130);
             this.cmdOrdersRecord.TabIndex = 6;
             this.cmdOrdersRecord.Text = "Orders Record";
             this.cmdOrdersRecord.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 487);
+            this.ClientSize = new System.Drawing.Size(949, 504);
             this.Controls.Add(this.cmdExit);
             this.Controls.Add(this.cmdCustomReports);
             this.Controls.Add(this.cmdChangePassword);
