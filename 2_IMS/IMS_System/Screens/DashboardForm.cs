@@ -30,6 +30,7 @@ namespace IMS_System.Screens
 
         private void cmdDefine_Click(object sender, EventArgs e)
         {
+            this.Hide();
             DefineProducts dps = new DefineProducts();
             dps.Show();
 

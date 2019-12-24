@@ -55,7 +55,6 @@ namespace IMS_System
                         SqlDataReader sdr = cmd.ExecuteReader();
                         if (sdr.Read())
                         {
-                            MessageBox.Show("Welcome!");
                             this.Hide();
                             DashboardForm df = new DashboardForm();
                             df.Show();
