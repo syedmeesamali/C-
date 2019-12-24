@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMS_System.Screens.Products;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace IMS_System.Screens
         private void cmdDefine_Click(object sender, EventArgs e)
         {
             DefineProducts dps = new DefineProducts();
-            dps.show();
+            dps.Show();
 
         }
     }
