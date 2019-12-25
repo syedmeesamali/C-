@@ -1,4 +1,6 @@
-﻿namespace IMS_System.Screens.Products
+﻿using System;
+
+namespace IMS_System.Screens.Products
 {
     partial class DefineProducts
     {
@@ -170,9 +172,15 @@
             this.MaximizeBox = false;
             this.Name = "DefineProducts";
             this.Resizable = false;
+            this.Load += new System.EventHandler(this.DefineProducts_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

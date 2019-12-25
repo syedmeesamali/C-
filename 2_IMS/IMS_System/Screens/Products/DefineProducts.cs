@@ -23,9 +23,14 @@ namespace IMS_System.Screens.Products
         }
 
 
-        private void cmdClose_Click(object sender, EventArgs e)
+        private void CmdClose_Click(object sender, EventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void DefineProducts_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

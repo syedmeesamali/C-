@@ -18,11 +18,6 @@ namespace IMS_System.Screens
             InitializeComponent();
         }
 
-        private void DashboardForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmdExit_Click(object sender, EventArgs e)
         {
             System.Windows.Application.Current.Shutdown();

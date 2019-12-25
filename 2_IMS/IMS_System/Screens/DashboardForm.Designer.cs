@@ -1,4 +1,6 @@
-﻿namespace IMS_System.Screens
+﻿using System;
+
+namespace IMS_System.Screens
 {
     partial class DashboardForm 
     {
@@ -210,6 +212,11 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.ResumeLayout(false);
 
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
