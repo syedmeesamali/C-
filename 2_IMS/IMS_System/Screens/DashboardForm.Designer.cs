@@ -209,15 +209,11 @@ namespace IMS_System.Screens
             this.Controls.Add(this.cmdDefine);
             this.Name = "DashboardForm";
             this.Text = "Main Dashboard";
-            this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.ResumeLayout(false);
 
         }
 
-        private void DashboardForm_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         #endregion
         private System.Windows.Forms.Button cmdDefine;

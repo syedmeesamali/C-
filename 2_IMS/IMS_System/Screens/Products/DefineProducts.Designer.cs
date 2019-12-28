@@ -142,7 +142,7 @@ namespace IMS_System.Screens.Products
             this.cmdClose.TabIndex = 6;
             this.cmdClose.Text = "Close";
             this.cmdClose.UseVisualStyleBackColor = true;
-            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
+            
             // 
             // cmdDefineNew
             // 
@@ -172,15 +172,9 @@ namespace IMS_System.Screens.Products
             this.MaximizeBox = false;
             this.Name = "DefineProducts";
             this.Resizable = false;
-            this.Load += new System.EventHandler(this.DefineProducts_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void cmdClose_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
