@@ -172,11 +172,19 @@ namespace IMS_System.Screens.Products
             this.MaximizeBox = false;
             this.Name = "DefineProducts";
             this.Resizable = false;
+<<<<<<< HEAD
+            this.Load += new System.EventHandler(this.DefineProducts_Load);
+=======
+>>>>>>> a3a0db476310c0f451fe3fd47b4d539261d1eb22
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+<<<<<<< HEAD
+        
+=======
+>>>>>>> a3a0db476310c0f451fe3fd47b4d539261d1eb22
         #endregion
 
         private System.Windows.Forms.Button cmdSave;

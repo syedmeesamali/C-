@@ -20,20 +20,29 @@ namespace IMS_System.Screens.Products
 
         private void DefineProducts_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if(!this.isUpdate)
             {
 
             }
+=======
+            MessageBox.Show("Welcome to define products menu!");
+>>>>>>> 541848cca7cbb4a4dd11d6513e574ef531c0cd38
         }
         //sizes_LoadAllSizes
 
+<<<<<<< HEAD
         public bool isUpdate { get; set; }
         
         private void LoadAllSizesDateGridView()
+=======
+        private void cmdClose_Click(object sender, EventArgs e)
+>>>>>>> 541848cca7cbb4a4dd11d6513e574ef531c0cd38
         {
             SizesDataGridView.DataSource = GetSizeData();
         }
 
+<<<<<<< HEAD
         private DataTable GetSizeData()
         {
             DataTable dtSizes = null;
@@ -49,5 +58,10 @@ namespace IMS_System.Screens.Products
 
         //System.Windows.Application.Current.Shutdown();
 
+=======
+        // MessageBox.Show("Welcome to define products menu!");
+        //System.Windows.Application.Current.Shutdown();
+
+>>>>>>> 541848cca7cbb4a4dd11d6513e574ef531c0cd38
     }
 }
