@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace IMS_System.Screens.Products
 {
@@ -19,18 +20,34 @@ namespace IMS_System.Screens.Products
 
         private void DefineProducts_Load(object sender, EventArgs e)
         {
+            if(!this.isUpdate)
+            {
 
+            }
+        }
+        //sizes_LoadAllSizes
+
+        public bool isUpdate { get; set; }
+        
+        private void LoadAllSizesDateGridView()
+        {
+            SizesDataGridView.DataSource = GetSizeData();
         }
 
+        private DataTable GetSizeData()
+        {
+            DataTable dtSizes = null;
 
-        private void CmdClose_Click(object sender, EventArgs e)
+
+            return dtSizes;
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }
 
-        private void DefineProducts_Load_1(object sender, EventArgs e)
-        {
+        //System.Windows.Application.Current.Shutdown();
 
-        }
     }
 }
