@@ -1,4 +1,4 @@
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[Stock]    Script Date: 12/16/2019 7:26:46 AM ******/
@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Stock](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[SalesOrders]    Script Date: 12/16/2019 7:26:41 AM ******/
@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[SalesOrders](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[SalesOrderDetails]    Script Date: 12/16/2019 7:26:37 AM ******/
@@ -76,7 +76,7 @@ CREATE TABLE [dbo].[SalesOrderDetails](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[ProductSizes]    Script Date: 12/16/2019 7:26:32 AM ******/
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[ProductSizes](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[Products]    Script Date: 12/16/2019 7:26:27 AM ******/
@@ -123,7 +123,7 @@ PRIMARY KEY CLUSTERED
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[LoginUsers]    Script Date: 12/16/2019 7:26:21 AM ******/
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[LoginUsers](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[ListTypesData]    Script Date: 12/16/2019 7:26:14 AM ******/
@@ -166,7 +166,7 @@ CREATE TABLE [dbo].[ListTypesData](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[ListTypes]    Script Date: 12/16/2019 7:26:06 AM ******/
@@ -187,7 +187,7 @@ CREATE TABLE [dbo].[ListTypes](
 GO
 
 
-USE [IMS_New]
+USE [IMS]
 GO
 
 /****** Object:  Table [dbo].[Customers]    Script Date: 12/16/2019 7:25:57 AM ******/

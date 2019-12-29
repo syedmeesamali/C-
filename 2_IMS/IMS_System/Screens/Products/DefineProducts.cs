@@ -19,18 +19,16 @@ namespace IMS_System.Screens.Products
 
         private void DefineProducts_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Welcome to define products menu!");
         }
 
-
-        private void CmdClose_Click(object sender, EventArgs e)
+        private void cmdClose_Click(object sender, EventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }
 
-        private void DefineProducts_Load_1(object sender, EventArgs e)
-        {
+        // MessageBox.Show("Welcome to define products menu!");
+        //System.Windows.Application.Current.Shutdown();
 
-        }
     }
 }
