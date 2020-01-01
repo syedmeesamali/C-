@@ -41,7 +41,7 @@ namespace IMS_System
             if (IsValid())
                 {
                 //using (string constring = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString) ;
-                string dat1 = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString;
+         
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rbx"].ConnectionString))
                 {
                     using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", conn))

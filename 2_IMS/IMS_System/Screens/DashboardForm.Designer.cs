@@ -213,11 +213,7 @@ namespace IMS_System.Screens
 
         }
 
-<<<<<<< HEAD
-=======
-        
 
->>>>>>> a3a0db476310c0f451fe3fd47b4d539261d1eb22
         #endregion
         private System.Windows.Forms.Button cmdDefine;
         private System.Windows.Forms.Button cmdManage;

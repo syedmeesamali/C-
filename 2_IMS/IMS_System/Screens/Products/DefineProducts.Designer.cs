@@ -41,7 +41,7 @@ namespace IMS_System.Screens.Products
             this.label4 = new System.Windows.Forms.Label();
             this.txtSalePrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmdClose = new System.Windows.Forms.Button();
+            this.cmdEnd = new System.Windows.Forms.Button();
             this.cmdDefineNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,15 +134,15 @@ namespace IMS_System.Screens.Products
             this.label5.TabIndex = 9;
             this.label5.Text = "Sale Price:";
             // 
-            // cmdClose
+            // cmdEnd
             // 
-            this.cmdClose.Location = new System.Drawing.Point(213, 212);
-            this.cmdClose.Name = "cmdClose";
-            this.cmdClose.Size = new System.Drawing.Size(133, 30);
-            this.cmdClose.TabIndex = 6;
-            this.cmdClose.Text = "Close";
-            this.cmdClose.UseVisualStyleBackColor = true;
-            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
+            this.cmdEnd.Location = new System.Drawing.Point(213, 212);
+            this.cmdEnd.Name = "cmdEnd";
+            this.cmdEnd.Size = new System.Drawing.Size(133, 30);
+            this.cmdEnd.TabIndex = 6;
+            this.cmdEnd.Text = "Close";
+            this.cmdEnd.UseVisualStyleBackColor = true;
+            this.cmdEnd.Click += new System.EventHandler(this.cmdEnd_Click);
             // 
             // cmdDefineNew
             // 
@@ -157,7 +157,7 @@ namespace IMS_System.Screens.Products
             // 
             this.ClientSize = new System.Drawing.Size(609, 292);
             this.Controls.Add(this.cmdDefineNew);
-            this.Controls.Add(this.cmdClose);
+            this.Controls.Add(this.cmdEnd);
             this.Controls.Add(this.txtSalePrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPurchasePrice);
@@ -172,19 +172,12 @@ namespace IMS_System.Screens.Products
             this.MaximizeBox = false;
             this.Name = "DefineProducts";
             this.Resizable = false;
-<<<<<<< HEAD
             this.Load += new System.EventHandler(this.DefineProducts_Load);
-=======
->>>>>>> a3a0db476310c0f451fe3fd47b4d539261d1eb22
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-<<<<<<< HEAD
-        
-=======
->>>>>>> a3a0db476310c0f451fe3fd47b4d539261d1eb22
         #endregion
 
         private System.Windows.Forms.Button cmdSave;
@@ -198,7 +191,7 @@ namespace IMS_System.Screens.Products
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSalePrice;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button cmdClose;
+        private System.Windows.Forms.Button cmdEnd;
         private System.Windows.Forms.Button cmdDefineNew;
     }
 }

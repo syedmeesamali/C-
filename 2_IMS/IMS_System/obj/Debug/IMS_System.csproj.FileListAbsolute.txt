@@ -9,7 +9,6 @@ C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.Properti
 C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csproj.GenerateResource.cache
 C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.exe
 C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.pdb
-C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csprojAssemblyReference.cache
 C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\Loginform.g.cs
 C:\Users\SYED\source\repos\CSharp\2_IMS\IMS_System\obj\Debug\Loginform.baml
 C:\Users\Cclgulf\source\CSharp\2_IMS\IMS_System\obj\Debug\IMS_System.csprojAssemblyReference.cache
