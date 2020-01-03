@@ -1,0 +1,13 @@
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExceltoSQL.exe.config
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExceltoSQL.exe
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExceltoSQL.pdb
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.csprojAssemblyReference.cache
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.Form1.resources
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.Properties.Resources.resources
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.csproj.GenerateResource.cache
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.exe
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.pdb
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExcelDataReader.dll
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExcelDataReader.pdb
+C:\Users\SYED\source\repos\ExceltoSQL\bin\Debug\ExcelDataReader.xml
+C:\Users\SYED\source\repos\ExceltoSQL\obj\Debug\ExceltoSQL.csproj.CopyComplete
