@@ -1,6 +1,6 @@
 ﻿namespace ExceltoSQL
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -89,7 +89,7 @@
             this.cboSheets.TabIndex = 5;
             this.cboSheets.SelectedIndexChanged += new System.EventHandler(this.cboSheets_SelectedIndexChanged);
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +102,7 @@
             this.Controls.Add(this.BtnImport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Read Excel \".xls\" or \".xlsx\" Files";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
