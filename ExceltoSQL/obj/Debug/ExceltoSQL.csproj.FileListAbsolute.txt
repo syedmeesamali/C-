@@ -17,7 +17,6 @@ D:\repos\CSharp\ExceltoSQL\bin\Debug\ExceltoSQL.pdb
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.dll
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.pdb
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.xml
-D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.csprojAssemblyReference.cache
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.frmMain.resources
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.Properties.Resources.resources
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.csproj.GenerateResource.cache

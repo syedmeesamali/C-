@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ExceltoSQL
 {
     public partial class frmMain : Form
@@ -18,13 +17,12 @@ namespace ExceltoSQL
         {
             InitializeComponent();
         }
-
         DataTableCollection tableCollection;
         private void BtnImport_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Button clicked!");
             using(OpenFileDialog openFileDialog = new OpenFileDialog()
-            { Filter = "Excel 97-2003 workbooks|*.xls | Excel Workbook|.xlsx" })
+            { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" })
              {
                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -46,11 +44,15 @@ namespace ExceltoSQL
                 }
              }
         }
-
         private void cboSheets_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()];
             dataGridView.DataSource = dt;
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

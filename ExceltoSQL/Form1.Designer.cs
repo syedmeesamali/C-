@@ -34,6 +34,7 @@
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.cboSheets = new System.Windows.Forms.ComboBox();
+            this.btnData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +70,8 @@
             // 
             this.txtFileName.Location = new System.Drawing.Point(109, 308);
             this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(331, 20);
+            this.txtFileName.ReadOnly = true;
+            this.txtFileName.Size = new System.Drawing.Size(375, 20);
             this.txtFileName.TabIndex = 3;
             // 
             // dataGridView
@@ -89,11 +91,22 @@
             this.cboSheets.TabIndex = 5;
             this.cboSheets.SelectedIndexChanged += new System.EventHandler(this.cboSheets_SelectedIndexChanged);
             // 
+            // btnData
+            // 
+            this.btnData.Location = new System.Drawing.Point(342, 334);
+            this.btnData.Name = "btnData";
+            this.btnData.Size = new System.Drawing.Size(115, 24);
+            this.btnData.TabIndex = 6;
+            this.btnData.Text = "&Import";
+            this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 419);
+            this.Controls.Add(this.btnData);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.txtFileName);
@@ -119,6 +132,7 @@
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ComboBox cboSheets;
+        private System.Windows.Forms.Button btnData;
     }
 }
 
