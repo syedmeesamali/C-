@@ -20,7 +20,7 @@ namespace ExceltoSQL
         DataTableCollection tableCollection;
         private void BtnImport_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Button clicked!");
+            
             using(OpenFileDialog openFileDialog = new OpenFileDialog()
             { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" })
              {
@@ -52,7 +52,7 @@ namespace ExceltoSQL
 
         private void btnData_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Not Implemented Yet!");
         }
     }
 }

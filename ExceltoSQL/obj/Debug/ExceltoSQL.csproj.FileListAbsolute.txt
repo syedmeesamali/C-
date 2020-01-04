@@ -26,3 +26,10 @@ D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.pdb
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.DataSet.dll
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.DataSet.pdb
 D:\repos\CSharp\ExceltoSQL\bin\Debug\ExcelDataReader.DataSet.xml
+D:\repos\CSharp\ExceltoSQL\bin\Debug\Z.Dapper.Plus.dll
+D:\repos\CSharp\ExceltoSQL\bin\Debug\Z.Dapper.Plus.xml
+D:\repos\CSharp\ExceltoSQL\bin\Debug\ExceltoSQL.exe.manifest
+D:\repos\CSharp\ExceltoSQL\bin\Debug\ExceltoSQL.application
+D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.TrustInfo.xml
+D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.exe.manifest
+D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.application
