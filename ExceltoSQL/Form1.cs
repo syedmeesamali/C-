@@ -54,5 +54,10 @@ namespace ExceltoSQL
         {
             MessageBox.Show("Not Implemented Yet!");
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

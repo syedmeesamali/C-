@@ -33,4 +33,5 @@ D:\repos\CSharp\ExceltoSQL\bin\Debug\ExceltoSQL.application
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.TrustInfo.xml
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.exe.manifest
 D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.application
-D:\repos\CSharp\ExceltoSQL\obj\Debug\ExceltoSQL.csprojAssemblyReference.cache
+D:\repos\CSharp\ExceltoSQL\bin\Debug\Database1.mdf
+D:\repos\CSharp\ExceltoSQL\bin\Debug\Database1_log.ldf
