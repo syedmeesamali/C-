@@ -35,12 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.btnData = new System.Windows.Forms.Button();
-            this.dataSet1 = new ExceltoSQL.DataSet1();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,9 +80,7 @@
             // 
             // dataGridView
             // 
-            this.dataGridView.AutoGenerateColumns = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.DataSource = this.dataSet1BindingSource;
             this.dataGridView.Location = new System.Drawing.Point(18, 11);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(714, 265);
@@ -109,16 +105,6 @@
             this.btnData.UseVisualStyleBackColor = true;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,7 +125,6 @@
             this.Text = "Read Excel \".xls\" or \".xlsx\" Files";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,7 +141,7 @@
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Button btnData;
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private DataSet1 dataSet1;
+        
     }
 }
 
