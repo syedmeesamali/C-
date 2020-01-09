@@ -59,5 +59,62 @@ namespace ExceltoSQL
         {
 
         }
+
+        private void cmdLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsValid())
+            {
+                //using (string constring = ConfigurationManager.ConnectionStrings["rbx"].ConnectionString) ;
+
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rbx"].ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserName", userName.Text.TrimStart());
+                        cmd.Parameters.AddWithValue("@Password", passBox.Password.TrimStart());
+                        conn.Open();    //Open DB connection
+
+                        //MessageBox.Show(dat1);
+                        SqlDataReader sdr = cmd.ExecuteReader();
+                        if (sdr.Read())
+                        {
+                            this.Hide();
+                            DashboardForm df = new DashboardForm();
+                            df.Show();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username or password is wrong!", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+
+                    } //End of sqlCommand
+
+                } //End of usingSql
+
+            } //End of isValid()
+        } //End of cmdLogin
+
+        //Function to check if the input fields are empty or filled
+        private bool IsValid()
+        {
+            if (userName.Text.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("User name is required!", "Error");
+                return false;
+            }
+
+            //Check password box
+            if (passBox.Password.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("Password is required!", "Error");
+                return false;
+            }
+
+            return true;
+
+        } //End of isValid function
+
     }
 }

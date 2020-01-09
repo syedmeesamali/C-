@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.BtnImport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.btnData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnImport
@@ -125,7 +122,6 @@
             this.Text = "Read Excel \".xls\" or \".xlsx\" Files";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +136,6 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Button btnData;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
         
     }
 }
