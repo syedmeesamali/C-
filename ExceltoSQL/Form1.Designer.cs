@@ -100,7 +100,7 @@
             this.btnData.TabIndex = 6;
             this.btnData.Text = "&Import";
             this.btnData.UseVisualStyleBackColor = true;
-            this.btnData.Click += new System.EventHandler(this.btnData_Click);
+
             // 
             // frmMain
             // 

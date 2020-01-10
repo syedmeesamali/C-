@@ -56,31 +56,14 @@ namespace ExceltoSQL
         private void btnData_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Not Implemented Yet!");
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["con_db"].ConnectionString))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db_con"].ConnectionString))
             {
-            using (SqlCommand cmd = new SqlCommand("usp_Login_VerifyLoginDetails", conn))
-            {
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@UserName", userName.Text.TrimStart());
-                cmd.Parameters.AddWithValue("@Password", passBox.Password.TrimStart());
-                conn.Open();    //Open DB connection
-
-                //MessageBox.Show(dat1);
-                SqlDataReader sdr = cmd.ExecuteReader();
-                if (sdr.Read())
-                {
-                    this.Hide();
-                    DashboardForm df = new DashboardForm();
-                    df.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Username or password is wrong!", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-
-            } //End of sqlCommand
-
+                //conn.Open();
+                SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM ProductData", conn);
+                DataTable dt = new DataTable();
+                sqd.Fill(dt);
+                dataGridView.DataSource = dt;
+            
             } //End of usingSql
 
         }
