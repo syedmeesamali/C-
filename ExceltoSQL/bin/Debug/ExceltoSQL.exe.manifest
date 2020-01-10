@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="30632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="30120">
       <assemblyIdentity name="ExceltoSQL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pjcfue53c/5Wlk4bTHWRlViNvfYhEFmq8aTlNML3/5o=</dsig:DigestValue>
+        <dsig:DigestValue>3nzdNwIbrBY+cUwXEKy+p5SRmtqXgtdGuqBNjkUh1QY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

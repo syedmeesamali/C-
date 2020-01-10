@@ -53,9 +53,14 @@ namespace ExceltoSQL
             dataGridView.DataSource = dt;
         }
 
-        private void btnData_Click(object sender, RoutedEventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Not Implemented Yet!");
+
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Will show now data stored in Product_Data SQL Database!");
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db_con"].ConnectionString))
             {
                 //conn.Open();
@@ -63,16 +68,8 @@ namespace ExceltoSQL
                 DataTable dt = new DataTable();
                 sqd.Fill(dt);
                 dataGridView.DataSource = dt;
-            
+
             } //End of usingSql
-
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
