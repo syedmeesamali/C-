@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3nzdNwIbrBY+cUwXEKy+p5SRmtqXgtdGuqBNjkUh1QY=</dsig:DigestValue>
+        <dsig:DigestValue>3rODJbzijAl1jm3rGnGK9IRJF3T9/Ht5cQsnkeHze04=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,13 +89,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ExceltoSQL.exe.config" size="394">
+  <file name="ExceltoSQL.exe.config" size="398">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>PUeLF8YDkkX/x1b/MZQ+Dnj3b3AociPTJsH6W0aSHvM=</dsig:DigestValue>
+      <dsig:DigestValue>9UlLjycVWA1OwpWB0b3xb9e1s2Oww7p8oHCjtgNzbeE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
