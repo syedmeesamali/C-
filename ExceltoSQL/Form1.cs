@@ -25,21 +25,21 @@ namespace ExceltoSQL
         {
             
             using(OpenFileDialog openFileDialog = new OpenFileDialog()
-            { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" })
+            { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" }) //Filter for the type of files to show
              {
-               if (openFileDialog.ShowDialog() == DialogResult.OK)
+               if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                    txtFileName.Text = openFileDialog.FileName;
+                    txtFileName.Text = openFileDialog.FileName;        //Pick name from dialog box
                     using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                     {
-                        using(IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                        using(IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
                         {
                             DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
                             {
                                 ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true}
                             });
-                            tableCollection = result.Tables;
-                            cboSheets.Items.Clear();
+                            tableCollection = result.Tables;        
+                            cboSheets.Items.Clear(); // clear the combo box
                             foreach (DataTable table in tableCollection)
                                 cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
                         }
@@ -49,13 +49,8 @@ namespace ExceltoSQL
         }
         private void cboSheets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()];
+            DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
             dataGridView.DataSource = dt;
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnData_Click(object sender, EventArgs e)
@@ -64,11 +59,10 @@ namespace ExceltoSQL
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db_con"].ConnectionString))
             {
                 //conn.Open();
-                SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM ProductData", conn);
+                SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM ProductData", conn); //Show all records from table
                 DataTable dt = new DataTable();
-                sqd.Fill(dt);
-                dataGridView.DataSource = dt;
-
+                sqd.Fill(dt);  //Fill the data table
+                dataGridView.DataSource = dt;   //Data source is the data table
             } //End of usingSql
         }
     }
