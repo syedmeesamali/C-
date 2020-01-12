@@ -1,0 +1,9 @@
+F:\Repos\CSharp\Simple_Converter\bin\Debug\Simple_Converter.exe.config
+F:\Repos\CSharp\Simple_Converter\bin\Debug\Simple_Converter.exe
+F:\Repos\CSharp\Simple_Converter\bin\Debug\Simple_Converter.pdb
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.csprojAssemblyReference.cache
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.frmMain.resources
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.Properties.Resources.resources
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.csproj.GenerateResource.cache
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.exe
+F:\Repos\CSharp\Simple_Converter\obj\Debug\Simple_Converter.pdb
