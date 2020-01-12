@@ -19,9 +19,27 @@ namespace Simple_Converter
 
         private void cmdCalculate_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello world!");
+            float inVal; 
+            inVal = float.Parse(txtInput.Text);
+            
+            switch(cboMain.SelectedItem.ToString().Trim())
+            {
+                case "mm - m":
+                    float result;
+                    result = inVal * 1000;
+                    txtOutput.Text = result.ToString();
+                    break;
+                case "m - mm":
+                    result = inVal / 1000;
+                    txtOutput.Text = result.ToString();
+                    break;
+                default:
+                    MessageBox.Show("None selected!");
+                    break;
+            } //End of switch
+            
         }
 
-       
+        
     }
 }
