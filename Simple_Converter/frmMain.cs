@@ -40,6 +40,9 @@ namespace Simple_Converter
             
         }
 
-        
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
