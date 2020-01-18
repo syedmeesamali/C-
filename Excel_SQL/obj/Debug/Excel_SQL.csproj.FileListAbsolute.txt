@@ -20,8 +20,6 @@ F:\Repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.application
 F:\Repos\CSharp\Excel_SQL\obj\Debug\Excel_SQL.csproj.CopyComplete
 F:\Repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.exe
 F:\Repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.pdb
-D:\repos\CSharp\Excel_SQL\bin\Debug\Database1.mdf
-D:\repos\CSharp\Excel_SQL\bin\Debug\Database1_log.ldf
 D:\repos\CSharp\Excel_SQL\bin\Debug\ExceltoSQL.exe.config
 D:\repos\CSharp\Excel_SQL\bin\Debug\ExceltoSQL.exe.manifest
 D:\repos\CSharp\Excel_SQL\bin\Debug\ExceltoSQL.application
@@ -45,3 +43,5 @@ D:\repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.application
 D:\repos\CSharp\Excel_SQL\obj\Debug\Excel_SQL.csproj.CopyComplete
 D:\repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.exe
 D:\repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.pdb
+D:\repos\CSharp\Excel_SQL\bin\Debug\prod_localdb.mdf
+D:\repos\CSharp\Excel_SQL\bin\Debug\prod_localdb_log.ldf

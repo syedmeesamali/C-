@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="30120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="30632">
       <assemblyIdentity name="ExceltoSQL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LhCpwljZSMHR/lv0YqHEZ7syQtvPWk68Zy2bkuY3jMQ=</dsig:DigestValue>
+        <dsig:DigestValue>EsfM/VJGSRsDbseGvuEBw6KhVzTAh9xLIOrgFwSM628=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,24 +89,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Database1.mdf" size="8388608" writeableType="applicationData">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>64Q9/G/KErH5BSHbWbRhh1whyyBZ/m7T3zZfuoF5UDg=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Database1_log.ldf" size="8388608" writeableType="applicationData">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>t7THmQL5pv/XUAkOkNHsTWae0y4FevhvPJgXq/pEBiY=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="ExceltoSQL.exe.config" size="394">
     <hash>
       <dsig:Transforms>
@@ -114,6 +96,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>PUeLF8YDkkX/x1b/MZQ+Dnj3b3AociPTJsH6W0aSHvM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="prod_localdb.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bAxuyd1WCCdq64STWa4ev8VaDxDEVO1cJMgbdcIxrbs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="prod_localdb_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8T//RSL1UM4FjjhKdW9PQzxXDrhOh1fstcZRtKONgEY=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

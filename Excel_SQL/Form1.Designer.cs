@@ -45,7 +45,7 @@
             this.BtnImport.Name = "BtnImport";
             this.BtnImport.Size = new System.Drawing.Size(140, 20);
             this.BtnImport.TabIndex = 0;
-            this.BtnImport.Text = "......";
+            this.BtnImport.Text = "&Show Excel File";
             this.BtnImport.UseVisualStyleBackColor = true;
             this.BtnImport.Click += new System.EventHandler(this.BtnImport_Click);
             // 
@@ -98,7 +98,7 @@
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(115, 24);
             this.btnData.TabIndex = 6;
-            this.btnData.Text = "&Import";
+            this.btnData.Text = "&Display";
             this.btnData.UseVisualStyleBackColor = true;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 

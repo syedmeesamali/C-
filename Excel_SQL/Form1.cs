@@ -47,23 +47,33 @@ namespace ExceltoSQL
                 }
              }
         }
+        //Below function will display the data of selected sheet to datagridview
         private void cboSheets_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
             dataGridView.DataSource = dt;
         }
 
+        //Show data from local database
         private void btnData_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will show now data stored in Product_Data SQL Database!");
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db_con"].ConnectionString))
+            MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True"))
             {
-                //conn.Open();
-                SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM ProductData", conn); //Show all records from table
+                if(conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+                conn.Open();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Table";
+                cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
-                sqd.Fill(dt);  //Fill the data table
-                dataGridView.DataSource = dt;   //Data source is the data table
-            } //End of usingSql
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView.DataSource = dt;
+            } 
         }
     }
 }
