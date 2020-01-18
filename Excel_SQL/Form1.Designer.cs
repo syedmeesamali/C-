@@ -36,6 +36,11 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.btnData = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtProdName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmdInsert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +85,7 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(18, 11);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(714, 265);
+            this.dataGridView.Size = new System.Drawing.Size(731, 265);
             this.dataGridView.TabIndex = 4;
             // 
             // cboSheets
@@ -102,11 +107,58 @@
             this.btnData.UseVisualStyleBackColor = true;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 374);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Code:";
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(109, 374);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(100, 20);
+            this.txtCode.TabIndex = 8;
+            // 
+            // txtProdName
+            // 
+            this.txtProdName.Location = new System.Drawing.Point(342, 374);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Size = new System.Drawing.Size(242, 20);
+            this.txtProdName.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(262, 374);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Prod Name:";
+            // 
+            // cmdInsert
+            // 
+            this.cmdInsert.Location = new System.Drawing.Point(608, 371);
+            this.cmdInsert.Name = "cmdInsert";
+            this.cmdInsert.Size = new System.Drawing.Size(141, 24);
+            this.cmdInsert.TabIndex = 11;
+            this.cmdInsert.Text = "Insert Record";
+            this.cmdInsert.UseVisualStyleBackColor = true;
+            this.cmdInsert.Click += new System.EventHandler(this.cmdInsert_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 419);
+            this.ClientSize = new System.Drawing.Size(781, 444);
+            this.Controls.Add(this.cmdInsert);
+            this.Controls.Add(this.txtProdName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.dataGridView);
@@ -135,7 +187,11 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Button btnData;
-        
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtProdName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button cmdInsert;
     }
 }
 

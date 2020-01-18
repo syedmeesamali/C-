@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using MessageBox = System.Windows.MessageBox;
+
 namespace ExceltoSQL
 {
     public partial class frmMain : Form
@@ -69,5 +71,42 @@ namespace ExceltoSQL
             da.Fill(dt);
             dataGridView.DataSource = dt;
         }
+
+        private void cmdInsert_Click(object sender, EventArgs e)
+        {
+            if(IsValid())
+            {
+                MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+                conn.Open();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName + "')";
+                cmd.ExecuteNonQuery();
+                txtCode.Text = "";
+                txtProdName.Text = "";
+                MessageBox.Show("Date inserted into local DB successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Product code or name is invalid!", "Insert Failed");
+            }
+        }
+
+
+        private bool IsValid()
+        {
+            if (txtCode.Text.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("Product code is required!", "Error");
+                return false;
+            }
+            if (txtProdName.Text.TrimStart() == string.Empty)
+            {
+                MessageBox.Show("Product name is required!", "Error");
+                return false;
+            }
+            return true;
+        } 
     }//End of class
 }
