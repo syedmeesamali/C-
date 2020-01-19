@@ -41,6 +41,7 @@
             this.txtProdName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmdInsert = new System.Windows.Forms.Button();
+            this.cmdDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +150,22 @@
             this.cmdInsert.UseVisualStyleBackColor = true;
             this.cmdInsert.Click += new System.EventHandler(this.cmdInsert_Click);
             // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Location = new System.Drawing.Point(109, 414);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(141, 24);
+            this.cmdDelete.TabIndex = 12;
+            this.cmdDelete.Text = "Delete Record";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 444);
+            this.ClientSize = new System.Drawing.Size(781, 462);
+            this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.cmdInsert);
             this.Controls.Add(this.txtProdName);
             this.Controls.Add(this.label4);
@@ -192,6 +204,7 @@
         private System.Windows.Forms.TextBox txtProdName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button cmdInsert;
+        private System.Windows.Forms.Button cmdDelete;
     }
 }
 

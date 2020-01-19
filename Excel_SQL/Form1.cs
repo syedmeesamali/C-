@@ -60,7 +60,7 @@ namespace ExceltoSQL
         private void btnData_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -76,7 +76,7 @@ namespace ExceltoSQL
         {
             if(IsValid())
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -106,6 +106,16 @@ namespace ExceltoSQL
                 return false;
             }
             return true;
-        } 
+        }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This will delete the selected datagridview record!", "Error");
+            dataGridView.SelectedRows.Clear();
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                row.Selected = true;
+            }
+        }
     }//End of class
 }
