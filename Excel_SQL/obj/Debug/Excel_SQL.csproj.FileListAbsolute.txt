@@ -45,3 +45,6 @@ D:\repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.exe
 D:\repos\CSharp\Excel_SQL\obj\Debug\ExceltoSQL.pdb
 D:\repos\CSharp\Excel_SQL\bin\Debug\prod_localdb.mdf
 D:\repos\CSharp\Excel_SQL\bin\Debug\prod_localdb_log.ldf
+F:\Repos\CSharp\Excel_SQL\bin\Debug\prod_localdb.mdf
+F:\Repos\CSharp\Excel_SQL\bin\Debug\prod_localdb_log.ldf
+F:\Repos\CSharp\Excel_SQL\obj\Debug\Excel_SQL.csprojAssemblyReference.cache

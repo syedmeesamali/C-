@@ -60,7 +60,7 @@ namespace ExceltoSQL
         private void btnData_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -76,12 +76,11 @@ namespace ExceltoSQL
         {
             if(IsValid())
             {
-                MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName + "')";
+                cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName.Text + "')";
                 cmd.ExecuteNonQuery();
                 txtCode.Text = "";
                 txtProdName.Text = "";
