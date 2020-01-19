@@ -84,9 +84,9 @@ namespace ExceltoSQL
                 cmd.ExecuteNonQuery();
                 txtCode.Text = "";
                 txtProdName.Text = "";
-                MessageBox.Show("Date inserted into local DB successfully!");
                 dataGridView.Update();
                 dataGridView.Refresh();
+                MessageBox.Show("Date inserted into local DB successfully!");
             }
             else
             {
@@ -114,26 +114,28 @@ namespace ExceltoSQL
         {
             MessageBox.Show("This will delete the selected datagridview record!", "Error");
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
-            conn.Open();
-            foreach (DataGridViewCell oneCell in dataGridView.SelectedCells)
+            try
             {
-                if (oneCell.Selected)
-                {
-                    dataGridView.Rows.RemoveAt(oneCell.RowIndex);
-                    try
-                    {
-                        conn.Open();
-                        SqlCommand cmd = conn.CreateCommand();
-                        cmd.CommandType = CommandType.Text;
-                        //cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName.Text + "')";
-                        //cmd.ExecuteNonQuery();
-                        
-                    } catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                    MessageBox.Show("Deleted Successfully!");
-                }
+                int id = dataGridView.CurrentCell.RowIndex;
+                dataGridView.da
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM prods WHERE Product_ID = " + id + "";
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                dataGridView.Rows.RemoveAt(dataGridView.SelectedRows[0].Index);
+                MessageBox.Show("Row Deleted!");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }//End of class

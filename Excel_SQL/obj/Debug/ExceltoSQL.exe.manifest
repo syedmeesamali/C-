@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="33192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExceltoSQL.exe" size="33704">
       <assemblyIdentity name="ExceltoSQL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NQP+kdgPbYAuE1d6VaVlj9wYMKZ+BlxKuGeyp7MlnUI=</dsig:DigestValue>
+        <dsig:DigestValue>co6ptFIF6w7nKS20EHdTNBUwe2xIBhb5ZdXMxMwH+zk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -104,7 +104,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UxSH2VELrGSzIaUILQeAI4U9xd1fVnvOxcYanozHY0A=</dsig:DigestValue>
+      <dsig:DigestValue>YQhd5fbYgWcfPLTfx+x6mffZvlpFyFIhhv46NbTVlhA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="prod_localdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -113,7 +113,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MQLDqqrEhKi2nnOAV9tI3qjILLb1TssAP8H2vz7PW1A=</dsig:DigestValue>
+      <dsig:DigestValue>vkxMCP8qTIBI1Fubi8zqp3681wrD7bP/GXAqdFaQjAM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
