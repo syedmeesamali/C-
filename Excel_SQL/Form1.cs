@@ -85,6 +85,8 @@ namespace ExceltoSQL
                 txtCode.Text = "";
                 txtProdName.Text = "";
                 MessageBox.Show("Date inserted into local DB successfully!");
+                dataGridView.Update();
+                dataGridView.Refresh();
             }
             else
             {
@@ -111,10 +113,27 @@ namespace ExceltoSQL
         private void cmdDelete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This will delete the selected datagridview record!", "Error");
-            dataGridView.SelectedRows.Clear();
-            foreach (DataGridViewRow row in dataGridView.Rows)
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+            conn.Open();
+            foreach (DataGridViewCell oneCell in dataGridView.SelectedCells)
             {
-                row.Selected = true;
+                if (oneCell.Selected)
+                {
+                    dataGridView.Rows.RemoveAt(oneCell.RowIndex);
+                    try
+                    {
+                        conn.Open();
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        //cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName.Text + "')";
+                        //cmd.ExecuteNonQuery();
+                        
+                    } catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    MessageBox.Show("Deleted Successfully!");
+                }
             }
         }
     }//End of class
