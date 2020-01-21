@@ -235,7 +235,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 607);
-            this.Controls.Add(this.crystalReportViewer1);
+
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.ComboBox1);
             this.Name = "frmReport";

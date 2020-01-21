@@ -41,17 +41,22 @@ namespace InventorySystem1._0
             cmd.CommandType = CommandType.Text;
             cmd.CommandText =" SELECT * FROM LoginDetails WHERE Name = '" + txtusername.Text + "' and Password = sha1('" + txtpass.Text + "')";
             cmd.ExecuteNonQuery();
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (config.dt.Rows.Count > 0)
+            cmd.Parameters.AddWithValue("@username", txtusername);
+            cmd.Parameters.AddWithValue("@password", txtpass);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(ds);
+            con.Close();
+
+            bool loginSuccessful = ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0));
+
+            if (loginSuccessful)
             {
-                frm.enabled_menu();
-                this.Close();
+                MessageBox.Show("Success!");
             }
             else
             {
-                MessageBox.Show("Account does not exist! Please contact administrator.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid username or password");
             }
 
         }
@@ -66,6 +71,11 @@ namespace InventorySystem1._0
         private void Button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
