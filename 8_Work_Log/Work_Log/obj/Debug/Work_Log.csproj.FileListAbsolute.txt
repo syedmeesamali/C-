@@ -1,0 +1,9 @@
+F:\Repos\CSharp\8_Work_Log\Work_Log\bin\Debug\Work_Log.exe.config
+F:\Repos\CSharp\8_Work_Log\Work_Log\bin\Debug\Work_Log.exe
+F:\Repos\CSharp\8_Work_Log\Work_Log\bin\Debug\Work_Log.pdb
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.csprojAssemblyReference.cache
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.frmLogs.resources
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.Properties.Resources.resources
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.csproj.GenerateResource.cache
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.exe
+F:\Repos\CSharp\8_Work_Log\Work_Log\obj\Debug\Work_Log.pdb
