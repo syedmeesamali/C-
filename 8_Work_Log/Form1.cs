@@ -41,7 +41,7 @@ namespace Work_Log
                             {
                                 DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
                                 {
-                                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = false }
+                                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
                                 });
                                 tableCollection = result.Tables;
                                 cboSheets.Items.Clear(); // clear the combo box
@@ -57,7 +57,27 @@ namespace Work_Log
         private void btnData_Click(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
-            dataGridView1.DataSource = dt;
+            //dataGridView1.DataSource = dt;
+            if (dt != null)
+            {
+                List<Products> products = new List<Products>();
+                for (int i=0; i < dt.Rows.Count; i++)
+                {
+                    Products prodList = new Products();
+                    prodList.ID = i.ToString();
+                    prodList.ProdID = dt.Rows[i]["ProdID"].ToString();
+                    prodList.ProdName = dt.Rows[i]["ProdName"].ToString();
+                    products.Add(prodList);
+                }
+                productsBindingSource.DataSource = products;
+            }
+        }
+
+        private void frmLogs_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterDBDataSet.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.masterDBDataSet.Products);
+
         }
     }
 }

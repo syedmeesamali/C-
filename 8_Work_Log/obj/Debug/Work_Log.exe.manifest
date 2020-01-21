@@ -68,24 +68,54 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="119720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="148904">
       <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d40W6c9QhjrQ5+3mgsp67GKylxMzFQgdsDzS2/t5TV8=</dsig:DigestValue>
+        <dsig:DigestValue>LauI4OMA+L1aEqDfNxENHyBZAT9blj1n9txXB6+KgIs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Work_Log.exe.config" size="189">
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Z.Dapper.Plus.dll" size="905216">
+      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.1.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Vzk20bWLYEKHG3AkaEdIB26XjOE56zFTGMM9DwQvaq4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MasterDB.mdf" size="8388608" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>dDxGuAeZiR+6ym1ugoZ+AvFRsabF6ptoTkL486XoFZ8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MasterDB_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xfcqQAGNK2Udfplpc5rUjHIKc2vJIf2203n0ZMCiu7g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Work_Log.exe.config" size="551">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0j/GsJVi54MVcDswne6IFkygQPAk6ep/HxijqcICG6Q=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

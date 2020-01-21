@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogs));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +41,17 @@
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.masterDBDataSet = new Work_Log.MasterDBDataSet();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsTableAdapter = new Work_Log.MasterDBDataSetTableAdapters.ProductsTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +61,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(811, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(851, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,10 +111,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(352, 27);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.prodIDDataGridViewTextBoxColumn,
+            this.prodNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(352, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(487, 378);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnData
@@ -130,15 +146,57 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Sheet:";
+            this.label2.Text = "Select Sheet:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(349, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Data in selected sheet:";
+            // 
+            // masterDBDataSet
+            // 
+            this.masterDBDataSet.DataSetName = "MasterDBDataSet";
+            this.masterDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.masterDBDataSet;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // prodIDDataGridViewTextBoxColumn
+            // 
+            this.prodIDDataGridViewTextBoxColumn.DataPropertyName = "ProdID";
+            this.prodIDDataGridViewTextBoxColumn.HeaderText = "ProdID";
+            this.prodIDDataGridViewTextBoxColumn.Name = "prodIDDataGridViewTextBoxColumn";
+            // 
+            // prodNameDataGridViewTextBoxColumn
+            // 
+            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "ProdName";
+            this.prodNameDataGridViewTextBoxColumn.HeaderText = "ProdName";
+            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
             // 
             // frmLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 440);
+            this.ClientSize = new System.Drawing.Size(851, 440);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.label2);
@@ -150,10 +208,12 @@
             this.Name = "frmLogs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily Works Log";
-            
+            this.Load += new System.EventHandler(this.frmLogs_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +232,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem importExcelFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.Label label1;
+        private MasterDBDataSet masterDBDataSet;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private MasterDBDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;
     }
 }
 

@@ -39,7 +39,6 @@ D:\repos\CSharp\8_Work_Log\bin\Debug\ExcelDataReader.pdb
 D:\repos\CSharp\8_Work_Log\bin\Debug\ExcelDataReader.xml
 D:\repos\CSharp\8_Work_Log\bin\Debug\ExcelDataReader.DataSet.pdb
 D:\repos\CSharp\8_Work_Log\bin\Debug\ExcelDataReader.DataSet.xml
-D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.csprojAssemblyReference.cache
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.frmLogs.resources
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.Properties.Resources.resources
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.csproj.GenerateResource.cache
@@ -49,3 +48,7 @@ D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.application
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.csproj.CopyComplete
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.exe
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.pdb
+D:\repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.dll
+D:\repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.xml
+D:\repos\CSharp\8_Work_Log\bin\Debug\MasterDB.mdf
+D:\repos\CSharp\8_Work_Log\bin\Debug\MasterDB_log.ldf
