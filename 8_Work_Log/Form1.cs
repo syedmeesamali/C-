@@ -41,7 +41,7 @@ namespace Work_Log
                             {
                                 DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
                                 {
-                                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
+                                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = false }
                                 });
                                 tableCollection = result.Tables;
                                 cboSheets.Items.Clear(); // clear the combo box
@@ -49,16 +49,11 @@ namespace Work_Log
                                     cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
                             }
                         }
-                    }
-                }
-            
-        }
+                    } //If valid excel file
+                }//Open excel file
+        }//Import excel file button
 
-        private void frmLogs_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //Display the selected sheet in excel file loaded
         private void btnData_Click(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
