@@ -60,16 +60,27 @@ namespace Work_Log
             //dataGridView1.DataSource = dt;
             if (dt != null)
             {
-                List<Products> products = new List<Products>();
-                for (int i=0; i < dt.Rows.Count; i++)
+                //List<Products> products = new List<Products>();
+                //for (int i=0; i < dt.Rows.Count; i++)
+                //{
+                //    Products prodList = new Products();
+                //    prodList.ID = i.ToString();
+                //    prodList.ProdID = dt.Rows[i]["ProdID"].ToString();
+                //    prodList.ProdName = dt.Rows[i]["ProdName"].ToString();
+                //    products.Add(prodList);
+                //}
+                //productsBindingSource.DataSource = products;
+
+                List<Projects> projects = new List<Projects>();
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    Products prodList = new Products();
-                    prodList.ID = i.ToString();
-                    prodList.ProdID = dt.Rows[i]["ProdID"].ToString();
-                    prodList.ProdName = dt.Rows[i]["ProdName"].ToString();
-                    products.Add(prodList);
+                    Projects projList = new Projects();
+                    projList.ID = i.ToString();
+                    projList.ProjectName = dt.Rows[i]["ProjectName"].ToString();
+                    
+                    projects.Add(projList);
                 }
-                productsBindingSource.DataSource = products;
+                productsBindingSource.DataSource = projects;
             }
         }
 
