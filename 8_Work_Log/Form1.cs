@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using Z.Dapper.Plus;
 
 namespace Work_Log
 {
@@ -60,27 +61,27 @@ namespace Work_Log
             //dataGridView1.DataSource = dt;
             if (dt != null)
             {
-                //List<Products> products = new List<Products>();
-                //for (int i=0; i < dt.Rows.Count; i++)
-                //{
-                //    Products prodList = new Products();
-                //    prodList.ID = i.ToString();
-                //    prodList.ProdID = dt.Rows[i]["ProdID"].ToString();
-                //    prodList.ProdName = dt.Rows[i]["ProdName"].ToString();
-                //    products.Add(prodList);
-                //}
-                //productsBindingSource.DataSource = products;
-
-                List<Projects> projects = new List<Projects>();
+                List<Products> products = new List<Products>();
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    Projects projList = new Projects();
-                    projList.ID = i.ToString();
-                    projList.ProjectName = dt.Rows[i]["ProjectName"].ToString();
-                    
-                    projects.Add(projList);
+                    Products prodList = new Products();
+                    prodList.ID = i.ToString();
+                    prodList.ProdID = dt.Rows[i]["ProdID"].ToString();
+                    prodList.ProdName = dt.Rows[i]["ProdName"].ToString();
+                    products.Add(prodList);
                 }
-                productsBindingSource.DataSource = projects;
+                productsBindingSource.DataSource = products;
+
+                //List<Projects> projects = new List<Projects>();
+                //for (int i = 0; i < dt.Rows.Count; i++)
+                //{
+                //    Projects projList = new Projects();
+                //    projList.ID = i.ToString();
+                //    projList.ProjectName = dt.Rows[i]["ProjectName"].ToString();
+
+                //    projects.Add(projList);
+                //}
+                //productsBindingSource.DataSource = projects;
             }
         }
 
@@ -95,7 +96,16 @@ namespace Work_Log
         {
             try
             {
-
+                DapperPlusManager.Entity<Products>().Table("Products");
+                List<Products> products = productsBindingSource.DataSource as List<Products>;
+                if (products != null)
+                {
+                    using(IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
+                    {
+                        db.BulkInsert(products);
+                    }
+                }
+                MessageBox.Show("Finished!");
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
