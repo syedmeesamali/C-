@@ -52,4 +52,11 @@ D:\repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.dll
 D:\repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.xml
 D:\repos\CSharp\8_Work_Log\bin\Debug\MasterDB.mdf
 D:\repos\CSharp\8_Work_Log\bin\Debug\MasterDB_log.ldf
+<<<<<<< HEAD
 D:\repos\CSharp\8_Work_Log\obj\Debug\Work_Log.csprojAssemblyReference.cache
+=======
+F:\Repos\CSharp\8_Work_Log\bin\Debug\MasterDB.mdf
+F:\Repos\CSharp\8_Work_Log\bin\Debug\MasterDB_log.ldf
+F:\Repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.dll
+F:\Repos\CSharp\8_Work_Log\bin\Debug\Z.Dapper.Plus.xml
+>>>>>>> e2eb307ad552dd8d65def5494343542f8ea87372

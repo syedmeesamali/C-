@@ -4,7 +4,7 @@
   <description asmv2:publisher="Syed Meesam Ali" co.v1:suiteName="Excel Reader" asmv2:product="Excel Reader" asmv2:supportUrl="https://syedmeesamali.pythonanywhere.com/" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Work_Log" version="1.0.0.0" publicKeyToken="71FFDDDB004BEC1E" language="neutral" processorArchitecture="msil" />
     <commandLine file="Work_Log.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -68,14 +68,23 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="149416">
       <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="149432">
+      <assemblyIdentity name="Work_Log" version="1.0.0.0" publicKeyToken="71FFDDDB004BEC1E" language="neutral" processorArchitecture="msil" />
+>>>>>>> e2eb307ad552dd8d65def5494343542f8ea87372
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>8CVLKtXoKAv6SphlLzD2jpr7BRTv7C5nxqv+RvBr8QU=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>Seph0wEu2yaeHSJ0iAHH6PNzuvY8znFDE1HhF2NCwxo=</dsig:DigestValue>
+>>>>>>> e2eb307ad552dd8d65def5494343542f8ea87372
       </hash>
     </dependentAssembly>
   </dependency>
