@@ -79,5 +79,17 @@ namespace Work_Log
             this.productsTableAdapter.Fill(this.masterDBDataSet.Products);
 
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
