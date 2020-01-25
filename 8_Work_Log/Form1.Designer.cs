@@ -48,6 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.productsTableAdapter = new Work_Log.MasterDBDataSetTableAdapters.ProductsTableAdapter();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.first100RecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sRecordsNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aRecordsIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -58,6 +62,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -78,21 +83,21 @@
             // importExcelFileToolStripMenuItem
             // 
             this.importExcelFileToolStripMenuItem.Name = "importExcelFileToolStripMenuItem";
-            this.importExcelFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importExcelFileToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.importExcelFileToolStripMenuItem.Text = "Import Excel File";
             this.importExcelFileToolStripMenuItem.Click += new System.EventHandler(this.importExcelFileToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.saveToolStripMenuItem.Text = "Import Data";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -107,7 +112,7 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             // 
             // dataGridView1
@@ -192,6 +197,35 @@
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.first100RecordsToolStripMenuItem,
+            this.sRecordsNameToolStripMenuItem,
+            this.aRecordsIDToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // first100RecordsToolStripMenuItem
+            // 
+            this.first100RecordsToolStripMenuItem.Name = "first100RecordsToolStripMenuItem";
+            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.first100RecordsToolStripMenuItem.Text = "First 100 Records";
+            this.first100RecordsToolStripMenuItem.Click += new System.EventHandler(this.first100RecordsToolStripMenuItem_Click);
+            // 
+            // sRecordsNameToolStripMenuItem
+            // 
+            this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
+            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
+            // 
+            // aRecordsIDToolStripMenuItem
+            // 
+            this.aRecordsIDToolStripMenuItem.Name = "aRecordsIDToolStripMenuItem";
+            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aRecordsIDToolStripMenuItem.Text = "A Records (ID)";
+            // 
             // frmLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +274,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem first100RecordsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sRecordsNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aRecordsIDToolStripMenuItem;
     }
 }
 
