@@ -29,9 +29,16 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.button1 = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
+            this.MasterDBDataSet = new Work_Log.MasterDBDataSet();
+            this.ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductsTableAdapter = new Work_Log.MasterDBDataSetTableAdapters.ProductsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -46,9 +53,13 @@
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProductsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Work_Log.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(39, 64);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
+            
             this.reportViewer1.Size = new System.Drawing.Size(736, 315);
             this.reportViewer1.TabIndex = 0;
             // 
@@ -61,6 +72,20 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "First 100 Records";
             // 
+            // MasterDBDataSet
+            // 
+            this.MasterDBDataSet.DataSetName = "MasterDBDataSet";
+            this.MasterDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ProductsBindingSource
+            // 
+            this.ProductsBindingSource.DataMember = "Products";
+            this.ProductsBindingSource.DataSource = this.MasterDBDataSet;
+            // 
+            // ProductsTableAdapter
+            // 
+            this.ProductsTableAdapter.ClearBeforeFill = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,9 +97,11 @@
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Report Form";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +111,8 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource ProductsBindingSource;
+        private MasterDBDataSet MasterDBDataSet;
+        private MasterDBDataSetTableAdapters.ProductsTableAdapter ProductsTableAdapter;
     }
 }

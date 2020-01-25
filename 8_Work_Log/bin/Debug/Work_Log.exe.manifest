@@ -716,14 +716,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="154024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="168872">
       <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jySKiRRdBw/D48fLyKxBf/ilgxjr6u4VX8oKCSMJj8s=</dsig:DigestValue>
+        <dsig:DigestValue>kdJTw1eilg+HU2xUz/Gog4Ot9emEOobd11gvv8H7F2U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -745,7 +745,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>PRqLAkfAz8FvA+yMjP9dWqwAKks4Q54XKwfFWc6JjzI=</dsig:DigestValue>
+      <dsig:DigestValue>wKOrwsyJ509EtbiLgSmf3UkjilxJMGbgo44LKUJBXwM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="MasterDB_log.ldf" size="8388608" writeableType="applicationData">
@@ -754,7 +754,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZWUuxBoz9NuFwjJfq96TdWFAwnK+1xPGob0WacJsFdk=</dsig:DigestValue>
+      <dsig:DigestValue>oU7/Sa6t8PplR9cp6yyGYNVtpDpEUJhXYKuVjnKAVP8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

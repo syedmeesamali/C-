@@ -1,4 +1,5 @@
 ﻿using ExcelDataReader;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,9 +116,9 @@ namespace Work_Log
 
         private void first100RecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
+            
+
+            
         }
     }
 }
