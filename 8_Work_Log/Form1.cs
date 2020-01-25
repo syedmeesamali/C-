@@ -115,17 +115,9 @@ namespace Work_Log
 
         private void first100RecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Filter done!");
             this.Hide();
             Form2 form2 = new Form2();
             form2.Show();
-            //SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
-            //conn.Open();
-            //SqlCommand cmd = conn.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "SELECT TOP 100 * FROM Products";
-            //cmd.ExecuteNonQuery();
-            
         }
     }
 }
