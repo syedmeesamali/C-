@@ -72,22 +72,14 @@ namespace Work_Log
                 }
                 productsBindingSource.DataSource = products;
 
-                //List<Projects> projects = new List<Projects>();
-                //for (int i = 0; i < dt.Rows.Count; i++)
-                //{
-                //    Projects projList = new Projects();
-                //    projList.ID = i.ToString();
-                //    projList.ProjectName = dt.Rows[i]["ProjectName"].ToString();
-
-                //    projects.Add(projList);
-                //}
-                //productsBindingSource.DataSource = projects;
             }
         }
 
         private void frmLogs_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'masterDBDataSet.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.masterDBDataSet.Products);
+
 
         }
 
@@ -114,14 +106,12 @@ namespace Work_Log
 
         private void first100RecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllRecords objRecords = new AllRecords();
-            objRecords.Visible = true;
+            
         }
 
         private void sRecordsNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllRecords objRecords = new AllRecords();
-            objRecords.Visible = true;
+            
         }
     }
 }
