@@ -35,6 +35,10 @@
             this.importExcelFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.first100RecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sRecordsNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aRecordsIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,20 +46,16 @@
             this.prodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterDBDataSet = new Work_Log.MasterDBDataSet();
+            
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.productsTableAdapter = new Work_Log.MasterDBDataSetTableAdapters.ProductsTableAdapter();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.first100RecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sRecordsNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aRecordsIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDBDataSet)).BeginInit();
+            
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -101,6 +101,36 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.first100RecordsToolStripMenuItem,
+            this.sRecordsNameToolStripMenuItem,
+            this.aRecordsIDToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // first100RecordsToolStripMenuItem
+            // 
+            this.first100RecordsToolStripMenuItem.Name = "first100RecordsToolStripMenuItem";
+            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.first100RecordsToolStripMenuItem.Text = "First 100 Records";
+            this.first100RecordsToolStripMenuItem.Click += new System.EventHandler(this.first100RecordsToolStripMenuItem_Click);
+            // 
+            // sRecordsNameToolStripMenuItem
+            // 
+            this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
+            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
+            this.sRecordsNameToolStripMenuItem.Click += new System.EventHandler(this.sRecordsNameToolStripMenuItem_Click);
+            // 
+            // aRecordsIDToolStripMenuItem
+            // 
+            this.aRecordsIDToolStripMenuItem.Name = "aRecordsIDToolStripMenuItem";
+            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aRecordsIDToolStripMenuItem.Text = "A Records (ID)";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -112,7 +142,7 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             // 
             // dataGridView1
@@ -150,13 +180,11 @@
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.masterDBDataSet;
+            
             // 
             // masterDBDataSet
             // 
-            this.masterDBDataSet.DataSetName = "MasterDBDataSet";
-            this.masterDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            
             // btnData
             // 
             this.btnData.Location = new System.Drawing.Point(111, 89);
@@ -195,36 +223,7 @@
             // 
             // productsTableAdapter
             // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.first100RecordsToolStripMenuItem,
-            this.sRecordsNameToolStripMenuItem,
-            this.aRecordsIDToolStripMenuItem});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
-            // first100RecordsToolStripMenuItem
-            // 
-            this.first100RecordsToolStripMenuItem.Name = "first100RecordsToolStripMenuItem";
-            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.first100RecordsToolStripMenuItem.Text = "First 100 Records";
-            this.first100RecordsToolStripMenuItem.Click += new System.EventHandler(this.first100RecordsToolStripMenuItem_Click);
-            // 
-            // sRecordsNameToolStripMenuItem
-            // 
-            this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
-            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
-            // 
-            // aRecordsIDToolStripMenuItem
-            // 
-            this.aRecordsIDToolStripMenuItem.Name = "aRecordsIDToolStripMenuItem";
-            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aRecordsIDToolStripMenuItem.Text = "A Records (ID)";
+            
             // 
             // frmLogs
             // 
@@ -248,7 +247,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDBDataSet)).EndInit();
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,9 +267,9 @@
         private System.Windows.Forms.ToolStripMenuItem importExcelFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
-        private MasterDBDataSet masterDBDataSet;
+        
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private MasterDBDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;

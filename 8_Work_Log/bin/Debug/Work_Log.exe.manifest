@@ -224,14 +224,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.DataVisualization.dll" size="5100672">
-      <assemblyIdentity name="Microsoft.ReportViewer.DataVisualization" version="15.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.DataVisualization.dll" size="5416096">
+      <assemblyIdentity name="Microsoft.ReportViewer.DataVisualization" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QS5+AVzEp+RHtOpHKgSQLrRVI7rXM7Ci0IAgL6uNUjA=</dsig:DigestValue>
+        <dsig:DigestValue>32NmbwFRbFbGABKO8rUNNpXf/fWY4TZ+fe+enWoSOpI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -488,14 +488,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.ProcessingObjectModel.dll" size="104072">
-      <assemblyIdentity name="Microsoft.ReportViewer.ProcessingObjectModel" version="15.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.ProcessingObjectModel.dll" size="115880">
+      <assemblyIdentity name="Microsoft.ReportViewer.ProcessingObjectModel" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8LSIYVRZFuBxZXbIyHsmhRSW0KdxcOW929kFQ7S3p+c=</dsig:DigestValue>
+        <dsig:DigestValue>uMiTWAb4d38wHVY/k31AuwZskp7pVunHnokiNaP+z0M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.WebForms.dll" size="1695392">
+      <assemblyIdentity name="Microsoft.ReportViewer.WebForms" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>c1xv8O76ADWmbvTYdD/yXr/fGMqLlITblpOg6w/qyeo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -632,14 +644,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="391880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="392456">
       <assemblyIdentity name="Microsoft.SqlServer.Types" version="14.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aDughU/4oIdP0U5PVA/hienfFEP3z8qTXas2lk6ov0s=</dsig:DigestValue>
+        <dsig:DigestValue>MBCP8iJXWg/sjexlvJLRsHc+FCmr75GNlp3/63tbsso=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -723,7 +735,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kdJTw1eilg+HU2xUz/Gog4Ot9emEOobd11gvv8H7F2U=</dsig:DigestValue>
+        <dsig:DigestValue>fBKflkdiLW6JC8rBNB/C9eAKWzK64BAJCbt/J3NngB8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -745,7 +757,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wKOrwsyJ509EtbiLgSmf3UkjilxJMGbgo44LKUJBXwM=</dsig:DigestValue>
+      <dsig:DigestValue>WWJ/RFWJoaLiJawHtFBKi7seRtpgVabRjCBPVx+kim0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="MasterDB_log.ldf" size="8388608" writeableType="applicationData">
@@ -754,7 +766,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oU7/Sa6t8PplR9cp6yyGYNVtpDpEUJhXYKuVjnKAVP8=</dsig:DigestValue>
+      <dsig:DigestValue>UENIzfxsCBdoEKJANzHIXnREstTL1czUsnTb0zRTALE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">
@@ -775,13 +787,13 @@
       <dsig:DigestValue>DQC/F1apVnlxXpPcgrGzGZR3PQKfu9Tg6FE27wgrhqk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SqlServerTypes\x64\SqlServerSpatial140.dll" size="736952">
+  <file name="SqlServerTypes\x64\SqlServerSpatial140.dll" size="732936">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/blDmQ2kNUPD90GteDw8TMKRWKtAgefDEnmgRL7Pqj4=</dsig:DigestValue>
+      <dsig:DigestValue>WFoMNnaROt3XfwxAt9b0DeSBHde3Difv9+ABpcoGX7E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\x86\msvcr120.dll" size="971584">
@@ -793,22 +805,22 @@
       <dsig:DigestValue>HIRJ9BdWbdD9adwh73fUa5R1+6rHMdo1vccWafIiQsg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SqlServerTypes\x86\SqlServerSpatial140.dll" size="589504">
+  <file name="SqlServerTypes\x86\SqlServerSpatial140.dll" size="587016">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rLztN4VXMw69Q6b6MX/FIYxzyxMKuwcEaaz4TnqMk8A=</dsig:DigestValue>
+      <dsig:DigestValue>8eJ1vDSOzCKLH6hLBhOVcB8W9jAQ9fjqzX4uog5/7Gw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Work_Log.exe.config" size="551">
+  <file name="Work_Log.exe.config" size="1681">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0j/GsJVi54MVcDswne6IFkygQPAk6ep/HxijqcICG6Q=</dsig:DigestValue>
+      <dsig:DigestValue>RGxOE+Hm8wbU7vs5lCmCiHeQW5qs8qJy5vmnrrWP2MM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -1,5 +1,4 @@
 ﻿using ExcelDataReader;
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,8 +87,7 @@ namespace Work_Log
 
         private void frmLogs_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'masterDBDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.masterDBDataSet.Products);
+            
 
         }
 
@@ -116,9 +114,14 @@ namespace Work_Log
 
         private void first100RecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            AllRecords objRecords = new AllRecords();
+            objRecords.Visible = true;
+        }
 
-            
+        private void sRecordsNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllRecords objRecords = new AllRecords();
+            objRecords.Visible = true;
         }
     }
 }
