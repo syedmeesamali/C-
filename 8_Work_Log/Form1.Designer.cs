@@ -42,20 +42,14 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -83,21 +77,21 @@
             // importExcelFileToolStripMenuItem
             // 
             this.importExcelFileToolStripMenuItem.Name = "importExcelFileToolStripMenuItem";
-            this.importExcelFileToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.importExcelFileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.importExcelFileToolStripMenuItem.Text = "Import Excel File";
             this.importExcelFileToolStripMenuItem.Click += new System.EventHandler(this.importExcelFileToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.saveToolStripMenuItem.Text = "Import Data";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -114,21 +108,21 @@
             // first100RecordsToolStripMenuItem
             // 
             this.first100RecordsToolStripMenuItem.Name = "first100RecordsToolStripMenuItem";
-            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.first100RecordsToolStripMenuItem.Text = "First 100 Records";
             this.first100RecordsToolStripMenuItem.Click += new System.EventHandler(this.first100RecordsToolStripMenuItem_Click);
             // 
             // sRecordsNameToolStripMenuItem
             // 
             this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
-            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
             this.sRecordsNameToolStripMenuItem.Click += new System.EventHandler(this.sRecordsNameToolStripMenuItem_Click);
             // 
             // aRecordsIDToolStripMenuItem
             // 
             this.aRecordsIDToolStripMenuItem.Name = "aRecordsIDToolStripMenuItem";
-            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aRecordsIDToolStripMenuItem.Text = "A Records (ID)";
             // 
             // aboutToolStripMenuItem
@@ -149,42 +143,16 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.prodIDDataGridViewTextBoxColumn,
-            this.prodNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(352, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(487, 378);
             this.dataGridView1.TabIndex = 1;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // prodIDDataGridViewTextBoxColumn
-            // 
-            this.prodIDDataGridViewTextBoxColumn.DataPropertyName = "ProdID";
-            this.prodIDDataGridViewTextBoxColumn.HeaderText = "ProdID";
-            this.prodIDDataGridViewTextBoxColumn.Name = "prodIDDataGridViewTextBoxColumn";
-            // 
-            // prodNameDataGridViewTextBoxColumn
-            // 
-            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "ProdName";
-            this.prodNameDataGridViewTextBoxColumn.HeaderText = "ProdName";
-            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
-            // 
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "Products";
-            
             // 
-            // masterDBDataSet
-            // 
-            
             // btnData
             // 
             this.btnData.Location = new System.Drawing.Point(111, 89);
@@ -221,10 +189,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Data in selected sheet:";
             // 
-            // productsTableAdapter
-            // 
-            
-            // 
             // frmLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +211,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,9 +230,7 @@
         private System.Windows.Forms.ToolStripMenuItem importExcelFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
-        
         private System.Windows.Forms.BindingSource productsBindingSource;
-        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,17 @@ namespace Work_Log
 
         private void AllRecords_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'masterDBDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.masterDBDataSet.Products);
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport localReport = reportViewer1.LocalReport;
+            localReport.ReportPath = "ProductsData.rdlc";
+            DataSet dataset = new DataSet("ProductData");
 
+            ReportDataSource dsSalesOrder = new ReportDataSource();
+            dsSalesOrder.Name = "SalesOrder";
+            dsSalesOrder.Value = dataset.Tables["Products"];
+
+            localReport.DataSources.Add(dsSalesOrder);
+            reportViewer1.RefreshReport();
         }
     }
 }

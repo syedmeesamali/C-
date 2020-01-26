@@ -1,0 +1,3 @@
+﻿DELETE  E
+FROM (SELECT  rn = ROW_NUMBER() OVER (ORDER BY (SELECT 0)) FROM dbo.prods) AS E
+WHERE E.rn = 5

@@ -77,7 +77,7 @@ namespace ExceltoSQL
         {
             if(IsValid())
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True");
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -115,18 +115,19 @@ namespace ExceltoSQL
         private void cmdDelete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This will delete the selected datagridview record!", "Error");
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True");
             try
             {
                 int id = dataGridView.CurrentCell.RowIndex;
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM prods WHERE Product_ID = " + id + "";
+                cmd.CommandText = "DELETE  E " +
+                "FROM (SELECT  rn = ROW_NUMBER() OVER(ORDER BY(SELECT 0)) FROM dbo.prods) AS E " +
+                "WHERE E.rn = " +  (id+1).ToString() + "";
                 conn.Open();
                 cmd.Connection = conn;
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                dataGridView.Rows.RemoveAt(dataGridView.SelectedRows[0].Index);
                 MessageBox.Show("Row Deleted!");
             }
 

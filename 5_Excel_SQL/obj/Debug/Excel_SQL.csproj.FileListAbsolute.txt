@@ -63,7 +63,6 @@ F:\Repos\CSharp\5_Excel_SQL\bin\Debug\ExcelDataReader.xml
 F:\Repos\CSharp\5_Excel_SQL\bin\Debug\ExcelDataReader.DataSet.pdb
 F:\Repos\CSharp\5_Excel_SQL\bin\Debug\ExcelDataReader.DataSet.xml
 F:\Repos\CSharp\5_Excel_SQL\bin\Debug\Z.Dapper.Plus.xml
-F:\Repos\CSharp\5_Excel_SQL\obj\Debug\Excel_SQL.csprojAssemblyReference.cache
 F:\Repos\CSharp\5_Excel_SQL\obj\Debug\ExceltoSQL.frmMain.resources
 F:\Repos\CSharp\5_Excel_SQL\obj\Debug\ExceltoSQL.Properties.Resources.resources
 F:\Repos\CSharp\5_Excel_SQL\obj\Debug\Excel_SQL.csproj.GenerateResource.cache
