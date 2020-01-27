@@ -197,7 +197,6 @@ D:\repos\CSharp\8b_Work_Log_Home\bin\Debug\pt\Microsoft.ReportViewer.DataVisuali
 D:\repos\CSharp\8b_Work_Log_Home\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\8b_Work_Log_Home\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\8b_Work_Log_Home\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.csprojAssemblyReference.cache
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.frmLogs.resources
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.Form2.resources
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.Properties.Resources.resources
@@ -210,3 +209,5 @@ D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.application
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.csproj.CopyComplete
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.exe
 D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.pdb
+D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.Form3.resources
+D:\repos\CSharp\8b_Work_Log_Home\obj\Debug\Work_Log.csprojAssemblyReference.cache
