@@ -16,5 +16,13 @@ namespace Work_Log
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'MasterDBDataSet.Products' table. You can move, or remove it, as needed.
+            this.ProductsTableAdapter.Fill(this.MasterDBDataSet.Products);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

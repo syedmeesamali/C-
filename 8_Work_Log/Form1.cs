@@ -106,12 +106,10 @@ namespace Work_Log
 
         private void first100RecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Form2 myform = new Form2();
+            myform.Visible = true;
         }
 
-        private void sRecordsNameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

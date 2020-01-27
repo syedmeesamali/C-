@@ -12,7 +12,7 @@
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>3.97917in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -242,9 +242,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.13417in</Top>
-        <Left>0.11333in</Left>
+        <Left>1.23833in</Left>
         <Height>0.5in</Height>
-        <Width>3in</Width>
+        <Width>5.97917in</Width>
         <Style>
           <Border>
             <Style>None</Style>

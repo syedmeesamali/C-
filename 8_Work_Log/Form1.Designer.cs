@@ -125,7 +125,7 @@
             this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
             this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
-            this.sRecordsNameToolStripMenuItem.Click += new System.EventHandler(this.sRecordsNameToolStripMenuItem_Click);
+            
             // 
             // aRecordsIDToolStripMenuItem
             // 
