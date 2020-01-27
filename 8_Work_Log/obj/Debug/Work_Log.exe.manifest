@@ -80,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="166840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="166824">
       <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jF9kFdCjPvFMt2IScD8oMHdqGZpn3dcA9tnFLwYbfHM=</dsig:DigestValue>
+        <dsig:DigestValue>3NCPS4iThtzh1OMBUD5dF4LqJeeltK7ZtdFrJEZ2z6I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

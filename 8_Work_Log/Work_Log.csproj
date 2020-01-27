@@ -59,7 +59,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E4A5B1BA5E4414FEAC03AF0BEEF1781F1F435B7F</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>CAAB0D602A3D8E21B27E126307CBD914B65CA9EC</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Work_Log_TemporaryKey.pfx</ManifestKeyFile>
@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
