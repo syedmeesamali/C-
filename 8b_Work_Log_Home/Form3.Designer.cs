@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.MasterDBDataSet = new Work_Log.MasterDBDataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MasterDBDataSet = new Work_Log.MasterDBDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProductsTableAdapter = new Work_Log.MasterDBDataSetTableAdapters.ProductsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProductsBindingSource
+            // 
+            this.ProductsBindingSource.DataMember = "Products";
+            this.ProductsBindingSource.DataSource = this.MasterDBDataSet;
+            // 
+            // MasterDBDataSet
+            // 
+            this.MasterDBDataSet.DataSetName = "MasterDBDataSet";
+            this.MasterDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +62,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(819, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // MasterDBDataSet
-            // 
-            this.MasterDBDataSet.DataSetName = "MasterDBDataSet";
-            this.MasterDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProductsBindingSource
-            // 
-            this.ProductsBindingSource.DataMember = "Products";
-            this.ProductsBindingSource.DataSource = this.MasterDBDataSet;
-            // 
             // ProductsTableAdapter
             // 
             this.ProductsTableAdapter.ClearBeforeFill = true;
@@ -71,11 +72,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MasterDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

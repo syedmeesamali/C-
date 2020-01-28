@@ -716,14 +716,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="287144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Work_Log.exe" size="390568">
       <assemblyIdentity name="Work_Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5sEmjO/BGOItiNghnLHw2Np0T7MmLAlE48wnSDiyscs=</dsig:DigestValue>
+        <dsig:DigestValue>XxUdRTNoX+1crE9Ixhv/7siCfxmMpmmRv8lr+3KGcJg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
