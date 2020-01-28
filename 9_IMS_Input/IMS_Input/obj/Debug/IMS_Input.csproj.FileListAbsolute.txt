@@ -7,3 +7,11 @@ F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csproj.GenerateResourc
 F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.exe
 F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.pdb
 F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.AboutBox1.resources
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csprojAssemblyReference.cache
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.DataSet.dll
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.dll
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.pdb
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.xml
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.DataSet.pdb
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\ExcelDataReader.DataSet.xml
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csproj.CopyComplete
