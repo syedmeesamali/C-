@@ -1,0 +1,9 @@
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\IMS_Input.exe.config
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\IMS_Input.exe
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\IMS_Input.pdb
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.Form1.resources
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.Properties.Resources.resources
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csproj.GenerateResource.cache
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.exe
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.pdb
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.AboutBox1.resources
