@@ -4,8 +4,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
-
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace IMS_Input
 {
@@ -66,7 +70,8 @@ namespace IMS_Input
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook wb = xlApp.Workbooks.Open(@"C:\Users\cclgulf\Desktop\Projects.xlsx\");
         }
     }
 }
