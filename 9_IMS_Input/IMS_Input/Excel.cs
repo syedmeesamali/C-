@@ -20,16 +20,10 @@ namespace IMS_Input
             {
                 wb = xlApp.Workbooks.Open(path);
                 ws = wb.Worksheets[sheet];
-            } catch (System.IO.IOException e)
+            } catch (System.IO.IOException)
             {
                  MessageBox.Show("Make sure no other Excel window is Open and Excel is closed!", MessageBoxButtons.OK.ToString());
-            }
-            finally
-            {
-                wb.Close();
-            }
-            
-            
+            }         
         }
 
         public string ReadCell(int i, int j)
@@ -44,8 +38,7 @@ namespace IMS_Input
             {
                 return "";
             }
-        }
-
-        
+        } //End of readcell
+       
     }
 }

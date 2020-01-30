@@ -45,3 +45,4 @@ D:\repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csproj.CopyComplete
 D:\repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csprojAssemblyReference.cache
 F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\EPPlus.dll
 F:\Repos\CSharp\9_IMS_Input\IMS_Input\bin\Debug\EPPlus.xml
+F:\Repos\CSharp\9_IMS_Input\IMS_Input\obj\Debug\IMS_Input.csprojAssemblyReference.cache

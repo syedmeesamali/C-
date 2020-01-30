@@ -34,8 +34,15 @@ namespace IMS_Input
 
         private void btnData_Click(object sender, EventArgs e)
         {
-            DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
-            dataGridView1.DataSource = dt;
+            try
+            {
+                DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
+                dataGridView1.DataSource = dt;
+            } catch (System.IO.IOException)
+            {
+                MessageBox.Show("Select sheet first please!", MessageBoxButtons.OK.ToString());
+            }
+            
         }
 
         private void cboSheets_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,8 +78,14 @@ namespace IMS_Input
 
         public void OpenFile()
         {
-            ExcelWork excel = new ExcelWork(@"C:\Users\cclgulf\Desktop\test.xlsx", 1);
-            MessageBox.Show(excel.ReadCell(0, 0));            
+            try
+            {
+                ExcelWork excel = new ExcelWork(@"C:\Users\cclgulf\Desktop\test.xlsx", 1);
+                MessageBox.Show(excel.ReadCell(0, 0));
+            } catch (System.IO.IOException)
+            {
+                MessageBox.Show("Make sure no other Excel window is Open and Excel is closed!", MessageBoxButtons.OK.ToString());
+            }   
         }
 
         private void importDataToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,9 +93,5 @@ namespace IMS_Input
             OpenFile();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
