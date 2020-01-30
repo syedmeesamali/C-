@@ -96,7 +96,7 @@ namespace IMS_Input
 
         public void OpenFile()
         {
-            path = "C:\Users\SYED\Desktop\test.xlsx";
+            path = @"C:\Users\SYED\Desktop\test.xlsx";
             ExcelRead excel = new ExcelRead(path, 1);
         }
 
