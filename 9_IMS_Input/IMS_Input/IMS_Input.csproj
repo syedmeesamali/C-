@@ -57,10 +57,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D14E37FB1B59C232A5CDCB19D235BD3928A49F87</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C19FFE8643B799353C79B0244A962F6207426FE3</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>IMS_Input_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>IMS_Input_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -122,6 +122,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IMS_Input_1_TemporaryKey.pfx" />
     <None Include="IMS_Input_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />

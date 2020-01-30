@@ -40,6 +40,7 @@
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importExcelSheetToolStripMenuItem,
+            this.importDataToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -89,7 +91,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -141,6 +143,13 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Sheet:";
             // 
+            // importDataToolStripMenuItem
+            // 
+            this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importDataToolStripMenuItem.Text = "Import Data";
+            
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,7 +167,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IMS Data Import";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -180,6 +189,7 @@
         private System.Windows.Forms.Button btnData;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem importDataToolStripMenuItem;
     }
 }
 

@@ -63,15 +63,42 @@ namespace IMS_Input
                             foreach (DataTable table in tableCollection)
                                 cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
                         }
-                    }
-                }
+                    }//End of reading stream
+                }//If workbook is selected for opening
+            }//Filter
+        }
+
+
+        string path = "";
+        Excel.Application xlApp = new Excel.Application();
+        Excel.Workbook wb;
+        Excel.Worksheet ws;
+
+        public void ExcelRead(string path, int sheet)
+        {
+            this.path = path;
+            //@"C:\Users\SYED\Desktop\original\2019-11-16_113458_1963"
+            wb = xlApp.Workbooks.Open(path);
+        }
+
+        public string ReadCell(int i, int j)
+        {
+            i++;
+            j++;
+            if (ws.Cells[i,j].value2 != null)
+            {
+                return ws.Cells[i, j].value2;
+            } else
+            {
+                return "";
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void OpenFile()
         {
-            Excel.Application xlApp = new Excel.Application();
-            Excel.Workbook wb = xlApp.Workbooks.Open(@"C:\Users\cclgulf\Desktop\Projects.xlsx\");
+            path = "C:\Users\SYED\Desktop\test.xlsx";
+            ExcelRead excel = new ExcelRead(path, 1);
         }
+
     }
 }
