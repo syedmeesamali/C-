@@ -69,36 +69,20 @@ namespace IMS_Input
         }
 
 
-        string path = "";
-        Excel.Application xlApp = new Excel.Application();
-        Excel.Workbook wb;
-        Excel.Worksheet ws;
-
-        public void ExcelRead(string path, int sheet)
-        {
-            this.path = path;
-            //@"C:\Users\SYED\Desktop\original\2019-11-16_113458_1963"
-            wb = xlApp.Workbooks.Open(path);
-        }
-
-        public string ReadCell(int i, int j)
-        {
-            i++;
-            j++;
-            if (ws.Cells[i,j].value2 != null)
-            {
-                return ws.Cells[i, j].value2;
-            } else
-            {
-                return "";
-            }
-        }
-
         public void OpenFile()
         {
-            path = @"C:\Users\SYED\Desktop\test.xlsx";
-            ExcelRead excel = new ExcelRead(path, 1);
+            ExcelWork excel = new ExcelWork(@"C:\Users\cclgulf\Desktop\test.xlsx", 1);
+            MessageBox.Show(excel.ReadCell(0, 0));            
         }
 
+        private void importDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFile();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

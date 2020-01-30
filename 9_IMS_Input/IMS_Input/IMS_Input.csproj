@@ -57,10 +57,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C19FFE8643B799353C79B0244A962F6207426FE3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>F47511BD4030798F1182BD3B0C9E8EDE746CE555</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>IMS_Input_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>IMS_Input_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -104,6 +104,7 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Excel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +130,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="IMS_Input_1_TemporaryKey.pfx" />
+    <None Include="IMS_Input_2_TemporaryKey.pfx" />
     <None Include="IMS_Input_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
