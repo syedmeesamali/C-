@@ -44,15 +44,15 @@ namespace IMS_Input
 
         private void newWorkbookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var workbook = new ExcelFile();
-            var worksheet = workbook.Worksheets.Add("Hello World");
+            //var workbook = new ExcelFile();
+            //var worksheet = workbook.Worksheets.Add("Hello World");
 
-            worksheet.Cells[0, 0].Value = "English:";
-            worksheet.Cells[0, 1].Value = "Hello";
-            worksheet.Cells[1, 0].Value = "Russian:";
-            worksheet.Cells[2, 0].Value = "Chinese:";
+            //worksheet.Cells[0, 0].Value = "English:";
+            //worksheet.Cells[0, 1].Value = "Hello";
+            //worksheet.Cells[1, 0].Value = "Russian:";
+            //worksheet.Cells[2, 0].Value = "Chinese:";
             
-            workbook.Save("Hello World.xlsx");
+            //workbook.Save("Hello World.xlsx");
         }
 
         private void importSpecialNewToolStripMenuItem_Click(object sender, EventArgs e)
