@@ -95,3 +95,6 @@ D:\repos\CSharp\9b_IMS_Input\obj\Debug\IMS_Input.TrustInfo.xml
 D:\repos\CSharp\9b_IMS_Input\obj\Debug\IMS_Input.exe.manifest
 D:\repos\CSharp\9b_IMS_Input\obj\Debug\IMS_Input.application
 D:\repos\CSharp\9b_IMS_Input\obj\Debug\IMS_Input.csproj.CopyComplete
+D:\repos\CSharp\9b_IMS_Input\bin\Debug\IronXL.dll
+D:\repos\CSharp\9b_IMS_Input\bin\Debug\IronXL.xml
+D:\repos\CSharp\9b_IMS_Input\obj\Debug\IMS_Input.csprojAssemblyReference.cache

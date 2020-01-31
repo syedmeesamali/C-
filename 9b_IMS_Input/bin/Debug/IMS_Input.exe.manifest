@@ -78,14 +78,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Input.exe" size="157096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Input.exe" size="163752">
       <assemblyIdentity name="IMS_Input" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XF/4U7QNSSNxCksRMPCJFZNCT62iSMRnpaLDn1vVq7Q=</dsig:DigestValue>
+        <dsig:DigestValue>u081vioBFSAcguSh87Hgx8Dt0JZeFlUmlnDFpINnNyk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IronXL.dll" size="5769728">
+      <assemblyIdentity name="IronXL" version="2019.5.2.0" publicKeyToken="0F5804B6690BAD1E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5lYWc9GQr7znSZBhIH4lgK9MYzLtV38y6RT6HpVoF+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
