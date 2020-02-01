@@ -52,7 +52,7 @@ namespace ExceltoSQL
         private void btnData_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Will show now data stored in Locald DB = prod_localdb");
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True"); 
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -69,17 +69,24 @@ namespace ExceltoSQL
         {
             if(IsValid())
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True");
-                conn.Open();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName.Text + "')";
-                cmd.ExecuteNonQuery();
-                txtCode.Text = "";
-                txtProdName.Text = "";
-                dataGridView.Update();
-                dataGridView.Refresh();
-                MessageBox.Show("Date inserted into local DB successfully!");
+                try
+                {
+                    SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\CSharp\5_Excel_SQL\prod_localdb.mdf;Integrated Security=True");
+                    conn.Open();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO prods(Product_ID, Product_Name) VALUES('" + txtCode.Text + "', '" + txtProdName.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    txtCode.Text = "";
+                    txtProdName.Text = "";
+                    dataGridView.Update();
+                    dataGridView.Refresh();
+                    MessageBox.Show("Date inserted into local DB successfully!");
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Exception: " + ex.ToString());
+                }
+                
             }
             else
             {
@@ -132,7 +139,10 @@ namespace ExceltoSQL
                 conn.Close();
             }
         } //End of cmdDelete button function
-    
-    
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }//End of class
 }
