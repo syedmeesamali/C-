@@ -116,20 +116,20 @@
             // first100RecordsToolStripMenuItem
             // 
             this.first100RecordsToolStripMenuItem.Name = "first100RecordsToolStripMenuItem";
-            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.first100RecordsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.first100RecordsToolStripMenuItem.Text = "First 100 Records";
             this.first100RecordsToolStripMenuItem.Click += new System.EventHandler(this.first100RecordsToolStripMenuItem_Click);
             // 
             // sRecordsNameToolStripMenuItem
             // 
             this.sRecordsNameToolStripMenuItem.Name = "sRecordsNameToolStripMenuItem";
-            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sRecordsNameToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.sRecordsNameToolStripMenuItem.Text = "S Records (Name)";
             // 
             // aRecordsIDToolStripMenuItem
             // 
             this.aRecordsIDToolStripMenuItem.Name = "aRecordsIDToolStripMenuItem";
-            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aRecordsIDToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aRecordsIDToolStripMenuItem.Text = "All Records";
             this.aRecordsIDToolStripMenuItem.Click += new System.EventHandler(this.aRecordsIDToolStripMenuItem_Click);
             // 
@@ -232,6 +232,7 @@
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "Products";
+
             // 
             // frmLogs
             // 

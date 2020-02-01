@@ -134,3 +134,8 @@ D:\repos\CSharp\9_IMS_Input\bin\Debug\ICSharpCode.SharpZipLib.xml
 D:\repos\CSharp\9_IMS_Input\bin\Debug\EPPlus.dll
 D:\repos\CSharp\9_IMS_Input\bin\Debug\EPPlus.xml
 D:\repos\CSharp\9_IMS_Input\obj\Debug\IMS_Input.csprojAssemblyReference.cache
+D:\repos\CSharp\9_IMS_Input\bin\Debug\Stocks.mdf
+D:\repos\CSharp\9_IMS_Input\bin\Debug\Stocks_log.ldf
+D:\repos\CSharp\9_IMS_Input\bin\Debug\Z.Dapper.Plus.dll
+D:\repos\CSharp\9_IMS_Input\bin\Debug\Z.Dapper.Plus.xml
+D:\repos\CSharp\9_IMS_Input\obj\Debug\IMS_Input.frmStockin.resources

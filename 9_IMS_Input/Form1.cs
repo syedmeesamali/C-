@@ -1,4 +1,4 @@
-﻿using ExcelDataReader;
+﻿
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using OfficeOpenXml;
-
+using Z.Dapper.Plus;
 
 
 namespace IMS_Input
@@ -23,30 +23,10 @@ namespace IMS_Input
         //Import PREPARED SHEETS
         private void importPreparedFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog()
-            { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" }) //Filter for the type of files to show
-            {
-                if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
-                {
-                    
-                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                    {
-                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
-                        {
-                            DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
-                            {
-                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
-                            });
-                            tableCollection = result.Tables;
-                            cboSheets.Items.Clear(); // clear the combo box
-                            foreach (DataTable table in tableCollection)
-                                cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
-                        }
-                    }
-                }
-            } //End of filter for imoprt
-
-        }//End of button functions
+            this.Hide();
+            frmStockin frmstockin = new frmStockin();
+            frmstockin.Show();
+        }
 
 
         //EXIT APPLICATION
@@ -101,7 +81,6 @@ namespace IMS_Input
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
-            //dataGridView1.DataSource = dt;
             if (dt != null)
             {
                 List<Stockin> stockin = new List<Stockin>();
@@ -119,30 +98,32 @@ namespace IMS_Input
                     stockin.Add(stockinItems);
                 }
                 //productsBindingSource.DataSource = products;
-
             }
-
-
             //BELOW CODE WILL IMPORT DATA TO LOCAL DATABASE
-
-
+            /*
             try
             {
-                DapperPlusManager.Entity<Stockin>().Table("Stockin");
-                List<Stockin> products = productsBindingSource.DataSource as List<Products>;
-                if (products != null)
+                
+                DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+                List<Stockin> stockin = productsBindingSource.DataSource as List<Stockin>;
+                if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\Stocks.mdf;Integrated Security=True"))
                     {
-                        db.BulkInsert(products);
+                        db.BulkInsert(stockin);
                     }
                 }
-                MessageBox.Show("Finished!");
+                MessageBox.Show("Database update done!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
+        }
+
+        private void importStockOutFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

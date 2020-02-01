@@ -44,6 +44,8 @@
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdImportData = new System.Windows.Forms.Button();
+            this.importStockOutFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,21 +75,22 @@
             // importExcelSheetToolStripMenuItem
             // 
             this.importExcelSheetToolStripMenuItem.Name = "importExcelSheetToolStripMenuItem";
-            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.importExcelSheetToolStripMenuItem.Text = "Import Excel Sheet";
             this.importExcelSheetToolStripMenuItem.Click += new System.EventHandler(this.importExcelSheetToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // preparedFileToolStripMenuItem
             // 
             this.preparedFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importPreparedFileToolStripMenuItem});
+            this.importPreparedFileToolStripMenuItem,
+            this.importStockOutFileToolStripMenuItem});
             this.preparedFileToolStripMenuItem.Name = "preparedFileToolStripMenuItem";
             this.preparedFileToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.preparedFileToolStripMenuItem.Text = "Prepared File";
@@ -95,8 +98,8 @@
             // importPreparedFileToolStripMenuItem
             // 
             this.importPreparedFileToolStripMenuItem.Name = "importPreparedFileToolStripMenuItem";
-            this.importPreparedFileToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.importPreparedFileToolStripMenuItem.Text = "Import Prepared File";
+            this.importPreparedFileToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.importPreparedFileToolStripMenuItem.Text = "Import Stock-In File";
             this.importPreparedFileToolStripMenuItem.Click += new System.EventHandler(this.importPreparedFileToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
@@ -108,7 +111,8 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.manualToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -116,7 +120,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -170,11 +174,24 @@
             // 
             this.cmdImportData.Location = new System.Drawing.Point(424, 354);
             this.cmdImportData.Name = "cmdImportData";
-            this.cmdImportData.Size = new System.Drawing.Size(192, 24);
+            this.cmdImportData.Size = new System.Drawing.Size(251, 24);
             this.cmdImportData.TabIndex = 10;
-            this.cmdImportData.Text = "&Import to Database";
+            this.cmdImportData.Text = "&Import to Relevant Database";
             this.cmdImportData.UseVisualStyleBackColor = true;
             this.cmdImportData.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // importStockOutFileToolStripMenuItem
+            // 
+            this.importStockOutFileToolStripMenuItem.Name = "importStockOutFileToolStripMenuItem";
+            this.importStockOutFileToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.importStockOutFileToolStripMenuItem.Text = "Import Stock-Out File";
+            this.importStockOutFileToolStripMenuItem.Click += new System.EventHandler(this.importStockOutFileToolStripMenuItem_Click);
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
             // 
             // Form1
             // 
@@ -219,6 +236,8 @@
         private System.Windows.Forms.ToolStripMenuItem importPreparedFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.Button cmdImportData;
+        private System.Windows.Forms.ToolStripMenuItem importStockOutFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
     }
 }
 
