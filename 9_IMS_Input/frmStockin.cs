@@ -3,6 +3,9 @@ using System;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using Z.Dapper.Plus;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace IMS_Input
 {
@@ -48,9 +51,52 @@ namespace IMS_Input
 
         private void frmStockin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stocksDataSet.StockinTable' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'stocksDataSet.StockinTable' table.
             this.stockinTableTableAdapter.Fill(this.stocksDataSet.StockinTable);
 
+        }
+
+        private void cmdDisplay_Click(object sender, EventArgs e)
+        {
+            DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
+            if (dt != null)
+            {
+                List<Stockin> stockin = new List<Stockin>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Stockin stockinItems = new Stockin();
+                    stockinItems.ID = i;
+                    stockinItems.Date = (DateTime)dt.Rows[i]["Date"]; //Explicit conversion
+                    stockinItems.Sup_ID = dt.Rows[i]["Sup_ID"].ToString();
+                    stockinItems.Sup_Name = dt.Rows[i]["Sup_Name"].ToString();
+                    stockinItems.Prod_ID = dt.Rows[i]["Prod_ID"].ToString();
+                    stockinItems.Prod_Name = dt.Rows[i]["Prod_Name"].ToString();
+                    stockinItems.Expiry = (DateTime)dt.Rows[i]["Expiry"];
+                    stockinItems.Units = (float)dt.Rows[i]["Units"];
+                    stockin.Add(stockinItems);
+                }
+                stockinTableBindingSource.DataSource = stockin;
+            }
+            //BELOW CODE WILL IMPORT DATA TO LOCAL DATABASE
+           
+            try
+            { 
+                DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+                List<Stockin> stockin = stockinTableBindingSource.DataSource as List<Stockin>;
+                if (stockin != null)
+                {
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\Stocks.mdf;Integrated Security=True"))
+                    {
+                        db.BulkInsert(stockin);
+                    }
+                }
+                MessageBox.Show("Database update done!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

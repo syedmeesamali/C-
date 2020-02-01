@@ -35,17 +35,20 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preparedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importPreparedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importStockOutFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdImportData = new System.Windows.Forms.Button();
-            this.importStockOutFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockMainReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filterReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expiryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,14 +78,14 @@
             // importExcelSheetToolStripMenuItem
             // 
             this.importExcelSheetToolStripMenuItem.Name = "importExcelSheetToolStripMenuItem";
-            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.importExcelSheetToolStripMenuItem.Text = "Import Excel Sheet";
             this.importExcelSheetToolStripMenuItem.Click += new System.EventHandler(this.importExcelSheetToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -102,8 +105,19 @@
             this.importPreparedFileToolStripMenuItem.Text = "Import Stock-In File";
             this.importPreparedFileToolStripMenuItem.Click += new System.EventHandler(this.importPreparedFileToolStripMenuItem_Click);
             // 
+            // importStockOutFileToolStripMenuItem
+            // 
+            this.importStockOutFileToolStripMenuItem.Name = "importStockOutFileToolStripMenuItem";
+            this.importStockOutFileToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.importStockOutFileToolStripMenuItem.Text = "Import Stock-Out File";
+            this.importStockOutFileToolStripMenuItem.Click += new System.EventHandler(this.importStockOutFileToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem
             // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockMainReportToolStripMenuItem,
+            this.filterReportToolStripMenuItem,
+            this.expiryReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
@@ -120,9 +134,15 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
             // 
             // dataGridView1
             // 
@@ -180,18 +200,23 @@
             this.cmdImportData.UseVisualStyleBackColor = true;
             this.cmdImportData.Click += new System.EventHandler(this.button1_Click);
             // 
-            // importStockOutFileToolStripMenuItem
+            // stockMainReportToolStripMenuItem
             // 
-            this.importStockOutFileToolStripMenuItem.Name = "importStockOutFileToolStripMenuItem";
-            this.importStockOutFileToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.importStockOutFileToolStripMenuItem.Text = "Import Stock-Out File";
-            this.importStockOutFileToolStripMenuItem.Click += new System.EventHandler(this.importStockOutFileToolStripMenuItem_Click);
+            this.stockMainReportToolStripMenuItem.Name = "stockMainReportToolStripMenuItem";
+            this.stockMainReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockMainReportToolStripMenuItem.Text = "Stock Main Report";
             // 
-            // manualToolStripMenuItem
+            // filterReportToolStripMenuItem
             // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
+            this.filterReportToolStripMenuItem.Name = "filterReportToolStripMenuItem";
+            this.filterReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filterReportToolStripMenuItem.Text = "Filter Report";
+            // 
+            // expiryReportToolStripMenuItem
+            // 
+            this.expiryReportToolStripMenuItem.Name = "expiryReportToolStripMenuItem";
+            this.expiryReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.expiryReportToolStripMenuItem.Text = "Expiry Report";
             // 
             // Form1
             // 
@@ -238,6 +263,9 @@
         private System.Windows.Forms.Button cmdImportData;
         private System.Windows.Forms.ToolStripMenuItem importStockOutFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockMainReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filterReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem expiryReportToolStripMenuItem;
     }
 }
 
