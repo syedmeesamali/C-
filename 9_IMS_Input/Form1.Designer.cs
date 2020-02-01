@@ -32,10 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExcelSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newWorkbookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importSpecialNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preparedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importPreparedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,6 +43,7 @@
             this.btnData = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmdImportData = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.preparedFileToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -62,9 +65,6 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importExcelSheetToolStripMenuItem,
-            this.importDataToolStripMenuItem,
-            this.newWorkbookToolStripMenuItem,
-            this.importSpecialNewToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -73,37 +73,37 @@
             // importExcelSheetToolStripMenuItem
             // 
             this.importExcelSheetToolStripMenuItem.Name = "importExcelSheetToolStripMenuItem";
-            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.importExcelSheetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importExcelSheetToolStripMenuItem.Text = "Import Excel Sheet";
             this.importExcelSheetToolStripMenuItem.Click += new System.EventHandler(this.importExcelSheetToolStripMenuItem_Click);
-            // 
-            // importDataToolStripMenuItem
-            // 
-            this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.importDataToolStripMenuItem.Text = "Import Data (Test.xls)";
-            this.importDataToolStripMenuItem.Click += new System.EventHandler(this.importDataToolStripMenuItem_Click);
-            // 
-            // newWorkbookToolStripMenuItem
-            // 
-            this.newWorkbookToolStripMenuItem.Name = "newWorkbookToolStripMenuItem";
-            this.newWorkbookToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.newWorkbookToolStripMenuItem.Text = "Make Workbook";
-            this.newWorkbookToolStripMenuItem.Click += new System.EventHandler(this.newWorkbookToolStripMenuItem_Click);
-            // 
-            // importSpecialNewToolStripMenuItem
-            // 
-            this.importSpecialNewToolStripMenuItem.Name = "importSpecialNewToolStripMenuItem";
-            this.importSpecialNewToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.importSpecialNewToolStripMenuItem.Text = "Import Special New";
-            this.importSpecialNewToolStripMenuItem.Click += new System.EventHandler(this.importSpecialNewToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // preparedFileToolStripMenuItem
+            // 
+            this.preparedFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importPreparedFileToolStripMenuItem});
+            this.preparedFileToolStripMenuItem.Name = "preparedFileToolStripMenuItem";
+            this.preparedFileToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.preparedFileToolStripMenuItem.Text = "Prepared File";
+            // 
+            // importPreparedFileToolStripMenuItem
+            // 
+            this.importPreparedFileToolStripMenuItem.Name = "importPreparedFileToolStripMenuItem";
+            this.importPreparedFileToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.importPreparedFileToolStripMenuItem.Text = "Import Prepared File";
+            this.importPreparedFileToolStripMenuItem.Click += new System.EventHandler(this.importPreparedFileToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // helpToolStripMenuItem
             // 
@@ -116,7 +116,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -166,11 +166,22 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Sheet:";
             // 
+            // cmdImportData
+            // 
+            this.cmdImportData.Location = new System.Drawing.Point(424, 354);
+            this.cmdImportData.Name = "cmdImportData";
+            this.cmdImportData.Size = new System.Drawing.Size(192, 24);
+            this.cmdImportData.TabIndex = 10;
+            this.cmdImportData.Text = "&Import to Database";
+            this.cmdImportData.UseVisualStyleBackColor = true;
+            this.cmdImportData.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.cmdImportData);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.label2);
@@ -204,9 +215,10 @@
         private System.Windows.Forms.Button btnData;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem importDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newWorkbookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importSpecialNewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preparedFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importPreparedFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.Button cmdImportData;
     }
 }
 
