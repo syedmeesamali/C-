@@ -54,7 +54,7 @@ namespace IMS_Input
         private void frmStockin_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stocksDataSet.StockinTable' table.
-            this.stockinTableTableAdapter.Fill(this.stocksDataSet.StockinTable);
+            //this.stockinTableTableAdapter.Fill(this.stocksDataSet.StockinTable);
 
         }
 

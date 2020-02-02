@@ -85,7 +85,9 @@ namespace IMS_Input
 
         private void importStockOutFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmStockOut frmstockOut = new frmStockOut();
+            frmstockOut.Show();
         }
     }
 }
