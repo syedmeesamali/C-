@@ -46,6 +46,7 @@
             this.cmdDisplay = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stocksDataSet)).BeginInit();
@@ -140,7 +141,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(380, 323);
+            this.btnImport.Location = new System.Drawing.Point(12, 319);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(153, 32);
             this.btnImport.TabIndex = 1;
@@ -150,7 +151,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(380, 367);
+            this.btnExit.Location = new System.Drawing.Point(12, 367);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(153, 32);
             this.btnExit.TabIndex = 2;
@@ -164,7 +165,7 @@
             // 
             // cmdDisplay
             // 
-            this.cmdDisplay.Location = new System.Drawing.Point(60, 367);
+            this.cmdDisplay.Location = new System.Drawing.Point(267, 356);
             this.cmdDisplay.Name = "cmdDisplay";
             this.cmdDisplay.Size = new System.Drawing.Size(153, 32);
             this.cmdDisplay.TabIndex = 3;
@@ -175,7 +176,7 @@
             // cboSheets
             // 
             this.cboSheets.FormattingEnabled = true;
-            this.cboSheets.Location = new System.Drawing.Point(60, 330);
+            this.cboSheets.Location = new System.Drawing.Point(267, 319);
             this.cboSheets.Name = "cboSheets";
             this.cboSheets.Size = new System.Drawing.Size(221, 21);
             this.cboSheets.TabIndex = 10;
@@ -183,17 +184,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 333);
+            this.label2.Location = new System.Drawing.Point(224, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Sheet:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(542, 356);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 32);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "&Import to Database";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmStockin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 429);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmdDisplay);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Button cmdDisplay;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

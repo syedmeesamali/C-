@@ -1,11 +1,11 @@
-﻿using ExcelDataReader;
-using System;
+﻿using System;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using Z.Dapper.Plus;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using ExcelDataReader;
 
 namespace IMS_Input
 {
@@ -27,7 +27,7 @@ namespace IMS_Input
         private void btnImport_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
-            { Filter = "Excel 97-2003 workbooks|*.xls|Excel Workbook|*.xlsx" }) //Filter for the type of files to show
+            { Filter = "Excel 97-2003 workbooks|*.xlsx|Excel Workbook|*.xls" }) //Filter for the type of files to show
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
@@ -41,11 +41,13 @@ namespace IMS_Input
                                 ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
                             });
                             tableCollection = result.Tables;
-                            
+                            cboSheets.Items.Clear(); // clear the combo box
+                            foreach (DataTable table in tableCollection)
+                                cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
                         }
                     }
                 }
-            } //End of filter for imoprt
+            } //End of filter for import 
 
         }
 
@@ -72,20 +74,23 @@ namespace IMS_Input
                     stockinItems.Prod_ID = dt.Rows[i]["Prod_ID"].ToString();
                     stockinItems.Prod_Name = dt.Rows[i]["Prod_Name"].ToString();
                     stockinItems.Expiry = (DateTime)dt.Rows[i]["Expiry"];
-                    stockinItems.Units = (float)dt.Rows[i]["Units"];
+                    stockinItems.Units = float.Parse(dt.Rows[i]["Units"].ToString());
                     stockin.Add(stockinItems);
                 }
                 stockinTableBindingSource.DataSource = stockin;
-            }
+            } //if not null
+        } //End of command
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             //BELOW CODE WILL IMPORT DATA TO LOCAL DATABASE
-           
             try
-            { 
+            {
                 DapperPlusManager.Entity<Stockin>().Table("StockinTable");
                 List<Stockin> stockin = stockinTableBindingSource.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\Stocks.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Input\Stocks.mdf;Integrated Security=True"))
                     {
                         db.BulkInsert(stockin);
                     }
@@ -96,7 +101,6 @@ namespace IMS_Input
             {
                 MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
     }
 }
