@@ -98,5 +98,12 @@ namespace IMS_Input
             DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
             dataGridView1.DataSource = dt;
         }
+
+        //Show the total stocks report
+        private void stockMainReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TotalStocks totalstocks = new TotalStocks();
+            totalstocks.Visible = true;
+        }
     }
 }

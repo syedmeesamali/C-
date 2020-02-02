@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="IMS_Input.exe.manifest" size="12929">
+    <dependentAssembly dependencyType="install" codebase="IMS_Input.exe.manifest" size="52265">
       <assemblyIdentity name="IMS_Input.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZyZAMbDD6CiaVHoW4mza7SrUAdq0m3saGItjF2HgpM4=</dsig:DigestValue>
+        <dsig:DigestValue>ZpWDRCFp/KBk4Ozw5iU1/BjjpQFd0d1ZmOl/H4mZBLE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
