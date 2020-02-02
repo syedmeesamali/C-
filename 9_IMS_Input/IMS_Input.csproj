@@ -57,7 +57,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>570AC288D7045B535A90EF282C852A17FC6E14CE</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>DC7220B522591DEC8890FBC1E74C8FE4FBC9C04D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>IMS_Input_TemporaryKey.pfx</ManifestKeyFile>
@@ -181,6 +181,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TotalStocks.rdlc" />
     <None Include="IMS_Input_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
