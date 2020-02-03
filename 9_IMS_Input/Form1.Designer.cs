@@ -124,20 +124,20 @@
             // stockMainReportToolStripMenuItem
             // 
             this.stockMainReportToolStripMenuItem.Name = "stockMainReportToolStripMenuItem";
-            this.stockMainReportToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.stockMainReportToolStripMenuItem.Text = "StockIn Main Report";
+            this.stockMainReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockMainReportToolStripMenuItem.Text = "StockIn Reports";
             this.stockMainReportToolStripMenuItem.Click += new System.EventHandler(this.stockMainReportToolStripMenuItem_Click);
             // 
             // filterReportToolStripMenuItem
             // 
             this.filterReportToolStripMenuItem.Name = "filterReportToolStripMenuItem";
-            this.filterReportToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.filterReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filterReportToolStripMenuItem.Text = "Filter Report";
             // 
             // expiryReportToolStripMenuItem
             // 
             this.expiryReportToolStripMenuItem.Name = "expiryReportToolStripMenuItem";
-            this.expiryReportToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.expiryReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.expiryReportToolStripMenuItem.Text = "Expiry Report";
             // 
             // helpToolStripMenuItem
@@ -152,14 +152,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             // 
             // dataGridView1

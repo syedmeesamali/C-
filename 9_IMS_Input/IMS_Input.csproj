@@ -57,7 +57,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>54759DCF133E08945B77D8DA4DBE359A5E743C31</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>64F7C34A1EAA0F57CCA5BBDC054561A0164E088E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>IMS_Input_TemporaryKey.pfx</ManifestKeyFile>
@@ -153,6 +153,12 @@
     <Compile Include="frmStockOut.Designer.cs">
       <DependentUpon>frmStockOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockinFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockinFilters.Designer.cs">
+      <DependentUpon>StockinFilters.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stockout.cs" />
     <Compile Include="Excel.cs" />
     <Compile Include="Form1.cs">
@@ -197,6 +203,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StockinFilters.resx">
+      <DependentUpon>StockinFilters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TotalStocks.rdlc" />
     <EmbeddedResource Include="TotalStocks.resx">
       <DependentUpon>TotalStocks.cs</DependentUpon>

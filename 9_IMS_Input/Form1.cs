@@ -102,8 +102,11 @@ namespace IMS_Input
         //Show the total stocks report
         private void stockMainReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TotalStocks totalstocks = new TotalStocks();
-            totalstocks.Visible = true;
+            this.Hide();
+            StockinFilters stockinFilters = new StockinFilters();
+            stockinFilters.Show();
+
+            
         }
     }
 }

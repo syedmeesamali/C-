@@ -296,3 +296,4 @@ D:\repos\CSharp\9_IMS_Input\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualiz
 D:\repos\CSharp\9_IMS_Input\obj\Debug\IMS_Input.TotalStocks.resources
 D:\repos\CSharp\9_IMS_Input\obj\Debug\RdlCompile.cache
 D:\repos\CSharp\9_IMS_Input\obj\Debug\RdlCompile.compiled
+F:\Repos\CSharp\9_IMS_Input\obj\Debug\IMS_Input.StockinFilters.resources
