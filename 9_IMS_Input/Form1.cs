@@ -103,7 +103,7 @@ namespace IMS_Input
         private void stockMainReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StockinFilters stockinFilters = new StockinFilters();
+            StockFilters stockinFilters = new StockFilters();
             stockinFilters.Show();
 
             

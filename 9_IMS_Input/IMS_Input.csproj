@@ -153,11 +153,11 @@
     <Compile Include="frmStockOut.Designer.cs">
       <DependentUpon>frmStockOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockinFilters.cs">
+    <Compile Include="StockFilters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockinFilters.Designer.cs">
-      <DependentUpon>StockinFilters.cs</DependentUpon>
+    <Compile Include="StockFilters.Designer.cs">
+      <DependentUpon>StockFilters.cs</DependentUpon>
     </Compile>
     <Compile Include="Stockout.cs" />
     <Compile Include="Excel.cs" />
@@ -203,8 +203,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StockinFilters.resx">
-      <DependentUpon>StockinFilters.cs</DependentUpon>
+    <EmbeddedResource Include="StockFilters.resx">
+      <DependentUpon>StockFilters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TotalStocks.rdlc" />
     <EmbeddedResource Include="TotalStocks.resx">
