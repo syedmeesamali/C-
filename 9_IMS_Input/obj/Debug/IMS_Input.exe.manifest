@@ -126,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Input.exe" size="587704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Input.exe" size="588200">
       <assemblyIdentity name="IMS_Input" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JyFTDtctdeCpXT1vBq2rxxAonRI9G+wyYdohXZIs4pQ=</dsig:DigestValue>
+        <dsig:DigestValue>lgptsBZqCBLFrn1a1hWij28ZMu3/Dv7M/bG+Sq9akdU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

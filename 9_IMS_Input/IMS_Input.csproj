@@ -57,7 +57,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DC7220B522591DEC8890FBC1E74C8FE4FBC9C04D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>54759DCF133E08945B77D8DA4DBE359A5E743C31</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>IMS_Input_TemporaryKey.pfx</ManifestKeyFile>
