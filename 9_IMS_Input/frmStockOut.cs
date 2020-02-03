@@ -88,7 +88,7 @@ namespace IMS_Input
                 List<Stockout> stockout = stockoutTableBindingSource.DataSource as List<Stockout>;
                 if (stockout != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Input\Stocks.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\9_IMS_Input\Stocks.mdf;Integrated Security=True"))
                     {
                         db.BulkInsert(stockout);
                     }

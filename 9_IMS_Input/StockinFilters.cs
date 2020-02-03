@@ -22,5 +22,20 @@ namespace IMS_Input
             TotalStocks totalstocks = new TotalStocks();
             totalstocks.Visible = true;
         }
+
+        private void StockinFilters_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'stocksDataSet.StockinTable' table. You can move, or remove it, as needed.
+            
+            try
+            {
+                this.stockinTableTableAdapter.Fill(this.stocksDataSet.StockinTable);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ExceptION: " + ex.ToString());
+            }
+            
+
+        }
     }
 }
