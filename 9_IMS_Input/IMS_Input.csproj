@@ -160,7 +160,6 @@
       <DependentUpon>StockFilters.cs</DependentUpon>
     </Compile>
     <Compile Include="Stockout.cs" />
-    <Compile Include="Excel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,10 +180,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StocksDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TotalStocks.cs">
+    <Compile Include="Forms\TotalStocks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TotalStocks.Designer.cs">
+    <Compile Include="Forms\TotalStocks.Designer.cs">
       <DependentUpon>TotalStocks.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AboutBox1.resx">
@@ -217,7 +216,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports RDLC\Stockout.rdlc" />
     <EmbeddedResource Include="Reports RDLC\TotalStocks.rdlc" />
-    <EmbeddedResource Include="TotalStocks.resx">
+    <EmbeddedResource Include="Forms\TotalStocks.resx">
       <DependentUpon>TotalStocks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IMS_Input_TemporaryKey.pfx" />

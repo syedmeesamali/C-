@@ -64,6 +64,7 @@
             this.btnStockin.TabIndex = 1;
             this.btnStockin.Text = "Full stock-in Data";
             this.btnStockin.UseVisualStyleBackColor = true;
+            this.btnStockin.Click += new System.EventHandler(this.btnStockin_Click_1);
             // 
             // cboStockin
             // 

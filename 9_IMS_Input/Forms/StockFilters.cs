@@ -17,13 +17,6 @@ namespace IMS_Input
             frm1.Show();
         }
 
-        //Show report for the stockin
-        private void btnStockin_Click(object sender, EventArgs e)
-        {
-            TotalStocks totalstocks = new TotalStocks();
-            totalstocks.Visible = true;
-        }
-
         //Show report for the stockout
         private void btnStockout_Click(object sender, EventArgs e)
         {
@@ -45,7 +38,10 @@ namespace IMS_Input
             
         }
 
-        
-       
+        private void btnStockin_Click_1(object sender, EventArgs e)
+        {
+            TotalStocks totalstocks = new TotalStocks();
+            totalstocks.Visible = true;
+        }
     }
 }

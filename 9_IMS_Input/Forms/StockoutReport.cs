@@ -21,8 +21,7 @@ namespace IMS_Input
             {
                 MessageBox.Show("Exception: " + ex.ToString());
             }
-
-
         }
+
     }
 }

@@ -31,13 +31,23 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockoutReport));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.StocksDataSet = new IMS_Input.StocksDataSet();
             this.StockoutTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StocksDataSet = new IMS_Input.StocksDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.StockoutTableTableAdapter = new IMS_Input.StocksDataSetTableAdapters.StockoutTableTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.StocksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StockoutTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StocksDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // StockoutTableBindingSource
+            // 
+            this.StockoutTableBindingSource.DataMember = "StockoutTable";
+            this.StockoutTableBindingSource.DataSource = this.StocksDataSet;
+            // 
+            // StocksDataSet
+            // 
+            this.StocksDataSet.DataSetName = "StocksDataSet";
+            this.StocksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(820, 408);
             this.reportViewer1.TabIndex = 1;
-            // 
-            // StocksDataSet
-            // 
-            this.StocksDataSet.DataSetName = "StocksDataSet";
-            this.StocksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // StockoutTableBindingSource
-            // 
-            this.StockoutTableBindingSource.DataMember = "StockoutTable";
-            this.StockoutTableBindingSource.DataSource = this.StocksDataSet;
             // 
             // StockoutTableTableAdapter
             // 
@@ -76,8 +76,8 @@
             this.Name = "StockoutReport";
             this.Text = "Stockout Report";
             this.Load += new System.EventHandler(this.StockoutReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StocksDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StockoutTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StocksDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
