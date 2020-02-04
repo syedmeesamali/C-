@@ -14,5 +14,11 @@ namespace IMS_Final
         {
             Application.Exit();
         }
+
+        private void stockReportFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockReportsForm stockReportsForm = new StockReportsForm();
+            stockReportsForm.Show();
+        }
     }
 }

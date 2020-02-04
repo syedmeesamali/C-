@@ -16,3 +16,14 @@ F:\Repos\CSharp\10_IMS_Final\obj\Debug\WindowsFormsApp1.Properties.Resources.res
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csproj.GenerateResource.cache
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\WindowsFormsApp1.exe
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\WindowsFormsApp1.pdb
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmMain.resources
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csproj.GenerateResource.cache
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.StockReportsForm.resources
+D:\repos\CSharp\10_IMS_Final\bin\Debug\StocksDB.mdf
+D:\repos\CSharp\10_IMS_Final\bin\Debug\StocksDB_log.ldf
+D:\repos\CSharp\10_IMS_Final\bin\Debug\IMS_Final.exe.config
+D:\repos\CSharp\10_IMS_Final\bin\Debug\IMS_Final.exe
+D:\repos\CSharp\10_IMS_Final\bin\Debug\IMS_Final.pdb
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Properties.Resources.resources
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.exe
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.pdb

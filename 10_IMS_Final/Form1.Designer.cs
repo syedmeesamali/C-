@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importInvoiceExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importPurchaseExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockReportFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.expiryReportFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,25 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // importInvoiceExcelToolStripMenuItem
+            // 
+            this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.importInvoiceExcelToolStripMenuItem.Text = "Import Invoice (Excel)";
+            // 
+            // importPurchaseExcelToolStripMenuItem
+            // 
+            this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase (Excel)";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,6 +92,19 @@
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
+            // stockReportFormToolStripMenuItem
+            // 
+            this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockReportFormToolStripMenuItem.Text = "Stock Report Form";
+            this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
+            // 
+            // expiryReportFormToolStripMenuItem
+            // 
+            this.expiryReportFormToolStripMenuItem.Name = "expiryReportFormToolStripMenuItem";
+            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.expiryReportFormToolStripMenuItem.Text = "Expiry Report Form";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -81,41 +113,10 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // importInvoiceExcelToolStripMenuItem
-            // 
-            this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.importInvoiceExcelToolStripMenuItem.Text = "Import Invoice (Excel)";
-            // 
-            // importPurchaseExcelToolStripMenuItem
-            // 
-            this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase (Excel)";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // stockReportFormToolStripMenuItem
-            // 
-            this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stockReportFormToolStripMenuItem.Text = "Stock Report Form";
-            // 
-            // expiryReportFormToolStripMenuItem
-            // 
-            this.expiryReportFormToolStripMenuItem.Name = "expiryReportFormToolStripMenuItem";
-            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.expiryReportFormToolStripMenuItem.Text = "Expiry Report Form";
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // frmMain
