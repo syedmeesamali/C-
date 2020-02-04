@@ -125,7 +125,7 @@
             // 
             this.stockMainReportToolStripMenuItem.Name = "stockMainReportToolStripMenuItem";
             this.stockMainReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stockMainReportToolStripMenuItem.Text = "StockIn Reports";
+            this.stockMainReportToolStripMenuItem.Text = "Stock Reports Form";
             this.stockMainReportToolStripMenuItem.Click += new System.EventHandler(this.stockMainReportToolStripMenuItem_Click);
             // 
             // filterReportToolStripMenuItem

@@ -135,28 +135,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
+    <Compile Include="Forms\AboutBox1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
+    <Compile Include="Forms\AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockin.cs">
+    <Compile Include="Forms\frmStockin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockin.Designer.cs">
+    <Compile Include="Forms\frmStockin.Designer.cs">
       <DependentUpon>frmStockin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockOut.cs">
+    <Compile Include="Forms\frmStockOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockOut.Designer.cs">
+    <Compile Include="Forms\frmStockOut.Designer.cs">
       <DependentUpon>frmStockOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockFilters.cs">
+    <Compile Include="Forms\StockFilters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockFilters.Designer.cs">
+    <Compile Include="Forms\StockFilters.Designer.cs">
       <DependentUpon>StockFilters.cs</DependentUpon>
     </Compile>
     <Compile Include="Stockout.cs" />
@@ -170,6 +170,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stockin.cs" />
+    <Compile Include="Forms\StockoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockoutReport.Designer.cs">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="StocksDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,16 +187,16 @@
     <Compile Include="TotalStocks.Designer.cs">
       <DependentUpon>TotalStocks.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
+    <EmbeddedResource Include="Forms\AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockin.resx">
+    <EmbeddedResource Include="Forms\frmStockin.resx">
       <DependentUpon>frmStockin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockOut.resx">
+    <EmbeddedResource Include="Forms\frmStockOut.resx">
       <DependentUpon>frmStockOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -203,10 +209,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StockFilters.resx">
+    <EmbeddedResource Include="Forms\StockFilters.resx">
       <DependentUpon>StockFilters.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TotalStocks.rdlc" />
+    <EmbeddedResource Include="Forms\StockoutReport.resx">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports RDLC\Stockout.rdlc" />
+    <EmbeddedResource Include="Reports RDLC\TotalStocks.rdlc" />
     <EmbeddedResource Include="TotalStocks.resx">
       <DependentUpon>TotalStocks.cs</DependentUpon>
     </EmbeddedResource>
