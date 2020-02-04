@@ -1,0 +1,2 @@
+INSERT INTO [D:\REPOS\CSHARP\10_IMS_FINAL\STOCKSDB.MDF].[dbo].Products (Prod_ID, Prod_Name)
+SELECT ProdID, ProdName FROM [D:\repos\CSharp\8b_Work_Log_Home\MasterDB.MDF].[dbo].Products;

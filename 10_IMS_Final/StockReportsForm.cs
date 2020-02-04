@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMS_Final.Reports;
+using System;
 using System.Windows.Forms;
 
 namespace IMS_Final
@@ -10,9 +11,15 @@ namespace IMS_Final
             InitializeComponent();
         }
 
-        private void StockReportsForm_Load(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Product_Report product_Report = new Product_Report();
+            product_Report.Show();
         }
     }
 }
