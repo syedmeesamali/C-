@@ -68,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Fields!Units.Value)</Value>
+                              <Value>=Sum(Fields!Units.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>0.00;(0.00)</Format>
@@ -91,6 +91,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -803,7 +804,7 @@
         </TablixRowHierarchy>
         <DataSetName>Product_Report_StocksDB</DataSetName>
         <Height>0.5in</Height>
-        <Width>8in</Width>
+        <Width>8.00001in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -814,7 +815,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>8in</Width>
+  <Width>8.00001in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
