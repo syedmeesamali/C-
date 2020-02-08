@@ -21,7 +21,6 @@ namespace IMS_Final.Reports
             // TODO: This line of code loads data into the 'stocksDBDataSet_Complete.StockinTable' table. You can move, or remove it, as needed.
             this.stockinTableTableAdapter.Fill(this.stocksDBDataSet_Complete.StockinTable, comboBox1.SelectedValue.ToString());
             // TODO: This line of code loads data into the 'stocksDBDataSet_Products.Products' table. You can move, or remove it, as needed.
-            
 
             this.reportViewer1.RefreshReport();
         }
