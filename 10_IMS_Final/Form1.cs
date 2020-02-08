@@ -34,24 +34,23 @@ namespace IMS_Final
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
-            { Filter = "Excel 97-2003 workbooks|*.xlsx|Excel Workbook|*.xls" }) //Filter for the type of files to show
+            { Filter = "Excel 97-2003 workbooks|*.xlsx" }) //Filter for the type of files to show
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-
-                    FileInfo fileName = new FileInfo(openFileDialog.FileName);                        
-                    using (ExcelPackage package = new ExcelPackage(fileName))
-                        {
-                            ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                            int col = 2;
-                            for (int row = 2; row < 5; row++)
-                            {
-                                listBox1.Items.Add(row);
-                                listBox1.Items.Add(col);
-                                listBox1.Items.Add(worksheet.Cells[row, col].Value);
-                            }
-                        }
+                    //string fileName;
+                    FileInfo fileName = new FileInfo(openFileDialog.SafeFileName);
+                    MessageBox.Show("FileName: " + fileName.ToString());
+                    ExcelPackage package = new ExcelPackage(fileName);
                         
+                    ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                    int col = 2;
+                    for (int row = 2; row < 5; row++)
+                    {
+                        //listBox1.Items.Add(row);
+                        //listBox1.Items.Add(col);
+                        Console.WriteLine(ws.Cells[row, col].Value);
+                    }
                         //using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
                         //{
                         //    DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
