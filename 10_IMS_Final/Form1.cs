@@ -2,6 +2,7 @@
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using OfficeOpenXml;
 
 namespace IMS_Final
 {
@@ -26,8 +27,8 @@ namespace IMS_Final
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
-            dataGridView1.DataSource = dt;
+            //DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
+            //dataGridView1.DataSource = dt;
         }
 
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,8 +39,19 @@ namespace IMS_Final
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
 
-                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                    {
+                    FileInfo fileName = new FileInfo(openFileDialog.FileName);                        
+                    using (ExcelPackage package = new ExcelPackage(fileName))
+                        {
+                            ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                            int col = 2;
+                            for (int row = 2; row < 5; row++)
+                            {
+                                listBox1.Items.Add(row);
+                                listBox1.Items.Add(col);
+                                listBox1.Items.Add(worksheet.Cells[row, col].Value);
+                            }
+                        }
+                        
                         //using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
                         //{
                         //    DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
@@ -53,7 +65,6 @@ namespace IMS_Final
                         //}
                     }
                 }
-            } //End of filter for import 
         }
     }
 }

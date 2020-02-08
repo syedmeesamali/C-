@@ -43,6 +43,7 @@
             this.btnView = new System.Windows.Forms.Button();
             this.cboSheets = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -101,14 +102,14 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.stockReportFormToolStripMenuItem.Text = "Stock Report Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
             // expiryReportFormToolStripMenuItem
             // 
             this.expiryReportFormToolStripMenuItem.Name = "expiryReportFormToolStripMenuItem";
-            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.expiryReportFormToolStripMenuItem.Text = "Expiry Report Form";
             // 
             // helpToolStripMenuItem
@@ -122,7 +123,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // dataGridView1
@@ -133,7 +134,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(434, 274);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnView
@@ -163,11 +164,20 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Sheet:";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(550, 39);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(192, 303);
+            this.listBox1.TabIndex = 5;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 365);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.btnView);
@@ -205,6 +215,7 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.ComboBox cboSheets;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
