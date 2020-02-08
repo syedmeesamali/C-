@@ -39,17 +39,16 @@ namespace IMS_Final
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
                     //string fileName;
-                    FileInfo fileName = new FileInfo(openFileDialog.SafeFileName);
-                    MessageBox.Show("FileName: " + fileName.ToString());
+                    FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
                     ExcelPackage package = new ExcelPackage(fileName);
-                        
+                    MessageBox.Show("FileName: " + fileName.ToString());
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
                     int col = 2;
                     for (int row = 2; row < 5; row++)
                     {
-                        //listBox1.Items.Add(row);
-                        //listBox1.Items.Add(col);
-                        Console.WriteLine(ws.Cells[row, col].Value);
+                        listBox1.Items.Add(row);
+                        listBox1.Items.Add(col);
+                        listBox1.Items.Add(ws.Cells[row, col].Value);
                     }
                         //using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
                         //{
