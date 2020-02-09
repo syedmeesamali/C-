@@ -2182,8 +2182,7 @@ SELECT Prod_ID, Prod_Name FROM Products WHERE (Prod_ID = @Prod_ID)";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units\r\nFROM" +
-                "            StockinTable\r\nWHERE        (Prod_Name = @Prod_Name)\r\nINNER JOIN     " +
-                "  StockoutTable\r\nON StockinTable.Prod_ID = StockoutTable.Prod_ID;";
+                "            StockinTable\r\nWHERE        (Prod_Name = @Prod_Name);";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

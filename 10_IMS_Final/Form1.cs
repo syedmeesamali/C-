@@ -38,7 +38,7 @@ namespace IMS_Final
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-<<<<<<< HEAD
+
                     //string fileName;
                     FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
                     ExcelPackage package = new ExcelPackage(fileName);
@@ -50,26 +50,10 @@ namespace IMS_Final
                         listBox1.Items.Add(row);
                         listBox1.Items.Add(col);
                         listBox1.Items.Add(ws.Cells[row, col].Value);
-=======
-                    //Setup to read the excel file using openxml package i.e. EPPlus
-                    FileInfo fileName = new FileInfo(openFileDialog.FileName);
-                    MessageBox.Show("FileName: " + fileName.ToString());
-                    ExcelPackage package = new ExcelPackage(fileName);
-                    ExcelWorksheet ws = package.Workbook.Worksheets[1]; //First worksheet only for my case
-                    int col = 1;
-                    for (int row = 15; row < 28; row++)
-                    {
-                        if (ws.Cells[row, col].Value != null)
-                        {
-                            listBox1.Items.Add(ws.Cells[row, col].Value);
-                            listBox1.Items.Add(ws.Cells[row, col+3].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 6].Value);
-                        }
-                            
->>>>>>> 05d9eb7a7e94d48d4ffae29adc85746827d42a08
-                    }
+
                     }
                 }
+            }
         }
     }
 }
