@@ -13,7 +13,9 @@ namespace IMS_Final
             InitializeComponent();
         }
 
-        DataTableCollection tableCollection;
+        //DataTableCollection tableCollection;
+        DataTable tbl = new DataTable("Details");
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -23,12 +25,6 @@ namespace IMS_Final
         {
             StockReportsForm stockReportsForm = new StockReportsForm();
             stockReportsForm.Show();
-        }
-
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            //DataTable dt = tableCollection[cboSheets.SelectedItem.ToString()]; //Show the datagrid as per sheets
-            //dataGridView1.DataSource = dt;
         }
 
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,16 +40,48 @@ namespace IMS_Final
                     ExcelPackage package = new ExcelPackage(fileName);
                     MessageBox.Show("FileName: " + fileName.ToString());
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                    int col = 2;
-                    for (int row = 2; row < 5; row++)
+                    
+                    int col = 1;
+                    tbl.Columns.Add("Prod ID", typeof(String));
+                    tbl.Columns.Add("Description", typeof(String));
+                    tbl.Columns.Add("Boxes", typeof(String));
+                    tbl.Columns.Add("Pcs", typeof(String));
+                    tbl.Columns.Add("Price", typeof(String));
+                    tbl.Columns.Add("Units", typeof(String));
+                    for (int row = 15; row < 30; row++)
                     {
-                        listBox1.Items.Add(row);
-                        listBox1.Items.Add(col);
-                        listBox1.Items.Add(ws.Cells[row, col].Value);
+                        if (ws.Cells[row, col].Value != null)
+                        {
+                            DataRow dr = tbl.NewRow();
+                            for (int cols = 1; cols <= 5; cols++)
+                            {
+                                dr[cols] = ws.Cells[row, col].Value;
+                            }
+                            tbl.Rows.Add(dr); //Add the prepared row to table
+                            listBox1.Items.Add(ws.Cells[row, col].Value);
+                            listBox1.Items.Add(ws.Cells[row, col].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 3].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 6].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 9].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 11].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 15].Value);
+                        }
+                    } //End of for loop to input Excel data
+                    dataGridView1.AutoGenerateColumns = true;
+                    dataGridView1.Columns.Clear();
+                    dataGridView1.DataSource = tbl;
+                    dataGridView1.Refresh();
 
-                    }
-                }
-            }
+                } //End of dialog selection
+            }//End of filter
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = tbl;
+            dataGridView1.Refresh();
         }
     }
 }
