@@ -38,30 +38,17 @@ namespace IMS_Final
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                    //string fileName;
-                    FileInfo fileName = new FileInfo(openFileDialog.SafeFileName);
+                    //Setup to read the excel file using openxml package i.e. EPPlus
+                    FileInfo fileName = new FileInfo(openFileDialog.FileName);
                     MessageBox.Show("FileName: " + fileName.ToString());
                     ExcelPackage package = new ExcelPackage(fileName);
-                        
-                    ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                    int col = 2;
-                    for (int row = 2; row < 5; row++)
+                    ExcelWorksheet ws = package.Workbook.Worksheets[1]; //First worksheet only for my case
+                    int col = 1;
+                    for (int row = 14; row < 28; row++)
                     {
-                        //listBox1.Items.Add(row);
-                        //listBox1.Items.Add(col);
-                        Console.WriteLine(ws.Cells[row, col].Value);
+                        if (ws.Cells[row, col].Value != null)
+                            listBox1.Items.Add(ws.Cells[row, col].Value);
                     }
-                        //using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))  //Create stream for data
-                        //{
-                        //    DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
-                        //    {
-                        //        ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
-                        //    });
-                        //    tableCollection = result.Tables;
-                        //    cboSheets.Items.Clear(); // clear the combo box
-                        //    foreach (DataTable table in tableCollection)
-                        //        cboSheets.Items.Add(table.TableName);  //Add names of sheets to combo box
-                        //}
                     }
                 }
         }
