@@ -41,8 +41,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnView = new System.Windows.Forms.Button();
-            this.cboSheets = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,20 +71,20 @@
             // importInvoiceExcelToolStripMenuItem
             // 
             this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importInvoiceExcelToolStripMenuItem.Text = "Import Sales Invoice (Excel)";
             this.importInvoiceExcelToolStripMenuItem.Click += new System.EventHandler(this.importInvoiceExcelToolStripMenuItem_Click);
             // 
             // importPurchaseExcelToolStripMenuItem
             // 
             this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase Invoice (Excel)";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -102,14 +100,14 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.stockReportFormToolStripMenuItem.Text = "Stock Report Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
             // expiryReportFormToolStripMenuItem
             // 
             this.expiryReportFormToolStripMenuItem.Name = "expiryReportFormToolStripMenuItem";
-            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.expiryReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.expiryReportFormToolStripMenuItem.Text = "Expiry Report Form";
             // 
             // helpToolStripMenuItem
@@ -134,12 +132,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(434, 291);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(303, 319);
+            this.btnView.Location = new System.Drawing.Point(19, 327);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(150, 26);
             this.btnView.TabIndex = 2;
@@ -147,29 +145,12 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // cboSheets
-            // 
-            this.cboSheets.FormattingEnabled = true;
-            this.cboSheets.Location = new System.Drawing.Point(82, 319);
-            this.cboSheets.Name = "cboSheets";
-            this.cboSheets.Size = new System.Drawing.Size(187, 21);
-            this.cboSheets.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 322);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Sheet:";
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(550, 39);
+            this.listBox1.Location = new System.Drawing.Point(459, 26);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(192, 303);
+            this.listBox1.Size = new System.Drawing.Size(292, 316);
             this.listBox1.TabIndex = 5;
             // 
             // frmMain
@@ -178,8 +159,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 365);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cboSheets);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -213,8 +192,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.ComboBox cboSheets;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
     }
 }

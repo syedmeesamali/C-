@@ -2166,52 +2166,6 @@ SELECT Prod_ID, Prod_Name FROM Products WHERE (Prod_ID = @Prod_ID)";
             tableMapping.ColumnMappings.Add("Expiry", "Expiry");
             tableMapping.ColumnMappings.Add("Units", "Units");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [StockinTable] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [StockinTable] ([Id], [Date], [Sup_ID], [Sup_Name], [Prod_ID], [Prod_Name], [Expiry], [Units]) VALUES (@Id, @Date, @Sup_ID, @Sup_Name, @Prod_ID, @Prod_Name, @Expiry, @Units);
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = @Id)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [StockinTable] SET [Id] = @Id, [Date] = @Date, [Sup_ID] = @Sup_ID, [Sup_Name] = @Sup_Name, [Prod_ID] = @Prod_ID, [Prod_Name] = @Prod_Name, [Expiry] = @Expiry, [Units] = @Units WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units));
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2228,7 +2182,8 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units\r\nFROM" +
-                "            StockinTable\r\nWHERE        (Prod_Name = @Prod_Name)";
+                "            StockinTable\r\nWHERE        (Prod_Name = @Prod_Name)\r\nINNER JOIN     " +
+                "  StockoutTable\r\nON StockinTable.Prod_ID = StockoutTable.Prod_ID;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -2267,234 +2222,6 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             StocksDBDataSet_Complete.StockinTableDataTable dataTable = new StocksDBDataSet_Complete.StockinTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_Complete.StockinTableDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_Complete dataSet) {
-            return this.Adapter.Update(dataSet, "StockinTable");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(Expiry));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((double)(Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int Id, 
-                    System.DateTime Date, 
-                    string Sup_ID, 
-                    string Sup_Name, 
-                    string Prod_ID, 
-                    string Prod_Name, 
-                    System.DateTime Expiry, 
-                    double Units, 
-                    int Original_Id, 
-                    System.DateTime Original_Date, 
-                    string Original_Sup_ID, 
-                    string Original_Sup_Name, 
-                    string Original_Prod_ID, 
-                    string Original_Prod_Name, 
-                    System.DateTime Original_Expiry, 
-                    double Original_Units) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Expiry));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Units));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            return this.Update(Original_Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Original_Id, Original_Date, Original_Sup_ID, Original_Sup_Name, Original_Prod_ID, Original_Prod_Name, Original_Expiry, Original_Units);
         }
     }
     
@@ -2936,8 +2663,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
         
         private ProductsTableAdapter _productsTableAdapter;
         
-        private StockinTableTableAdapter _stockinTableTableAdapter;
-        
         private StockoutTableTableAdapter _stockoutTableTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
@@ -2966,20 +2691,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
             }
             set {
                 this._productsTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public StockinTableTableAdapter StockinTableTableAdapter {
-            get {
-                return this._stockinTableTableAdapter;
-            }
-            set {
-                this._stockinTableTableAdapter = value;
             }
         }
         
@@ -3020,10 +2731,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                             && (this._productsTableAdapter.Connection != null))) {
                     return this._productsTableAdapter.Connection;
                 }
-                if (((this._stockinTableTableAdapter != null) 
-                            && (this._stockinTableTableAdapter.Connection != null))) {
-                    return this._stockinTableTableAdapter.Connection;
-                }
                 if (((this._stockoutTableTableAdapter != null) 
                             && (this._stockoutTableTableAdapter.Connection != null))) {
                     return this._stockoutTableTableAdapter.Connection;
@@ -3042,9 +2749,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
             get {
                 int count = 0;
                 if ((this._productsTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._stockinTableTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._stockoutTableTableAdapter != null)) {
@@ -3067,15 +2771,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._productsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._stockinTableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._stockinTableTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3106,14 +2801,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._stockinTableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._stockinTableTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._stockoutTableTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.StockoutTable.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -3137,14 +2824,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._stockoutTableTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._stockinTableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._stockinTableTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3200,11 +2879,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._stockinTableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._stockinTableTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._stockoutTableTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._stockoutTableTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -3249,15 +2923,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                     if (this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._productsTableAdapter.Adapter);
-                    }
-                }
-                if ((this._stockinTableTableAdapter != null)) {
-                    revertConnections.Add(this._stockinTableTableAdapter, this._stockinTableTableAdapter.Connection);
-                    this._stockinTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._stockinTableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._stockinTableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._stockinTableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockinTableTableAdapter.Adapter);
                     }
                 }
                 if ((this._stockoutTableTableAdapter != null)) {
@@ -3330,10 +2995,6 @@ SELECT Id, Date, Cust_ID, Cust_Name, Prod_ID, Prod_Name, Units FROM StockoutTabl
                 if ((this._productsTableAdapter != null)) {
                     this._productsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._productsTableAdapter]));
                     this._productsTableAdapter.Transaction = null;
-                }
-                if ((this._stockinTableTableAdapter != null)) {
-                    this._stockinTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockinTableTableAdapter]));
-                    this._stockinTableTableAdapter.Transaction = null;
                 }
                 if ((this._stockoutTableTableAdapter != null)) {
                     this._stockoutTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockoutTableTableAdapter]));
