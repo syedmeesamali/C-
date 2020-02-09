@@ -44,10 +44,15 @@ namespace IMS_Final
                     ExcelPackage package = new ExcelPackage(fileName);
                     ExcelWorksheet ws = package.Workbook.Worksheets[1]; //First worksheet only for my case
                     int col = 1;
-                    for (int row = 14; row < 28; row++)
+                    for (int row = 15; row < 28; row++)
                     {
                         if (ws.Cells[row, col].Value != null)
+                        {
                             listBox1.Items.Add(ws.Cells[row, col].Value);
+                            listBox1.Items.Add(ws.Cells[row, col+3].Value);
+                            listBox1.Items.Add(ws.Cells[row, col + 6].Value);
+                        }
+                            
                     }
                     }
                 }
