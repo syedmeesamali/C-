@@ -53,29 +53,17 @@ namespace IMS_Final
                     
                     for (int row = 15; row < 30; row++)
                     {
-                        
+                        DataRow dr = tbl.NewRow();
                         if (ws.Cells[row, col].Value != null)
                         {
-                            DataRow dr = tbl.NewRow();
-                            //for (int cols =1; cols<6; cols++)
-                            //{
-                            //    dr[cols] = ws.Cells[row, cols].Value;
-                            //}
-                            foreach (int cols in offsets)
-                            {
-                                dr[cols] = ws.Cells[row, cols].Value;
-                            }
-
+                            dr[0] = ws.Cells[row, col].Value;
+                            dr[1] = ws.Cells[row, col + 3].Value;
+                            dr[2] = ws.Cells[row, col + 6].Value;
+                            dr[3] = ws.Cells[row, col + 9].Value;
+                            dr[4] = ws.Cells[row, col + 11].Value;
+                            dr[5] = ws.Cells[row, col + 15].Value;
                             tbl.Rows.Add(dr); //Add the prepared row to table
-                            
-                            listBox1.Items.Add(ws.Cells[row, col].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 3].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 6].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 9].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 11].Value);
-                            listBox1.Items.Add(ws.Cells[row, col + 15].Value);
                         }
-                        
                     } //End of for loop to input Excel data
                     dataGridView1.AutoGenerateColumns = true;
                     dataGridView1.Columns.Clear();
