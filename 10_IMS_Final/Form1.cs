@@ -28,7 +28,7 @@ namespace IMS_Final
             StockReportsForm stockReportsForm = new StockReportsForm();
             stockReportsForm.Show();
         }
-
+        int counter = 0;
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -36,7 +36,7 @@ namespace IMS_Final
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                    int counter = 0;
+                    
                     try
                     {
                         //string fileName;
@@ -54,30 +54,27 @@ namespace IMS_Final
                             tbl.Columns.Add("Pcs", typeof(String));
                             tbl.Columns.Add("Price", typeof(String));
                             tbl.Columns.Add("Units", typeof(String));
-                        } else
-                        {
-                            for (int row = 15; row < 30; row++)
-                            {
-                                DataRow dr = tbl.NewRow();
-                                if (ws.Cells[row, col].Value != null)
-                                {
-                                    //Populate the columns and rows of our defined datatable
-                                    dr[0] = ws.Cells[row, col].Value;
-                                    dr[1] = ws.Cells[row, col + 3].Value;
-                                    dr[2] = ws.Cells[row, col + 6].Value;
-                                    dr[3] = ws.Cells[row, col + 9].Value;
-                                    dr[4] = ws.Cells[row, col + 11].Value;
-                                    dr[5] = ws.Cells[row, col + 15].Value;
-                                    tbl.Rows.Add(dr); //Add the prepared row to table
-                                }
-                            } //End of for loop to input Excel data
-                            dataGridView1.AutoGenerateColumns = true;
-                            dataGridView1.Columns.Clear();
-                            dataGridView1.DataSource = tbl;
-                            dataGridView1.Refresh();
-                        } //End of else block
+                        }
                         
-                    } //End of try block
+                        for (int row = 15; row < 30; row++)
+                        {
+                            DataRow dr = tbl.NewRow();
+                            if (ws.Cells[row, col].Value != null)
+                            {
+                                //Populate the columns and rows of our defined datatable
+                                dr[0] = ws.Cells[row, col].Value;
+                                dr[1] = ws.Cells[row, col + 3].Value;
+                                dr[2] = ws.Cells[row, col + 6].Value;
+                                dr[3] = ws.Cells[row, col + 9].Value;
+                                dr[4] = ws.Cells[row, col + 11].Value;
+                                dr[5] = ws.Cells[row, col + 15].Value;
+                                tbl.Rows.Add(dr); //Add the prepared row to table
+                            }
+                        } //End of for loop to input Excel data
+                        //dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = tbl;
+                        dataGridView1.Refresh();
+                    } //End of try blocks
 
                     catch (Exception ex)
                     {
