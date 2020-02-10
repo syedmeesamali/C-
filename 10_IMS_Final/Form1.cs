@@ -48,17 +48,26 @@ namespace IMS_Final
                     tbl.Columns.Add("Pcs", typeof(String));
                     tbl.Columns.Add("Price", typeof(String));
                     tbl.Columns.Add("Units", typeof(String));
+                    
+                    int[] offsets = {1, 3, 6, 9, 11, 16}; // use for offsets of columns
+                    
                     for (int row = 15; row < 30; row++)
                     {
+                        
                         if (ws.Cells[row, col].Value != null)
                         {
                             DataRow dr = tbl.NewRow();
-                            for (int cols = 1; cols <= 5; cols++)
+                            //for (int cols =1; cols<6; cols++)
+                            //{
+                            //    dr[cols] = ws.Cells[row, cols].Value;
+                            //}
+                            foreach (int cols in offsets)
                             {
-                                dr[cols] = ws.Cells[row, col].Value;
+                                dr[cols] = ws.Cells[row, cols].Value;
                             }
+
                             tbl.Rows.Add(dr); //Add the prepared row to table
-                            listBox1.Items.Add(ws.Cells[row, col].Value);
+                            
                             listBox1.Items.Add(ws.Cells[row, col].Value);
                             listBox1.Items.Add(ws.Cells[row, col + 3].Value);
                             listBox1.Items.Add(ws.Cells[row, col + 6].Value);
@@ -66,6 +75,7 @@ namespace IMS_Final
                             listBox1.Items.Add(ws.Cells[row, col + 11].Value);
                             listBox1.Items.Add(ws.Cells[row, col + 15].Value);
                         }
+                        
                     } //End of for loop to input Excel data
                     dataGridView1.AutoGenerateColumns = true;
                     dataGridView1.Columns.Clear();
@@ -78,10 +88,7 @@ namespace IMS_Final
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.Columns.Clear();
-            dataGridView1.DataSource = tbl;
-            dataGridView1.Refresh();
+            
         }
     }
 }
