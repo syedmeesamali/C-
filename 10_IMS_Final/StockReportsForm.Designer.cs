@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.btnFullReport = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.stocksDBDataSet_Products = new IMS_Final.StocksDBDataSet_Products();
+            
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new IMS_Final.StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter();
+            
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_Products)).BeginInit();
+            this.button4 = new System.Windows.Forms.Button();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +65,14 @@
             // 
             // stocksDBDataSet_Products
             // 
-            this.stocksDBDataSet_Products.DataSetName = "StocksDBDataSet_Products";
-            this.stocksDBDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsBindingSource
+            
             // 
             this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.stocksDBDataSet_Products;
+            
             // 
             // productsTableAdapter
             // 
-            this.productsTableAdapter.ClearBeforeFill = true;
+            
             // 
             // button1
             // 
@@ -114,11 +112,22 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(474, 32);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(158, 34);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Expiry Report";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // StockReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 283);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -131,7 +140,7 @@
             this.Name = "StockReportsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Reports Form";
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_Products)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -142,12 +151,13 @@
 
         private System.Windows.Forms.Button btnFullReport;
         private System.Windows.Forms.Button btnExit;
-        private StocksDBDataSet_Products stocksDBDataSet_Products;
+        
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter productsTableAdapter;
+        
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
     }
 }

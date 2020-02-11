@@ -131,8 +131,8 @@ namespace IMS_Final
                                 dr[3] = ws.Cells[rowPurchase, colPurchase + 3].Value;
                                 dr[4] = ws.Cells[rowPurchase, colPurchase + 4].Value;
                                 dr[5] = ws.Cells[rowPurchase, colPurchase + 5].Value;
-                                dr[5] = ws.Cells[rowPurchase, colPurchase + 6].Value;
-                                dr[5] = ws.Cells[rowPurchase, colPurchase + 7].Value;
+                                dr[6] = ws.Cells[rowPurchase, colPurchase + 6].Value;
+                                dr[7] = ws.Cells[rowPurchase, colPurchase + 7].Value;
                                 tblPurchase.Rows.Add(dr); //Add the prepared row to table
                             }
                         } //End of for loop to input Excel data

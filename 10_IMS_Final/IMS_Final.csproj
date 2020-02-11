@@ -99,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ExpiryReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ExpiryReports.Designer.cs">
+      <DependentUpon>ExpiryReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Product_Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,19 +119,6 @@
     </Compile>
     <Compile Include="StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StocksDBDataSet_Complete.cs">
-      <DependentUpon>StocksDBDataSet_Complete.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StocksDBDataSet_Complete.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StocksDBDataSet_Complete.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StocksDBDataSet_Products.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -146,6 +139,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\ExpiryReports.resx">
+      <DependentUpon>ExpiryReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Expiry_Report.rdlc" />
     <EmbeddedResource Include="Reports\Product_Report.rdlc" />
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
@@ -163,28 +160,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="StocksDBDataSet_Complete.xsc">
-      <DependentUpon>StocksDBDataSet_Complete.xsd</DependentUpon>
-    </None>
-    <None Include="StocksDBDataSet_Complete.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StocksDBDataSet_Complete.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StocksDBDataSet_Complete.xss">
-      <DependentUpon>StocksDBDataSet_Complete.xsd</DependentUpon>
-    </None>
-    <None Include="StocksDBDataSet_Products.xsc">
-      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
-    </None>
-    <None Include="StocksDBDataSet_Products.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StocksDBDataSet_Products.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StocksDBDataSet_Products.xss">
-      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

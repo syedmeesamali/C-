@@ -21,5 +21,11 @@ namespace IMS_Final
             Product_Report product_Report = new Product_Report();
             product_Report.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ExpiryReports expiryReports = new ExpiryReports();
+            expiryReports.Show();
+        }
     }
 }
