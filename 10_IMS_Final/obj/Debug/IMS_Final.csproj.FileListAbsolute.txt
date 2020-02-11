@@ -83,7 +83,6 @@ D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.Product_Report.resource
 D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.cache
 D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.compiled
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csproj.CopyComplete
-D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csprojAssemblyReference.cache
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -161,3 +160,5 @@ F:\Repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.dll
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.xml
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmInstructions.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmLoadedList.resources
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmInstructions.resources
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmLoadedList.resources

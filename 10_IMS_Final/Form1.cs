@@ -14,9 +14,8 @@ namespace IMS_Final
         }
 
         //DataTableCollection tableCollection;
-        DataTable tbl = new DataTable("Details");
-        
-        
+        DataTable tblSales = new DataTable("Sales");
+        DataTable tblPurchase = new DataTable("Purchase");
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,17 +47,17 @@ namespace IMS_Final
                         int col = 1;
                         if (counter == 1) //Only for the first time define table structure
                         {
-                            tbl.Columns.Add("Prod ID", typeof(String));
-                            tbl.Columns.Add("Description", typeof(String));
-                            tbl.Columns.Add("Boxes", typeof(String));
-                            tbl.Columns.Add("Pcs", typeof(String));
-                            tbl.Columns.Add("Price", typeof(String));
-                            tbl.Columns.Add("Units", typeof(String));
+                            tblSales.Columns.Add("Prod ID", typeof(String));
+                            tblSales.Columns.Add("Description", typeof(String));
+                            tblSales.Columns.Add("Boxes", typeof(String));
+                            tblSales.Columns.Add("Pcs", typeof(String));
+                            tblSales.Columns.Add("Price", typeof(String));
+                            tblSales.Columns.Add("Units", typeof(String));
                         }
                         
                         for (int row = 15; row < 30; row++)
                         {
-                            DataRow dr = tbl.NewRow();
+                            DataRow dr = tblSales.NewRow();
                             if (ws.Cells[row, col].Value != null)
                             {
                                 //Populate the columns and rows of our defined datatable
@@ -68,11 +67,11 @@ namespace IMS_Final
                                 dr[3] = ws.Cells[row, col + 9].Value;
                                 dr[4] = ws.Cells[row, col + 11].Value;
                                 dr[5] = ws.Cells[row, col + 15].Value;
-                                tbl.Rows.Add(dr); //Add the prepared row to table
+                                tblSales.Rows.Add(dr); //Add the prepared row to table
                             }
                         } //End of for loop to input Excel data
                         //dataGridView1.AutoGenerateColumns = true;
-                        dataGridView1.DataSource = tbl;
+                        dataGridView1.DataSource = tblSales;
                         dataGridView1.Refresh();
                     } //End of try blocks
 
@@ -89,6 +88,7 @@ namespace IMS_Final
             
         }
 
+        //------------import purchase data-----------
         private void importPurchaseExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -108,31 +108,35 @@ namespace IMS_Final
                         int col = 1;
                         if (counter == 1) //Only for the first time define table structure
                         {
-                            tbl.Columns.Add("Prod ID", typeof(String));
-                            tbl.Columns.Add("Description", typeof(String));
-                            tbl.Columns.Add("Boxes", typeof(String));
-                            tbl.Columns.Add("Pcs", typeof(String));
-                            tbl.Columns.Add("Price", typeof(String));
-                            tbl.Columns.Add("Units", typeof(String));
+                            tblPurchase.Columns.Add("Prod ID", typeof(String));
+                            tblPurchase.Columns.Add("Prod Name", typeof(String));
+                            tblPurchase.Columns.Add("Date", typeof(DateTime));
+                            tblPurchase.Columns.Add("Expiry", typeof(DateTime));
+                            tblPurchase.Columns.Add("Supp Code", typeof(String));
+                            tblPurchase.Columns.Add("Supp Name", typeof(String));
+                            tblPurchase.Columns.Add("Units", typeof(float));
+                            tblPurchase.Columns.Add("Cost", typeof(float));
                         }
 
-                        for (int row = 15; row < 30; row++)
+                        for (int row = 2; row < 5000; row++) //HARD-CODED - NEED TO UPDATE
                         {
-                            DataRow dr = tbl.NewRow();
+                            DataRow dr = tblPurchase.NewRow();
                             if (ws.Cells[row, col].Value != null)
                             {
                                 //Populate the columns and rows of our defined datatable
                                 dr[0] = ws.Cells[row, col].Value;
-                                dr[1] = ws.Cells[row, col + 3].Value;
-                                dr[2] = ws.Cells[row, col + 6].Value;
-                                dr[3] = ws.Cells[row, col + 9].Value;
-                                dr[4] = ws.Cells[row, col + 11].Value;
-                                dr[5] = ws.Cells[row, col + 15].Value;
-                                tbl.Rows.Add(dr); //Add the prepared row to table
+                                dr[1] = ws.Cells[row, col + 1].Value;
+                                dr[2] = ws.Cells[row, col + 2].Value;
+                                dr[3] = ws.Cells[row, col + 3].Value;
+                                dr[4] = ws.Cells[row, col + 4].Value;
+                                dr[5] = ws.Cells[row, col + 5].Value;
+                                dr[5] = ws.Cells[row, col + 6].Value;
+                                dr[5] = ws.Cells[row, col + 7].Value;
+                                tblPurchase.Rows.Add(dr); //Add the prepared row to table
                             }
                         } //End of for loop to input Excel data
                         //dataGridView1.AutoGenerateColumns = true;
-                        dataGridView1.DataSource = tbl;
+                        dataGridView1.DataSource = tblPurchase;
                         dataGridView1.Refresh();
                     } //End of try blocks
 
