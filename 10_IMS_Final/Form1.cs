@@ -27,7 +27,7 @@ namespace IMS_Final
             StockReportsForm stockReportsForm = new StockReportsForm();
             stockReportsForm.Show();
         }
-        int counter = 0;
+        int counterSales = 0;
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -43,9 +43,9 @@ namespace IMS_Final
                         ExcelPackage package = new ExcelPackage(fileName);
                         MessageBox.Show("FileName: " + fileName.ToString());
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                        counter++;
-                        int col = 1;
-                        if (counter == 1) //Only for the first time define table structure
+                        counterSales++;
+                        int colSales = 1;
+                        if (counterSales == 1) //Only for the first time define table structure
                         {
                             tblSales.Columns.Add("Prod ID", typeof(String));
                             tblSales.Columns.Add("Description", typeof(String));
@@ -55,19 +55,19 @@ namespace IMS_Final
                             tblSales.Columns.Add("Units", typeof(String));
                         }
                         
-                        for (int row = 15; row < 30; row++)
+                        for (int rowSales = 15; rowSales < 30; rowSales++)
                         {
                             DataRow dr = tblSales.NewRow();
-                            if (ws.Cells[row, col].Value != null)
+                            if (ws.Cells[rowSales, colSales].Value != null)
                             {
-                                //Populate the columns and rows of our defined datatable
-                                dr[0] = ws.Cells[row, col].Value;
-                                dr[1] = ws.Cells[row, col + 3].Value;
-                                dr[2] = ws.Cells[row, col + 6].Value;
-                                dr[3] = ws.Cells[row, col + 9].Value;
-                                dr[4] = ws.Cells[row, col + 11].Value;
-                                dr[5] = ws.Cells[row, col + 15].Value;
-                                tblSales.Rows.Add(dr); //Add the prepared row to table
+                                //Populate the colSalesumns and rowSaless of our defined datatable
+                                dr[0] = ws.Cells[rowSales, colSales].Value;
+                                dr[1] = ws.Cells[rowSales, colSales + 3].Value;
+                                dr[2] = ws.Cells[rowSales, colSales + 6].Value;
+                                dr[3] = ws.Cells[rowSales, colSales + 9].Value;
+                                dr[4] = ws.Cells[rowSales, colSales + 11].Value;
+                                dr[5] = ws.Cells[rowSales, colSales + 15].Value;
+                                tblSales.Rows.Add(dr); //Add the prepared rowSales to table
                             }
                         } //End of for loop to input Excel data
                         //dataGridView1.AutoGenerateColumns = true;
@@ -88,6 +88,7 @@ namespace IMS_Final
             
         }
 
+        int counterPurchase = 0;
         //------------import purchase data-----------
         private void importPurchaseExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,34 +105,34 @@ namespace IMS_Final
                         ExcelPackage package = new ExcelPackage(fileName);
                         MessageBox.Show("FileName: " + fileName.ToString());
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                        counter++;
-                        int col = 1;
-                        if (counter == 1) //Only for the first time define table structure
+                        counterPurchase++;
+                        int colPurchase = 1;
+                        if (counterPurchase == 1) //Only for the first time define table structure
                         {
                             tblPurchase.Columns.Add("Prod ID", typeof(String));
                             tblPurchase.Columns.Add("Prod Name", typeof(String));
-                            tblPurchase.Columns.Add("Date", typeof(DateTime));
-                            tblPurchase.Columns.Add("Expiry", typeof(DateTime));
+                            tblPurchase.Columns.Add("Date", typeof(String));
+                            tblPurchase.Columns.Add("Expiry", typeof(String));
                             tblPurchase.Columns.Add("Supp Code", typeof(String));
                             tblPurchase.Columns.Add("Supp Name", typeof(String));
                             tblPurchase.Columns.Add("Units", typeof(float));
                             tblPurchase.Columns.Add("Cost", typeof(float));
                         }
 
-                        for (int row = 2; row < 5000; row++) //HARD-CODED - NEED TO UPDATE
+                        for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
                         {
                             DataRow dr = tblPurchase.NewRow();
-                            if (ws.Cells[row, col].Value != null)
+                            if (ws.Cells[rowPurchase, colPurchase].Value != null)
                             {
-                                //Populate the columns and rows of our defined datatable
-                                dr[0] = ws.Cells[row, col].Value;
-                                dr[1] = ws.Cells[row, col + 1].Value;
-                                dr[2] = ws.Cells[row, col + 2].Value;
-                                dr[3] = ws.Cells[row, col + 3].Value;
-                                dr[4] = ws.Cells[row, col + 4].Value;
-                                dr[5] = ws.Cells[row, col + 5].Value;
-                                dr[5] = ws.Cells[row, col + 6].Value;
-                                dr[5] = ws.Cells[row, col + 7].Value;
+                                //Populate the colPurchaseumns and rows of our defined datatable
+                                dr[0] = ws.Cells[rowPurchase, colPurchase].Value;
+                                dr[1] = ws.Cells[rowPurchase, colPurchase + 1].Value;
+                                dr[2] = ws.Cells[rowPurchase, colPurchase + 2].Value;
+                                dr[3] = ws.Cells[rowPurchase, colPurchase + 3].Value;
+                                dr[4] = ws.Cells[rowPurchase, colPurchase + 4].Value;
+                                dr[5] = ws.Cells[rowPurchase, colPurchase + 5].Value;
+                                dr[5] = ws.Cells[rowPurchase, colPurchase + 6].Value;
+                                dr[5] = ws.Cells[rowPurchase, colPurchase + 7].Value;
                                 tblPurchase.Rows.Add(dr); //Add the prepared row to table
                             }
                         } //End of for loop to input Excel data
