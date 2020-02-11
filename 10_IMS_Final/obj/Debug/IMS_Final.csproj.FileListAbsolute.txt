@@ -159,3 +159,4 @@ D:\repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.dll
 D:\repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.xml
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.dll
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\EPPlus.xml
+F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmInstructions.resources
