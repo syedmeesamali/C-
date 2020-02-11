@@ -150,5 +150,12 @@ namespace IMS_Final
             frmInstructions frminstructions = new frmInstructions();
             frminstructions.Show();
         }
+
+        private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLoadedList frmloaded = new frmLoadedList();
+            frmloaded.Show();
+        }
     }
 }
