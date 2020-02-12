@@ -30,7 +30,8 @@ namespace IMS_Final
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            CustomSearch customSearch = new CustomSearch();
+            customSearch.Show();
         }
     }
 }

@@ -149,8 +149,6 @@ F:\Repos\CSharp\10_IMS_Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisuali
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Properties.Resources.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.Product_Report.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.StockReportsForm.resources
-F:\Repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.cache
-F:\Repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.compiled
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csproj.CopyComplete
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.exe
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.pdb
@@ -164,3 +162,4 @@ D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmInstructions.resources
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmLoadedList.resources
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.ExpiryReports.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.ExpiryReports.resources
+F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.CustomSearch.resources

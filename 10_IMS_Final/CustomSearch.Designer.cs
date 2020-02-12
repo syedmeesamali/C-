@@ -45,7 +45,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(474, 274);
             this.dataGridView1.TabIndex = 0;
-
             // 
             // label1
             // 
@@ -104,6 +103,7 @@
             this.Name = "CustomSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Custom Search in Database";
+            this.Load += new System.EventHandler(this.CustomSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
