@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomSearch.Designer.cs">
+      <DependentUpon>CustomSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,14 @@
     <Compile Include="StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StocksDBDataSetStockinExpiry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomSearch.resx">
+      <DependentUpon>CustomSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,8 +156,6 @@
     <EmbeddedResource Include="Reports\ExpiryReports.resx">
       <DependentUpon>ExpiryReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Expiry_Report.rdlc" />
-    <EmbeddedResource Include="Reports\Product_Report.rdlc" />
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +172,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StocksDBDataSetStockinExpiry.xsc">
+      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
+    </None>
+    <None Include="StocksDBDataSetStockinExpiry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StocksDBDataSetStockinExpiry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StocksDBDataSetStockinExpiry.xss">
+      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
