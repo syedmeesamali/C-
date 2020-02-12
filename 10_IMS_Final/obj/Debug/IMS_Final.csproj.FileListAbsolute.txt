@@ -80,8 +80,6 @@ D:\repos\CSharp\10_IMS_Final\bin\Debug\ru\Microsoft.ReportViewer.DataVisualizati
 D:\repos\CSharp\10_IMS_Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\10_IMS_Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.Product_Report.resources
-D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.cache
-D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.compiled
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csproj.CopyComplete
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 F:\Repos\CSharp\10_IMS_Final\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -163,3 +161,5 @@ D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.frmLoadedList.resources
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.ExpiryReports.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.ExpiryReports.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.CustomSearch.resources
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csprojAssemblyReference.cache
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.CustomSearch.resources
