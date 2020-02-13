@@ -163,3 +163,5 @@ F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.Reports.ExpiryReports.resources
 F:\Repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.CustomSearch.resources
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.CustomSearch.resources
+F:\Repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.cache
+F:\Repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.compiled

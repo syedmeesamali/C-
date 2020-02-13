@@ -29,16 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpiryReports));
             this.btnExpiryReport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.stockinTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            
+            this.stocksDBDataSetStockinExpiry = new IMS_Final.StocksDBDataSetStockinExpiry();
+            this.stocksDBDataSetStockinExpiryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockinTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.stockinTableTableAdapter = new IMS_Final.StocksDBDataSetStockinExpiryTableAdapters.StockinTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource)).BeginInit();
-            
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSetStockinExpiry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSetStockinExpiryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExpiryReport
@@ -62,7 +67,10 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "IMS_Final.Reports.Expiry_Report.rdlc";
+            reportDataSource1.Name = "Expiry_Stockin_Dataset";
+            reportDataSource1.Value = this.stockinTableBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "IMS_Final.Reports.Expiry_Stockin.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(8, 81);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -79,16 +87,25 @@
             // stockinTableBindingSource
             // 
             this.stockinTableBindingSource.DataMember = "StockinTable";
-            
             // 
-            // stocksDBDataSet_Complete
+            // stocksDBDataSetStockinExpiry
             // 
-            
-            
+            this.stocksDBDataSetStockinExpiry.DataSetName = "StocksDBDataSetStockinExpiry";
+            this.stocksDBDataSetStockinExpiry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stocksDBDataSetStockinExpiryBindingSource
+            // 
+            this.stocksDBDataSetStockinExpiryBindingSource.DataSource = this.stocksDBDataSetStockinExpiry;
+            this.stocksDBDataSetStockinExpiryBindingSource.Position = 0;
+            // 
+            // stockinTableBindingSource1
+            // 
+            this.stockinTableBindingSource1.DataMember = "StockinTable";
+            this.stockinTableBindingSource1.DataSource = this.stocksDBDataSetStockinExpiryBindingSource;
             // 
             // stockinTableTableAdapter
             // 
-            
+            this.stockinTableTableAdapter.ClearBeforeFill = true;
             // 
             // ExpiryReports
             // 
@@ -106,7 +123,9 @@
             this.Text = "ExpiryReports";
             this.Load += new System.EventHandler(this.ExpiryReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource)).EndInit();
-            
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSetStockinExpiry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSetStockinExpiryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +138,9 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.BindingSource stockinTableBindingSource;
-        
+        private StocksDBDataSetStockinExpiry stocksDBDataSetStockinExpiry;
+        private System.Windows.Forms.BindingSource stocksDBDataSetStockinExpiryBindingSource;
+        private System.Windows.Forms.BindingSource stockinTableBindingSource1;
+        private StocksDBDataSetStockinExpiryTableAdapters.StockinTableTableAdapter stockinTableTableAdapter;
     }
 }

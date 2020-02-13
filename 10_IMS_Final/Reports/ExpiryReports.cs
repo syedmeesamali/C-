@@ -17,8 +17,10 @@ namespace IMS_Final.Reports
 
         private void ExpiryReports_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'stocksDBDataSetStockinExpiry.StockinTable' table. You can move, or remove it, as needed.
+            this.stockinTableTableAdapter.Fill(this.stocksDBDataSetStockinExpiry.StockinTable);
             // TODO: This line of code loads data into the 'stocksDBDataSet_Complete.StockinTable' table. You can move, or remove it, as needed.
-            
+
 
         }
     }

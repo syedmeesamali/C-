@@ -156,6 +156,7 @@
     <EmbeddedResource Include="Reports\ExpiryReports.resx">
       <DependentUpon>ExpiryReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Expiry_Stockin.rdlc" />
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </EmbeddedResource>
