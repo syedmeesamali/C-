@@ -49,13 +49,13 @@
             this.txtInstructions.Multiline = true;
             this.txtInstructions.Name = "txtInstructions";
             this.txtInstructions.ReadOnly = true;
-            this.txtInstructions.Size = new System.Drawing.Size(518, 152);
+            this.txtInstructions.Size = new System.Drawing.Size(432, 152);
             this.txtInstructions.TabIndex = 1;
             this.txtInstructions.Text = resources.GetString("txtInstructions.Text");
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(612, 46);
+            this.button1.Location = new System.Drawing.Point(486, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 29);
             this.button1.TabIndex = 2;
@@ -67,14 +67,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 261);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtInstructions);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.MaximumSize = new System.Drawing.Size(800, 400);
+            this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "frmInstructions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInstructions";
