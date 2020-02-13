@@ -745,7 +745,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZGY8PNrbl8wSeQZJ3pScq3la06Vr2wHLNt63kysO4bY=</dsig:DigestValue>
+      <dsig:DigestValue>1x8kwZRUkrmEi88T4v3m7KTcjgSnvEDAgGn9+0lOuis=</dsig:DigestValue>
     </hash>
   </file>
   <file name="MasterDB_log.ldf" size="8388608" writeableType="applicationData">
@@ -754,7 +754,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6V7lwkmGauJaiqvVXFaLxceWZ1oYnABiop2hB2FCyuc=</dsig:DigestValue>
+      <dsig:DigestValue>2R7ArrIgiC1JKGKQoSRq2aZ3B//A+XOdwrs1ggRysq8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

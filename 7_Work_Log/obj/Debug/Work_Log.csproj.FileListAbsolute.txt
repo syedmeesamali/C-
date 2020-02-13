@@ -202,8 +202,6 @@ F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.frmLogs.resources
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.Form2.resources
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.Properties.Resources.resources
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.csproj.GenerateResource.cache
-F:\Repos\CSharp\7_Work_Log\obj\Debug\RdlCompile.cache
-F:\Repos\CSharp\7_Work_Log\obj\Debug\RdlCompile.compiled
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.TrustInfo.xml
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.exe.manifest
 F:\Repos\CSharp\7_Work_Log\obj\Debug\Work_Log.application

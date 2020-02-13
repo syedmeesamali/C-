@@ -1,6 +1,6 @@
-https://stackoverflow.com/questions/12475850/sql-query-return-data-from-multiple-tables
+RDLC Report Viewer:
+-------------------
 
+Reference link:
 
-https://www.google.com/search?q=programmatically+change+datasource+for+csharp+reportviewer&oq=programmatically+change+datasource+for+csharp+reportviewer&aqs=chrome..69i57.11454j0j1&sourceid=chrome&ie=UTF-8
-
-https://www.google.com/search?q=reportviewer+report+based+on+the+drop-down+csharp&oq=reportviewer+report+based+on+the+drop-down+csharp&aqs=chrome..69i57.8302j0j1&sourceid=chrome&ie=UTF-8
+https://stackoverflow.com/questions/31581432/missing-microsoft-rdlc-report-designer-in-visual-studio

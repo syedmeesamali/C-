@@ -97,3 +97,4 @@ D:\repos\CSharp\5_Excel_SQL\obj\Debug\ExceltoSQL.application
 D:\repos\CSharp\5_Excel_SQL\obj\Debug\Excel_SQL.csproj.CopyComplete
 D:\repos\CSharp\5_Excel_SQL\obj\Debug\ExceltoSQL.exe
 D:\repos\CSharp\5_Excel_SQL\obj\Debug\ExceltoSQL.pdb
+F:\Repos\CSharp\5_Excel_SQL\obj\Debug\Excel_SQL.csprojAssemblyReference.cache
