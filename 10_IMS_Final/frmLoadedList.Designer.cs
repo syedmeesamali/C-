@@ -76,7 +76,6 @@
             this.Name = "frmLoadedList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoadedList";
-            this.Load += new System.EventHandler(this.frmLoadedList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

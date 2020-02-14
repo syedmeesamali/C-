@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IMS_Input
+namespace IMS_Final
 {
     class Stockin
     {

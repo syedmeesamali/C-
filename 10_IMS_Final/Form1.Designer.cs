@@ -100,7 +100,7 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.stockReportFormToolStripMenuItem.Text = "Main Reports Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
@@ -119,7 +119,7 @@
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
             this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
-
+            this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 

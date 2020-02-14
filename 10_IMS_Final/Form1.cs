@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using OfficeOpenXml;
+using Z.Dapper.Plus;
 
 namespace IMS_Final
 {
@@ -16,6 +18,7 @@ namespace IMS_Final
         //DataTableCollection tableCollection;
         DataTable tblSales = new DataTable("Sales");
         DataTable tblPurchase = new DataTable("Purchase");
+        public static string transfer;
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,11 +44,6 @@ namespace IMS_Final
                         //string fileName;
                         FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
                         ExcelPackage package = new ExcelPackage(fileName);
-
-                        string transfer;
-                        frmLoadedList frmLoaded = new frmLoadedList(transfer);
-                        frmLoaded.ShowDialog();
-                        
                         MessageBox.Show("FileName: " + fileName.ToString());
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
                         counterSales++;
@@ -88,9 +86,26 @@ namespace IMS_Final
             }//End of filter
         }
 
+        //Import the data to the main database
         private void btnView_Click(object sender, EventArgs e)
         {
-            
+            //try
+            //{
+            //    DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+            //    List<Stockin> stockin = productsBindingSource.DataSource as List<Stockin>;
+            //    if (products != null)
+            //    {
+            //        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
+            //        {
+            //            db.BulkInsert(products);
+            //        }
+            //    }
+            //    MessageBox.Show("Finished!");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         int counterPurchase = 0;
@@ -112,6 +127,9 @@ namespace IMS_Final
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
                         counterPurchase++;
                         int colPurchase = 1;
+                        //Save all the data to list
+                        List<Stockin> stockin = new List<Stockin>();
+                        Stockin stockinList = new Stockin();
                         if (counterPurchase == 1) //Only for the first time define table structure
                         {
                             tblPurchase.Columns.Add("Prod ID", typeof(String));
@@ -161,34 +179,15 @@ namespace IMS_Final
             frminstructions.Show();
         }
 
-        //private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    this.Hide();
-        //    frmLoadedList frmloaded = new frmLoadedList();
-        //    frmloaded.Show();
-        //}
-
-
-
+        private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLoadedList frmloaded = new frmLoadedList();
+            frmloaded.Show();
+        }
         //private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         //{
-        //    try
-        //    {
-        //        DapperPlusManager.Entity<Products>().Table("Products");
-        //        List<Products> products = productsBindingSource.DataSource as List<Products>;
-        //        if (products != null)
-        //        {
-        //            using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
-        //            {
-        //                db.BulkInsert(products);
-        //            }
-        //        }
-        //        MessageBox.Show("Finished!");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
+        
 
         //}
 
