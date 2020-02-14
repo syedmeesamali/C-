@@ -168,3 +168,4 @@ D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.cache
 D:\repos\CSharp\10_IMS_Final\obj\Debug\RdlCompile.compiled
 D:\repos\CSharp\10_IMS_Final\bin\Debug\Z.Dapper.Plus.dll
 D:\repos\CSharp\10_IMS_Final\bin\Debug\Z.Dapper.Plus.xml
+D:\repos\CSharp\10_IMS_Final\obj\Debug\IMS_Final.csprojAssemblyReference.cache

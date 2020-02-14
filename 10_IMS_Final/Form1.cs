@@ -139,7 +139,7 @@ namespace IMS_Final
                             tblPurchase.Columns.Add("Supp Code", typeof(String));
                             tblPurchase.Columns.Add("Supp Name", typeof(String));
                             tblPurchase.Columns.Add("Units", typeof(float));
-                            tblPurchase.Columns.Add("Cost", typeof(float));
+                            //tblPurchase.Columns.Add("Cost", typeof(float));
                         }
 
                         for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
@@ -148,19 +148,30 @@ namespace IMS_Final
                             if (ws.Cells[rowPurchase, colPurchase].Value != null)
                             {
                                 //Populate the colPurchaseumns and rows of our defined datatable
+
+                                stockinList.ID = rowPurchase;
                                 dr[0] = ws.Cells[rowPurchase, colPurchase].Value;
+                                stockinList.Prod_ID = dr[0].ToString();
                                 dr[1] = ws.Cells[rowPurchase, colPurchase + 1].Value;
+                                stockinList.Prod_Name = dr[1].ToString();
                                 dr[2] = ws.Cells[rowPurchase, colPurchase + 2].Value;
+                                stockinList.Date = Convert.ToDateTime(dr[2].ToString());
                                 dr[3] = ws.Cells[rowPurchase, colPurchase + 3].Value;
+                                stockinList.Expiry = Convert.ToDateTime(dr[3].ToString());
                                 dr[4] = ws.Cells[rowPurchase, colPurchase + 4].Value;
+                                stockinList.Sup_ID = dr[4].ToString();
                                 dr[5] = ws.Cells[rowPurchase, colPurchase + 5].Value;
+                                stockinList.Sup_Name = dr[5].ToString();
                                 dr[6] = ws.Cells[rowPurchase, colPurchase + 6].Value;
-                                dr[7] = ws.Cells[rowPurchase, colPurchase + 7].Value;
+                                stockinList.Units = float.Parse(dr[6].ToString());
+                                //dr[7] = ws.Cells[rowPurchase, colPurchase + 7].Value;
                                 tblPurchase.Rows.Add(dr); //Add the prepared row to table
+                                stockin.Add(stockinList);
                             }
                         } //End of for loop to input Excel data
                         //dataGridView1.AutoGenerateColumns = true;
-                        dataGridView1.DataSource = tblPurchase;
+                        //dataGridView1.DataSource = tblPurchase;
+                        dataGridView1.DataSource = stockin;
                         dataGridView1.Refresh();
                     } //End of try blocks
 
