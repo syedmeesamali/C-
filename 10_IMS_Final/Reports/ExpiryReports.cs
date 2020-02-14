@@ -12,6 +12,7 @@ namespace IMS_Final.Reports
 
         private void btnExpiryReport_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Expiry report for dates earlier than selected date!");
             this.reportViewer1.RefreshReport();
         }
 

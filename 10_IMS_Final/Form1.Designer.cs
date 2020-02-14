@@ -119,7 +119,7 @@
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
             this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
-            this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
+
             // 
             // instructionsToolStripMenuItem
             // 

@@ -41,6 +41,11 @@ namespace IMS_Final
                         //string fileName;
                         FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
                         ExcelPackage package = new ExcelPackage(fileName);
+
+                        string transfer;
+                        frmLoadedList frmLoaded = new frmLoadedList(transfer);
+                        frmLoaded.ShowDialog();
+                        
                         MessageBox.Show("FileName: " + fileName.ToString());
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
                         counterSales++;
@@ -156,11 +161,37 @@ namespace IMS_Final
             frminstructions.Show();
         }
 
-        private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmLoadedList frmloaded = new frmLoadedList();
-            frmloaded.Show();
-        }
+        //private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    frmLoadedList frmloaded = new frmLoadedList();
+        //    frmloaded.Show();
+        //}
+
+
+
+        //private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        DapperPlusManager.Entity<Products>().Table("Products");
+        //        List<Products> products = productsBindingSource.DataSource as List<Products>;
+        //        if (products != null)
+        //        {
+        //            using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
+        //            {
+        //                db.BulkInsert(products);
+        //            }
+        //        }
+        //        MessageBox.Show("Finished!");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+
+        //}
+
+
     }
 }
