@@ -972,16 +972,23 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM dbo.Sto" +
-                "ckinTable";
+                "ckinTable\r\nWHERE Expiry <= @Expiry";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(StocksDBDataSetStockinExpiry.StockinTableDataTable dataTable) {
+        public virtual int Fill(StocksDBDataSetStockinExpiry.StockinTableDataTable dataTable, string Expiry) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Expiry == null)) {
+                throw new global::System.ArgumentNullException("Expiry");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Expiry));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -993,8 +1000,14 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual StocksDBDataSetStockinExpiry.StockinTableDataTable GetData() {
+        public virtual StocksDBDataSetStockinExpiry.StockinTableDataTable GetData(string Expiry) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Expiry == null)) {
+                throw new global::System.ArgumentNullException("Expiry");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Expiry));
+            }
             StocksDBDataSetStockinExpiry.StockinTableDataTable dataTable = new StocksDBDataSetStockinExpiry.StockinTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
