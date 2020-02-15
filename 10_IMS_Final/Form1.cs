@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -11,9 +12,13 @@ namespace IMS_Final
 {
     public partial class frmMain : Form
     {
+        private ObservableCollection<Stockout> stockout = new ObservableCollection<Stockout>();
+        private ObservableCollection<Stockin> stockin = new ObservableCollection<Stockin>();
+        
         public frmMain()
         {
             InitializeComponent();
+            dataGridView1.Refresh();
         }
 
         //DataTableCollection tableCollection;
@@ -31,6 +36,32 @@ namespace IMS_Final
             StockReportsForm stockReportsForm = new StockReportsForm();
             stockReportsForm.Show();
         }
+
+        //-------------------------------------
+        //Import the STOCK-OUT data to DATABASE
+        //-------------------------------------
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    DapperPlusManager.Entity<Stockin>().Table("StockoutTable");
+            //    List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
+            //    if (stockin != null)
+            //    {
+            //        using (IDbConnection db = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\10_IMS_Final\StocksDB.mdf; Integrated Security = True"))
+            //        {
+            //            db.BulkInsert(stockin);
+            //        }
+            //    }
+            //    MessageBox.Show("Sales Data Imported successfully!");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
+
         int counterSales = 0;
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,47 +70,52 @@ namespace IMS_Final
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
+                try
+                {
+                    FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                    ExcelPackage package = new ExcelPackage(fileName);
+                    MessageBox.Show("FileName: " + fileName.ToString());
+                    ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                    counterSales++;
+                    int colSales = 1;
                     
-                    try
+                    if (counterSales == 1) //Only for the first time define table structure
                     {
-                        //string fileName;
-                        FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
-                        ExcelPackage package = new ExcelPackage(fileName);
-                        MessageBox.Show("FileName: " + fileName.ToString());
-                        ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                        counterSales++;
-                        int colSales = 1;
-                        if (counterSales == 1) //Only for the first time define table structure
-                        {
-                            tblSales.Columns.Add("Prod ID", typeof(String));
-                            tblSales.Columns.Add("Description", typeof(String));
-                            tblSales.Columns.Add("Boxes", typeof(String));
-                            tblSales.Columns.Add("Pcs", typeof(String));
-                            tblSales.Columns.Add("Price", typeof(String));
-                            tblSales.Columns.Add("Units", typeof(String));
-                        }
+                        tblSales.Columns.Add("Date", typeof(DateTime));
+                        tblSales.Columns.Add("Cust ID", typeof(String));
+                        tblSales.Columns.Add("Prod ID", typeof(String));
+                        tblSales.Columns.Add("Prod Name", typeof(String));
+                        tblSales.Columns.Add("Pcs", typeof(String));
+                    }
+                    string cust_ID = ws.Cells[8, 8].Value.ToString(); //Hard-coded customer name value
+                    string date_Loc = ws.Cells[4, 15].Value.ToString();
+                    string date_Val = date_Loc.Substring(6, 10).ToString();
                         
-                        for (int rowSales = 15; rowSales < 30; rowSales++)
+                    for (int rowSales = 15; rowSales < 30; rowSales++) //Hard-coded start as well
+                    {
+                        DataRow dr = tblSales.NewRow();
+                        if (ws.Cells[rowSales, colSales].Value != null)
                         {
-                            DataRow dr = tblSales.NewRow();
-                            if (ws.Cells[rowSales, colSales].Value != null)
-                            {
-                                //Populate the colSalesumns and rowSaless of our defined datatable
-                                dr[0] = ws.Cells[rowSales, colSales].Value;
-                                dr[1] = ws.Cells[rowSales, colSales + 3].Value;
-                                dr[2] = ws.Cells[rowSales, colSales + 6].Value;
-                                dr[3] = ws.Cells[rowSales, colSales + 9].Value;
-                                dr[4] = ws.Cells[rowSales, colSales + 11].Value;
-                                dr[5] = ws.Cells[rowSales, colSales + 15].Value;
-                                tblSales.Rows.Add(dr); //Add the prepared rowSales to table
-                            }
-                        } //End of for loop to input Excel data
-                        //dataGridView1.AutoGenerateColumns = true;
-                        dataGridView1.DataSource = tblSales;
-                        dataGridView1.Refresh();
-                    } //End of try blocks
-
-                    catch (Exception ex)
+                            //Populate the colSalesumns and rowSaless of our defined datatable
+                            Stockout stockoutList = new Stockout();
+                            dr[0] = date_Val;
+                            stockoutList.Date = Convert.ToDateTime(dr[0].ToString());
+                            dr[1] = cust_ID;
+                            stockoutList.Cust_Name = dr[1].ToString();
+                            dr[2] = ws.Cells[rowSales, colSales].Value;
+                            stockoutList.Prod_ID = dr[2].ToString();
+                            dr[3] = ws.Cells[rowSales, colSales + 3].Value;
+                            stockoutList.Prod_Name = dr[3].ToString();
+                            dr[4] = ws.Cells[rowSales, colSales + 9].Value;
+                            stockoutList.Units = float.Parse(dr[4].ToString());
+                            tblSales.Rows.Add(dr); //Add the prepared rowSales to table
+                            stockout.Add(stockoutList);
+                        }
+                    } //End of for loop to input Excel data
+                    //dataGridView1.AutoGenerateColumns = true;
+                    dataGridView1.DataSource = stockout;
+                    dataGridView1.Refresh();
+                }  catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
                     }
@@ -87,7 +123,9 @@ namespace IMS_Final
             }//End of filter
         }
 
-        //Import the data to the main database
+        //-------------------------------------
+        //Import the STOCK-IN data to DATABASE
+        //-------------------------------------
         private void btnView_Click(object sender, EventArgs e)
         {
             try
@@ -101,11 +139,11 @@ namespace IMS_Final
                         db.BulkInsert(stockin);
                     }
                 }
-                MessageBox.Show("Data imported successfully!");
+                MessageBox.Show("Purchase Data Imported successfully!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -127,8 +165,7 @@ namespace IMS_Final
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
                     counterPurchase++;
                     int colPurchase = 1;
-                    
-                    List<Stockin> stockin = new List<Stockin>(); //Save all the data to list
+                    //List<Stockin> stockin = new List<Stockin>();
 
                     if (counterPurchase == 1) //Only for the first time define table structure
                     {
@@ -193,6 +230,5 @@ namespace IMS_Final
             frmLoadedList frmloaded = new frmLoadedList();
             frmloaded.Show();
         }
-        
     }
 }
