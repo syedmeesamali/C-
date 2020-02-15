@@ -50,8 +50,9 @@
             this.btnFullReport.Name = "btnFullReport";
             this.btnFullReport.Size = new System.Drawing.Size(231, 34);
             this.btnFullReport.TabIndex = 0;
-            this.btnFullReport.Text = "Full stocks report";
+            this.btnFullReport.Text = "Product List Search";
             this.btnFullReport.UseVisualStyleBackColor = true;
+            this.btnFullReport.Click += new System.EventHandler(this.btnFullReport_Click);
             // 
             // btnExit
             // 
@@ -85,6 +86,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Stocks-Out Report for Print";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -94,6 +96,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Consolidated Report";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -133,6 +136,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "Custom Report (Stock-Out)";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // StockReportsForm
             // 
@@ -155,6 +159,7 @@
             this.Name = "StockReportsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Reports Form";
+            this.Load += new System.EventHandler(this.StockReportsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

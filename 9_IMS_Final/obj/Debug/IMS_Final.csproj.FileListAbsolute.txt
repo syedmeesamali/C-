@@ -247,3 +247,5 @@ D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.csproj.GenerateResource.cache
 D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.csproj.CopyComplete
 D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.exe
 D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.pdb
+D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.SalesSearch.resources
+D:\repos\CSharp\9_IMS_Final\obj\Debug\IMS_Final.ProductListSearch.resources

@@ -33,5 +33,32 @@ namespace IMS_Final
             CustomSearch customSearch = new CustomSearch();
             customSearch.Show();
         }
+
+        private void StockReportsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFullReport_Click(object sender, EventArgs e)
+        {
+            ProductListSearch productListSearch = new ProductListSearch();
+            productListSearch.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SalesSearch salesSearch = new SalesSearch();
+            salesSearch.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet!", "Coming Soon");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet!", "Coming Soon");
+        }
     }
 }

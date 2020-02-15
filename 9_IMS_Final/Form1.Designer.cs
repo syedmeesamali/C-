@@ -102,7 +102,7 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.stockReportFormToolStripMenuItem.Text = "Main Reports Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
@@ -119,21 +119,21 @@
             // filesLoadedToolStripMenuItem
             // 
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
-            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
             this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // dataGridView1
@@ -172,7 +172,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(642, 30);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(230, 264);
+            this.listBox1.Size = new System.Drawing.Size(230, 303);
             this.listBox1.TabIndex = 4;
             // 
             // frmMain

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace IMS_Final
 {
     class Stockin
     {
+        //[Key]
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public string Sup_ID { get; set; }

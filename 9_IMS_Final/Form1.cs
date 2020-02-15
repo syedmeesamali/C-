@@ -23,11 +23,6 @@ namespace IMS_Final
             dataGridView1.Refresh();
         }
 
-        //DataTableCollection tableCollection;
-        DataTable tblSales = new DataTable("Sales");
-        DataTable tblPurchase = new DataTable("Purchase");
-        public static string transfer;
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -44,23 +39,24 @@ namespace IMS_Final
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
+            {   DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
                 DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelLoaded");
-                List<Stockout> stockoutTable = dataGridView1.DataSource as List<Stockout>;
-                List<ExcelLoaded> excelLoadedTable = listBox1.DataSource as List<ExcelLoaded>;
-                if (stockin != null)
-                {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
-                    { db.BulkInsert(stockoutTable);
-                        db.BulkInsert(excelLoaded);
+                List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
+                List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
+                if (stockout != null)
+                {   using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    {
+                        MessageBox.Show("TRyiing to insert!");
+                        db.BulkInsert(stockout);
+                       db.BulkInsert(excelLoaded);
                     }
+                    MessageBox.Show("Purchase Data Imported successfully!");
+                } else
+                {
+                    MessageBox.Show("Stockout is null !!!");
                 }
-                MessageBox.Show("Purchase Data Imported successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  catch (Exception ex)
+            {   MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -81,6 +77,7 @@ namespace IMS_Final
                             ExcelWorksheet ws = package.Workbook.Worksheets[1];
                             loadedList.LoadedFileExcel = file;
                             listBox1.Items.Add(file);
+                            listBox1.HorizontalScrollbar = true;
                             excelLoaded.Add(loadedList);
                             int colSales = 1;
                             string cust_ID = ws.Cells[8, 8].Value.ToString(); //Hard-coded customer name value
@@ -88,7 +85,6 @@ namespace IMS_Final
                             string date_Val = date_Loc.Substring(6, 10).ToString();
                             for (int rowSales = 15; rowSales < 30; rowSales++) //Hard-coded start as well
                             {
-                                DataRow dr = tblSales.NewRow();
                                 if (ws.Cells[rowSales, colSales].Value != null)
                                 {
                                     //Populate the colSalesumns and rowSaless of our defined datatable
@@ -105,11 +101,9 @@ namespace IMS_Final
                         }  catch (Exception ex)
                         {  MessageBox.Show(ex.ToString());    }
                     }
-                    //Update datagridview after all files have been loaded.
-                    
                     dataGridView1.DataSource = stockout;
                     dataGridView1.Refresh();
-                } //End of dialog selection
+                } 
             }//End of filter
         }
         //-------------------------------------
@@ -123,13 +117,13 @@ namespace IMS_Final
                 {
                     using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     {    db.BulkInsert(stockin);      }
-                }  MessageBox.Show("Purchase Data Imported successfully!");
+                    MessageBox.Show("Purchase Data Imported successfully!");
+                }   MessageBox.Show("Stockin is still null or there is some issue!");
             }  catch (Exception ex)
             { MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        int counterPurchase = 0;
         //------------import purchase data-----------
         private void importPurchaseExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -146,12 +140,10 @@ namespace IMS_Final
                     int colPurchase = 1;
                     for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
                     {
-                        DataRow dr = tblPurchase.NewRow();
                         if (ws.Cells[rowPurchase, colPurchase].Value != null)
                         {
                             Stockin stockinList = new Stockin();
-                                //Populate the colPurchaseumns and rows of our defined datatable
-                                //stockinList.ID = rowPurchase;
+                            stockinList.ID = default;
                             stockinList.Prod_ID = (ws.Cells[rowPurchase, colPurchase].Value).ToString();
                             stockinList.Prod_Name = (ws.Cells[rowPurchase, colPurchase + 1].Value).ToString();
                             stockinList.Date = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString());
