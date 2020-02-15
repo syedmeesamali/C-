@@ -42,6 +42,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnView = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -117,21 +118,21 @@
             // filesLoadedToolStripMenuItem
             // 
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
-            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
             this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // dataGridView1
@@ -149,17 +150,27 @@
             // 
             this.btnView.Location = new System.Drawing.Point(19, 327);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(150, 26);
+            this.btnView.Size = new System.Drawing.Size(216, 26);
             this.btnView.TabIndex = 2;
-            this.btnView.Text = "Import to Database";
+            this.btnView.Text = "Import Stock-In to Databasee";
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(262, 327);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 26);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Import Stock-out to Database";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 365);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -194,6 +205,7 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.ToolStripMenuItem instructionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filesLoadedToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

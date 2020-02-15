@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
 using OfficeOpenXml;
@@ -89,23 +90,23 @@ namespace IMS_Final
         //Import the data to the main database
         private void btnView_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    DapperPlusManager.Entity<Stockin>().Table("StockinTable");
-            //    List<Stockin> stockin = productsBindingSource.DataSource as List<Stockin>;
-            //    if (products != null)
-            //    {
-            //        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\8_Work_Log\MasterDB.mdf;Integrated Security=True"))
-            //        {
-            //            db.BulkInsert(products);
-            //        }
-            //    }
-            //    MessageBox.Show("Finished!");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+                List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
+                if (stockin != null)
+                {
+                    using (IDbConnection db = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\10_IMS_Final\StocksDB.mdf; Integrated Security = True"))
+                    {
+                        db.BulkInsert(stockin);
+                    }
+                }
+                MessageBox.Show("Data imported successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         int counterPurchase = 0;
@@ -117,91 +118,81 @@ namespace IMS_Final
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
+                try
+                {
+                    //string fileName;
+                    FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                    ExcelPackage package = new ExcelPackage(fileName);
+                    MessageBox.Show("FileName: " + fileName.ToString());
+                    ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                    counterPurchase++;
+                    int colPurchase = 1;
+                    
+                    List<Stockin> stockin = new List<Stockin>(); //Save all the data to list
 
-                    try
+                    if (counterPurchase == 1) //Only for the first time define table structure
                     {
-                        //string fileName;
-                        FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
-                        ExcelPackage package = new ExcelPackage(fileName);
-                        MessageBox.Show("FileName: " + fileName.ToString());
-                        ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                        counterPurchase++;
-                        int colPurchase = 1;
-                        //Save all the data to list
-                        List<Stockin> stockin = new List<Stockin>();
-                        Stockin stockinList = new Stockin();
-                        if (counterPurchase == 1) //Only for the first time define table structure
-                        {
-                            tblPurchase.Columns.Add("Prod ID", typeof(String));
-                            tblPurchase.Columns.Add("Prod Name", typeof(String));
-                            tblPurchase.Columns.Add("Date", typeof(String));
-                            tblPurchase.Columns.Add("Expiry", typeof(String));
-                            tblPurchase.Columns.Add("Supp Code", typeof(String));
-                            tblPurchase.Columns.Add("Supp Name", typeof(String));
-                            tblPurchase.Columns.Add("Units", typeof(float));
-                            //tblPurchase.Columns.Add("Cost", typeof(float));
-                        }
-
-                        for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
-                        {
-                            DataRow dr = tblPurchase.NewRow();
-                            if (ws.Cells[rowPurchase, colPurchase].Value != null)
-                            {
-                                //Populate the colPurchaseumns and rows of our defined datatable
-
-                                stockinList.ID = rowPurchase;
-                                dr[0] = ws.Cells[rowPurchase, colPurchase].Value;
-                                stockinList.Prod_ID = dr[0].ToString();
-                                dr[1] = ws.Cells[rowPurchase, colPurchase + 1].Value;
-                                stockinList.Prod_Name = dr[1].ToString();
-                                dr[2] = ws.Cells[rowPurchase, colPurchase + 2].Value;
-                                stockinList.Date = Convert.ToDateTime(dr[2].ToString());
-                                dr[3] = ws.Cells[rowPurchase, colPurchase + 3].Value;
-                                stockinList.Expiry = Convert.ToDateTime(dr[3].ToString());
-                                dr[4] = ws.Cells[rowPurchase, colPurchase + 4].Value;
-                                stockinList.Sup_ID = dr[4].ToString();
-                                dr[5] = ws.Cells[rowPurchase, colPurchase + 5].Value;
-                                stockinList.Sup_Name = dr[5].ToString();
-                                dr[6] = ws.Cells[rowPurchase, colPurchase + 6].Value;
-                                stockinList.Units = float.Parse(dr[6].ToString());
-                                //dr[7] = ws.Cells[rowPurchase, colPurchase + 7].Value;
-                                tblPurchase.Rows.Add(dr); //Add the prepared row to table
-                                stockin.Add(stockinList);
-                            }
-                        } //End of for loop to input Excel data
-                        //dataGridView1.AutoGenerateColumns = true;
-                        //dataGridView1.DataSource = tblPurchase;
-                        dataGridView1.DataSource = stockin;
-                        dataGridView1.Refresh();
-                    } //End of try blocks
-
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
+                        tblPurchase.Columns.Add("Prod ID", typeof(String));
+                        tblPurchase.Columns.Add("Prod Name", typeof(String));
+                        tblPurchase.Columns.Add("Date", typeof(String));
+                        tblPurchase.Columns.Add("Expiry", typeof(String));
+                        tblPurchase.Columns.Add("Supp Code", typeof(String));
+                        tblPurchase.Columns.Add("Supp Name", typeof(String));
+                        tblPurchase.Columns.Add("Units", typeof(float));
+                        //tblPurchase.Columns.Add("Cost", typeof(float));
                     }
+
+                    for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
+                    {
+                        DataRow dr = tblPurchase.NewRow();
+                        if (ws.Cells[rowPurchase, colPurchase].Value != null)
+                        {
+                            Stockin stockinList = new Stockin();
+                            //Populate the colPurchaseumns and rows of our defined datatable
+                            stockinList.ID = rowPurchase;
+                            dr[0] = ws.Cells[rowPurchase, colPurchase].Value;
+                            stockinList.Prod_ID = dr[0].ToString();
+                            dr[1] = ws.Cells[rowPurchase, colPurchase + 1].Value;
+                            stockinList.Prod_Name = dr[1].ToString();
+                            dr[2] = ws.Cells[rowPurchase, colPurchase + 2].Value;
+                            stockinList.Date = Convert.ToDateTime(dr[2].ToString());
+                            dr[3] = ws.Cells[rowPurchase, colPurchase + 3].Value;
+                            stockinList.Expiry = Convert.ToDateTime(dr[3].ToString());
+                            dr[4] = ws.Cells[rowPurchase, colPurchase + 4].Value;
+                            stockinList.Sup_ID = dr[4].ToString();
+                            dr[5] = ws.Cells[rowPurchase, colPurchase + 5].Value;
+                            stockinList.Sup_Name = dr[5].ToString();
+                            dr[6] = ws.Cells[rowPurchase, colPurchase + 6].Value;
+                            stockinList.Units = float.Parse(dr[6].ToString());
+                            //dr[7] = ws.Cells[rowPurchase, colPurchase + 7].Value;
+                            tblPurchase.Rows.Add(dr); //Add the prepared row to table
+                            stockin.Add(stockinList);
+                        }
+                    } //End of for loop to input Excel data
+                    dataGridView1.DataSource = stockin;
+                    dataGridView1.Refresh();
+                }  catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
                 } //End of dialog selection
             }//End of filter
         }
 
+        //Instructions about use of software
         private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmInstructions frminstructions = new frmInstructions();
             frminstructions.Show();
         }
-
+        //Files already loaded in database
         private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmLoadedList frmloaded = new frmLoadedList();
             frmloaded.Show();
         }
-        //private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
         
-
-        //}
-
-
     }
 }

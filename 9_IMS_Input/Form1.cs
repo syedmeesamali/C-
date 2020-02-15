@@ -51,7 +51,6 @@ namespace IMS_Input
                 if (isExcelInstalled)
                 {
                     System.Diagnostics.Process.Start(excelFile.ToString());
-
                 }
             }
         }
@@ -102,8 +101,6 @@ namespace IMS_Input
             this.Hide();
             StockFilters stockinFilters = new StockFilters();
             stockinFilters.Show();
-
-            
         }
     }
 }
