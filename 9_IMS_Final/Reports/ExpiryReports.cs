@@ -22,8 +22,6 @@ namespace IMS_Final.Reports
             string theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             this.stockinTableTableAdapter.Fill(this.stocksDBDataSetStockinExpiry.StockinTable, theDate);
             // TODO: This line of code loads data into the 'stocksDBDataSet_Complete.StockinTable' table. You can move, or remove it, as needed.
-
-
         }
     }
 }

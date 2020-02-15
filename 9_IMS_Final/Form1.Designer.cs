@@ -43,6 +43,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnView = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,7 +102,7 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stockReportFormToolStripMenuItem.Text = "Main Reports Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
@@ -118,21 +119,21 @@
             // filesLoadedToolStripMenuItem
             // 
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
-            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
             this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // dataGridView1
@@ -143,12 +144,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(617, 310);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(19, 327);
+            this.btnView.Location = new System.Drawing.Point(19, 352);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(216, 26);
             this.btnView.TabIndex = 2;
@@ -158,7 +159,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(262, 327);
+            this.button1.Location = new System.Drawing.Point(262, 352);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 26);
             this.button1.TabIndex = 3;
@@ -166,11 +167,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(642, 30);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(230, 264);
+            this.listBox1.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 365);
+            this.ClientSize = new System.Drawing.Size(884, 395);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.dataGridView1);
@@ -178,8 +188,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(779, 404);
-            this.MinimumSize = new System.Drawing.Size(779, 404);
+            this.MaximumSize = new System.Drawing.Size(900, 450);
+            this.MinimumSize = new System.Drawing.Size(779, 430);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management & Reporting System";
@@ -207,6 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem instructionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filesLoadedToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

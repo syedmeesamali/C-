@@ -88,6 +88,7 @@
     <Compile Include="CustomSearch.Designer.cs">
       <DependentUpon>CustomSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcelLoaded.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

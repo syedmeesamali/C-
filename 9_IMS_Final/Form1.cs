@@ -15,7 +15,8 @@ namespace IMS_Final
         //These lists will be used to update the individual lists locally
         private ObservableCollection<Stockout> stockout = new ObservableCollection<Stockout>();
         private ObservableCollection<Stockin> stockin = new ObservableCollection<Stockin>();
-        
+        private ObservableCollection<ExcelLoaded> excelLoaded = new ObservableCollection<ExcelLoaded>();
+
         public frmMain()
         {
             InitializeComponent();
@@ -42,7 +43,25 @@ namespace IMS_Final
         //-------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-               
+            try
+            {
+                DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
+                DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelLoaded");
+                List<Stockout> stockoutTable = dataGridView1.DataSource as List<Stockout>;
+                List<ExcelLoaded> excelLoadedTable = listBox1.DataSource as List<ExcelLoaded>;
+                if (stockin != null)
+                {
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    { db.BulkInsert(stockoutTable);
+                        db.BulkInsert(excelLoaded);
+                    }
+                }
+                MessageBox.Show("Purchase Data Imported successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,19 +73,19 @@ namespace IMS_Final
                 openFileDialog.Title = "Select all invoices to be input";
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                
+                ExcelLoaded loadedList = new ExcelLoaded();
                 foreach (string file in openFileDialog.FileNames)
-                    {
-                        try
-                        {
-                            FileInfo fileName = new FileInfo("" + file);
+                    {   try
+                        {   FileInfo fileName = new FileInfo("" + file);
                             ExcelPackage package = new ExcelPackage(fileName);
                             ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                            loadedList.LoadedFileExcel = file;
+                            listBox1.Items.Add(file);
+                            excelLoaded.Add(loadedList);
                             int colSales = 1;
                             string cust_ID = ws.Cells[8, 8].Value.ToString(); //Hard-coded customer name value
                             string date_Loc = ws.Cells[4, 15].Value.ToString();
                             string date_Val = date_Loc.Substring(6, 10).ToString();
-
                             for (int rowSales = 15; rowSales < 30; rowSales++) //Hard-coded start as well
                             {
                                 DataRow dr = tblSales.NewRow();
@@ -83,13 +102,11 @@ namespace IMS_Final
                                 }
                             } //End of for loop to input Excel data
                             
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.ToString());
-                        }
+                        }  catch (Exception ex)
+                        {  MessageBox.Show(ex.ToString());    }
                     }
                     //Update datagridview after all files have been loaded.
+                    
                     dataGridView1.DataSource = stockout;
                     dataGridView1.Refresh();
                 } //End of dialog selection
@@ -104,7 +121,7 @@ namespace IMS_Final
                 List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\10_IMS_Final\StocksDB.mdf; Integrated Security = True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     {    db.BulkInsert(stockin);      }
                 }  MessageBox.Show("Purchase Data Imported successfully!");
             }  catch (Exception ex)
