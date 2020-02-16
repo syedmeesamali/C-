@@ -43,6 +43,7 @@
             this.txtProdID.Name = "txtProdID";
             this.txtProdID.Size = new System.Drawing.Size(82, 20);
             this.txtProdID.TabIndex = 15;
+            this.txtProdID.TextChanged += new System.EventHandler(this.txtProdID_TextChanged);
             // 
             // label3
             // 
@@ -98,6 +99,7 @@
             this.Name = "SalesSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesSearch";
+            this.Load += new System.EventHandler(this.SalesSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

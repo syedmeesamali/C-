@@ -15,7 +15,7 @@ namespace IMS_Final
         DataTable dt;
         private void CustomSearch_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM StockInTable", conn);
             dt = new DataTable();
@@ -35,7 +35,7 @@ namespace IMS_Final
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             try
-            {   SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+            {   SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM StockInTable WHERE Prod_Name like '" + txtSearch.Text + "%'", conn);
                 dt = new DataTable();
@@ -51,7 +51,7 @@ namespace IMS_Final
             MessageBox.Show("You will now see results which have expiry date earlier than specified!");
             try
             {   string theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True");
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM StockInTable WHERE Expiry <= '" + theDate + "'", conn);
                 dt = new DataTable();
@@ -64,7 +64,7 @@ namespace IMS_Final
         //Update the database based on the word typed in the Product-ID
         private void txtProdID_TextChanged(object sender, EventArgs e)
         {   try
-            {   SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True");
+            {   SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True");
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM StockInTable WHERE Prod_ID like '" + txtProdID.Text + "%'", conn);
                 dt = new DataTable();

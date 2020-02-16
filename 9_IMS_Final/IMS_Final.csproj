@@ -143,11 +143,6 @@
     <Compile Include="StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StocksDBDataSetStockinExpiry.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CustomSearch.resx">
       <DependentUpon>CustomSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,17 +190,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="StocksDBDataSetStockinExpiry.xsc">
-      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
-    </None>
-    <None Include="StocksDBDataSetStockinExpiry.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StocksDBDataSetStockinExpiry.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StocksDBDataSetStockinExpiry.xss">
-      <DependentUpon>StocksDBDataSetStockinExpiry.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
