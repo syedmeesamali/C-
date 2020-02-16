@@ -17,7 +17,7 @@ namespace IMS_Final
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+                SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM Products WHERE Prod_Name like '" + txtSearch.Text + "%'", conn);
                 dt = new DataTable();
@@ -33,7 +33,7 @@ namespace IMS_Final
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+                SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM Products WHERE Prod_ID like '" + txtProdID.Text + "%'", conn);
                 dt = new DataTable();
@@ -47,7 +47,7 @@ namespace IMS_Final
 
         private void ProductListSearch_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM Products", conn);
             dt = new DataTable();

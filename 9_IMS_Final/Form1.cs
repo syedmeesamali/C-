@@ -43,13 +43,14 @@ namespace IMS_Final
                 openFileDialog.Title = "Select all invoices to be input";
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                ExcelLoaded loadedList = new ExcelLoaded();
+                
                 foreach (string file in openFileDialog.FileNames)
                     {   try
                         {   FileInfo fileName = new FileInfo("" + file);
+                            ExcelLoaded loadedList = new ExcelLoaded();
                             ExcelPackage package = new ExcelPackage(fileName);
                             ExcelWorksheet ws = package.Workbook.Worksheets[1];
-                            loadedList.LoadedFileExcel = file;
+                            loadedList.LoadedFileName = file;
                             listBox1.Items.Add(file);
                             listBox1.HorizontalScrollbar = true;
                             excelLoaded.Add(loadedList);
@@ -61,7 +62,6 @@ namespace IMS_Final
                             {
                                 if (ws.Cells[rowSales, colSales].Value != null)
                                 {
-                                    //Populate the colSalesumns and rowSaless of our defined datatable
                                     Stockout stockoutList = new Stockout();
                                     stockoutList.Date = Convert.ToDateTime(date_Val);
                                     stockoutList.Cust_Name = cust_ID;
@@ -88,12 +88,12 @@ namespace IMS_Final
             try
             {
                 DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
-                DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelLoaded");
+                DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelFiles");
                 List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
-                List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
-                if (stockout != null)
+                //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
+                if (excelLoaded != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     {
                         db.BulkInsert(stockout);
                         db.BulkInsert(excelLoaded);
@@ -102,7 +102,7 @@ namespace IMS_Final
                 }
                 else
                 {
-                    MessageBox.Show("Stockout is null and there is some error!");
+                    MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
                 }
             }
             catch (Exception ex)
@@ -122,7 +122,6 @@ namespace IMS_Final
                 try
                 {   FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
                     ExcelPackage package = new ExcelPackage(fileName);
-                    MessageBox.Show("FileName: " + fileName.ToString());
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
                     int colPurchase = 1;
                     for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
@@ -130,7 +129,6 @@ namespace IMS_Final
                         if (ws.Cells[rowPurchase, colPurchase].Value != null)
                         {
                             Stockin stockinList = new Stockin();
-                            //stockinList.ID = default;
                             stockinList.Prod_ID = (ws.Cells[rowPurchase, colPurchase].Value).ToString();
                             stockinList.Prod_Name = (ws.Cells[rowPurchase, colPurchase + 1].Value).ToString();
                             stockinList.Date = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString());
@@ -159,11 +157,14 @@ namespace IMS_Final
                 List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     { db.BulkInsert(stockin); }
                     MessageBox.Show("Purchase Data Imported successfully!");
+                } else
+                {
+                    MessageBox.Show("Stockin is still null or there is some issue!");
                 }
-                MessageBox.Show("Stockin is still null or there is some issue!");
+                
             }
             catch (Exception ex)
             {
