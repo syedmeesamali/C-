@@ -93,7 +93,7 @@ namespace IMS_Final
                 //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
                 if (excelLoaded != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                     {
                         db.BulkInsert(stockout);
                         db.BulkInsert(excelLoaded);
@@ -157,7 +157,7 @@ namespace IMS_Final
                 List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                     { db.BulkInsert(stockin); }
                     MessageBox.Show("Purchase Data Imported successfully!");
                 } else
@@ -186,5 +186,7 @@ namespace IMS_Final
             frmLoadedList frmloaded = new frmLoadedList();
             frmloaded.Show();
         }
+
+       
     }
 }

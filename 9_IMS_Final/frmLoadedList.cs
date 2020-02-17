@@ -22,7 +22,7 @@ namespace IMS_Final
         DataTable dt;
         private void frmLoadedList_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\repos\CSharp\9_IMS_Final\StocksDB.mdf; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True");
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM ExcelFiles", conn);
             dt = new DataTable();

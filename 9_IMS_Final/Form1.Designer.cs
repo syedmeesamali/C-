@@ -74,21 +74,21 @@
             // importInvoiceExcelToolStripMenuItem
             // 
             this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importInvoiceExcelToolStripMenuItem.Text = "Import Sales Invoice (Excel)";
             this.importInvoiceExcelToolStripMenuItem.Click += new System.EventHandler(this.importInvoiceExcelToolStripMenuItem_Click);
             // 
             // importPurchaseExcelToolStripMenuItem
             // 
             this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase Invoice (Excel)";
             this.importPurchaseExcelToolStripMenuItem.Click += new System.EventHandler(this.importPurchaseExcelToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
