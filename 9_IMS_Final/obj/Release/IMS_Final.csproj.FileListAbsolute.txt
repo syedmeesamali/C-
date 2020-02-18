@@ -167,3 +167,10 @@ F:\Repos\CSharp\9_IMS_Final\bin\Release\IMS_Final.application
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe.manifest
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
+D:\repos\CSharp\9_IMS_Final\bin\Release\IMS_Final.exe.manifest
+D:\repos\CSharp\9_IMS_Final\bin\Release\IMS_Final.application
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
+D:\repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.cache
+D:\repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.compiled
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe.manifest
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application

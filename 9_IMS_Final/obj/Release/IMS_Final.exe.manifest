@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="IMS_Final.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="IMS_Final.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fiRW0FRwvWeGiw9pupJsoI8XwmXKATnHSLUZcYI80tY=</dsig:DigestValue>
+        <dsig:DigestValue>w3UetOO3bkt8YqrYKIp1biyLoFp9rnYDDBi9vcbEiLM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -785,7 +785,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zGxkGe2Umxs/FwibITgBTwuUVUl7W2JJjdjztLR3Lro=</dsig:DigestValue>
+      <dsig:DigestValue>rEGcdGwNSRAk1+2/VL1BrqpFZcBkYtCEgVxMiuYoV2E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="2621440" writeableType="applicationData">
@@ -794,7 +794,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yXOjXlEBacra4Eo1iO0w++9OOSch6Fb6qG9KM4bt4Gk=</dsig:DigestValue>
+      <dsig:DigestValue>3+I1ndhMPKI1m8ZEMCGpbZw3IJ6+pGeGaCVpstCQudo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
