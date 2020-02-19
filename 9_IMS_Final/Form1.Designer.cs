@@ -57,7 +57,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1034, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,21 +74,21 @@
             // importInvoiceExcelToolStripMenuItem
             // 
             this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.importInvoiceExcelToolStripMenuItem.Text = "Import Sales Invoice (Excel)";
             this.importInvoiceExcelToolStripMenuItem.Click += new System.EventHandler(this.importInvoiceExcelToolStripMenuItem_Click);
             // 
             // importPurchaseExcelToolStripMenuItem
             // 
             this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase Invoice (Excel)";
             this.importPurchaseExcelToolStripMenuItem.Click += new System.EventHandler(this.importPurchaseExcelToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -145,12 +145,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(617, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(709, 496);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(19, 352);
+            this.btnView.Location = new System.Drawing.Point(19, 554);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(216, 26);
             this.btnView.TabIndex = 2;
@@ -160,7 +160,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(262, 352);
+            this.button1.Location = new System.Drawing.Point(264, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 26);
             this.button1.TabIndex = 3;
@@ -171,15 +171,15 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(642, 62);
+            this.listBox1.Location = new System.Drawing.Point(734, 50);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(230, 277);
+            this.listBox1.Size = new System.Drawing.Size(288, 472);
             this.listBox1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(648, 36);
+            this.label1.Location = new System.Drawing.Point(734, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 5;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 395);
+            this.ClientSize = new System.Drawing.Size(1034, 611);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
@@ -199,8 +199,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 450);
-            this.MinimumSize = new System.Drawing.Size(779, 430);
+            this.MaximumSize = new System.Drawing.Size(1050, 650);
+            this.MinimumSize = new System.Drawing.Size(1050, 650);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management & Reporting System";

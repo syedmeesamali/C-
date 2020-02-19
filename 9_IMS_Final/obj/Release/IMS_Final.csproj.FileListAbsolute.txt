@@ -84,3 +84,5 @@ D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.CopyComplete
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.pdb
+D:\repos\CSharp\9_IMS_Final\bin\Release\StocksDB.mdf
+D:\repos\CSharp\9_IMS_Final\bin\Release\StocksDB_log.ldf
