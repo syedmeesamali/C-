@@ -99,10 +99,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomSearch.cs">
+    <Compile Include="Reports\CustomSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomSearch.Designer.cs">
+    <Compile Include="Reports\CustomSearch.Designer.cs">
       <DependentUpon>CustomSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcelLoaded.cs" />
@@ -124,10 +124,10 @@
     <Compile Include="frmLoadedList.Designer.cs">
       <DependentUpon>frmLoadedList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductListSearch.cs">
+    <Compile Include="Reports\ProductListSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductListSearch.Designer.cs">
+    <Compile Include="Reports\ProductListSearch.Designer.cs">
       <DependentUpon>ProductListSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -144,19 +144,19 @@
     <Compile Include="Reports\Product_Report.Designer.cs">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesSearch.cs">
+    <Compile Include="Reports\SalesSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesSearch.Designer.cs">
+    <Compile Include="Reports\SalesSearch.Designer.cs">
       <DependentUpon>SalesSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Stockin.cs" />
     <Compile Include="Stockout.cs" />
-    <Compile Include="StockReportsForm.cs">
+    <Compile Include="Reports\StockReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockReportsForm.Designer.cs">
+    <Compile Include="Reports\StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StocksDBDataSet_StockinExpiry.cs">
@@ -167,7 +167,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomSearch.resx">
+    <EmbeddedResource Include="Reports\CustomSearch.resx">
       <DependentUpon>CustomSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -179,7 +179,7 @@
     <EmbeddedResource Include="frmLoadedList.resx">
       <DependentUpon>frmLoadedList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductListSearch.resx">
+    <EmbeddedResource Include="Reports\ProductListSearch.resx">
       <DependentUpon>ProductListSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -199,10 +199,10 @@
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalesSearch.resx">
+    <EmbeddedResource Include="Reports\SalesSearch.resx">
       <DependentUpon>SalesSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockReportsForm.resx">
+    <EmbeddedResource Include="Reports\StockReportsForm.resx">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IMS_Final_TemporaryKey.pfx" />
@@ -265,6 +265,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,7 +13,9 @@ namespace IMS_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmMain frm = new frmMain();
+            this.Hide();
+            frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
