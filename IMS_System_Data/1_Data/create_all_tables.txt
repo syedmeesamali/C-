@@ -1,0 +1,65 @@
+USE [D:\REPOS\CSHARP\9_IMS_FINAL\STOCKSDB.MDF]
+GO
+
+/****** Object:  Table [dbo].[ExcelFiles]    Script Date: 2/19/2020 11:29:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ExcelFiles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[LoadedFileName] [varchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Products](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Prod_ID] [nvarchar](10) NOT NULL,
+	[Prod_Name] [nvarchar](150) NULL,
+	[Re_Order] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[StockinTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Date] [date] NOT NULL,
+	[Sup_ID] [nvarchar](10) NOT NULL,
+	[Sup_Name] [nvarchar](50) NOT NULL,
+	[Prod_ID] [nvarchar](10) NOT NULL,
+	[Prod_Name] [nvarchar](100) NOT NULL,
+	[Expiry] [date] NOT NULL,
+	[Units] [float] NOT NULL,
+	[Cost] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+CREATE TABLE [dbo].[StockoutTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Date] [date] NOT NULL,
+	[Cust_Name] [nvarchar](150) NOT NULL,
+	[Prod_ID] [nvarchar](10) NOT NULL,
+	[Prod_Name] [nvarchar](150) NOT NULL,
+	[Boxes] [float] NOT NULL,
+	[Pcs] [float] NOT NULL,
+	[Price] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

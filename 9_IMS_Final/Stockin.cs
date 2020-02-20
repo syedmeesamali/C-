@@ -11,5 +11,6 @@ namespace IMS_Final
         public string Prod_Name { get; set; }
         public DateTime Expiry { get; set; }
         public float Units { get; set; }
+        public float Cost { get; set; }
     }
 }

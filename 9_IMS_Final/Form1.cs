@@ -67,7 +67,9 @@ namespace IMS_Final
                                     stockoutList.Cust_Name = cust_ID;
                                     stockoutList.Prod_ID = (ws.Cells[rowSales, colSales].Value).ToString();
                                     stockoutList.Prod_Name = ws.Cells[rowSales, colSales + 3].Value.ToString();
-                                    stockoutList.Units = float.Parse((ws.Cells[rowSales, colSales + 9].Value).ToString());
+                                    stockoutList.Boxes = float.Parse((ws.Cells[rowSales, colSales + 6].Value).ToString());
+                                    stockoutList.Pcs = float.Parse((ws.Cells[rowSales, colSales + 9].Value).ToString());
+                                    stockoutList.Price = float.Parse((ws.Cells[rowSales, colSales + 11].Value).ToString());
                                     stockout.Add(stockoutList);
                                 }
                             } //End of for loop to input Excel data
@@ -136,6 +138,7 @@ namespace IMS_Final
                             stockinList.Sup_ID = ws.Cells[rowPurchase, colPurchase + 4].Value.ToString();
                             stockinList.Sup_Name = ws.Cells[rowPurchase, colPurchase + 5].Value.ToString();
                             stockinList.Units = float.Parse(ws.Cells[rowPurchase, colPurchase + 6].Value.ToString());
+                            stockinList.Cost = float.Parse(ws.Cells[rowPurchase, colPurchase + 7].Value.ToString());
                             stockin.Add(stockinList);
                         }
                     } //End of for loop to input Excel data

@@ -104,7 +104,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BmRW2nAvzdVqy+E5/wSvw1j/4j0kYecFuwBPmG/sb98=</dsig:DigestValue>
+      <dsig:DigestValue>3bE29A1f4hGMtfpdUqhix2MaCykl1V+NcGvQqJlEZWA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="prod_localdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -113,7 +113,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oOazUeWoo/jQOjIw68+8xVflP0qQQvsIzlV4qI9Aoew=</dsig:DigestValue>
+      <dsig:DigestValue>OYCiL3TlxF0ttNBBZJ3hl2eUXztxKu24O1bqazOc6eY=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
