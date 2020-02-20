@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products.cs" />
     <Compile Include="Reports\CustomSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +161,6 @@
     <Compile Include="Reports\StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StocksDBDataSet_StockinExpiry.cs">
-      <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
-    </Compile>
     <Compile Include="StocksDBDataSet_StockinExpiry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,7 +194,6 @@
     <EmbeddedResource Include="Reports\ExpiryReports.resx">
       <DependentUpon>ExpiryReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Expiry_Stockin.rdlc" />
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </EmbeddedResource>

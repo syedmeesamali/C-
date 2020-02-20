@@ -155,7 +155,6 @@ F:\Repos\CSharp\9_IMS_Final\bin\Release\pt\Microsoft.ReportViewer.DataVisualizat
 F:\Repos\CSharp\9_IMS_Final\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\9_IMS_Final\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\9_IMS_Final\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.CustomSearch.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.frmMain.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.frmInstructions.resources
@@ -167,10 +166,9 @@ F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.Product_Report.resourc
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.SalesSearch.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.StockReportsForm.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.GenerateResource.cache
-F:\Repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.cache
-F:\Repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.compiled
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe.manifest
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.CopyComplete
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.pdb
+F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache

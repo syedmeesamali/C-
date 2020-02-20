@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.stockinTableProductsTableAdapter = new IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters.StockinTableProductsTableAdapter();
+            
             this.stockinTableProductsNBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockinTableProductsNTableAdapter = new IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters.StockinTableProductsNTableAdapter();
+            
             this.stockinTableProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stocksDBDataSet_StockinExpiry1 = new IMS_Final.StocksDBDataSet_StockinExpiry();
             this.stockinTableProductsNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -99,8 +99,7 @@
             // 
             // stockinTableProductsTableAdapter
             // 
-            this.stockinTableProductsTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // stockinTableProductsNBindingSource
             // 
             this.stockinTableProductsNBindingSource.DataMember = "StockinTableProductsN";
@@ -108,8 +107,7 @@
             // 
             // stockinTableProductsNTableAdapter
             // 
-            this.stockinTableProductsNTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // stockinTableProductsBindingSource
             // 
             this.stockinTableProductsBindingSource.DataMember = "StockinTableProducts";
@@ -157,9 +155,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private StocksDBDataSet_StockinExpiry stocksDBDataSet_StockinExpiry;
-        private StocksDBDataSet_StockinExpiryTableAdapters.StockinTableProductsTableAdapter stockinTableProductsTableAdapter;
+        
         private System.Windows.Forms.BindingSource stockinTableProductsNBindingSource;
-        private StocksDBDataSet_StockinExpiryTableAdapters.StockinTableProductsNTableAdapter stockinTableProductsNTableAdapter;
+        
         private System.Windows.Forms.BindingSource stockinTableProductsBindingSource;
         private StocksDBDataSet_StockinExpiry stocksDBDataSet_StockinExpiry1;
         private System.Windows.Forms.BindingSource stockinTableProductsNBindingSource1;

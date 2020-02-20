@@ -24,11 +24,7 @@ namespace IMS_Final {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class StocksDBDataSet_StockinExpiry : global::System.Data.DataSet {
         
-        private StockinTableProductsDataTable tableStockinTableProducts;
-        
-        private StockinTableExpiryDataTable tableStockinTableExpiry;
-        
-        private StockinTableProductsNDataTable tableStockinTableProductsN;
+        private StockinTableDataTable tableStockinTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -58,14 +54,8 @@ namespace IMS_Final {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["StockinTableProducts"] != null)) {
-                    base.Tables.Add(new StockinTableProductsDataTable(ds.Tables["StockinTableProducts"]));
-                }
-                if ((ds.Tables["StockinTableExpiry"] != null)) {
-                    base.Tables.Add(new StockinTableExpiryDataTable(ds.Tables["StockinTableExpiry"]));
-                }
-                if ((ds.Tables["StockinTableProductsN"] != null)) {
-                    base.Tables.Add(new StockinTableProductsNDataTable(ds.Tables["StockinTableProductsN"]));
+                if ((ds.Tables["StockinTable"] != null)) {
+                    base.Tables.Add(new StockinTableDataTable(ds.Tables["StockinTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -89,29 +79,9 @@ namespace IMS_Final {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public StockinTableProductsDataTable StockinTableProducts {
+        public StockinTableDataTable StockinTable {
             get {
-                return this.tableStockinTableProducts;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public StockinTableExpiryDataTable StockinTableExpiry {
-            get {
-                return this.tableStockinTableExpiry;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public StockinTableProductsNDataTable StockinTableProductsN {
-            get {
-                return this.tableStockinTableProductsN;
+                return this.tableStockinTable;
             }
         }
         
@@ -182,14 +152,8 @@ namespace IMS_Final {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["StockinTableProducts"] != null)) {
-                    base.Tables.Add(new StockinTableProductsDataTable(ds.Tables["StockinTableProducts"]));
-                }
-                if ((ds.Tables["StockinTableExpiry"] != null)) {
-                    base.Tables.Add(new StockinTableExpiryDataTable(ds.Tables["StockinTableExpiry"]));
-                }
-                if ((ds.Tables["StockinTableProductsN"] != null)) {
-                    base.Tables.Add(new StockinTableProductsNDataTable(ds.Tables["StockinTableProductsN"]));
+                if ((ds.Tables["StockinTable"] != null)) {
+                    base.Tables.Add(new StockinTableDataTable(ds.Tables["StockinTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -224,22 +188,10 @@ namespace IMS_Final {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableStockinTableProducts = ((StockinTableProductsDataTable)(base.Tables["StockinTableProducts"]));
+            this.tableStockinTable = ((StockinTableDataTable)(base.Tables["StockinTable"]));
             if ((initTable == true)) {
-                if ((this.tableStockinTableProducts != null)) {
-                    this.tableStockinTableProducts.InitVars();
-                }
-            }
-            this.tableStockinTableExpiry = ((StockinTableExpiryDataTable)(base.Tables["StockinTableExpiry"]));
-            if ((initTable == true)) {
-                if ((this.tableStockinTableExpiry != null)) {
-                    this.tableStockinTableExpiry.InitVars();
-                }
-            }
-            this.tableStockinTableProductsN = ((StockinTableProductsNDataTable)(base.Tables["StockinTableProductsN"]));
-            if ((initTable == true)) {
-                if ((this.tableStockinTableProductsN != null)) {
-                    this.tableStockinTableProductsN.InitVars();
+                if ((this.tableStockinTable != null)) {
+                    this.tableStockinTable.InitVars();
                 }
             }
         }
@@ -252,29 +204,13 @@ namespace IMS_Final {
             this.Namespace = "http://tempuri.org/StocksDBDataSet_StockinExpiry.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableStockinTableProducts = new StockinTableProductsDataTable();
-            base.Tables.Add(this.tableStockinTableProducts);
-            this.tableStockinTableExpiry = new StockinTableExpiryDataTable();
-            base.Tables.Add(this.tableStockinTableExpiry);
-            this.tableStockinTableProductsN = new StockinTableProductsNDataTable();
-            base.Tables.Add(this.tableStockinTableProductsN);
+            this.tableStockinTable = new StockinTableDataTable();
+            base.Tables.Add(this.tableStockinTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeStockinTableProducts() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeStockinTableExpiry() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeStockinTableProductsN() {
+        private bool ShouldSerializeStockinTable() {
             return false;
         }
         
@@ -334,20 +270,14 @@ namespace IMS_Final {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void StockinTableProductsRowChangeEventHandler(object sender, StockinTableProductsRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void StockinTableExpiryRowChangeEventHandler(object sender, StockinTableExpiryRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void StockinTableProductsNRowChangeEventHandler(object sender, StockinTableProductsNRowChangeEvent e);
+        public delegate void StockinTableRowChangeEventHandler(object sender, StockinTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class StockinTableProductsDataTable : global::System.Data.TypedTableBase<StockinTableProductsRow> {
+        public partial class StockinTableDataTable : global::System.Data.TypedTableBase<StockinTableRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -365,10 +295,12 @@ namespace IMS_Final {
             
             private global::System.Data.DataColumn columnUnits;
             
+            private global::System.Data.DataColumn columnCost;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsDataTable() {
-                this.TableName = "StockinTableProducts";
+            public StockinTableDataTable() {
+                this.TableName = "StockinTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -376,7 +308,7 @@ namespace IMS_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableProductsDataTable(global::System.Data.DataTable table) {
+            internal StockinTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -393,7 +325,7 @@ namespace IMS_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected StockinTableProductsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected StockinTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -464,6 +396,14 @@ namespace IMS_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CostColumn {
+                get {
+                    return this.columnCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -473,34 +413,34 @@ namespace IMS_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRow this[int index] {
+            public StockinTableRow this[int index] {
                 get {
-                    return ((StockinTableProductsRow)(this.Rows[index]));
+                    return ((StockinTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsRowChangeEventHandler StockinTableProductsRowChanging;
+            public event StockinTableRowChangeEventHandler StockinTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsRowChangeEventHandler StockinTableProductsRowChanged;
+            public event StockinTableRowChangeEventHandler StockinTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsRowChangeEventHandler StockinTableProductsRowDeleting;
+            public event StockinTableRowChangeEventHandler StockinTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsRowChangeEventHandler StockinTableProductsRowDeleted;
+            public event StockinTableRowChangeEventHandler StockinTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddStockinTableProductsRow(StockinTableProductsRow row) {
+            public void AddStockinTableRow(StockinTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRow AddStockinTableProductsRow(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-                StockinTableProductsRow rowStockinTableProductsRow = ((StockinTableProductsRow)(this.NewRow()));
+            public StockinTableRow AddStockinTableRow(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, double Cost) {
+                StockinTableRow rowStockinTableRow = ((StockinTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Date,
@@ -509,23 +449,24 @@ namespace IMS_Final {
                         Prod_ID,
                         Prod_Name,
                         Expiry,
-                        Units};
-                rowStockinTableProductsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowStockinTableProductsRow);
-                return rowStockinTableProductsRow;
+                        Units,
+                        Cost};
+                rowStockinTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStockinTableRow);
+                return rowStockinTableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRow FindById(int Id) {
-                return ((StockinTableProductsRow)(this.Rows.Find(new object[] {
+            public StockinTableRow FindById(int Id) {
+                return ((StockinTableRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                StockinTableProductsDataTable cln = ((StockinTableProductsDataTable)(base.Clone()));
+                StockinTableDataTable cln = ((StockinTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -533,7 +474,7 @@ namespace IMS_Final {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new StockinTableProductsDataTable();
+                return new StockinTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,6 +488,7 @@ namespace IMS_Final {
                 this.columnProd_Name = base.Columns["Prod_Name"];
                 this.columnExpiry = base.Columns["Expiry"];
                 this.columnUnits = base.Columns["Units"];
+                this.columnCost = base.Columns["Cost"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -568,6 +510,8 @@ namespace IMS_Final {
                 base.Columns.Add(this.columnExpiry);
                 this.columnUnits = new global::System.Data.DataColumn("Units", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnits);
+                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCost);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -587,32 +531,33 @@ namespace IMS_Final {
                 this.columnProd_Name.MaxLength = 100;
                 this.columnExpiry.AllowDBNull = false;
                 this.columnUnits.AllowDBNull = false;
+                this.columnCost.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRow NewStockinTableProductsRow() {
-                return ((StockinTableProductsRow)(this.NewRow()));
+            public StockinTableRow NewStockinTableRow() {
+                return ((StockinTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new StockinTableProductsRow(builder);
+                return new StockinTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(StockinTableProductsRow);
+                return typeof(StockinTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.StockinTableProductsRowChanged != null)) {
-                    this.StockinTableProductsRowChanged(this, new StockinTableProductsRowChangeEvent(((StockinTableProductsRow)(e.Row)), e.Action));
+                if ((this.StockinTableRowChanged != null)) {
+                    this.StockinTableRowChanged(this, new StockinTableRowChangeEvent(((StockinTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -620,8 +565,8 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.StockinTableProductsRowChanging != null)) {
-                    this.StockinTableProductsRowChanging(this, new StockinTableProductsRowChangeEvent(((StockinTableProductsRow)(e.Row)), e.Action));
+                if ((this.StockinTableRowChanging != null)) {
+                    this.StockinTableRowChanging(this, new StockinTableRowChangeEvent(((StockinTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -629,8 +574,8 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.StockinTableProductsRowDeleted != null)) {
-                    this.StockinTableProductsRowDeleted(this, new StockinTableProductsRowChangeEvent(((StockinTableProductsRow)(e.Row)), e.Action));
+                if ((this.StockinTableRowDeleted != null)) {
+                    this.StockinTableRowDeleted(this, new StockinTableRowChangeEvent(((StockinTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -638,14 +583,14 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.StockinTableProductsRowDeleting != null)) {
-                    this.StockinTableProductsRowDeleting(this, new StockinTableProductsRowChangeEvent(((StockinTableProductsRow)(e.Row)), e.Action));
+                if ((this.StockinTableRowDeleting != null)) {
+                    this.StockinTableRowDeleting(this, new StockinTableRowChangeEvent(((StockinTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveStockinTableProductsRow(StockinTableProductsRow row) {
+            public void RemoveStockinTableRow(StockinTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -672,749 +617,7 @@ namespace IMS_Final {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "StockinTableProductsDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class StockinTableExpiryDataTable : global::System.Data.TypedTableBase<StockinTableExpiryRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnDate;
-            
-            private global::System.Data.DataColumn columnSup_ID;
-            
-            private global::System.Data.DataColumn columnSup_Name;
-            
-            private global::System.Data.DataColumn columnProd_ID;
-            
-            private global::System.Data.DataColumn columnProd_Name;
-            
-            private global::System.Data.DataColumn columnExpiry;
-            
-            private global::System.Data.DataColumn columnUnits;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryDataTable() {
-                this.TableName = "StockinTableExpiry";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableExpiryDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected StockinTableExpiryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DateColumn {
-                get {
-                    return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Sup_IDColumn {
-                get {
-                    return this.columnSup_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Sup_NameColumn {
-                get {
-                    return this.columnSup_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Prod_IDColumn {
-                get {
-                    return this.columnProd_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Prod_NameColumn {
-                get {
-                    return this.columnProd_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpiryColumn {
-                get {
-                    return this.columnExpiry;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn UnitsColumn {
-                get {
-                    return this.columnUnits;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRow this[int index] {
-                get {
-                    return ((StockinTableExpiryRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableExpiryRowChangeEventHandler StockinTableExpiryRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableExpiryRowChangeEventHandler StockinTableExpiryRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableExpiryRowChangeEventHandler StockinTableExpiryRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableExpiryRowChangeEventHandler StockinTableExpiryRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddStockinTableExpiryRow(StockinTableExpiryRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRow AddStockinTableExpiryRow(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-                StockinTableExpiryRow rowStockinTableExpiryRow = ((StockinTableExpiryRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Date,
-                        Sup_ID,
-                        Sup_Name,
-                        Prod_ID,
-                        Prod_Name,
-                        Expiry,
-                        Units};
-                rowStockinTableExpiryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowStockinTableExpiryRow);
-                return rowStockinTableExpiryRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRow FindById(int Id) {
-                return ((StockinTableExpiryRow)(this.Rows.Find(new object[] {
-                            Id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                StockinTableExpiryDataTable cln = ((StockinTableExpiryDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new StockinTableExpiryDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnDate = base.Columns["Date"];
-                this.columnSup_ID = base.Columns["Sup_ID"];
-                this.columnSup_Name = base.Columns["Sup_Name"];
-                this.columnProd_ID = base.Columns["Prod_ID"];
-                this.columnProd_Name = base.Columns["Prod_Name"];
-                this.columnExpiry = base.Columns["Expiry"];
-                this.columnUnits = base.Columns["Units"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
-                this.columnSup_ID = new global::System.Data.DataColumn("Sup_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSup_ID);
-                this.columnSup_Name = new global::System.Data.DataColumn("Sup_Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSup_Name);
-                this.columnProd_ID = new global::System.Data.DataColumn("Prod_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProd_ID);
-                this.columnProd_Name = new global::System.Data.DataColumn("Prod_Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProd_Name);
-                this.columnExpiry = new global::System.Data.DataColumn("Expiry", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpiry);
-                this.columnUnits = new global::System.Data.DataColumn("Units", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnits);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnDate.AllowDBNull = false;
-                this.columnSup_ID.AllowDBNull = false;
-                this.columnSup_ID.MaxLength = 10;
-                this.columnSup_Name.AllowDBNull = false;
-                this.columnSup_Name.MaxLength = 50;
-                this.columnProd_ID.AllowDBNull = false;
-                this.columnProd_ID.MaxLength = 10;
-                this.columnProd_Name.AllowDBNull = false;
-                this.columnProd_Name.MaxLength = 100;
-                this.columnExpiry.AllowDBNull = false;
-                this.columnUnits.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRow NewStockinTableExpiryRow() {
-                return ((StockinTableExpiryRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new StockinTableExpiryRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(StockinTableExpiryRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.StockinTableExpiryRowChanged != null)) {
-                    this.StockinTableExpiryRowChanged(this, new StockinTableExpiryRowChangeEvent(((StockinTableExpiryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.StockinTableExpiryRowChanging != null)) {
-                    this.StockinTableExpiryRowChanging(this, new StockinTableExpiryRowChangeEvent(((StockinTableExpiryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.StockinTableExpiryRowDeleted != null)) {
-                    this.StockinTableExpiryRowDeleted(this, new StockinTableExpiryRowChangeEvent(((StockinTableExpiryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.StockinTableExpiryRowDeleting != null)) {
-                    this.StockinTableExpiryRowDeleting(this, new StockinTableExpiryRowChangeEvent(((StockinTableExpiryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveStockinTableExpiryRow(StockinTableExpiryRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                StocksDBDataSet_StockinExpiry ds = new StocksDBDataSet_StockinExpiry();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "StockinTableExpiryDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class StockinTableProductsNDataTable : global::System.Data.TypedTableBase<StockinTableProductsNRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnDate;
-            
-            private global::System.Data.DataColumn columnSup_ID;
-            
-            private global::System.Data.DataColumn columnSup_Name;
-            
-            private global::System.Data.DataColumn columnProd_ID;
-            
-            private global::System.Data.DataColumn columnProd_Name;
-            
-            private global::System.Data.DataColumn columnExpiry;
-            
-            private global::System.Data.DataColumn columnUnits;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNDataTable() {
-                this.TableName = "StockinTableProductsN";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableProductsNDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected StockinTableProductsNDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DateColumn {
-                get {
-                    return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Sup_IDColumn {
-                get {
-                    return this.columnSup_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Sup_NameColumn {
-                get {
-                    return this.columnSup_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Prod_IDColumn {
-                get {
-                    return this.columnProd_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Prod_NameColumn {
-                get {
-                    return this.columnProd_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpiryColumn {
-                get {
-                    return this.columnExpiry;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn UnitsColumn {
-                get {
-                    return this.columnUnits;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRow this[int index] {
-                get {
-                    return ((StockinTableProductsNRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsNRowChangeEventHandler StockinTableProductsNRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsNRowChangeEventHandler StockinTableProductsNRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsNRowChangeEventHandler StockinTableProductsNRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event StockinTableProductsNRowChangeEventHandler StockinTableProductsNRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddStockinTableProductsNRow(StockinTableProductsNRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRow AddStockinTableProductsNRow(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-                StockinTableProductsNRow rowStockinTableProductsNRow = ((StockinTableProductsNRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Date,
-                        Sup_ID,
-                        Sup_Name,
-                        Prod_ID,
-                        Prod_Name,
-                        Expiry,
-                        Units};
-                rowStockinTableProductsNRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowStockinTableProductsNRow);
-                return rowStockinTableProductsNRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRow FindById(int Id) {
-                return ((StockinTableProductsNRow)(this.Rows.Find(new object[] {
-                            Id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                StockinTableProductsNDataTable cln = ((StockinTableProductsNDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new StockinTableProductsNDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnDate = base.Columns["Date"];
-                this.columnSup_ID = base.Columns["Sup_ID"];
-                this.columnSup_Name = base.Columns["Sup_Name"];
-                this.columnProd_ID = base.Columns["Prod_ID"];
-                this.columnProd_Name = base.Columns["Prod_Name"];
-                this.columnExpiry = base.Columns["Expiry"];
-                this.columnUnits = base.Columns["Units"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
-                this.columnSup_ID = new global::System.Data.DataColumn("Sup_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSup_ID);
-                this.columnSup_Name = new global::System.Data.DataColumn("Sup_Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSup_Name);
-                this.columnProd_ID = new global::System.Data.DataColumn("Prod_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProd_ID);
-                this.columnProd_Name = new global::System.Data.DataColumn("Prod_Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProd_Name);
-                this.columnExpiry = new global::System.Data.DataColumn("Expiry", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpiry);
-                this.columnUnits = new global::System.Data.DataColumn("Units", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnits);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnDate.AllowDBNull = false;
-                this.columnSup_ID.AllowDBNull = false;
-                this.columnSup_ID.MaxLength = 10;
-                this.columnSup_Name.AllowDBNull = false;
-                this.columnSup_Name.MaxLength = 50;
-                this.columnProd_ID.AllowDBNull = false;
-                this.columnProd_ID.MaxLength = 10;
-                this.columnProd_Name.AllowDBNull = false;
-                this.columnProd_Name.MaxLength = 100;
-                this.columnExpiry.AllowDBNull = false;
-                this.columnUnits.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRow NewStockinTableProductsNRow() {
-                return ((StockinTableProductsNRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new StockinTableProductsNRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(StockinTableProductsNRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.StockinTableProductsNRowChanged != null)) {
-                    this.StockinTableProductsNRowChanged(this, new StockinTableProductsNRowChangeEvent(((StockinTableProductsNRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.StockinTableProductsNRowChanging != null)) {
-                    this.StockinTableProductsNRowChanging(this, new StockinTableProductsNRowChangeEvent(((StockinTableProductsNRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.StockinTableProductsNRowDeleted != null)) {
-                    this.StockinTableProductsNRowDeleted(this, new StockinTableProductsNRowChangeEvent(((StockinTableProductsNRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.StockinTableProductsNRowDeleting != null)) {
-                    this.StockinTableProductsNRowDeleting(this, new StockinTableProductsNRowChangeEvent(((StockinTableProductsNRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveStockinTableProductsNRow(StockinTableProductsNRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                StocksDBDataSet_StockinExpiry ds = new StocksDBDataSet_StockinExpiry();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "StockinTableProductsNDataTable";
+                attribute2.FixedValue = "StockinTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1458,25 +661,25 @@ namespace IMS_Final {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class StockinTableProductsRow : global::System.Data.DataRow {
+        public partial class StockinTableRow : global::System.Data.DataRow {
             
-            private StockinTableProductsDataTable tableStockinTableProducts;
+            private StockinTableDataTable tableStockinTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableProductsRow(global::System.Data.DataRowBuilder rb) : 
+            internal StockinTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableStockinTableProducts = ((StockinTableProductsDataTable)(this.Table));
+                this.tableStockinTable = ((StockinTableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableStockinTableProducts.IdColumn]));
+                    return ((int)(this[this.tableStockinTable.IdColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.IdColumn] = value;
+                    this[this.tableStockinTable.IdColumn] = value;
                 }
             }
             
@@ -1484,10 +687,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableProducts.DateColumn]));
+                    return ((global::System.DateTime)(this[this.tableStockinTable.DateColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.DateColumn] = value;
+                    this[this.tableStockinTable.DateColumn] = value;
                 }
             }
             
@@ -1495,10 +698,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Sup_ID {
                 get {
-                    return ((string)(this[this.tableStockinTableProducts.Sup_IDColumn]));
+                    return ((string)(this[this.tableStockinTable.Sup_IDColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.Sup_IDColumn] = value;
+                    this[this.tableStockinTable.Sup_IDColumn] = value;
                 }
             }
             
@@ -1506,10 +709,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Sup_Name {
                 get {
-                    return ((string)(this[this.tableStockinTableProducts.Sup_NameColumn]));
+                    return ((string)(this[this.tableStockinTable.Sup_NameColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.Sup_NameColumn] = value;
+                    this[this.tableStockinTable.Sup_NameColumn] = value;
                 }
             }
             
@@ -1517,10 +720,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Prod_ID {
                 get {
-                    return ((string)(this[this.tableStockinTableProducts.Prod_IDColumn]));
+                    return ((string)(this[this.tableStockinTable.Prod_IDColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.Prod_IDColumn] = value;
+                    this[this.tableStockinTable.Prod_IDColumn] = value;
                 }
             }
             
@@ -1528,10 +731,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Prod_Name {
                 get {
-                    return ((string)(this[this.tableStockinTableProducts.Prod_NameColumn]));
+                    return ((string)(this[this.tableStockinTable.Prod_NameColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.Prod_NameColumn] = value;
+                    this[this.tableStockinTable.Prod_NameColumn] = value;
                 }
             }
             
@@ -1539,10 +742,10 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Expiry {
                 get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableProducts.ExpiryColumn]));
+                    return ((global::System.DateTime)(this[this.tableStockinTable.ExpiryColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.ExpiryColumn] = value;
+                    this[this.tableStockinTable.ExpiryColumn] = value;
                 }
             }
             
@@ -1550,216 +753,21 @@ namespace IMS_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Units {
                 get {
-                    return ((double)(this[this.tableStockinTableProducts.UnitsColumn]));
+                    return ((double)(this[this.tableStockinTable.UnitsColumn]));
                 }
                 set {
-                    this[this.tableStockinTableProducts.UnitsColumn] = value;
+                    this[this.tableStockinTable.UnitsColumn] = value;
                 }
             }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class StockinTableExpiryRow : global::System.Data.DataRow {
-            
-            private StockinTableExpiryDataTable tableStockinTableExpiry;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableExpiryRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableStockinTableExpiry = ((StockinTableExpiryDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
+            public double Cost {
                 get {
-                    return ((int)(this[this.tableStockinTableExpiry.IdColumn]));
+                    return ((double)(this[this.tableStockinTable.CostColumn]));
                 }
                 set {
-                    this[this.tableStockinTableExpiry.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Date {
-                get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableExpiry.DateColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.DateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Sup_ID {
-                get {
-                    return ((string)(this[this.tableStockinTableExpiry.Sup_IDColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.Sup_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Sup_Name {
-                get {
-                    return ((string)(this[this.tableStockinTableExpiry.Sup_NameColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.Sup_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Prod_ID {
-                get {
-                    return ((string)(this[this.tableStockinTableExpiry.Prod_IDColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.Prod_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Prod_Name {
-                get {
-                    return ((string)(this[this.tableStockinTableExpiry.Prod_NameColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.Prod_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expiry {
-                get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableExpiry.ExpiryColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.ExpiryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Units {
-                get {
-                    return ((double)(this[this.tableStockinTableExpiry.UnitsColumn]));
-                }
-                set {
-                    this[this.tableStockinTableExpiry.UnitsColumn] = value;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class StockinTableProductsNRow : global::System.Data.DataRow {
-            
-            private StockinTableProductsNDataTable tableStockinTableProductsN;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal StockinTableProductsNRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableStockinTableProductsN = ((StockinTableProductsNDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
-                get {
-                    return ((int)(this[this.tableStockinTableProductsN.IdColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Date {
-                get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableProductsN.DateColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.DateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Sup_ID {
-                get {
-                    return ((string)(this[this.tableStockinTableProductsN.Sup_IDColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.Sup_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Sup_Name {
-                get {
-                    return ((string)(this[this.tableStockinTableProductsN.Sup_NameColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.Sup_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Prod_ID {
-                get {
-                    return ((string)(this[this.tableStockinTableProductsN.Prod_IDColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.Prod_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Prod_Name {
-                get {
-                    return ((string)(this[this.tableStockinTableProductsN.Prod_NameColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.Prod_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expiry {
-                get {
-                    return ((global::System.DateTime)(this[this.tableStockinTableProductsN.ExpiryColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.ExpiryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Units {
-                get {
-                    return ((double)(this[this.tableStockinTableProductsN.UnitsColumn]));
-                }
-                set {
-                    this[this.tableStockinTableProductsN.UnitsColumn] = value;
+                    this[this.tableStockinTable.CostColumn] = value;
                 }
             }
         }
@@ -1768,90 +776,22 @@ namespace IMS_Final {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class StockinTableProductsRowChangeEvent : global::System.EventArgs {
+        public class StockinTableRowChangeEvent : global::System.EventArgs {
             
-            private StockinTableProductsRow eventRow;
+            private StockinTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRowChangeEvent(StockinTableProductsRow row, global::System.Data.DataRowAction action) {
+            public StockinTableRowChangeEvent(StockinTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class StockinTableExpiryRowChangeEvent : global::System.EventArgs {
-            
-            private StockinTableExpiryRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRowChangeEvent(StockinTableExpiryRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableExpiryRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class StockinTableProductsNRowChangeEvent : global::System.EventArgs {
-            
-            private StockinTableProductsNRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRowChangeEvent(StockinTableProductsNRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StockinTableProductsNRow Row {
+            public StockinTableRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1879,7 +819,7 @@ namespace IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class StockinTableProductsTableAdapter : global::System.ComponentModel.Component {
+    public partial class StockinTableTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1893,7 +833,7 @@ namespace IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public StockinTableProductsTableAdapter() {
+        public StockinTableTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1990,7 +930,7 @@ namespace IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "StockinTableProducts";
+            tableMapping.DataSetTable = "StockinTable";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Date", "Date");
             tableMapping.ColumnMappings.Add("Sup_ID", "Sup_ID");
@@ -1999,10 +939,11 @@ namespace IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters {
             tableMapping.ColumnMappings.Add("Prod_Name", "Prod_Name");
             tableMapping.ColumnMappings.Add("Expiry", "Expiry");
             tableMapping.ColumnMappings.Add("Units", "Units");
+            tableMapping.ColumnMappings.Add("Cost", "Cost");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StockinTable] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StockinTable] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units) AND ([Cost] = @Original_Cost))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2012,10 +953,11 @@ namespace IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StockinTable] ([Date], [Sup_ID], [Sup_Name], [Prod_ID], [Prod_Name], [Expiry], [Units]) VALUES (@Date, @Sup_ID, @Sup_Name, @Prod_ID, @Prod_Name, @Expiry, @Units);
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StockinTable] ([Date], [Sup_ID], [Sup_Name], [Prod_ID], [Prod_Name], [Expiry], [Units], [Cost]) VALUES (@Date, @Sup_ID, @Sup_Name, @Prod_ID, @Prod_Name, @Expiry, @Units, @Cost);
+SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Cost FROM StockinTable WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2024,10 +966,11 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockinTable] SET [Date] = @Date, [Sup_ID] = @Sup_ID, [Sup_Name] = @Sup_Name, [Prod_ID] = @Prod_ID, [Prod_Name] = @Prod_Name, [Expiry] = @Expiry, [Units] = @Units WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units));
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockinTable] SET [Date] = @Date, [Sup_ID] = @Sup_ID, [Sup_Name] = @Sup_Name, [Prod_ID] = @Prod_ID, [Prod_Name] = @Prod_Name, [Expiry] = @Expiry, [Units] = @Units, [Cost] = @Cost WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units) AND ([Cost] = @Original_Cost));
+SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Cost FROM StockinTable WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2036,6 +979,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2044,6 +988,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2060,24 +1005,17 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM dbo.Sto" +
-                "ckinTable\r\nWHERE Prod_Name = @Prod_Name";
+            this._commandCollection[0].CommandText = "SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Cost FROM d" +
+                "bo.StockinTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(StocksDBDataSet_StockinExpiry.StockinTableProductsDataTable dataTable, string Prod_Name) {
+        public virtual int Fill(StocksDBDataSet_StockinExpiry.StockinTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Prod_Name));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2089,15 +1027,9 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual StocksDBDataSet_StockinExpiry.StockinTableProductsDataTable GetData(string Prod_Name) {
+        public virtual StocksDBDataSet_StockinExpiry.StockinTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Prod_Name));
-            }
-            StocksDBDataSet_StockinExpiry.StockinTableProductsDataTable dataTable = new StocksDBDataSet_StockinExpiry.StockinTableProductsDataTable();
+            StocksDBDataSet_StockinExpiry.StockinTableDataTable dataTable = new StocksDBDataSet_StockinExpiry.StockinTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2105,7 +1037,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_StockinExpiry.StockinTableProductsDataTable dataTable) {
+        public virtual int Update(StocksDBDataSet_StockinExpiry.StockinTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2113,7 +1045,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(StocksDBDataSet_StockinExpiry dataSet) {
-            return this.Adapter.Update(dataSet, "StockinTableProducts");
+            return this.Adapter.Update(dataSet, "StockinTable");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2135,7 +1067,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
+        public virtual int Delete(int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units, double Original_Cost) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
             if ((Original_Sup_ID == null)) {
@@ -2164,6 +1096,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Expiry));
             this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_Units));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_Cost));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2184,7 +1117,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
+        public virtual int Insert(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, double Cost) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date));
             if ((Sup_ID == null)) {
                 throw new global::System.ArgumentNullException("Sup_ID");
@@ -2212,6 +1145,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             }
             this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
             this.Adapter.InsertCommand.Parameters[6].Value = ((double)(Units));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((double)(Cost));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2240,6 +1174,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                     string Prod_Name, 
                     System.DateTime Expiry, 
                     double Units, 
+                    double Cost, 
                     int Original_Id, 
                     System.DateTime Original_Date, 
                     string Original_Sup_ID, 
@@ -2248,6 +1183,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                     string Original_Prod_Name, 
                     System.DateTime Original_Expiry, 
                     double Original_Units, 
+                    double Original_Cost, 
                     int Id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date));
             if ((Sup_ID == null)) {
@@ -2276,35 +1212,37 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Units));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Cost));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Date));
             if ((Original_Sup_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_Sup_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Sup_ID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sup_ID));
             }
             if ((Original_Sup_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Sup_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sup_Name));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Sup_Name));
             }
             if ((Original_Prod_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_Prod_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Prod_ID));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prod_ID));
             }
             if ((Original_Prod_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Prod_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prod_Name));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Prod_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Units));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Expiry));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_Units));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_Cost));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2317,373 +1255,6 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            return this.Update(Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Original_Id, Original_Date, Original_Sup_ID, Original_Sup_Name, Original_Prod_ID, Original_Prod_Name, Original_Expiry, Original_Units, Original_Id);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class StockinTableExpiryTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public StockinTableExpiryTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "StockinTableExpiry";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Date", "Date");
-            tableMapping.ColumnMappings.Add("Sup_ID", "Sup_ID");
-            tableMapping.ColumnMappings.Add("Sup_Name", "Sup_Name");
-            tableMapping.ColumnMappings.Add("Prod_ID", "Prod_ID");
-            tableMapping.ColumnMappings.Add("Prod_Name", "Prod_Name");
-            tableMapping.ColumnMappings.Add("Expiry", "Expiry");
-            tableMapping.ColumnMappings.Add("Units", "Units");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StockinTable] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StockinTable] ([Date], [Sup_ID], [Sup_Name], [Prod_ID], [Prod_Name], [Expiry], [Units]) VALUES (@Date, @Sup_ID, @Sup_Name, @Prod_ID, @Prod_Name, @Expiry, @Units);
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockinTable] SET [Date] = @Date, [Sup_ID] = @Sup_ID, [Sup_Name] = @Sup_Name, [Prod_ID] = @Prod_ID, [Prod_Name] = @Prod_Name, [Expiry] = @Expiry, [Units] = @Units WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units));
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::IMS_Final.Properties.Settings.Default.StocksDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM dbo.Sto" +
-                "ckinTable\r\nWHERE Expiry <= @Expiry";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(StocksDBDataSet_StockinExpiry.StockinTableExpiryDataTable dataTable, string Expiry) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Expiry == null)) {
-                throw new global::System.ArgumentNullException("Expiry");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Expiry));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual StocksDBDataSet_StockinExpiry.StockinTableExpiryDataTable GetData(string Expiry) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Expiry == null)) {
-                throw new global::System.ArgumentNullException("Expiry");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Expiry));
-            }
-            StocksDBDataSet_StockinExpiry.StockinTableExpiryDataTable dataTable = new StocksDBDataSet_StockinExpiry.StockinTableExpiryDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_StockinExpiry.StockinTableExpiryDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_StockinExpiry dataSet) {
-            return this.Adapter.Update(dataSet, "StockinTableExpiry");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((double)(Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
                 }
             }
         }
@@ -2700,6 +1271,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                     string Prod_Name, 
                     System.DateTime Expiry, 
                     double Units, 
+                    double Cost, 
                     int Original_Id, 
                     System.DateTime Original_Date, 
                     string Original_Sup_ID, 
@@ -2708,532 +1280,8 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                     string Original_Prod_Name, 
                     System.DateTime Original_Expiry, 
                     double Original_Units, 
-                    int Id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Units));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Units));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            return this.Update(Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Original_Id, Original_Date, Original_Sup_ID, Original_Sup_Name, Original_Prod_ID, Original_Prod_Name, Original_Expiry, Original_Units, Original_Id);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class StockinTableProductsNTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public StockinTableProductsNTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "StockinTableProductsN";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Date", "Date");
-            tableMapping.ColumnMappings.Add("Sup_ID", "Sup_ID");
-            tableMapping.ColumnMappings.Add("Sup_Name", "Sup_Name");
-            tableMapping.ColumnMappings.Add("Prod_ID", "Prod_ID");
-            tableMapping.ColumnMappings.Add("Prod_Name", "Prod_Name");
-            tableMapping.ColumnMappings.Add("Expiry", "Expiry");
-            tableMapping.ColumnMappings.Add("Units", "Units");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StockinTable] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StockinTable] ([Date], [Sup_ID], [Sup_Name], [Prod_ID], [Prod_Name], [Expiry], [Units]) VALUES (@Date, @Sup_ID, @Sup_Name, @Prod_ID, @Prod_Name, @Expiry, @Units);
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockinTable] SET [Date] = @Date, [Sup_ID] = @Sup_ID, [Sup_Name] = @Sup_Name, [Prod_ID] = @Prod_ID, [Prod_Name] = @Prod_Name, [Expiry] = @Expiry, [Units] = @Units WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Sup_ID] = @Original_Sup_ID) AND ([Sup_Name] = @Original_Sup_Name) AND ([Prod_ID] = @Original_Prod_ID) AND ([Prod_Name] = @Original_Prod_Name) AND ([Expiry] = @Original_Expiry) AND ([Units] = @Original_Units));
-SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM StockinTable WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sup_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sup_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prod_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expiry", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expiry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Units", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Units", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::IMS_Final.Properties.Settings.Default.StocksDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM dbo.Sto" +
-                "ckinTable";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(StocksDBDataSet_StockinExpiry.StockinTableProductsNDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual StocksDBDataSet_StockinExpiry.StockinTableProductsNDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            StocksDBDataSet_StockinExpiry.StockinTableProductsNDataTable dataTable = new StocksDBDataSet_StockinExpiry.StockinTableProductsNDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_StockinExpiry.StockinTableProductsNDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(StocksDBDataSet_StockinExpiry dataSet) {
-            return this.Adapter.Update(dataSet, "StockinTableProductsN");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((double)(Units));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    System.DateTime Date, 
-                    string Sup_ID, 
-                    string Sup_Name, 
-                    string Prod_ID, 
-                    string Prod_Name, 
-                    System.DateTime Expiry, 
-                    double Units, 
-                    int Original_Id, 
-                    System.DateTime Original_Date, 
-                    string Original_Sup_ID, 
-                    string Original_Sup_Name, 
-                    string Original_Prod_ID, 
-                    string Original_Prod_Name, 
-                    System.DateTime Original_Expiry, 
-                    double Original_Units, 
-                    int Id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date));
-            if ((Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Sup_ID));
-            }
-            if ((Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Sup_Name));
-            }
-            if ((Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Prod_ID));
-            }
-            if ((Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Expiry));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Units));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Sup_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Sup_ID));
-            }
-            if ((Original_Sup_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Sup_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sup_Name));
-            }
-            if ((Original_Prod_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_ID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Prod_ID));
-            }
-            if ((Original_Prod_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Prod_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Prod_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Expiry));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Units));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, string Sup_ID, string Sup_Name, string Prod_ID, string Prod_Name, System.DateTime Expiry, double Units, int Original_Id, System.DateTime Original_Date, string Original_Sup_ID, string Original_Sup_Name, string Original_Prod_ID, string Original_Prod_Name, System.DateTime Original_Expiry, double Original_Units) {
-            return this.Update(Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Original_Id, Original_Date, Original_Sup_ID, Original_Sup_Name, Original_Prod_ID, Original_Prod_Name, Original_Expiry, Original_Units, Original_Id);
+                    double Original_Cost) {
+            return this.Update(Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units, Cost, Original_Id, Original_Date, Original_Sup_ID, Original_Sup_Name, Original_Prod_ID, Original_Prod_Name, Original_Expiry, Original_Units, Original_Cost, Original_Id);
         }
     }
     
@@ -3249,11 +1297,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         
         private UpdateOrderOption _updateOrder;
         
-        private StockinTableProductsTableAdapter _stockinTableProductsTableAdapter;
-        
-        private StockinTableExpiryTableAdapter _stockinTableExpiryTableAdapter;
-        
-        private StockinTableProductsNTableAdapter _stockinTableProductsNTableAdapter;
+        private StockinTableTableAdapter _stockinTableTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -3275,40 +1319,12 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public StockinTableProductsTableAdapter StockinTableProductsTableAdapter {
+        public StockinTableTableAdapter StockinTableTableAdapter {
             get {
-                return this._stockinTableProductsTableAdapter;
+                return this._stockinTableTableAdapter;
             }
             set {
-                this._stockinTableProductsTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public StockinTableExpiryTableAdapter StockinTableExpiryTableAdapter {
-            get {
-                return this._stockinTableExpiryTableAdapter;
-            }
-            set {
-                this._stockinTableExpiryTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public StockinTableProductsNTableAdapter StockinTableProductsNTableAdapter {
-            get {
-                return this._stockinTableProductsNTableAdapter;
-            }
-            set {
-                this._stockinTableProductsNTableAdapter = value;
+                this._stockinTableTableAdapter = value;
             }
         }
         
@@ -3331,17 +1347,9 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._stockinTableProductsTableAdapter != null) 
-                            && (this._stockinTableProductsTableAdapter.Connection != null))) {
-                    return this._stockinTableProductsTableAdapter.Connection;
-                }
-                if (((this._stockinTableExpiryTableAdapter != null) 
-                            && (this._stockinTableExpiryTableAdapter.Connection != null))) {
-                    return this._stockinTableExpiryTableAdapter.Connection;
-                }
-                if (((this._stockinTableProductsNTableAdapter != null) 
-                            && (this._stockinTableProductsNTableAdapter.Connection != null))) {
-                    return this._stockinTableProductsNTableAdapter.Connection;
+                if (((this._stockinTableTableAdapter != null) 
+                            && (this._stockinTableTableAdapter.Connection != null))) {
+                    return this._stockinTableTableAdapter.Connection;
                 }
                 return null;
             }
@@ -3356,13 +1364,7 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._stockinTableProductsTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._stockinTableExpiryTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._stockinTableProductsNTableAdapter != null)) {
+                if ((this._stockinTableTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -3376,30 +1378,12 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(StocksDBDataSet_StockinExpiry dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._stockinTableProductsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.StockinTableProducts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._stockinTableTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._stockinTableProductsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._stockinTableExpiryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.StockinTableExpiry.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._stockinTableExpiryTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._stockinTableProductsNTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.StockinTableProductsN.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._stockinTableProductsNTableAdapter.Update(updatedRows));
+                    result = (result + this._stockinTableTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3413,27 +1397,11 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(StocksDBDataSet_StockinExpiry dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._stockinTableProductsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.StockinTableProducts.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._stockinTableTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._stockinTableProductsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._stockinTableExpiryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.StockinTableExpiry.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._stockinTableExpiryTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._stockinTableProductsNTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.StockinTableProductsN.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._stockinTableProductsNTableAdapter.Update(addedRows));
+                    result = (result + this._stockinTableTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3447,27 +1415,11 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(StocksDBDataSet_StockinExpiry dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._stockinTableProductsNTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.StockinTableProductsN.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._stockinTableTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.StockinTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._stockinTableProductsNTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._stockinTableExpiryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.StockinTableExpiry.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._stockinTableExpiryTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._stockinTableProductsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.StockinTableProducts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._stockinTableProductsTableAdapter.Update(deletedRows));
+                    result = (result + this._stockinTableTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3510,18 +1462,8 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._stockinTableProductsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._stockinTableProductsTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._stockinTableExpiryTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._stockinTableExpiryTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._stockinTableProductsNTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._stockinTableProductsNTableAdapter.Connection) == false))) {
+            if (((this._stockinTableTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._stockinTableTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -3557,31 +1499,13 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._stockinTableProductsTableAdapter != null)) {
-                    revertConnections.Add(this._stockinTableProductsTableAdapter, this._stockinTableProductsTableAdapter.Connection);
-                    this._stockinTableProductsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._stockinTableProductsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._stockinTableProductsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._stockinTableProductsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockinTableProductsTableAdapter.Adapter);
-                    }
-                }
-                if ((this._stockinTableExpiryTableAdapter != null)) {
-                    revertConnections.Add(this._stockinTableExpiryTableAdapter, this._stockinTableExpiryTableAdapter.Connection);
-                    this._stockinTableExpiryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._stockinTableExpiryTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._stockinTableExpiryTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._stockinTableExpiryTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockinTableExpiryTableAdapter.Adapter);
-                    }
-                }
-                if ((this._stockinTableProductsNTableAdapter != null)) {
-                    revertConnections.Add(this._stockinTableProductsNTableAdapter, this._stockinTableProductsNTableAdapter.Connection);
-                    this._stockinTableProductsNTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._stockinTableProductsNTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._stockinTableProductsNTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._stockinTableProductsNTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockinTableProductsNTableAdapter.Adapter);
+                if ((this._stockinTableTableAdapter != null)) {
+                    revertConnections.Add(this._stockinTableTableAdapter, this._stockinTableTableAdapter.Connection);
+                    this._stockinTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._stockinTableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._stockinTableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._stockinTableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockinTableTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3642,17 +1566,9 @@ SELECT Id, Date, Sup_ID, Sup_Name, Prod_ID, Prod_Name, Expiry, Units FROM Stocki
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._stockinTableProductsTableAdapter != null)) {
-                    this._stockinTableProductsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockinTableProductsTableAdapter]));
-                    this._stockinTableProductsTableAdapter.Transaction = null;
-                }
-                if ((this._stockinTableExpiryTableAdapter != null)) {
-                    this._stockinTableExpiryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockinTableExpiryTableAdapter]));
-                    this._stockinTableExpiryTableAdapter.Transaction = null;
-                }
-                if ((this._stockinTableProductsNTableAdapter != null)) {
-                    this._stockinTableProductsNTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockinTableProductsNTableAdapter]));
-                    this._stockinTableProductsNTableAdapter.Transaction = null;
+                if ((this._stockinTableTableAdapter != null)) {
+                    this._stockinTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockinTableTableAdapter]));
+                    this._stockinTableTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

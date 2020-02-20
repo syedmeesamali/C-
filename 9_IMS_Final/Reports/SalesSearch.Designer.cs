@@ -79,14 +79,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 415);
+            this.dataGridView1.Size = new System.Drawing.Size(1013, 548);
             this.dataGridView1.TabIndex = 8;
             // 
             // SalesSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 471);
+            this.ClientSize = new System.Drawing.Size(1034, 611);
             this.Controls.Add(this.txtProdID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearch);
@@ -94,8 +94,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(950, 510);
-            this.MinimumSize = new System.Drawing.Size(950, 510);
+            this.MaximumSize = new System.Drawing.Size(1050, 650);
+            this.MinimumSize = new System.Drawing.Size(1050, 650);
             this.Name = "SalesSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesSearch";

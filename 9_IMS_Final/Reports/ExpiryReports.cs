@@ -14,7 +14,7 @@ namespace IMS_Final.Reports
         {
             string theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             MessageBox.Show("Expiry report for dates earlier than selected date!");
-            this.stockinTableExpiryTableAdapter.Fill(this.stocksDBDataSet_StockinExpiry.StockinTableExpiry,theDate);
+            
             this.reportViewer1.RefreshReport();
         }
 

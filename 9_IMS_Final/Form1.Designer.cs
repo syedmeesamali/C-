@@ -45,6 +45,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.importProductListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnImportProducts = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +68,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importInvoiceExcelToolStripMenuItem,
             this.importPurchaseExcelToolStripMenuItem,
+            this.importProductListToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -74,21 +77,21 @@
             // importInvoiceExcelToolStripMenuItem
             // 
             this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importInvoiceExcelToolStripMenuItem.Text = "Import Sales Invoice (Excel)";
             this.importInvoiceExcelToolStripMenuItem.Click += new System.EventHandler(this.importInvoiceExcelToolStripMenuItem_Click);
             // 
             // importPurchaseExcelToolStripMenuItem
             // 
             this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase Invoice (Excel)";
             this.importPurchaseExcelToolStripMenuItem.Click += new System.EventHandler(this.importPurchaseExcelToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -185,11 +188,29 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "List of files loaded:";
             // 
+            // importProductListToolStripMenuItem
+            // 
+            this.importProductListToolStripMenuItem.Name = "importProductListToolStripMenuItem";
+            this.importProductListToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.importProductListToolStripMenuItem.Text = "Import Product List";
+            this.importProductListToolStripMenuItem.Click += new System.EventHandler(this.importProductListToolStripMenuItem_Click);
+            // 
+            // btnImportProducts
+            // 
+            this.btnImportProducts.Location = new System.Drawing.Point(524, 554);
+            this.btnImportProducts.Name = "btnImportProducts";
+            this.btnImportProducts.Size = new System.Drawing.Size(223, 26);
+            this.btnImportProducts.TabIndex = 6;
+            this.btnImportProducts.Text = "Import Product List";
+            this.btnImportProducts.UseVisualStyleBackColor = true;
+            this.btnImportProducts.Click += new System.EventHandler(this.btnImportProducts_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.btnImportProducts);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
@@ -198,8 +219,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1050, 650);
             this.MinimumSize = new System.Drawing.Size(1050, 650);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -230,6 +249,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem importProductListToolStripMenuItem;
+        private System.Windows.Forms.Button btnImportProducts;
     }
 }
 

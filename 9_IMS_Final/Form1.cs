@@ -16,6 +16,7 @@ namespace IMS_Final
         private List<Stockout> stockout = new List<Stockout>();
         private List<Stockin> stockin = new List<Stockin>();
         private List<ExcelLoaded> excelLoaded = new List<ExcelLoaded>();
+        private List<Products> products = new List<Products>();
 
         public frmMain()
         {
@@ -33,7 +34,9 @@ namespace IMS_Final
             StockReportsForm stockReportsForm = new StockReportsForm();
             stockReportsForm.Show();
         }
-
+        //############################################
+        //------------IMPORT SALES DATA (INVOICES)----
+        //############################################
         private void importInvoiceExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -88,23 +91,18 @@ namespace IMS_Final
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
+            {   DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
                 DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelFiles");
                 List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
                 //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
                 if (excelLoaded != null)
                 {
                     using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                    {
-                        db.BulkInsert(stockout);
+                    {   db.BulkInsert(stockout);
                         db.BulkInsert(excelLoaded);
-                    }
-                    MessageBox.Show("Purchase Data Imported successfully!");
-                }
-                else
-                {
-                    MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
+                    }   MessageBox.Show("Purchase Data Imported successfully!");
+                }  else
+                {    MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
                 }
             }
             catch (Exception ex)
@@ -112,8 +110,9 @@ namespace IMS_Final
                 MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //------------import purchase data-----------
+        //############################################
+        //------------IMPORT PURCHASE DATA-----------
+        //############################################
         private void importPurchaseExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -126,7 +125,7 @@ namespace IMS_Final
                     ExcelPackage package = new ExcelPackage(fileName);
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
                     int colPurchase = 1;
-                    for (int rowPurchase = 2; rowPurchase < 5000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
+                    for (int rowPurchase = 2; rowPurchase < 25000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
                     {
                         if (ws.Cells[rowPurchase, colPurchase].Value != null)
                         {
@@ -155,8 +154,7 @@ namespace IMS_Final
         private void btnView_Click(object sender, EventArgs e)
         {
             try
-            {
-                DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+            {   DapperPlusManager.Entity<Stockin>().Table("StockinTable");
                 List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
@@ -164,17 +162,11 @@ namespace IMS_Final
                     { db.BulkInsert(stockin); }
                     MessageBox.Show("Purchase Data Imported successfully!");
                 } else
-                {
-                    MessageBox.Show("Stockin is still null or there is some issue!");
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {  MessageBox.Show("Stockin is still null or there is some issue!");    }   
+            }  catch (Exception ex)
+            {   MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         //Instructions about use of software
         private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -190,6 +182,55 @@ namespace IMS_Final
             frmloaded.Show();
         }
 
-       
+        //############################################
+        //------------IMPORT PRODUCT LIST-----------
+        //############################################
+        private void importProductListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog()
+            { Filter = "Excel 2003-2016 workbooks|*.xlsx" }) //Filter for the type of files to show
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
+                {
+                    try
+                    {   FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                        ExcelPackage package = new ExcelPackage(fileName);
+                        ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                        int colProds = 1;
+                        for (int rowProds = 2; rowProds < 5000; rowProds++) //HARD-CODED - NEED TO UPDATE
+                        {
+                            if (ws.Cells[rowProds, colProds].Value != null)
+                            {
+                                Products productList = new Products();
+                                productList.Prod_ID = (ws.Cells[rowProds, colProds].Value).ToString();
+                                productList.Prod_Name = (ws.Cells[rowProds, colProds + 1].Value).ToString();
+                                productList.Re_Order = float.Parse(ws.Cells[rowProds, colProds + 2].Value.ToString());
+                                products.Add(productList);
+                            }
+                        } //End of for loop to input Excel data
+                        dataGridView1.DataSource = products;
+                        dataGridView1.Refresh();
+                    } catch (Exception ex)
+                    { MessageBox.Show(ex.ToString()); }
+                } //End of dialog selection
+            }//End of filter
+        }
+
+        private void btnImportProducts_Click(object sender, EventArgs e)
+        {
+            try
+            {   DapperPlusManager.Entity<Stockin>().Table("Products");
+                List<Products> products = dataGridView1.DataSource as List<Products>;
+                if (products != null)
+                {
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
+                    { db.BulkInsert(products); }
+                    MessageBox.Show("Products Data with Re-Order Imported successfully!");
+                }  else
+                {   MessageBox.Show("Data is null or some issue!");    }
+            }  catch (Exception ex)
+            {  MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

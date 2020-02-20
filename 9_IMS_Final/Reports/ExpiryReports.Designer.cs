@@ -37,7 +37,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.stocksDBDataSet_StockinExpiry = new IMS_Final.StocksDBDataSet_StockinExpiry();
             this.stockinTableExpiryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockinTableExpiryTableAdapter = new IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters.StockinTableExpiryTableAdapter();
+            
             ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableExpiryBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -92,9 +92,7 @@
             // 
             // stockinTableExpiryTableAdapter
             // 
-            this.stockinTableExpiryTableAdapter.ClearBeforeFill = true;
-            // 
-            // ExpiryReports
+            
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,6 +122,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private StocksDBDataSet_StockinExpiry stocksDBDataSet_StockinExpiry;
         private System.Windows.Forms.BindingSource stockinTableExpiryBindingSource;
-        private StocksDBDataSet_StockinExpiryTableAdapters.StockinTableExpiryTableAdapter stockinTableExpiryTableAdapter;
+
     }
 }
