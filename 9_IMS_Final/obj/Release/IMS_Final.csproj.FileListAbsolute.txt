@@ -79,8 +79,6 @@ D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.Product_Report.resourc
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.SalesSearch.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.StockReportsForm.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.GenerateResource.cache
-D:\repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.cache
-D:\repos\CSharp\9_IMS_Final\obj\Release\RdlCompile.compiled
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe.manifest
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.CopyComplete

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -138,12 +139,12 @@ namespace IMS_Final
                             Stockin stockinList = new Stockin();
                             stockinList.Prod_ID = (ws.Cells[rowPurchase, colPurchase].Value).ToString();
                             stockinList.Prod_Name = (ws.Cells[rowPurchase, colPurchase + 1].Value).ToString();
-                            DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateStockin);
-                            DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateExpiry);
+                            //DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateStockin);
+                            //DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateExpiry);
 //                          stockinList.Date = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString());
 //                          stockinList.Expiry = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString());
-                            stockinList.Date = parsedDateStockin;
-                            stockinList.Expiry = parsedDateExpiry;
+                            //stockinList.Date = parsedDateStockin;
+                            //stockinList.Expiry = parsedDateExpiry;
                             stockinList.Sup_ID = ws.Cells[rowPurchase, colPurchase + 4].Value.ToString();
                             stockinList.Sup_Name = ws.Cells[rowPurchase, colPurchase + 5].Value.ToString();
                             stockinList.Units = float.Parse(ws.Cells[rowPurchase, colPurchase + 6].Value.ToString());
@@ -207,6 +208,7 @@ namespace IMS_Final
                         ExcelPackage package = new ExcelPackage(fileName);
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
                         int colProds = 1;
+                        int reOrderVal;
                         for (int rowProds = 2; rowProds < 5000; rowProds++) //HARD-CODED - NEED TO UPDATE
                         {
                             if (ws.Cells[rowProds, colProds].Value != null)
@@ -214,7 +216,8 @@ namespace IMS_Final
                                 Products productList = new Products();
                                 productList.Prod_ID = (ws.Cells[rowProds, colProds].Value).ToString();
                                 productList.Prod_Name = (ws.Cells[rowProds, colProds + 1].Value).ToString();
-                                productList.Re_Order = float.Parse(ws.Cells[rowProds, colProds + 2].Value.ToString());
+                                Int32.TryParse(ws.Cells[rowProds, colProds + 2].Value.ToString(), out reOrderVal);
+                                productList.Re_Order = reOrderVal;
                                 products.Add(productList);
                             }
                         } //End of for loop to input Excel data

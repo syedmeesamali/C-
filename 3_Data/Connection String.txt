@@ -1,0 +1,5 @@
+<connectionStrings>
+        <add name="IMS_Final.Properties.Settings.StocksDBConnectionString"
+            connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
