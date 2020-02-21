@@ -54,7 +54,8 @@ namespace IMS_Final
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Width = 50;
-            dataGridView1.Columns[1].Width = 300;
+            dataGridView1.Columns[1].Width = 50;
+            dataGridView1.Columns[2].Width = 300;
             conn.Close();
         }
     }
