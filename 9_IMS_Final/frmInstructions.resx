@@ -127,7 +127,10 @@ For sales data import:
 For purchase data import:
 1. File format should be "xlsx". "xls" format is not supported.
 2. There shall be only one sheet per file
-3. Sheet headers should be as shown in graphic below.</value>
+3. Sheet headers should be as shown in graphic below.
+
+For product list import:
+1. Make sure that the target file (from where to import) is having only ONE sheet.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

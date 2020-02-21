@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="1177528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="1177016">
       <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QjoMgC25/gVvLJI8/ezhl6VZkY8YR+eSHElqbV0N4wg=</dsig:DigestValue>
+        <dsig:DigestValue>KYNpLThjv6pIcqs2GiqtwXfNLdclCGsyNugn/edKEWs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -725,13 +725,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="IMS_Final.exe.config" size="552">
+  <file name="IMS_Final.exe.config" size="564">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>W1BI7ihsEZIxSVS0ftmlEWLa3KKSpFjZT1Nr0ZRgyW0=</dsig:DigestValue>
+      <dsig:DigestValue>K0hmqSr/8U6jzY5YG1RysvbsBbkFOUo/KZiWAArmT/M=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">
@@ -785,7 +785,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>K5iCZfg383DBui9HulMZyB7DobooTf7pOxiLT3iI9DA=</dsig:DigestValue>
+      <dsig:DigestValue>ZiUXL0tZddDCtma+0070FBKHy+pVaITZ0LUTf9opXOQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="786432" writeableType="applicationData">
@@ -794,7 +794,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U5sImqFibntoez54u14BRz9U6ix+Xwj967PUICBhA8E=</dsig:DigestValue>
+      <dsig:DigestValue>FThBt6A/yd/uL3Lb5yiDLGNnrs38oCe9xVxxn6rPQtk=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

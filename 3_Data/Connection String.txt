@@ -3,3 +3,9 @@
             connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"
             providerName="System.Data.SqlClient" />
     </connectionStrings>
+
+
+
+
+
+Within the program: IMS_Final.Properties.Settings.Default.StocksDBConnectionString

@@ -31,28 +31,15 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_Report));
-            this.stocksDBDataSet_StockinExpiry = new IMS_Final.StocksDBDataSet_StockinExpiry();
+            this.stockinTableProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            
-            this.stockinTableProductsNBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            this.stockinTableProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stocksDBDataSet_StockinExpiry1 = new IMS_Final.StocksDBDataSet_StockinExpiry();
-            this.stockinTableProductsNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsNBindingSource)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsNBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // stocksDBDataSet_StockinExpiry
-            // 
-            this.stocksDBDataSet_StockinExpiry.DataSetName = "StocksDBDataSet_StockinExpiry";
-            this.stocksDBDataSet_StockinExpiry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -77,15 +64,17 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stockinTableProductsNBindingSource1, "Prod_Name", true));
-            this.comboBox1.DataSource = this.stockinTableProductsNBindingSource;
-            this.comboBox1.DisplayMember = "Prod_Name";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(181, 18);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(293, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "Prod_Name";
+            // 
+            // stocksDBDataSet_StockinExpiry1
+            // 
+            this.stocksDBDataSet_StockinExpiry1.DataSetName = "StocksDBDataSet_StockinExpiry";
+            this.stocksDBDataSet_StockinExpiry1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -96,32 +85,6 @@
             this.button1.Text = "Generate Report for Selected Product";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // stockinTableProductsTableAdapter
-            // 
-            
-            // stockinTableProductsNBindingSource
-            // 
-            this.stockinTableProductsNBindingSource.DataMember = "StockinTableProductsN";
-            this.stockinTableProductsNBindingSource.DataSource = this.stocksDBDataSet_StockinExpiry;
-            // 
-            // stockinTableProductsNTableAdapter
-            // 
-            
-            // stockinTableProductsBindingSource
-            // 
-            this.stockinTableProductsBindingSource.DataMember = "StockinTableProducts";
-            this.stockinTableProductsBindingSource.DataSource = this.stocksDBDataSet_StockinExpiry;
-            // 
-            // stocksDBDataSet_StockinExpiry1
-            // 
-            this.stocksDBDataSet_StockinExpiry1.DataSetName = "StocksDBDataSet_StockinExpiry";
-            this.stocksDBDataSet_StockinExpiry1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockinTableProductsNBindingSource1
-            // 
-            this.stockinTableProductsNBindingSource1.DataMember = "StockinTableProductsN";
-            this.stockinTableProductsNBindingSource1.DataSource = this.stocksDBDataSet_StockinExpiry1;
             // 
             // Product_Report
             // 
@@ -138,11 +101,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Report";
             this.Load += new System.EventHandler(this.Product_Report_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockinTableProductsNBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,12 +114,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private StocksDBDataSet_StockinExpiry stocksDBDataSet_StockinExpiry;
-        
-        private System.Windows.Forms.BindingSource stockinTableProductsNBindingSource;
         
         private System.Windows.Forms.BindingSource stockinTableProductsBindingSource;
         private StocksDBDataSet_StockinExpiry stocksDBDataSet_StockinExpiry1;
-        private System.Windows.Forms.BindingSource stockinTableProductsNBindingSource1;
     }
 }

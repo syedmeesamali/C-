@@ -63,14 +63,17 @@ namespace IMS_Final
                             string pattern = "dd/MM/yyyy";
                             string date_Loc = ws.Cells[4, 15].Value.ToString();
                             string date_Val = date_Loc.Substring(6, 10).ToString();
+                            string Invoice_Loc = ws.Cells[4, 11].Value.ToString();
+                            string Invoice_Val = Invoice_Loc.Substring(8, 9).ToString();
                             DateTime parsedDate;
-                            for (int rowSales = 15; rowSales < 30; rowSales++) //Hard-coded start as well
+                            for (int rowSales = 15; rowSales < 70; rowSales++) //Hard-coded start as well
                             {
                                 if (ws.Cells[rowSales, colSales].Value != null)
                                 {
                                     Stockout stockoutList = new Stockout();
                                     DateTime.TryParseExact(date_Val, pattern, null, DateTimeStyles.None, out parsedDate);
                                     stockoutList.Date = parsedDate;
+                                    stockoutList.Invoice = Invoice_Val;
                                     stockoutList.Cust_Name = cust_ID;
                                     stockoutList.Prod_ID = (ws.Cells[rowSales, colSales].Value).ToString();
                                     stockoutList.Prod_Name = ws.Cells[rowSales, colSales + 3].Value.ToString();
@@ -84,6 +87,7 @@ namespace IMS_Final
                         }  catch (Exception ex)
                         {  MessageBox.Show(ex.ToString());    }
                     }
+                    
                     dataGridView1.DataSource = stockout;
                     dataGridView1.Refresh();
                 } 
@@ -129,9 +133,6 @@ namespace IMS_Final
                     ExcelPackage package = new ExcelPackage(fileName);
                     ExcelWorksheet ws = package.Workbook.Worksheets[1];
                     int colPurchase = 1;
-                    string pattern = "MM/dd/yyyy";
-                    DateTime parsedDateStockin;
-                    DateTime parsedDateExpiry;
                     for (int rowPurchase = 2; rowPurchase < 25000; rowPurchase++) //HARD-CODED - NEED TO UPDATE
                     {
                         if (ws.Cells[rowPurchase, colPurchase].Value != null)
@@ -139,12 +140,8 @@ namespace IMS_Final
                             Stockin stockinList = new Stockin();
                             stockinList.Prod_ID = (ws.Cells[rowPurchase, colPurchase].Value).ToString();
                             stockinList.Prod_Name = (ws.Cells[rowPurchase, colPurchase + 1].Value).ToString();
-                            //DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateStockin);
-                            //DateTime.TryParseExact(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString(), pattern, null, DateTimeStyles.None, out parsedDateExpiry);
-//                          stockinList.Date = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString());
-//                          stockinList.Expiry = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString());
-                            //stockinList.Date = parsedDateStockin;
-                            //stockinList.Expiry = parsedDateExpiry;
+                            stockinList.Date = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 2].Value.ToString());
+                            stockinList.Expiry = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString());
                             stockinList.Sup_ID = ws.Cells[rowPurchase, colPurchase + 4].Value.ToString();
                             stockinList.Sup_Name = ws.Cells[rowPurchase, colPurchase + 5].Value.ToString();
                             stockinList.Units = float.Parse(ws.Cells[rowPurchase, colPurchase + 6].Value.ToString());

@@ -49,7 +49,7 @@
             this.txtInstructions.Multiline = true;
             this.txtInstructions.Name = "txtInstructions";
             this.txtInstructions.ReadOnly = true;
-            this.txtInstructions.Size = new System.Drawing.Size(432, 152);
+            this.txtInstructions.Size = new System.Drawing.Size(432, 296);
             this.txtInstructions.TabIndex = 1;
             this.txtInstructions.Text = resources.GetString("txtInstructions.Text");
             // 
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 261);
+            this.ClientSize = new System.Drawing.Size(684, 350);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtInstructions);
             this.Controls.Add(this.label1);
