@@ -28,6 +28,7 @@ namespace IMS_Final
             dataGridView1.Columns[4].Width = 50;
             dataGridView1.Columns[5].Width = 250;
             dataGridView1.Columns[7].Width = 50;
+            dataGridView1.Columns[8].DefaultCellStyle.Format = "N2";
             dataGridView1.Columns[8].Width = 50;
             conn.Close();
         }

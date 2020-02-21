@@ -5,6 +5,7 @@
     </connectionStrings>
 
 
+D:\repos\CSharp\9_IMS_Final\StocksDB.mdf
 
 
 

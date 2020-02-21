@@ -152,6 +152,12 @@
     <Compile Include="Reports\SalesSearch.Designer.cs">
       <DependentUpon>SalesSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\StockReportSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockReportSearch.Designer.cs">
+      <DependentUpon>StockReportSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Stockin.cs" />
     <Compile Include="Stockout.cs" />
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\SalesSearch.resx">
       <DependentUpon>SalesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReportSearch.resx">
+      <DependentUpon>StockReportSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StockReportsForm.resx">
       <DependentUpon>StockReportsForm.cs</DependentUpon>

@@ -1,0 +1,10 @@
+select 
+	*
+from
+	StockinTable sin
+full outer join
+	Products pr
+on 
+	sin.Prod_Name = pr.Prod_Name
+where 
+	sin.Prod_Name is not null
