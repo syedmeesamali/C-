@@ -55,7 +55,8 @@ namespace IMS_Final
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented yet!", "Coming Soon");
+            StockReportSearch stockReportSearch = new StockReportSearch();
+            stockReportSearch.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

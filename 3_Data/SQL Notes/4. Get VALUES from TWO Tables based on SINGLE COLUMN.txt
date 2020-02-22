@@ -1,0 +1,13 @@
+select 
+	sin.Prod_ID,
+	sin.Prod_Name,
+	sin.Sup_ID,
+	sin.Sup_Name,
+	sin.Units,
+	format(sin.Cost,'N2') as [Cost],
+	sin.Expiry,
+	pr.Re_Order
+from
+	Products pr, StockinTable sin 
+where
+	sin.Prod_Name = pr.Prod_Name

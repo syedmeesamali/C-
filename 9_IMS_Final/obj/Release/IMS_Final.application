@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="IMS_Final.exe.manifest" size="47068">
+    <dependentAssembly dependencyType="install" codebase="IMS_Final.exe.manifest" size="47067">
       <assemblyIdentity name="IMS_Final.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Yvuln+uFn5RgXIDqXlJBL6VkbT3Uk16QIXTJhmLW0Mg=</dsig:DigestValue>
+        <dsig:DigestValue>pqWCTMvW6uxcKoAJqzvsUiaByU1GhJmGdwvTQzf7i30=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
