@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>P2KlGvnAcrK5GXovl5zGfN2pPjPAP+/xU2LWy8Qmh9Y=</dsig:DigestValue>
+        <dsig:DigestValue>9ZMhlueHYJexy9pPuvxHlmfmrrYbL7c9vrJGO9N9L2o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -731,7 +731,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>K0hmqSr/8U6jzY5YG1RysvbsBbkFOUo/KZiWAArmT/M=</dsig:DigestValue>
+      <dsig:DigestValue>gSEVw9wOILsYRVISjBEoDoMCfjVSWQO/YYoKrHlREuo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">
@@ -785,7 +785,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3DB7g3grBcqzWyMYpvZekIOcz7Ye8VWzHjIo/e7iuBM=</dsig:DigestValue>
+      <dsig:DigestValue>cb2LNCWjsYfNq5XEsFlW0LzeQA073pSFkPp58aUSsDk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="516096" writeableType="applicationData">
@@ -794,7 +794,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cZHxYXpfZRKXbCFNngIjKP+XOjaG0+UqKkBZyl1mAtw=</dsig:DigestValue>
+      <dsig:DigestValue>DnseY+poi26n7sE6zrZBZbXzf5bUBADX9KZBlvc7x3o=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

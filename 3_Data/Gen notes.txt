@@ -4,3 +4,5 @@ RDLC Report Viewer:
 Reference link:
 
 https://stackoverflow.com/questions/31581432/missing-microsoft-rdlc-report-designer-in-visual-studio
+
+https://opentextbc.ca/dbdesign01/chapter/chapter-sql-dml/

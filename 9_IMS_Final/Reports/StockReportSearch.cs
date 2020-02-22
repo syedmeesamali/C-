@@ -29,10 +29,14 @@ namespace IMS_Final.Reports
             dataGridView1.Columns[3].Width = 150;
             dataGridView1.Columns[4].Width = 50;
             dataGridView1.Columns[5].Width = 50;
-            dataGridView1.Columns[6].Width = 120;
+            dataGridView1.Columns[6].Width = 80;
             dataGridView1.Columns[7].Width = 90;
-            //dataGridView1.Columns[8].Width = 70;
             conn.Close();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

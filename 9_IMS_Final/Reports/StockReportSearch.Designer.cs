@@ -34,6 +34,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtProdID = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 467);
+            this.dataGridView1.Size = new System.Drawing.Size(848, 467);
             this.dataGridView1.TabIndex = 9;
             // 
             // label1
@@ -80,11 +81,22 @@
             this.txtProdID.Size = new System.Drawing.Size(66, 20);
             this.txtProdID.TabIndex = 13;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(525, 12);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(159, 26);
+            this.btnPrint.TabIndex = 14;
+            this.btnPrint.Text = "&Print Report";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // StockReportSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(872, 540);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtProdID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearch);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtProdID;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

@@ -1,0 +1,4 @@
+select sin.Prod_Name, sin.Prod_ID, sum(Cost) as Cost
+from (
+select * from StockinTable) as sin
+group by sin.Prod_Name, sin.Prod_ID
