@@ -67,7 +67,6 @@ D:\repos\CSharp\9_IMS_Final\bin\Release\pt\Microsoft.ReportViewer.DataVisualizat
 D:\repos\CSharp\9_IMS_Final\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\9_IMS_Final\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\9_IMS_Final\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.CustomSearch.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.frmMain.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.frmInstructions.resources
@@ -172,3 +171,5 @@ F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.pdb
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.resources
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.StockReportDGV.resources

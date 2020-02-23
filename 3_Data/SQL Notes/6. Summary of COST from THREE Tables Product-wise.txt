@@ -1,0 +1,9 @@
+select sin.Prod_Name, sin.Prod_ID, sin.Expiry, 
+	format(sum(sin.Cost),'N2') as [Total Cost],
+	count(*) as [No. of Items]
+from StockinTable as sin
+inner join StockoutTable as sout
+on sin.Prod_Name = sout.Prod_Name
+inner join Products as pr
+on sin.Prod_Name = pr.Prod_Name
+group by sin.Prod_Name, sin.Prod_ID, sin.Expiry

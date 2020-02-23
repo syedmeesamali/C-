@@ -32,9 +32,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtProdID = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnOriginal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,45 +60,49 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(189, 6);
+            this.txtSearch.Location = new System.Drawing.Point(15, 35);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(247, 20);
             this.txtSearch.TabIndex = 11;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(113, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Or Prod ID:";
-            // 
-            // txtProdID
-            // 
-            this.txtProdID.Location = new System.Drawing.Point(189, 35);
-            this.txtProdID.Name = "txtProdID";
-            this.txtProdID.Size = new System.Drawing.Size(66, 20);
-            this.txtProdID.TabIndex = 13;
-            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(525, 12);
+            this.btnPrint.Location = new System.Drawing.Point(730, 12);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(159, 26);
+            this.btnPrint.Size = new System.Drawing.Size(130, 26);
             this.btnPrint.TabIndex = 14;
             this.btnPrint.Text = "&Print Report";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.Location = new System.Drawing.Point(565, 12);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(159, 26);
+            this.btnPurchase.TabIndex = 15;
+            this.btnPurchase.Text = "Purchase Summary";
+            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click_1);
+            // 
+            // btnOriginal
+            // 
+            this.btnOriginal.Location = new System.Drawing.Point(400, 12);
+            this.btnOriginal.Name = "btnOriginal";
+            this.btnOriginal.Size = new System.Drawing.Size(159, 26);
+            this.btnOriginal.TabIndex = 16;
+            this.btnOriginal.Text = "Original Summary";
+            this.btnOriginal.UseVisualStyleBackColor = true;
+            this.btnOriginal.Click += new System.EventHandler(this.btnOriginal_Click);
             // 
             // StockReportSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 540);
+            this.Controls.Add(this.btnOriginal);
+            this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.txtProdID);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -119,8 +123,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtProdID;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnPurchase;
+        private System.Windows.Forms.Button btnOriginal;
     }
 }

@@ -40,6 +40,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(218, 188);
+            this.button3.Location = new System.Drawing.Point(218, 241);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(231, 34);
             this.button3.TabIndex = 6;
@@ -138,11 +139,22 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(218, 188);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(231, 34);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Stock-In Cost Summary";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // StockReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 283);
+            this.ClientSize = new System.Drawing.Size(665, 411);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -154,8 +166,8 @@
             this.Controls.Add(this.btnFullReport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(681, 322);
-            this.MinimumSize = new System.Drawing.Size(681, 322);
+            this.MaximumSize = new System.Drawing.Size(681, 450);
+            this.MinimumSize = new System.Drawing.Size(681, 450);
             this.Name = "StockReportsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Reports Form";
@@ -180,5 +192,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

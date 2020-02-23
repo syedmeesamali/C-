@@ -1,0 +1,14 @@
+select pr.Prod_ID, pr.Prod_Name, pr.Re_Order, sout.Sold, sin.Bought
+	from Products as pr
+inner join 
+	(
+	select sout.Prod_Name, format(sum(sout.Price),'N2') as [Sold]
+	from StockoutTable as sout
+	where sout.Price >0
+	group by sout.Prod_Name) sout on sout.Prod_Name = pr.Prod_Name
+inner join
+	(
+	select sin.Prod_Name, format(sum(sin.Cost),'N2') as [Bought]
+	from StockinTable as sin
+	where sin.Cost >0
+	group by sin.Prod_Name) sin on sin.Prod_Name = pr.Prod_Name

@@ -167,6 +167,12 @@
     <Compile Include="Reports\StockReportsForm.Designer.cs">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\StockReportDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockReportDGV.Designer.cs">
+      <DependentUpon>StockReportDGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="StocksDBDataSet_StockinExpiry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\SalesSearch.resx">
       <DependentUpon>SalesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReportDGV.resx">
+      <DependentUpon>StockReportDGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StockReportSearch.resx">
       <DependentUpon>StockReportSearch.cs</DependentUpon>

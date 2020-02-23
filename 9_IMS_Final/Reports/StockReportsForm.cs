@@ -55,13 +55,19 @@ namespace IMS_Final
 
         private void button3_Click(object sender, EventArgs e)
         {
-            StockReportSearch stockReportSearch = new StockReportSearch();
-            stockReportSearch.Show();
+            StockReportDGV stockReportDGV = new StockReportDGV();
+            stockReportDGV.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not implemented yet!", "Coming Soon");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            StockReportSearch stockReportSearch = new StockReportSearch();
+            stockReportSearch.Show();
         }
     }
 }
