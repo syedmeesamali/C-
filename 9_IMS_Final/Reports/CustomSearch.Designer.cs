@@ -128,7 +128,7 @@
             this.MaximizeBox = false;
             this.Name = "CustomSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Custom Search in Database";
+            this.Text = "Custom Search in Stockin";
             this.Load += new System.EventHandler(this.CustomSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

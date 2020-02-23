@@ -23,5 +23,10 @@ namespace IMS_Final.Reports
             
             this.reportViewer1.RefreshReport();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

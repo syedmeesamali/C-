@@ -98,7 +98,7 @@
             this.MinimumSize = new System.Drawing.Size(1050, 650);
             this.Name = "SalesSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SalesSearch";
+            this.Text = "Sales Search in Stock-out Database";
             this.Load += new System.EventHandler(this.SalesSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

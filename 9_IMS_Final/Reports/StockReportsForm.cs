@@ -13,9 +13,10 @@ namespace IMS_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain();
-            this.Hide();
-            frm.Show();
+            Application.Exit();
+            //frmMain frm = new frmMain();
+            //this.Hide();
+            //frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,6 +69,12 @@ namespace IMS_Final
         {
             StockReportSearch stockReportSearch = new StockReportSearch();
             stockReportSearch.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Item_History item_History = new Item_History();
+            item_History.Show();
         }
     }
 }
