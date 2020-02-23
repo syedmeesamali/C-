@@ -1,0 +1,9 @@
+select sin.Prod_Name, sin.Id as [In-ID], sin.Expiry, sin.Sup_Name, sin.Units, sin.Date, sout.Id as [Out-ID],
+	   sout.Invoice, sout.Pcs
+	from StockinTable as sin
+inner join
+	StockoutTable as sout
+	on sout.Prod_Name = sin.Prod_Name and 
+	sout.Prod_ID = sin.Prod_ID
+where sin.Prod_Name = 'TATA TEA 1 KG X 12'
+order by sin.Prod_Name

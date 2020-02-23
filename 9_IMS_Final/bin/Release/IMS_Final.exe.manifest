@@ -785,7 +785,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7TBAHlH8IZFHqTkwIpmauYsptLwFPRTRcR4onTB9q4I=</dsig:DigestValue>
+      <dsig:DigestValue>qPmEO2NYH3pvFfk0+Vguo/1IXq0VY4/OIvaORk8cj8I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="516096" writeableType="applicationData">
@@ -794,7 +794,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ddUczc4NQzUVgDgZkVSJgN7jDluUknI8Gts1Tjog4ro=</dsig:DigestValue>
+      <dsig:DigestValue>zo9PLs8saqhzzlrjjnhjS9vK+dl8aOn5Jr9ND60Hjek=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
