@@ -6,3 +6,5 @@ Reference link:
 https://stackoverflow.com/questions/31581432/missing-microsoft-rdlc-report-designer-in-visual-studio
 
 https://opentextbc.ca/dbdesign01/chapter/chapter-sql-dml/
+
+https://www.c-sharpcorner.com/article/how-to-print-a-data-grid-in-C-Sharp-and-net/
