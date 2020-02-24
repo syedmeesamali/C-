@@ -38,6 +38,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productsTableAdapter = new IMS_Final.StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_Products)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,7 +47,7 @@
             // 
             // btnSummary
             // 
-            this.btnSummary.Location = new System.Drawing.Point(551, 16);
+            this.btnSummary.Location = new System.Drawing.Point(526, 15);
             this.btnSummary.Name = "btnSummary";
             this.btnSummary.Size = new System.Drawing.Size(152, 26);
             this.btnSummary.TabIndex = 17;
@@ -56,18 +58,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 13);
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Type Product Name in Text Box:";
+            this.label1.Text = "Select Product Name:";
             // 
             // cboHistory
             // 
             this.cboHistory.DataSource = this.productsBindingSource;
             this.cboHistory.DisplayMember = "Prod_Name";
             this.cboHistory.FormattingEnabled = true;
-            this.cboHistory.Location = new System.Drawing.Point(185, 20);
+            this.cboHistory.Location = new System.Drawing.Point(144, 19);
             this.cboHistory.Name = "cboHistory";
             this.cboHistory.Size = new System.Drawing.Size(326, 21);
             this.cboHistory.TabIndex = 19;
@@ -85,9 +87,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 95);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(847, 434);
+            this.dataGridView1.Size = new System.Drawing.Size(1210, 510);
             this.dataGridView1.TabIndex = 20;
             // 
             // productsTableAdapter
@@ -96,18 +98,38 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.Location = new System.Drawing.Point(724, 15);
+            this.btnHistory.Location = new System.Drawing.Point(526, 48);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(145, 26);
+            this.btnHistory.Size = new System.Drawing.Size(152, 26);
             this.btnHistory.TabIndex = 21;
             this.btnHistory.Text = "Get History";
             this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(144, 52);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(326, 20);
+            this.txtSearch.TabIndex = 23;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Type Product Name:";
             // 
             // Item_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 510);
+            this.ClientSize = new System.Drawing.Size(1234, 631);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cboHistory);
@@ -136,5 +158,7 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
     }
 }

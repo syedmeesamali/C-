@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="1565624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="1568696">
       <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TNSskfgHvxte8Xt5MpvgHnKyNfuiEVe5dcye6wn1m+U=</dsig:DigestValue>
+        <dsig:DigestValue>PFvS6dyOrxEwfS+tVtWWdSJrfcS5dE3nakS87RdCKOk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -785,7 +785,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U++gR90IkCwDJJa1zMN+C6JX328iBO6IX0+F/2Thqrc=</dsig:DigestValue>
+      <dsig:DigestValue>FH1a7TespwIWEwwD6rk3OT1wlt8xAhdVDH+4aezXDm4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="786432" writeableType="applicationData">
@@ -794,7 +794,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZFiZ+u5zyEFlqsZyBDaixYPEALkRjjuBYJdHZqettGg=</dsig:DigestValue>
+      <dsig:DigestValue>O2wjyrqZG59CF6NVveCw3GGJp6TCc5+EHkL3Fy1JTGw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

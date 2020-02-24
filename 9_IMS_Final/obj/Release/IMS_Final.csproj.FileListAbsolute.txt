@@ -173,3 +173,4 @@ D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.reso
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.StockReportDGV.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.Item_History.resources
+D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache

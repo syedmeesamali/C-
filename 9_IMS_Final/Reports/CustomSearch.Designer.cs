@@ -59,6 +59,7 @@
             this.label1.Size = new System.Drawing.Size(161, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Type Product Name in Text Box:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtSearch
             // 

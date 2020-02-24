@@ -76,5 +76,10 @@ namespace IMS_Final
             }  catch (Exception ex)
             {   MessageBox.Show("Some Issues with Query!", ex.ToString());     }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
