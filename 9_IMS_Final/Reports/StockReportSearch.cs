@@ -37,11 +37,12 @@ namespace IMS_Final.Reports
         private void btnPrint_Click(object sender, EventArgs e)
         {
             
-                dataGridPrinter1 = new DataGridPrinter(dataGridView1, printDocument1, dataSet11.Customers);
+                //dataGridPrinter1 = new DataGridPrinter(dataGridView1, printDocument1, dataSet11.Customers);
             
         }
 
-        private void btnPurchase_Click_1(object sender, EventArgs e)
+       
+    private void btnPurchase_Click_1(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
             conn.Open();
