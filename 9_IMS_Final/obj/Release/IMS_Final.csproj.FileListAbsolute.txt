@@ -168,7 +168,6 @@ F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.application
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csproj.CopyComplete
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.exe
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.pdb
-F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.resources
 F:\Repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.Reports.StockReportSearch.resources
 D:\repos\CSharp\9_IMS_Final\obj\Release\IMS_Final.StockReportDGV.resources

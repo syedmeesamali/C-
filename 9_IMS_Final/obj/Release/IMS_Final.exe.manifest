@@ -785,16 +785,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YXxHX6lDYgzuS7mM1j7zHD0O/ZoJmE+NPySCeIrjPsA=</dsig:DigestValue>
+      <dsig:DigestValue>0lluQi/s/CbjQBUPzXp+S48sF+TfMZ0esBHEQPjXxTE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="StocksDB_log.ldf" size="2359296" writeableType="applicationData">
+  <file name="StocksDB_log.ldf" size="4784128" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ai5Kp69dyqnnPbiGAtD+KtoBH1IwHvaYPT80fVEzFGw=</dsig:DigestValue>
+      <dsig:DigestValue>UX9xBVdgU7yc54Rgn80yuDtAQvstVCwKxu3TLmffdEM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
