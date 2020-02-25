@@ -76,17 +76,17 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 630);
+            this.dataGridView1.Size = new System.Drawing.Size(703, 538);
             this.dataGridView1.TabIndex = 8;
             // 
             // ProductListSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 687);
+            this.ClientSize = new System.Drawing.Size(734, 611);
             this.Controls.Add(this.txtProdID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearch);
@@ -94,8 +94,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(750, 750);
-            this.MinimumSize = new System.Drawing.Size(750, 726);
+            this.MaximumSize = new System.Drawing.Size(750, 650);
+            this.MinimumSize = new System.Drawing.Size(750, 650);
             this.Name = "ProductListSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductListSearch";

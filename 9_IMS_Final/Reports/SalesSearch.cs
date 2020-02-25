@@ -18,7 +18,7 @@ namespace IMS_Final
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM StockoutTable WHERE Prod_Name like '" + txtSearch.Text + "%'", conn);
                 dt = new DataTable();
@@ -32,7 +32,7 @@ namespace IMS_Final
 
         private void SalesSearch_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM StockOutTable", conn);
             dt = new DataTable();
@@ -55,7 +55,7 @@ namespace IMS_Final
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
                 conn.Open();
                 adapt = new SqlDataAdapter("SELECT * FROM StockOutTable WHERE Prod_ID like '" + txtProdID.Text + "%'", conn);
                 dt = new DataTable();
