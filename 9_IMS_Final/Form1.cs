@@ -104,7 +104,7 @@ namespace IMS_Final
                 //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
                 if (excelLoaded != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     {   db.BulkInsert(stockout);
                         db.BulkInsert(excelLoaded);
                     }   MessageBox.Show("Purchase Data Imported successfully!");
@@ -165,7 +165,7 @@ namespace IMS_Final
                 List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                 if (stockin != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     { db.BulkInsert(stockin); }
                     MessageBox.Show("Purchase Data Imported successfully!");
                 } else
@@ -232,7 +232,7 @@ namespace IMS_Final
                 List<Products> products = dataGridView1.DataSource as List<Products>;
                 if (products != null)
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
+                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\9_IMS_Final\StocksDB.mdf;Integrated Security=True"))
                     { db.BulkInsert(products); }
                     MessageBox.Show("Products Data with Re-Order Imported successfully!");
                 }  else
