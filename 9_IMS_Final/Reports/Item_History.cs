@@ -22,6 +22,7 @@ namespace IMS_Final.Reports
         DataTable dt;
         private void btnSummary_Click(object sender, EventArgs e)
         {
+            label2.Text = "Summary of Product (Units Bought, Sold and Stock) selected Above:";
             SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
             conn.Open();
             string selectedItem = cboHistory.GetItemText(cboHistory.SelectedItem);
@@ -46,6 +47,7 @@ namespace IMS_Final.Reports
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            label2.Text = "Detailed History of Product selected Above:";
             SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
             conn.Open();
             string selectedItem = cboHistory.GetItemText(cboHistory.SelectedItem);
@@ -68,26 +70,5 @@ namespace IMS_Final.Reports
             conn.Close();
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True");
-                conn.Open();
-                //adapt = new SqlDataAdapter("SELECT * FROM StockInTable WHERE Prod_Name like '" + txtSearch.Text + "%'", conn);
-                adapt = new SqlDataAdapter("SELECT sin.Prod_ID AS [Prod ID], sin.Prod_Name AS [Prod Name], sin.Date, " +
-                "sin.Sup_Name AS[Supplier / Customer], sin.Units AS[Units], FORMAT(sin.Cost, 'N2') AS[Cost / Price], " +
-                "CONVERT(varchar(100),sin.Expiry, 102) AS [Expiry / Invoice] " +
-                "FROM StockinTable AS sin WHERE sin.Prod_Name = '" + txtSearch.Text + "%'" +
-                "UNION ALL SELECT sout.Prod_ID, sout.Prod_Name, sout.Date, sout.Cust_Name, sout.Boxes, " +
-                "FORMAT(sout.Price,'N2'), sout.Invoice FROM StockoutTable AS sout WHERE sout.Prod_Name = '" + txtSearch.Text + "%'", conn);
-                dt = new DataTable();
-                adapt.Fill(dt);
-                dataGridView1.DataSource = dt;
-                conn.Close();
-            }
-            catch (Exception ex)
-            { MessageBox.Show("Some Issues with Query!", ex.ToString()); }
-        }
     }
 }

@@ -17,20 +17,13 @@ namespace IMS_Final
         {
             SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
             conn.Open();
-            adapt = new SqlDataAdapter("select pr.Prod_ID, pr.Prod_Name, pr.Re_Order, sin.Bought, sout.Sold " +
-                "from Products as pr " +
-                "inner join " +
-                "( " +
-                "select sin.Prod_Name, format(sum(sin.Cost), 'N2') as [Bought] " +
-                "from StockinTable as sin " +
-                "where sin.Cost > 0 " +
-                "group by sin.Prod_Name) sin on sin.Prod_Name = pr.Prod_Name " +
-                "inner join " +
-                "( " +
-                "select sout.Prod_Name, format(sum(sout.Price), 'N2') as [Sold] " +
-                "from StockoutTable as sout " +
-                "where sout.Price > 0 " +
-                "group by sout.Prod_Name) sout on sout.Prod_Name = pr.Prod_Name",conn);
+            adapt = new SqlDataAdapter("SELECT sin.Prod_ID, sin.Prod_Name, sin.Bought, ISNULL(sout.SOLD,0) as [Sold], " +
+                   "FORMAT(ISNULL((ISNULL(sin.Bought,0) - ISNULL(sout.SOLD,0)),0),'N2') AS [Stock Now] " +
+                   "FROM (SELECT Prod_ID, Prod_Name, ISNULL(SUM(Units),0) AS Bought " +
+                   "FROM StockinTable sin GROUP BY Prod_ID, Prod_Name) sin " +
+                   "LEFT JOIN  (SELECT Prod_ID, ISNULL(SUM(Boxes),0) AS SOLD " +
+                   "FROM StockoutTable GROUP BY Prod_ID) sout " +
+                   "ON sin.Prod_ID = sout.Prod_ID ", conn);
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;

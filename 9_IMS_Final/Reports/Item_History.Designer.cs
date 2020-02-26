@@ -38,7 +38,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productsTableAdapter = new IMS_Final.StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter();
             this.btnHistory = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_Products)).BeginInit();
@@ -47,7 +46,7 @@
             // 
             // btnSummary
             // 
-            this.btnSummary.Location = new System.Drawing.Point(526, 15);
+            this.btnSummary.Location = new System.Drawing.Point(500, 19);
             this.btnSummary.Name = "btnSummary";
             this.btnSummary.Size = new System.Drawing.Size(152, 26);
             this.btnSummary.TabIndex = 17;
@@ -98,7 +97,7 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.Location = new System.Drawing.Point(526, 48);
+            this.btnHistory.Location = new System.Drawing.Point(500, 51);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(152, 26);
             this.btnHistory.TabIndex = 21;
@@ -106,29 +105,20 @@
             this.btnHistory.UseVisualStyleBackColor = true;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(144, 52);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(326, 20);
-            this.txtSearch.TabIndex = 23;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Location = new System.Drawing.Point(14, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Type Product Name:";
+            this.label2.Text = "Summary:";
             // 
             // Item_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 631);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.dataGridView1);
@@ -158,7 +148,6 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private StocksDBDataSet_ProductsTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.Button btnHistory;
-        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
     }
 }

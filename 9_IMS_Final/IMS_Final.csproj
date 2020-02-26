@@ -153,6 +153,12 @@
     <Compile Include="Reports\Product_Report.Designer.cs">
       <DependentUpon>Product_Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReOrderReport.Designer.cs">
+      <DependentUpon>ReOrderReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\SalesSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Product_Report.resx">
       <DependentUpon>Product_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReOrderReport.resx">
+      <DependentUpon>ReOrderReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\SalesSearch.resx">
       <DependentUpon>SalesSearch.cs</DependentUpon>

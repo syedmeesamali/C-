@@ -42,6 +42,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnReorder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,11 +161,22 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnReorder
+            // 
+            this.btnReorder.Location = new System.Drawing.Point(218, 294);
+            this.btnReorder.Name = "btnReorder";
+            this.btnReorder.Size = new System.Drawing.Size(231, 34);
+            this.btnReorder.TabIndex = 13;
+            this.btnReorder.Text = "Re-Order Report";
+            this.btnReorder.UseVisualStyleBackColor = true;
+            this.btnReorder.Click += new System.EventHandler(this.btnReorder_Click);
+            // 
             // StockReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 411);
+            this.Controls.Add(this.btnReorder);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnReorder;
     }
 }

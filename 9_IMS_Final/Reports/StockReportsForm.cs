@@ -76,5 +76,11 @@ namespace IMS_Final
             Item_History item_History = new Item_History();
             item_History.Show();
         }
+
+        private void btnReorder_Click(object sender, EventArgs e)
+        {
+            ReOrderReport reOrderReport = new ReOrderReport();
+            reOrderReport.Show();
+        }
     }
 }
