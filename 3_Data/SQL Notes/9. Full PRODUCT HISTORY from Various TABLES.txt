@@ -1,8 +1,12 @@
-select sin.Prod_ID, sin.Prod_Name, format(sin.Cost,'N2') as [Cost], 
-	pr.Re_Order, sin.Expiry, sin.Sup_Name, sin.Units as [Units In], sin.Date as [Date Bought],  
-	sout.Pcs as [Sold], sout.Invoice as [Invoice Ref], sout.Date as [Date Sold], sout.Cust_Name
-	from StockinTable as sin
-inner join StockoutTable as sout
-on sout.Prod_Name = sin.Prod_Name
-inner join Products as pr on pr.Prod_Name = sin.Prod_Name
-where sin.Prod_Name = 'TATA TEA 1 KG X 12'
+SELECT sin.Prod_ID, sin.Input - sout.SOLD AS [Totals]
+FROM 
+(SELECT Prod_ID, SUM(Units) AS Input
+FROM StockinTable
+GROUP BY Prod_ID) sin
+LEFT JOIN
+    (SELECT Prod_ID, SUM(Boxes) AS SOLD
+      FROM StockoutTable
+      GROUP BY Prod_ID
+     ) sout
+     ON sout.Prod_ID = sin.Prod_ID
+WHERE sin.Prod_ID = 'A15'
