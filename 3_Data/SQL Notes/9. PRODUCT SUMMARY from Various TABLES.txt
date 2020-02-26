@@ -1,0 +1,9 @@
+SELECT sin.Prod_ID, sin.Prod_Name, sin.Bought, ISNULL(sout.SOLD,0) as [Sold], 
+ISNULL((sin.Bought - sout.SOLD),0) AS [Stock Now]
+FROM (SELECT Prod_ID, Prod_Name, ISNULL(SUM(Units),0) AS Bought
+	FROM StockinTable sout GROUP BY Prod_ID, Prod_Name) sin
+		LEFT JOIN  (SELECT Prod_ID, ISNULL(SUM(Boxes),0) AS SOLD
+		FROM StockoutTable GROUP BY Prod_ID) sout
+     ON sin.Prod_ID = sout.Prod_ID
+WHERE sin.Prod_Name = 'CIPOLE FRESCO 5KG'
+--GROUP BY sin.Prod_ID, sin.Prod_Name, sin.Bought, sout.SOLD

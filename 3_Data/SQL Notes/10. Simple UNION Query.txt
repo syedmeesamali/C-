@@ -1,5 +1,6 @@
-(SELECT Prod_ID, Prod_Name, Units, Expiry
-FROM StockinTable WHERE Prod_Name = 'TATA TEA 250 G X 48')
-UNION ALL
-(SELECT Prod_ID, Prod_Name, Boxes, Date
-FROM StockoutTable WHERE Prod_Name = 'TATA TEA 250 G X 48')
+SELECT sin.Prod_ID AS [Prod ID], sin.Prod_Name AS [Prod Name], sin.Date, 
+sin.Sup_Name AS [Supplier/Customer], sin.Units AS [Units], FORMAT(sin.Cost,'N2') AS [Cost/Price], 
+CONVERT(varchar(100),sin.Expiry, 102) AS [Expiry / Invoice]
+FROM StockinTable AS sin WHERE sin.Prod_Name = 'CIPOLE FRESCO 5KG'
+UNION ALL SELECT sout.Prod_ID, sout.Prod_Name, sout.Date, sout.Cust_Name, sout.Boxes, 
+FORMAT(sout.Price,'N2'), sout.Invoice FROM StockoutTable AS sout WHERE sout.Prod_Name = 'CIPOLE FRESCO 5KG'
