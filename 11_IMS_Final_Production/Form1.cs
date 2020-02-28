@@ -240,6 +240,19 @@ namespace IMS_Final
             }  catch (Exception ex)
             {  MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-    }
+        } //End of button import products
+       
+        bool logic;
+        private bool IsValid()
+        {
+            if (logic != true)
+            {
+                MessageBox.Show("User name is required!", "Error");
+                return false;
+            }  
+            return true;
+        } 
+
+
+    }//End of class
 }

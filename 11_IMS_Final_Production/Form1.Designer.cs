@@ -59,7 +59,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1157, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,28 +77,28 @@
             // importInvoiceExcelToolStripMenuItem
             // 
             this.importInvoiceExcelToolStripMenuItem.Name = "importInvoiceExcelToolStripMenuItem";
-            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importInvoiceExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importInvoiceExcelToolStripMenuItem.Text = "Import Sales Invoice (Excel)";
             this.importInvoiceExcelToolStripMenuItem.Click += new System.EventHandler(this.importInvoiceExcelToolStripMenuItem_Click);
             // 
             // importPurchaseExcelToolStripMenuItem
             // 
             this.importPurchaseExcelToolStripMenuItem.Name = "importPurchaseExcelToolStripMenuItem";
-            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importPurchaseExcelToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importPurchaseExcelToolStripMenuItem.Text = "Import Purchase Invoice (Excel)";
             this.importPurchaseExcelToolStripMenuItem.Click += new System.EventHandler(this.importPurchaseExcelToolStripMenuItem_Click);
             // 
             // importProductListToolStripMenuItem
             // 
             this.importProductListToolStripMenuItem.Name = "importProductListToolStripMenuItem";
-            this.importProductListToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.importProductListToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.importProductListToolStripMenuItem.Text = "Import Product List";
             this.importProductListToolStripMenuItem.Click += new System.EventHandler(this.importProductListToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -151,16 +151,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(19, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 496);
+            this.dataGridView1.Size = new System.Drawing.Size(852, 552);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(19, 554);
+            this.btnView.Location = new System.Drawing.Point(19, 607);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(216, 26);
             this.btnView.TabIndex = 2;
@@ -170,7 +172,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(264, 554);
+            this.button1.Location = new System.Drawing.Point(273, 607);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 26);
             this.button1.TabIndex = 3;
@@ -181,15 +183,15 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(789, 49);
+            this.listBox1.Location = new System.Drawing.Point(880, 49);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(368, 472);
+            this.listBox1.Size = new System.Drawing.Size(392, 524);
             this.listBox1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(789, 33);
+            this.label1.Location = new System.Drawing.Point(877, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 5;
@@ -197,9 +199,9 @@
             // 
             // btnImportProducts
             // 
-            this.btnImportProducts.Location = new System.Drawing.Point(524, 554);
+            this.btnImportProducts.Location = new System.Drawing.Point(535, 607);
             this.btnImportProducts.Name = "btnImportProducts";
-            this.btnImportProducts.Size = new System.Drawing.Size(223, 26);
+            this.btnImportProducts.Size = new System.Drawing.Size(180, 26);
             this.btnImportProducts.TabIndex = 6;
             this.btnImportProducts.Text = "Import Product List";
             this.btnImportProducts.UseVisualStyleBackColor = true;
@@ -209,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 611);
+            this.ClientSize = new System.Drawing.Size(1284, 661);
             this.Controls.Add(this.btnImportProducts);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
