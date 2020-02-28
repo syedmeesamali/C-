@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="1868728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="2204088">
       <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6D9FolhFM4mAKMquA5xzOe+386L735mx2DLIfVQFGzI=</dsig:DigestValue>
+        <dsig:DigestValue>9Ijc83v2XGhLxsbAUEnA//82/ZVNqXHWUyVR9csl2Uk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

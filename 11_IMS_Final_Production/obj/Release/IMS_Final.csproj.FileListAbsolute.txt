@@ -246,7 +246,6 @@ D:\repos\CSharp\11_IMS_Final_Production\bin\Release\pt\Microsoft.ReportViewer.Da
 D:\repos\CSharp\11_IMS_Final_Production\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\11_IMS_Final_Production\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\11_IMS_Final_Production\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.CustomSearch.resources
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.frmMain.resources
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.frmInstructions.resources
@@ -269,3 +268,5 @@ D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.exe
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.pdb
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\RdlCompile.cache
 D:\repos\CSharp\11_IMS_Final_Production\obj\Release\RdlCompile.compiled
+D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.LoginForm.resources
+D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.csprojAssemblyReference.cache
