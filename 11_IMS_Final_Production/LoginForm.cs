@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,17 +37,26 @@ namespace IMS_Final
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             if (IsValid())
             {
-                frmMain frm = new frmMain();
-                this.Hide();
-                frm.Show();
-            } else
-            {
-                MessageBox.Show("Check login info !");
-            }
-            
+                using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
+                {
+                    string query = "SELECT * FROM Login WHERE LoginID = '" + txtUserName.Text.Trim() +
+                        "' AND Password = '" + txtPassword.Text.Trim() + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+                    DataTable dta = new DataTable();
+                    sda.Fill(dta);
+                    if (dta.Rows.Count == 1)
+                    {
+                        frmMain frm = new frmMain();
+                        this.Hide();
+                        frm.Show();
+                    }   else
+                    {
+                        MessageBox.Show("Entered information not correct!", "Wrong Input");
+                    }
+                }
+            }//End of validity check
         }
 
         private void btnExit_Click(object sender, EventArgs e)
