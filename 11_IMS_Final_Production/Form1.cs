@@ -97,25 +97,41 @@ namespace IMS_Final
         //-------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {   DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
-                DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelFiles");
-                List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
-                //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
-                if (excelLoaded != null)
+
+            DialogResult result = MessageBox.Show("Are you sure you want to import data?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                    {   db.BulkInsert(stockout);
-                        db.BulkInsert(excelLoaded);
-                    }   MessageBox.Show("Purchase Data Imported successfully!");
-                }  else
-                {    MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
+                    DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
+                    DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelFiles");
+                    List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
+                    //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
+                    if (excelLoaded != null)
+                    {
+                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\11_IMS_Final_Production\StocksDB.mdf;Integrated Security=True"))
+                        {
+                            db.BulkInsert(stockout);
+                            db.BulkInsert(excelLoaded);
+                        }
+                        MessageBox.Show("Purchase Data Imported successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            
+            else
             {
-                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No data update done!", "Update Cancelled");
             }
+            
         }
         //############################################
         //------------IMPORT PURCHASE DATA-----------
@@ -160,18 +176,26 @@ namespace IMS_Final
         //Import the STOCK-IN data to DATABASE
         private void btnView_Click(object sender, EventArgs e)
         {
-            try
-            {   DapperPlusManager.Entity<Stockin>().Table("StockinTable");
-                List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
-                if (stockin != null)
+            DialogResult result = MessageBox.Show("Are you sure you want to import Stock-in data to database?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                    { db.BulkInsert(stockin); }
-                    MessageBox.Show("Purchase Data Imported successfully!");
-                } else
-                {  MessageBox.Show("Stockin is still null or there is some issue!");    }   
-            }  catch (Exception ex)
-            {   MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DapperPlusManager.Entity<Stockin>().Table("StockinTable");
+                    List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
+                    if (stockin != null)
+                    {
+                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\11_IMS_Final_Production\StocksDB.mdf;Integrated Security=True"))
+                        { db.BulkInsert(stockin); }
+                        MessageBox.Show("Purchase Data Imported successfully!");
+                    }
+                    else
+                    { MessageBox.Show("Stockin is still null or there is some issue!"); }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Instructions about use of software
@@ -227,32 +251,27 @@ namespace IMS_Final
 
         private void btnImportProducts_Click(object sender, EventArgs e)
         {
-            try
-            {   DapperPlusManager.Entity<Stockin>().Table("Products");
-                List<Products> products = dataGridView1.DataSource as List<Products>;
-                if (products != null)
+            DialogResult result = MessageBox.Show("Are you sure you want to import Product-List data to database?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
-                    using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                    { db.BulkInsert(products); }
-                    MessageBox.Show("Products Data with Re-Order Imported successfully!");
-                }  else
-                {   MessageBox.Show("Data is null or some issue!");    }
-            }  catch (Exception ex)
-            {  MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DapperPlusManager.Entity<Stockin>().Table("Products");
+                    List<Products> products = dataGridView1.DataSource as List<Products>;
+                    if (products != null)
+                    {
+                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\CSharp\11_IMS_Final_Production\StocksDB.mdf;Integrated Security=True"))
+                        { db.BulkInsert(products); }
+                        MessageBox.Show("Products Data with Re-Order Imported successfully!");
+                    }
+                    else
+                    { MessageBox.Show("Data is null or some issue!"); }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         } //End of button import products
-       
-        bool logic;
-        private bool IsValid()
-        {
-            if (logic != true)
-            {
-                MessageBox.Show("User name is required!", "Error");
-                return false;
-            }  
-            return true;
-        } 
-
-
     }//End of class
 }

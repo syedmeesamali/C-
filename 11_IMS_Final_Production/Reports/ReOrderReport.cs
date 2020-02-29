@@ -40,5 +40,10 @@ namespace IMS_Final.Reports
             dataGridView1.Columns[5].Width = 80;
             conn.Close();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
