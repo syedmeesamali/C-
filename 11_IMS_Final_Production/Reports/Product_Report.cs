@@ -12,15 +12,15 @@ namespace IMS_Final.Reports
 
         private void Product_Report_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stocksDBDataSet_StockinExpiry1.StockinTableProductsN' table. You can move, or remove it, as needed.
-           
-            
+            // TODO: This line of code loads data into the 'stocksDBDataSet_Products.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.stocksDBDataSet_Products.Products);
             this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'stocksDBDataSet_StockinExpiry1.StockinTable' table. You can move, or remove it, as needed.
+            this.stockinTableTableAdapter.Fill(this.stocksDBDataSet_StockinExpiry1.StockinTable);
             this.reportViewer1.RefreshReport();
         }
 

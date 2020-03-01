@@ -103,6 +103,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutIMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutIMS.Designer.cs">
+      <DependentUpon>AboutIMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataGridPrinter.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -205,6 +211,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutIMS.resx">
+      <DependentUpon>AboutIMS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

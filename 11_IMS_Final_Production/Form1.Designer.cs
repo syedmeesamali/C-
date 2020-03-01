@@ -130,22 +130,23 @@
             // filesLoadedToolStripMenuItem
             // 
             this.filesLoadedToolStripMenuItem.Name = "filesLoadedToolStripMenuItem";
-            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.filesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filesLoadedToolStripMenuItem.Text = "Files Loaded";
             this.filesLoadedToolStripMenuItem.Click += new System.EventHandler(this.filesLoadedToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 

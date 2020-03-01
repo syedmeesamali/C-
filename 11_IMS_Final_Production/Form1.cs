@@ -201,14 +201,12 @@ namespace IMS_Final
         //Instructions about use of software
         private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmInstructions frminstructions = new frmInstructions();
             frminstructions.Show();
         }
         //Files already loaded in database
         private void filesLoadedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmLoadedList frmloaded = new frmLoadedList();
             frmloaded.Show();
         }
@@ -273,5 +271,11 @@ namespace IMS_Final
                 }
             }
         } //End of button import products
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutIMS aboutIMS = new AboutIMS();
+            aboutIMS.Show();
+        }
     }//End of class
 }
