@@ -22,13 +22,13 @@ namespace IMS_Final
         {
             if (txtUserName.Text.TrimStart() == string.Empty | txtUserName.Text.Length < 5)
             {
-                MessageBox.Show("User name is required! Length >= 5", "Error");
+                MessageBox.Show("User-name is required!", "Error");
                 return false;
             }
 
             if (txtPassword.Text.TrimStart() == string.Empty | txtPassword.Text.Length < 8)
             {
-                MessageBox.Show("Password is required! Length >= 8", "Error");
+                MessageBox.Show("Password is required!", "Error");
                 return false;
             }
 
@@ -53,7 +53,7 @@ namespace IMS_Final
                         frm.Show();
                     }   else
                     {
-                        MessageBox.Show("Entered information not correct!", "Wrong Input");
+                        MessageBox.Show("Entered information is not correct!", "Wrong Input");
                     }
                 }
             }//End of validity check
