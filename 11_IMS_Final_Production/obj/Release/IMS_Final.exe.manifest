@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="2354616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="2356152">
       <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NDBcSqqe0sB+OeeXmKa3SUQ895TVrQj5rzqTIMta3vM=</dsig:DigestValue>
+        <dsig:DigestValue>ng0z/+RDb3OKDOVit3FLKTklcE+sTspgqA/IOuDiJlw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -716,13 +716,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Z.Dapper.Plus.dll" size="914432">
-      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.4.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.5.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>46YWnwauP8old6gihmJm6Ze1kloZdg3Le5Lp7V63c5k=</dsig:DigestValue>
+        <dsig:DigestValue>1/4s1P4WnSUU2dbT1gA8gN8sfZaOHk3/sSPKA40Cz9I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
