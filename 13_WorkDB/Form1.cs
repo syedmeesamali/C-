@@ -40,22 +40,19 @@ namespace WorkDB
                             ExcelWorksheet ws = package.Workbook.Worksheets[1];
                             int colLogs = 1;
                             
-                            for (int rowLogs = 2; rowLogs < 5; rowLogs++) //Hard-coded start as well
+                            for (int rowLogs = 2; rowLogs < 2000; rowLogs++) //Hard-coded start as well
                             {
                                 if (ws.Cells[rowLogs, 1].Value != null)
                                 {
                                     DateTime parsedDate;
                                     TaskLog taskLogs = new TaskLog();
-                                    string date_Val = ws.Cells[rowLogs, colLogs].Value.ToString();
-                                    DateTime.TryParseExact(date_Val, "yyyy-MM-dd", null, DateTimeStyles.None, out parsedDate);
-                                    MessageBox.Show("date_Val: " + date_Val.ToString());
-                                    MessageBox.Show("parsed: " + parsedDate.ToString());
-                                taskLogs.Date = parsedDate;
+                                    parsedDate = DateTime.FromOADate(float.Parse((ws.Cells[rowLogs, colLogs].Value).ToString()));
+                                    taskLogs.Date = parsedDate;
                                     taskLogs.ProjectName = ws.Cells[rowLogs, colLogs + 1].Value.ToString();
                                     taskLogs.Place = ws.Cells[rowLogs, colLogs + 2].Value.ToString();
                                     taskLogs.Type = ws.Cells[rowLogs, colLogs + 3].Value.ToString();
                                     taskLogs.Status = ws.Cells[rowLogs, colLogs + 4].Value.ToString();
-                                    taskLogs.Remarks = ws.Cells[rowLogs, colLogs + 4].Value.ToString();
+                                taskLogs.Remarks = ws.Cells[rowLogs, colLogs + 5]?.Value?.ToString();
                                 TaskLogs.Add(taskLogs);
                                 }
                             } //End of for loop to input Excel data
@@ -63,8 +60,15 @@ namespace WorkDB
                         catch (Exception ex)
                         { MessageBox.Show(ex.ToString()); }
                     }
-                    dataGridView1.DataSource = TaskLogs;
-                    dataGridView1.Refresh();
+
+                dataGridView1.DataSource = TaskLogs;
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[2].Width = 100;
+                dataGridView1.Columns[3].Width = 120;
+                dataGridView1.Columns[4].Width = 150;
+                dataGridView1.Columns[5].Width = 350;
+                dataGridView1.Refresh();
             }//End of filter
         }
 
