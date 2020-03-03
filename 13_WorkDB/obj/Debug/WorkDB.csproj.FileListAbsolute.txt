@@ -7,7 +7,6 @@ F:\Repos\CSharp\WorkDB\obj\Debug\WorkDB.Properties.Resources.resources
 F:\Repos\CSharp\WorkDB\obj\Debug\WorkDB.csproj.GenerateResource.cache
 F:\Repos\CSharp\WorkDB\obj\Debug\WorkDB.exe
 F:\Repos\CSharp\WorkDB\obj\Debug\WorkDB.pdb
-F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csprojAssemblyReference.cache
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.frmMain.resources
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.Properties.Resources.resources
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csproj.GenerateResource.cache
@@ -81,3 +80,5 @@ F:\Repos\CSharp\13_WorkDB\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.
 F:\Repos\CSharp\13_WorkDB\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\13_WorkDB\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csproj.CopyComplete
+F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.Report_tasklog.resources
+F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csprojAssemblyReference.cache

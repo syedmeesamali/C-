@@ -86,5 +86,28 @@ namespace IMS_Final.Reports
             dataGridView1.Columns[7].Width = 90;
             conn.Close();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(IMS_Final.Properties.Settings.Default.StocksDBConnectionString);
+            conn.Open();
+            adapt = new SqlDataAdapter("SELECT * FROM(" +
+                "select sin.Prod_ID, sin.Prod_Name, sin.Sup_ID, sin.Sup_Name, " +
+            "sin.Units, format(sin.Cost, 'N2') as [Cost], sin.Expiry, pr.Re_Order from Products pr, StockinTable sin " +
+            "where sin.Prod_Name = pr.Prod_Name) AS results WHERE " +
+            "Prod_Name Like '" + txtSearch.Text + "%'", conn);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Width = 50;
+            dataGridView1.Columns[1].Width = 250;
+            dataGridView1.Columns[2].Width = 50;
+            dataGridView1.Columns[3].Width = 150;
+            dataGridView1.Columns[4].Width = 50;
+            dataGridView1.Columns[5].Width = 50;
+            dataGridView1.Columns[6].Width = 80;
+            dataGridView1.Columns[7].Width = 90;
+            conn.Close();
+        }
     }
 }

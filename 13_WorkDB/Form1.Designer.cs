@@ -38,6 +38,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnImport = new System.Windows.Forms.Button();
+            this.taskLogReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importDataToolStripMenuItem,
+            this.taskLogReportToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -87,8 +89,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -119,6 +122,13 @@
             this.btnImport.Text = "&Import Data to Database";
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // taskLogReportToolStripMenuItem
+            // 
+            this.taskLogReportToolStripMenuItem.Name = "taskLogReportToolStripMenuItem";
+            this.taskLogReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.taskLogReportToolStripMenuItem.Text = "Task-Log Report";
+            this.taskLogReportToolStripMenuItem.Click += new System.EventHandler(this.taskLogReportToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -154,6 +164,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.ToolStripMenuItem taskLogReportToolStripMenuItem;
     }
 }
 

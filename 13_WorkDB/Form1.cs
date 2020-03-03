@@ -96,5 +96,16 @@ namespace WorkDB
                 }
             }
         }
+
+        private void taskLogReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_tasklog report_Tasklog = new Report_tasklog();
+            report_Tasklog.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Software developed by Engr. Syed", "About Software!");
+        }
     }
 }

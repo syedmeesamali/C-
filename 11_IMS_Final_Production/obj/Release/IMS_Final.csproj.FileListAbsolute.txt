@@ -339,7 +339,6 @@ F:\Repos\CSharp\11_IMS_Final_Production\bin\Release\pt\Microsoft.ReportViewer.Da
 F:\Repos\CSharp\11_IMS_Final_Production\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\11_IMS_Final_Production\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\Repos\CSharp\11_IMS_Final_Production\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.csprojAssemblyReference.cache
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.LoginForm.resources
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.CustomSearch.resources
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.frmMain.resources
