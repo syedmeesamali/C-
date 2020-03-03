@@ -35,6 +35,8 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
             this.btnOriginal = new System.Windows.Forms.Button();
+            this.btnPrintPreview = new System.Windows.Forms.Button();
+            this.MyPrintDocument = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.btnPrint.TabIndex = 14;
             this.btnPrint.Text = "&Print Report";
             this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
             // 
             // btnPurchase
             // 
@@ -96,11 +98,21 @@
             this.btnOriginal.UseVisualStyleBackColor = true;
             this.btnOriginal.Click += new System.EventHandler(this.btnOriginal_Click);
             // 
+            // btnPrintPreview
+            // 
+            this.btnPrintPreview.Location = new System.Drawing.Point(282, 12);
+            this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.Size = new System.Drawing.Size(112, 26);
+            this.btnPrintPreview.TabIndex = 17;
+            this.btnPrintPreview.Text = "Preview";
+            this.btnPrintPreview.UseVisualStyleBackColor = true;
+            // 
             // StockReportSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 540);
+            this.Controls.Add(this.btnPrintPreview);
             this.Controls.Add(this.btnOriginal);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnPrint);
@@ -127,5 +139,8 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnPurchase;
         private System.Windows.Forms.Button btnOriginal;
+        private System.Windows.Forms.Button btnPrintPreview;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Drawing.Printing.PrintDocument MyPrintDocument;
     }
 }

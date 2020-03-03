@@ -56,7 +56,8 @@ namespace IMS_Final.Reports
                 "CONVERT(varchar(100),sin.Expiry, 102) AS [Expiry / Invoice] " +
                 "FROM StockinTable AS sin WHERE sin.Prod_Name ='" + selectedItem + "' " +
                 "UNION ALL SELECT sout.Prod_ID, sout.Prod_Name, sout.Date, sout.Cust_Name, sout.Boxes, " +
-                "FORMAT(sout.Price,'N2'), sout.Invoice FROM StockoutTable AS sout WHERE sout.Prod_Name = '" + selectedItem + "' " , conn);
+                "FORMAT(sout.Price,'N2'), sout.Invoice FROM StockoutTable AS sout WHERE sout.Prod_Name = '" + selectedItem + "' " +
+                " ORDER BY 7 DESC" , conn);
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;

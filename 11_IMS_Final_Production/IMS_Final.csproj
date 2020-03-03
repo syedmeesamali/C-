@@ -109,7 +109,8 @@
     <Compile Include="AboutIMS.Designer.cs">
       <DependentUpon>AboutIMS.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridPrinter.cs" />
+    <Compile Include="DataGridViewPrinter.cs" />
+    <Compile Include="DGV_Print.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

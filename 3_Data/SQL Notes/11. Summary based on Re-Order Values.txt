@@ -9,3 +9,4 @@ FROM (SELECT Prod_ID, Prod_Name, ISNULL(SUM(Units),0) AS Bought
 		LEFT JOIN  (SELECT Prod_ID, Prod_Name, Re_Order as [Re-Order]
 		FROM Products GROUP BY Prod_ID, Prod_Name, Re_Order) pr
      ON sin.Prod_ID = pr.Prod_ID
+ORDER BY 7 DESC
