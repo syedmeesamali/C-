@@ -33,7 +33,7 @@ namespace WorkDB
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\13_WorkDB\Work.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM TaskLog " +
                 "WHERE ProjectName Like '%" + txtSearch.Text + "%'", conn);
@@ -48,6 +48,22 @@ namespace WorkDB
             dataGridView1.Columns[5].Width = 120;
             dataGridView1.Columns[6].Width = 370;
             conn.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string commandText = "DELETE FROM TaskLog WHERE Id >= " + txtFrom.Text + " AND Id <= " + txtTo.Text + ";";
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True"))
+            using (SqlCommand cmd = new SqlCommand(commandText, conn))
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            dataGridView1.Refresh();
+            txtFrom.Text = "";
+            txtTo.Text = "";
+            MessageBox.Show("Record(s) deleted successfully!", "DELETED!");
         }
     }
 }

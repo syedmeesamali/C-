@@ -32,6 +32,11 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +68,60 @@
             this.dataGridView1.Size = new System.Drawing.Size(1153, 541);
             this.dataGridView1.TabIndex = 17;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(606, 10);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(145, 28);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "&Delete Records:";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(770, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "From ID: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(915, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "To ID: ";
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.ForeColor = System.Drawing.Color.Red;
+            this.txtFrom.Location = new System.Drawing.Point(829, 17);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(63, 20);
+            this.txtFrom.TabIndex = 21;
+            // 
+            // txtTo
+            // 
+            this.txtTo.ForeColor = System.Drawing.Color.Red;
+            this.txtTo.Location = new System.Drawing.Point(961, 18);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(63, 20);
+            this.txtTo.TabIndex = 22;
+            // 
             // Report_tasklog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 601);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.txtFrom);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
@@ -87,5 +141,10 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtFrom;
+        private System.Windows.Forms.TextBox txtTo;
     }
 }
