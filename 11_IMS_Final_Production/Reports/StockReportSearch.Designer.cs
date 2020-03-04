@@ -32,10 +32,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
             this.btnOriginal = new System.Windows.Forms.Button();
-            this.btnPrintPreview = new System.Windows.Forms.Button();
             this.MyPrintDocument = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,19 +66,9 @@
             this.txtSearch.TabIndex = 11;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(730, 12);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(130, 26);
-            this.btnPrint.TabIndex = 14;
-            this.btnPrint.Text = "&Print Report";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
-            // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(565, 12);
+            this.btnPurchase.Location = new System.Drawing.Point(507, 12);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(159, 26);
             this.btnPurchase.TabIndex = 15;
@@ -90,7 +78,7 @@
             // 
             // btnOriginal
             // 
-            this.btnOriginal.Location = new System.Drawing.Point(400, 12);
+            this.btnOriginal.Location = new System.Drawing.Point(324, 12);
             this.btnOriginal.Name = "btnOriginal";
             this.btnOriginal.Size = new System.Drawing.Size(159, 26);
             this.btnOriginal.TabIndex = 16;
@@ -98,24 +86,13 @@
             this.btnOriginal.UseVisualStyleBackColor = true;
             this.btnOriginal.Click += new System.EventHandler(this.btnOriginal_Click);
             // 
-            // btnPrintPreview
-            // 
-            this.btnPrintPreview.Location = new System.Drawing.Point(282, 12);
-            this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(112, 26);
-            this.btnPrintPreview.TabIndex = 17;
-            this.btnPrintPreview.Text = "Preview";
-            this.btnPrintPreview.UseVisualStyleBackColor = true;
-            // 
             // StockReportSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 540);
-            this.Controls.Add(this.btnPrintPreview);
             this.Controls.Add(this.btnOriginal);
             this.Controls.Add(this.btnPurchase);
-            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -136,10 +113,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnPurchase;
         private System.Windows.Forms.Button btnOriginal;
-        private System.Windows.Forms.Button btnPrintPreview;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Drawing.Printing.PrintDocument MyPrintDocument;
     }

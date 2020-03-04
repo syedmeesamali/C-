@@ -31,14 +31,24 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockoutReport));
+            this.stockoutTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockDataset = new IMS_Final.StockDataset();
             this.btnExpiryReport = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.stockDataset = new IMS_Final.StockDataset();
-            this.stockoutTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockoutTableTableAdapter = new IMS_Final.StockDatasetTableAdapters.StockoutTableTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.stockDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockoutTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataset)).BeginInit();
             this.SuspendLayout();
+            // 
+            // stockoutTableBindingSource
+            // 
+            this.stockoutTableBindingSource.DataMember = "StockoutTable";
+            this.stockoutTableBindingSource.DataSource = this.stockDataset;
+            // 
+            // stockDataset
+            // 
+            this.stockDataset.DataSetName = "StockDataset";
+            this.stockDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnExpiryReport
             // 
@@ -59,18 +69,8 @@
             this.reportViewer1.Location = new System.Drawing.Point(10, 63);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1164, 526);
+            this.reportViewer1.Size = new System.Drawing.Size(1242, 536);
             this.reportViewer1.TabIndex = 12;
-            // 
-            // stockDataset
-            // 
-            this.stockDataset.DataSetName = "StockDataset";
-            this.stockDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockoutTableBindingSource
-            // 
-            this.stockoutTableBindingSource.DataMember = "StockoutTable";
-            this.stockoutTableBindingSource.DataSource = this.stockDataset;
             // 
             // stockoutTableTableAdapter
             // 
@@ -80,15 +80,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 601);
+            this.ClientSize = new System.Drawing.Size(1264, 611);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnExpiryReport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StockoutReport";
-            this.Text = "StockoutReport";
+            this.Text = "Stockout Report";
             this.Load += new System.EventHandler(this.StockoutReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.stockDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockoutTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataset)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -109,6 +109,11 @@
     <Compile Include="AboutIMS.Designer.cs">
       <DependentUpon>AboutIMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Combination.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataGridViewPrinter.cs" />
     <Compile Include="DGV_Print.cs" />
     <Compile Include="LoginForm.cs">
@@ -286,6 +291,18 @@
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stocks.rdlc" />
+    <EmbeddedResource Include="Reports\Summary.rdlc" />
+    <None Include="Combination.xsc">
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </None>
+    <None Include="Combination.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Combination.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Combination.xss">
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </None>
     <None Include="IMS_Final_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
