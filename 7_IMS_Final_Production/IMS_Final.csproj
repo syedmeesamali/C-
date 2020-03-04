@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E98377D-610B-4639-A0A9-339851A2E28A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IMS_Final</RootNamespace>
+    <AssemblyName>IMS_Final</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\cclgulf\Desktop\Docs\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IMS_Final.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EDC4C6E024632EAE3439ED0A8A47152DE216FD33</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IMS_Final_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>3g_icons %2811%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.Dapper.Plus, Version=3.0.5.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>packages\Z.Dapper.Plus.3.0.5\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutIMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutIMS.Designer.cs">
+      <DependentUpon>AboutIMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Combination.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewPrinter.cs" />
+    <Compile Include="DGV_Print.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs" />
+    <Compile Include="Reports\CustomSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomSearch.Designer.cs">
+      <DependentUpon>CustomSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelLoaded.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstructions.Designer.cs">
+      <DependentUpon>frmInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadedList.Designer.cs">
+      <DependentUpon>frmLoadedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Item_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Item_History.Designer.cs">
+      <DependentUpon>Item_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProductListSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ProductListSearch.Designer.cs">
+      <DependentUpon>ProductListSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ExpiryReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ExpiryReports.Designer.cs">
+      <DependentUpon>ExpiryReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Product_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Product_Report.Designer.cs">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReOrderReport.Designer.cs">
+      <DependentUpon>ReOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesSearch.Designer.cs">
+      <DependentUpon>SalesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockoutReport.Designer.cs">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockReportSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockReportSearch.Designer.cs">
+      <DependentUpon>StockReportSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Summary_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Summary_Stock.Designer.cs">
+      <DependentUpon>Summary_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StockDataset.cs">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stockin.cs" />
+    <Compile Include="Stockout.cs" />
+    <Compile Include="Reports\StockReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockReportsForm.Designer.cs">
+      <DependentUpon>StockReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockReportDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockReportDGV.Designer.cs">
+      <DependentUpon>StockReportDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StocksDBDataSet_Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StocksDBDataSet_StockinExpiry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutIMS.resx">
+      <DependentUpon>AboutIMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomSearch.resx">
+      <DependentUpon>CustomSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstructions.resx">
+      <DependentUpon>frmInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadedList.resx">
+      <DependentUpon>frmLoadedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Expiry.rdlc" />
+    <EmbeddedResource Include="Reports\Item_History.resx">
+      <DependentUpon>Item_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductListSearch.resx">
+      <DependentUpon>ProductListSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ExpiryReports.resx">
+      <DependentUpon>ExpiryReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Product_Report.resx">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReOrderReport.resx">
+      <DependentUpon>ReOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesSearch.resx">
+      <DependentUpon>SalesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockoutReport.resx">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReportDGV.resx">
+      <DependentUpon>StockReportDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReportSearch.resx">
+      <DependentUpon>StockReportSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReportsForm.resx">
+      <DependentUpon>StockReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stocks.rdlc" />
+    <EmbeddedResource Include="Reports\Summary.rdlc" />
+    <EmbeddedResource Include="Reports\Summary_Stock.resx">
+      <DependentUpon>Summary_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Combination.xsc">
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </None>
+    <None Include="Combination.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Combination.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Combination.xss">
+      <DependentUpon>Combination.xsd</DependentUpon>
+    </None>
+    <None Include="IMS_Final_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StockDataset.xsc">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </None>
+    <None Include="StockDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StockDataset.xss">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </None>
+    <None Include="StocksDBDataSet_Products.xsc">
+      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="StocksDBDataSet_Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StocksDBDataSet_Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StocksDBDataSet_Products.xss">
+      <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="StocksDBDataSet_StockinExpiry.xsc">
+      <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
+    </None>
+    <None Include="StocksDBDataSet_StockinExpiry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StocksDBDataSet_StockinExpiry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StocksDBDataSet_StockinExpiry.xss">
+      <DependentUpon>StocksDBDataSet_StockinExpiry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3g_icons %2811%29.ico" />
+    <Content Include="StocksDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StocksDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>StocksDB.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\reports.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
