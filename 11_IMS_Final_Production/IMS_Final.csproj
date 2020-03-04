@@ -181,6 +181,12 @@
     <Compile Include="Reports\SalesSearch.Designer.cs">
       <DependentUpon>SalesSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\StockoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StockoutReport.Designer.cs">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\StockReportSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,14 @@
       <DependentUpon>StockReportSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StockDataset.cs">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Stockin.cs" />
     <Compile Include="Stockout.cs" />
     <Compile Include="Reports\StockReportsForm.cs">
@@ -259,6 +273,9 @@
     <EmbeddedResource Include="Reports\SalesSearch.resx">
       <DependentUpon>SalesSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockoutReport.resx">
+      <DependentUpon>StockoutReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\StockReportDGV.resx">
       <DependentUpon>StockReportDGV.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +285,7 @@
     <EmbeddedResource Include="Reports\StockReportsForm.resx">
       <DependentUpon>StockReportsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stocks.rdlc" />
     <None Include="IMS_Final_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -279,6 +297,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StockDataset.xsc">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </None>
+    <None Include="StockDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StockDataset.xss">
+      <DependentUpon>StockDataset.xsd</DependentUpon>
+    </None>
     <None Include="StocksDBDataSet_Products.xsc">
       <DependentUpon>StocksDBDataSet_Products.xsd</DependentUpon>
     </None>

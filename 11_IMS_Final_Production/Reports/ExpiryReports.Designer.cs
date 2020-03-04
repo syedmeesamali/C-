@@ -31,16 +31,26 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpiryReports));
+            this.stockinTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stocksDBDataSet_StockinExpiry = new IMS_Final.StocksDBDataSet_StockinExpiry();
             this.btnExpiryReport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.stocksDBDataSet_StockinExpiry = new IMS_Final.StocksDBDataSet_StockinExpiry();
-            this.stockinTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockinTableTableAdapter = new IMS_Final.StocksDBDataSet_StockinExpiryTableAdapters.StockinTableTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).BeginInit();
             this.SuspendLayout();
+            // 
+            // stockinTableBindingSource
+            // 
+            this.stockinTableBindingSource.DataMember = "StockinTable";
+            this.stockinTableBindingSource.DataSource = this.stocksDBDataSet_StockinExpiry;
+            // 
+            // stocksDBDataSet_StockinExpiry
+            // 
+            this.stocksDBDataSet_StockinExpiry.DataSetName = "StocksDBDataSet_StockinExpiry";
+            this.stocksDBDataSet_StockinExpiry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnExpiryReport
             // 
@@ -80,16 +90,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(230, 20);
             this.dateTimePicker1.TabIndex = 11;
             // 
-            // stocksDBDataSet_StockinExpiry
-            // 
-            this.stocksDBDataSet_StockinExpiry.DataSetName = "StocksDBDataSet_StockinExpiry";
-            this.stocksDBDataSet_StockinExpiry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockinTableBindingSource
-            // 
-            this.stockinTableBindingSource.DataMember = "StockinTable";
-            this.stockinTableBindingSource.DataSource = this.stocksDBDataSet_StockinExpiry;
-            // 
             // stockinTableTableAdapter
             // 
             this.stockinTableTableAdapter.ClearBeforeFill = true;
@@ -106,10 +106,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExpiryReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ExpiryReports";
+            this.Text = "Expiry Report (Stock-in Basis)";
             this.Load += new System.EventHandler(this.ExpiryReports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockinTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksDBDataSet_StockinExpiry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

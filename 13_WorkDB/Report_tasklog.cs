@@ -15,7 +15,7 @@ namespace WorkDB
         DataTable dt;
         private void Report_tasklog_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\13_WorkDB\Work.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");
             conn.Open();
             adapt = new SqlDataAdapter("SELECT * FROM TaskLog", conn);
             dt = new DataTable();

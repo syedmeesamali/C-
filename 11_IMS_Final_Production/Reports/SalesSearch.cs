@@ -40,8 +40,8 @@ namespace IMS_Final
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 70;
-            dataGridView1.Columns[2].Width = 70;
-            dataGridView1.Columns[3].Width = 180;
+            dataGridView1.Columns[2].Width = 250;
+            dataGridView1.Columns[3].Width = 80;
             dataGridView1.Columns[4].Width = 70;
             dataGridView1.Columns[5].Width = 300;
             dataGridView1.Columns[6].Width = 70;

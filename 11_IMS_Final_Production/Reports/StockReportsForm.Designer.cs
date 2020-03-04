@@ -62,7 +62,7 @@
             this.btnExit.Location = new System.Drawing.Point(474, 241);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(158, 34);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 10;
             this.btnExit.Text = "&Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -76,7 +76,7 @@
             this.button1.Location = new System.Drawing.Point(218, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 34);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Stocks-In Report for Print";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -86,7 +86,7 @@
             this.button2.Location = new System.Drawing.Point(218, 137);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(231, 34);
-            this.button2.TabIndex = 5;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Stocks-Out Report for Print";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -96,7 +96,7 @@
             this.button3.Location = new System.Drawing.Point(218, 241);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(231, 34);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 8;
             this.button3.Text = "Stock Report";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -116,7 +116,7 @@
             this.button4.Location = new System.Drawing.Point(474, 32);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(158, 34);
-            this.button4.TabIndex = 8;
+            this.button4.TabIndex = 1;
             this.button4.Text = "Expiry Report (Print)";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -126,7 +126,7 @@
             this.button5.Location = new System.Drawing.Point(474, 85);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(158, 34);
-            this.button5.TabIndex = 9;
+            this.button5.TabIndex = 3;
             this.button5.Text = "Custom Report (Stock-In)";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -136,7 +136,7 @@
             this.button6.Location = new System.Drawing.Point(474, 137);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(158, 34);
-            this.button6.TabIndex = 10;
+            this.button6.TabIndex = 5;
             this.button6.Text = "Custom Report (Stock-Out)";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -146,7 +146,7 @@
             this.button7.Location = new System.Drawing.Point(218, 188);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(231, 34);
-            this.button7.TabIndex = 11;
+            this.button7.TabIndex = 6;
             this.button7.Text = "Stock-In Cost Summary";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -156,7 +156,7 @@
             this.button8.Location = new System.Drawing.Point(474, 188);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(157, 34);
-            this.button8.TabIndex = 12;
+            this.button8.TabIndex = 7;
             this.button8.Text = "Product History";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -166,7 +166,7 @@
             this.btnReorder.Location = new System.Drawing.Point(218, 294);
             this.btnReorder.Name = "btnReorder";
             this.btnReorder.Size = new System.Drawing.Size(231, 34);
-            this.btnReorder.TabIndex = 13;
+            this.btnReorder.TabIndex = 9;
             this.btnReorder.Text = "Re-Order Report";
             this.btnReorder.UseVisualStyleBackColor = true;
             this.btnReorder.Click += new System.EventHandler(this.btnReorder_Click);

@@ -363,3 +363,5 @@ F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.csproj.CopyComplet
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.exe
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.pdb
 F:\Repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.AboutIMS.resources
+D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.AboutIMS.resources
+D:\repos\CSharp\11_IMS_Final_Production\obj\Release\IMS_Final.Reports.StockoutReport.resources

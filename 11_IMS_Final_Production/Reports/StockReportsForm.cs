@@ -62,7 +62,8 @@ namespace IMS_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented yet!", "Coming Soon");
+            StockoutReport stockoutReport = new StockoutReport();
+            stockoutReport.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
