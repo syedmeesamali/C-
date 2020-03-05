@@ -165,3 +165,13 @@ D:\repos\CSharp\13_WorkDB\obj\Debug\WorkDB.application
 D:\repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csproj.CopyComplete
 D:\repos\CSharp\13_WorkDB\obj\Debug\WorkDB.exe
 D:\repos\CSharp\13_WorkDB\obj\Debug\WorkDB.pdb
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.Doc.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.License.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.Pdf.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Xceed.Document.NET.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Xceed.Words.NET.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Microsoft.mshtml.dll
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.Doc.xml
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.License.xml
+F:\Repos\CSharp\13_WorkDB\bin\Debug\Spire.Pdf.xml
+F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.Word_Import.resources

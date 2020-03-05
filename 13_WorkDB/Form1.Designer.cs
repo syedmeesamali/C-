@@ -38,6 +38,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnImport = new System.Windows.Forms.Button();
+            this.importWordFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importDataToolStripMenuItem,
             this.taskLogReportToolStripMenuItem,
+            this.importWordFileToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -67,7 +69,7 @@
             // 
             this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
             this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.importDataToolStripMenuItem.Text = "&Import Data";
+            this.importDataToolStripMenuItem.Text = "&Import Data (Excel)";
             this.importDataToolStripMenuItem.Click += new System.EventHandler(this.importDataToolStripMenuItem_Click);
             // 
             // taskLogReportToolStripMenuItem
@@ -120,6 +122,13 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
+            // importWordFileToolStripMenuItem
+            // 
+            this.importWordFileToolStripMenuItem.Name = "importWordFileToolStripMenuItem";
+            this.importWordFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importWordFileToolStripMenuItem.Text = "Word File Import";
+            this.importWordFileToolStripMenuItem.Click += new System.EventHandler(this.importWordFileToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +162,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.ToolStripMenuItem taskLogReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importWordFileToolStripMenuItem;
     }
 }
 

@@ -27,7 +27,7 @@ namespace WorkDB
             dataGridView1.Columns[3].Width = 80;
             dataGridView1.Columns[4].Width = 140;
             dataGridView1.Columns[5].Width = 120;
-            dataGridView1.Columns[6].Width = 370;
+            dataGridView1.Columns[6].Width = 470;
             conn.Close();
         }
 
@@ -46,7 +46,7 @@ namespace WorkDB
             dataGridView1.Columns[3].Width = 80;
             dataGridView1.Columns[4].Width = 140;
             dataGridView1.Columns[5].Width = 120;
-            dataGridView1.Columns[6].Width = 370;
+            dataGridView1.Columns[6].Width = 470;
             conn.Close();
         }
 
@@ -64,6 +64,25 @@ namespace WorkDB
             txtFrom.Text = "";
             txtTo.Text = "";
             MessageBox.Show("Record(s) deleted successfully!", "DELETED!");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");
+            conn.Open();
+            adapt = new SqlDataAdapter("SELECT * FROM TaskLog " +
+                "WHERE Remarks Like '%" + txtRemarks.Text + "%'", conn);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 70;
+            dataGridView1.Columns[2].Width = 150;
+            dataGridView1.Columns[3].Width = 80;
+            dataGridView1.Columns[4].Width = 140;
+            dataGridView1.Columns[5].Width = 100;
+            dataGridView1.Columns[6].Width = 470;
+            conn.Close();
         }
     }
 }

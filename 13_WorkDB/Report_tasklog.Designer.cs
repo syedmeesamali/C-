@@ -37,14 +37,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtFrom = new System.Windows.Forms.TextBox();
             this.txtTo = new System.Windows.Forms.TextBox();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(185, 12);
+            this.txtSearch.Location = new System.Drawing.Point(133, 13);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(247, 20);
+            this.txtSearch.Size = new System.Drawing.Size(187, 20);
             this.txtSearch.TabIndex = 14;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -53,9 +55,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 13);
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Type Project Name in Text Box:";
+            this.label1.Text = "Search Project Name:";
             // 
             // dataGridView1
             // 
@@ -65,14 +67,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1153, 541);
+            this.dataGridView1.Size = new System.Drawing.Size(1253, 541);
             this.dataGridView1.TabIndex = 17;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(606, 10);
+            this.btnDelete.Location = new System.Drawing.Point(793, 12);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(145, 28);
+            this.btnDelete.Size = new System.Drawing.Size(119, 28);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "&Delete Records:";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -81,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(770, 19);
+            this.label2.Location = new System.Drawing.Point(918, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 19;
@@ -90,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(915, 19);
+            this.label3.Location = new System.Drawing.Point(1063, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 20;
@@ -99,7 +101,7 @@
             // txtFrom
             // 
             this.txtFrom.ForeColor = System.Drawing.Color.Red;
-            this.txtFrom.Location = new System.Drawing.Point(829, 17);
+            this.txtFrom.Location = new System.Drawing.Point(977, 15);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(63, 20);
             this.txtFrom.TabIndex = 21;
@@ -107,16 +109,35 @@
             // txtTo
             // 
             this.txtTo.ForeColor = System.Drawing.Color.Red;
-            this.txtTo.Location = new System.Drawing.Point(961, 18);
+            this.txtTo.Location = new System.Drawing.Point(1109, 16);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(63, 20);
             this.txtTo.TabIndex = 22;
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Location = new System.Drawing.Point(443, 13);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(187, 20);
+            this.txtRemarks.TabIndex = 24;
+            this.txtRemarks.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(348, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Search Remarks:";
             // 
             // Report_tasklog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 601);
+            this.ClientSize = new System.Drawing.Size(1284, 601);
+            this.Controls.Add(this.txtRemarks);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTo);
             this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.label3);
@@ -126,7 +147,6 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "Report_tasklog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report on Task Log";
@@ -146,5 +166,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.TextBox txtRemarks;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -107,5 +107,11 @@ namespace WorkDB
         {
             MessageBox.Show("Software developed by Engr. Syed", "About Software!");
         }
+
+        private void importWordFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Word_Import word_Import = new Word_Import();
+            word_Import.Show();
+        }
     }
 }
