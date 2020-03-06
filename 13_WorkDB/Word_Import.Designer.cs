@@ -37,11 +37,12 @@
             // 
             // txtWord
             // 
+            this.txtWord.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWord.Location = new System.Drawing.Point(12, 65);
             this.txtWord.Multiline = true;
             this.txtWord.Name = "txtWord";
             this.txtWord.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWord.Size = new System.Drawing.Size(1150, 524);
+            this.txtWord.Size = new System.Drawing.Size(963, 524);
             this.txtWord.TabIndex = 0;
             // 
             // btnImport

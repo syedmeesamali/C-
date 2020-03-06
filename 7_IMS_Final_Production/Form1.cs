@@ -63,7 +63,8 @@ namespace IMS_Final
                             string date_Loc = ws.Cells[4, 15].Value.ToString();
                             string date_Val = date_Loc.Substring(6, 10).ToString();
                             string Invoice_Loc = ws.Cells[4, 11].Value.ToString();
-                            string Invoice_Val = Invoice_Loc.Substring(8, 9).ToString();
+                            //IMPORTANT UPDATE RELATED TO INVOICE VALUE STRING PICK-UP
+                            string Invoice_Val = Invoice_Loc.Substring(Invoice_Loc.LastIndexOf(':') + 2).ToString() ;
                             DateTime parsedDate;
                             for (int rowSales = 15; rowSales < 70; rowSales++) //Hard-coded start as well
                             {

@@ -703,14 +703,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="507832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="508344">
       <assemblyIdentity name="WorkDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J4lr/BwLZL9y7364WLJsq+SaR2p6xMAJadxkxb8kRPc=</dsig:DigestValue>
+        <dsig:DigestValue>ROA+HpiJxp5jGXtJnAKtjV1zWTP24s0iNIXEDjc6LBc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
