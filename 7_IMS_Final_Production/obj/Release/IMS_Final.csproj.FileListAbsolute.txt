@@ -464,6 +464,8 @@ F:\Repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.application
 F:\Repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.csproj.CopyComplete
 F:\Repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.exe
 F:\Repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.pdb
+D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.exe
+D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\SqlServerTypes\x64\msvcr120.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\SqlServerTypes\x86\msvcr120.dll
@@ -473,7 +475,6 @@ D:\repos\CSharp\7_IMS_Final_Production\bin\Release\StocksDB_log.ldf
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.exe.config
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.exe.manifest
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.application
-D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.exe
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\IMS_Final.pdb
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\EPPlus.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.ReportViewer.Common.dll
@@ -487,7 +488,6 @@ D:\repos\CSharp\7_IMS_Final_Production\bin\Release\EnvDTE.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\stdole.dll
-D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\Microsoft.MSXML.dll
@@ -533,6 +533,7 @@ D:\repos\CSharp\7_IMS_Final_Production\bin\Release\pt\Microsoft.ReportViewer.Dat
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\repos\CSharp\7_IMS_Final_Production\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.AboutIMS.resources
 D:\repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.LoginForm.resources
 D:\repos\CSharp\7_IMS_Final_Production\obj\Release\IMS_Final.CustomSearch.resources
