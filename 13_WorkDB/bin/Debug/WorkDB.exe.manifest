@@ -703,14 +703,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="508344">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="509368">
+>>>>>>> Trying to search text in word document - so far not successfull
       <assemblyIdentity name="WorkDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>ROA+HpiJxp5jGXtJnAKtjV1zWTP24s0iNIXEDjc6LBc=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>+P2unG2gSfNComMe9/dTtNsa+WmGyN92Vnr083inRvs=</dsig:DigestValue>
+>>>>>>> Trying to search text in word document - so far not successfull
       </hash>
     </dependentAssembly>
   </dependency>

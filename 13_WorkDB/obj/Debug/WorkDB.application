@@ -14,7 +14,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>dCPhXMaDRtBcASQI290FR4DyMiFAuU50D6iptNzo0Ts=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>1SNBmuwUknOYIxvNSGAFv7k9X1oVIlGyW6iPWQ1luoI=</dsig:DigestValue>
+>>>>>>> Trying to search text in word document - so far not successfull
       </hash>
     </dependentAssembly>
   </dependency>
