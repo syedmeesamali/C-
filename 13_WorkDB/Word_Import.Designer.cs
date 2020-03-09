@@ -42,6 +42,7 @@
             this.txtValue = new System.Windows.Forms.TextBox();
             this.btnGet = new System.Windows.Forms.Button();
             this.rtBoxData = new System.Windows.Forms.RichTextBox();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnImport
@@ -56,7 +57,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(591, 11);
+            this.btnExit.Location = new System.Drawing.Point(919, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(151, 26);
             this.btnExit.TabIndex = 2;
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(972, 125);
+            this.label2.Location = new System.Drawing.Point(972, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 14);
             this.label2.TabIndex = 7;
@@ -101,7 +102,7 @@
             // 
             // txtClient
             // 
-            this.txtClient.Location = new System.Drawing.Point(975, 145);
+            this.txtClient.Location = new System.Drawing.Point(975, 140);
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(169, 21);
             this.txtClient.TabIndex = 6;
@@ -109,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(972, 195);
+            this.label3.Location = new System.Drawing.Point(972, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 14);
             this.label3.TabIndex = 9;
@@ -117,15 +118,16 @@
             // 
             // txtProject
             // 
-            this.txtProject.Location = new System.Drawing.Point(975, 215);
+            this.txtProject.Location = new System.Drawing.Point(975, 205);
+            this.txtProject.Multiline = true;
             this.txtProject.Name = "txtProject";
-            this.txtProject.Size = new System.Drawing.Size(169, 21);
+            this.txtProject.Size = new System.Drawing.Size(169, 46);
             this.txtProject.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(972, 254);
+            this.label4.Location = new System.Drawing.Point(972, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 14);
             this.label4.TabIndex = 11;
@@ -133,14 +135,14 @@
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(975, 274);
+            this.txtValue.Location = new System.Drawing.Point(975, 285);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(169, 21);
             this.txtValue.TabIndex = 10;
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(408, 11);
+            this.btnGet.Location = new System.Drawing.Point(574, 12);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(151, 26);
             this.btnGet.TabIndex = 12;
@@ -158,11 +160,22 @@
             this.rtBoxData.TabIndex = 13;
             this.rtBoxData.Text = "";
             // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(394, 11);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(151, 26);
+            this.btnRemove.TabIndex = 14;
+            this.btnRemove.Text = "&Remove CRLF";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Word_Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 555);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.rtBoxData);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.label4);
@@ -200,5 +213,6 @@
         private System.Windows.Forms.TextBox txtValue;
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.RichTextBox rtBoxData;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

@@ -12,6 +12,21 @@ namespace WorkDB
         {
             InitializeComponent();
         }
+        
+        //Find my text method 
+        public int FindMyText(string text, int start)
+        {
+            int returnValue = -1;
+            if (text.Length > 0 && start >= 0)
+            {
+                int indexToText =rtBoxData.Find(text, start, RichTextBoxFinds.MatchCase);
+                if (indexToText >= 0)
+                {
+                    returnValue = indexToText;
+                }
+            }
+            return returnValue;
+        }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
@@ -52,9 +67,27 @@ namespace WorkDB
         //Search for particular text in the main box
         private void btnGet_Click(object sender, EventArgs e)
         {
-            rtBoxData.Find("Ref: ", RichTextBoxFinds.MatchCase);
-            rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
-            rtBoxData.SelectionColor = Color.Red;
+            //rtBoxData.Find("Ref: ", RichTextBoxFinds.MatchCase);
+            //rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
+            //rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
+            //rtBoxData.SelectionColor = Color.Red;
+            //rtBoxData.SelectionBackColor = Color.Yellow;
+            string ref1 = "Ref:";
+            string ref2 = "Project:";
+            string ref3 = "Subject:";
+            int fVal = FindMyText(ref1, 1);
+            int pVal = FindMyText(ref2, 1);
+            int sVal = FindMyText(ref3, 1);
+
+            txtQtn.Text = rtBoxData.Text.Substring(fVal+5, 15);
+            String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            txtClient.Text = myLines[2];
+            txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
