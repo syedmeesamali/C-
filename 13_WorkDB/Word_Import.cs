@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Windows.Documents;
 using System.Windows.Forms;
-using System.Xml;
 using Xceed.Words.NET;
+using System.Drawing;
 
 namespace WorkDB
 {
@@ -28,16 +26,11 @@ namespace WorkDB
                     {
                         using (var document = DocX.Load(fileName.FullName))
                         {
-                            
-                            txtWord.Text = document.Paragraphs[0].Text;
+                            rtBoxData.Text = document.Paragraphs[0].Text;
                             for (int j=1; j<document.Paragraphs.Count; j++)
                             {
-                                txtWord.AppendText(Environment.NewLine + document.Paragraphs[j].Text);
+                                rtBoxData.AppendText(Environment.NewLine + document.Paragraphs[j].Text);
                             }
-                            txtQtn.Text = document.Paragraphs[1].Text;
-                            txtClient.Text = document.Paragraphs[2].Text;
-                            txtProject.Text = document.Paragraphs[3].Text;
-                            //https://www.e-iceblue.com/Tutorials/Spire.Doc/Spire.Doc-Program-Guide/NET-Word-Find-and-Highlight-Text-in-Word-with-C-VB.NET.html
                         }
                     } catch (Exception ex)
                     { MessageBox.Show(ex.ToString()); }
@@ -53,7 +46,15 @@ namespace WorkDB
 
         private void txtClear_Click(object sender, EventArgs e)
         {
-            txtWord.Text = "";
+            rtBoxData.Text = "";
+        }
+
+        //Search for particular text in the main box
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            rtBoxData.Find("Ref: ", RichTextBoxFinds.MatchCase);
+            rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
+            rtBoxData.SelectionColor = Color.Red;
         }
     }
 }

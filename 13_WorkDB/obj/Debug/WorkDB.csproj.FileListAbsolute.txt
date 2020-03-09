@@ -85,7 +85,6 @@ F:\Repos\CSharp\13_WorkDB\bin\Debug\WorkDB.exe.manifest
 F:\Repos\CSharp\13_WorkDB\bin\Debug\WorkDB.application
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.exe.manifest
 F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.application
-F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csprojAssemblyReference.cache
 D:\repos\CSharp\13_WorkDB\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\repos\CSharp\13_WorkDB\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\repos\CSharp\13_WorkDB\bin\Debug\SqlServerTypes\x86\msvcr120.dll
