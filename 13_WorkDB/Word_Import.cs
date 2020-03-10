@@ -75,17 +75,24 @@ namespace WorkDB
             string ref1 = "Ref:";
             string ref2 = "Project:";
             string ref3 = "Subject:";
+            string ref4 = "AED";
             int fVal = FindMyText(ref1, 1);
             int pVal = FindMyText(ref2, 1);
             int sVal = FindMyText(ref3, 1);
+            int aedVal = FindMyText(ref4, 1);
 
-            txtQtn.Text = rtBoxData.Text.Substring(fVal+5, 15);
-            String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-            txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+            try
+            {
+                txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
+                String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+                txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+                txtValue.Text = rtBoxData.Text.Substring(aedVal-14, 32);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Some exception: " + ex.ToString(), "Sorry");
+            }
             
-            
-            txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
-            txtValue.Text = "AED Value";
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

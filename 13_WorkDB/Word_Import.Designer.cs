@@ -56,7 +56,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(919, 12);
+            this.btnExit.Location = new System.Drawing.Point(602, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(151, 26);
             this.btnExit.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // txtQtn
             // 
-            this.txtQtn.Location = new System.Drawing.Point(975, 82);
+            this.txtQtn.Location = new System.Drawing.Point(693, 81);
             this.txtQtn.Name = "txtQtn";
             this.txtQtn.Size = new System.Drawing.Size(169, 21);
             this.txtQtn.TabIndex = 4;
@@ -84,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(972, 63);
+            this.label1.Location = new System.Drawing.Point(690, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 14);
             this.label1.TabIndex = 5;
@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(972, 120);
+            this.label2.Location = new System.Drawing.Point(690, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 14);
             this.label2.TabIndex = 7;
@@ -101,7 +101,7 @@
             // 
             // txtClient
             // 
-            this.txtClient.Location = new System.Drawing.Point(975, 140);
+            this.txtClient.Location = new System.Drawing.Point(693, 139);
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(169, 21);
             this.txtClient.TabIndex = 6;
@@ -109,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(972, 182);
+            this.label3.Location = new System.Drawing.Point(690, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 14);
             this.label3.TabIndex = 9;
@@ -117,7 +117,7 @@
             // 
             // txtProject
             // 
-            this.txtProject.Location = new System.Drawing.Point(975, 205);
+            this.txtProject.Location = new System.Drawing.Point(693, 204);
             this.txtProject.Multiline = true;
             this.txtProject.Name = "txtProject";
             this.txtProject.Size = new System.Drawing.Size(169, 46);
@@ -126,7 +126,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(972, 265);
+            this.label4.Location = new System.Drawing.Point(690, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 14);
             this.label4.TabIndex = 11;
@@ -134,9 +134,10 @@
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(975, 285);
+            this.txtValue.Location = new System.Drawing.Point(693, 284);
+            this.txtValue.Multiline = true;
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(169, 21);
+            this.txtValue.Size = new System.Drawing.Size(169, 55);
             this.txtValue.TabIndex = 10;
             // 
             // btnGet
@@ -155,7 +156,7 @@
             this.rtBoxData.Location = new System.Drawing.Point(18, 59);
             this.rtBoxData.Name = "rtBoxData";
             this.rtBoxData.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtBoxData.Size = new System.Drawing.Size(919, 474);
+            this.rtBoxData.Size = new System.Drawing.Size(622, 474);
             this.rtBoxData.TabIndex = 13;
             this.rtBoxData.Text = "";
             // 
@@ -163,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 555);
+            this.ClientSize = new System.Drawing.Size(880, 555);
             this.Controls.Add(this.rtBoxData);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.label4);
