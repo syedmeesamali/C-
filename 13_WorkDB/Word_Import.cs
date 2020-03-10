@@ -81,8 +81,11 @@ namespace WorkDB
 
             txtQtn.Text = rtBoxData.Text.Substring(fVal+5, 15);
             String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-            txtClient.Text = myLines[2];
+            txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+            
+            
             txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+            txtValue.Text = "AED Value";
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

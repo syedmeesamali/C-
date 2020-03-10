@@ -42,7 +42,6 @@
             this.txtValue = new System.Windows.Forms.TextBox();
             this.btnGet = new System.Windows.Forms.Button();
             this.rtBoxData = new System.Windows.Forms.RichTextBox();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnImport
@@ -142,7 +141,7 @@
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(574, 12);
+            this.btnGet.Location = new System.Drawing.Point(410, 9);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(151, 26);
             this.btnGet.TabIndex = 12;
@@ -160,22 +159,11 @@
             this.rtBoxData.TabIndex = 13;
             this.rtBoxData.Text = "";
             // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(394, 11);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(151, 26);
-            this.btnRemove.TabIndex = 14;
-            this.btnRemove.Text = "&Remove CRLF";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
             // Word_Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 555);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.rtBoxData);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.label4);
@@ -213,6 +201,5 @@
         private System.Windows.Forms.TextBox txtValue;
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.RichTextBox rtBoxData;
-        private System.Windows.Forms.Button btnRemove;
     }
 }
