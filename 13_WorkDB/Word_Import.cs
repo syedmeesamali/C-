@@ -42,13 +42,47 @@ namespace WorkDB
                         using (var document = DocX.Load(fileName.FullName))
                         {
                             rtBoxData.Text = document.Paragraphs[0].Text;
-                            for (int j=1; j<document.Paragraphs.Count; j++)
+                            for (int j = 1; j < document.Paragraphs.Count; j++)
                             {
                                 rtBoxData.AppendText(Environment.NewLine + document.Paragraphs[j].Text);
                             }
                         }
                     } catch (Exception ex)
                     { MessageBox.Show(ex.ToString()); }
+
+                    //Below is the portion to extract the actual final value from the each loaded file.
+
+                    try
+                    {
+                        string ref1 = "Ref:";
+                        string ref2 = "Project:";
+                        string ref3 = "Subject:";
+                        string ref4 = "AED";
+                        int fVal = FindMyText(ref1, 1);
+                        int pVal = FindMyText(ref2, 1);
+                        int sVal = FindMyText(ref3, 1);
+                        int aedVal = FindMyText(ref4, 1);
+                        rtbResult.AppendText("---(NEW RECORD)----" + "\n");
+                        //rtbResult.AppendText("Qtn: [" + rtBoxData.Text.Substring(fVal + 5, 15) + "], ");
+                        String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        //rtbResult.AppendText("Client: [" + myLines[2] + myLines[3] + myLines[4] + "], ");
+                        //rtbResult.AppendText("Project: [" + rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9) + "], ");
+                        //rtbResult.AppendText("Value: [" + rtBoxData.Text.Substring(aedVal - 14, 32) + "]\n");
+                        string resultVal;
+                        resultVal = "[" + rtBoxData.Text.Substring(fVal + 5, 15) + "], [" + myLines[2] +
+                            myLines[3] + myLines[4] + "], [" +
+                            rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9) + "], [" +
+                            rtBoxData.Text.Substring(aedVal - 14, 32) + "]\n";
+                        resultVal = resultVal.Replace("\n", string.Empty);
+                        rtbResult.AppendText(resultVal);
+
+                        txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
+                        txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+                        txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+                        txtValue.Text = rtBoxData.Text.Substring(aedVal - 14, 32);
+                    }
+                    catch (Exception ex)
+                    { MessageBox.Show("Some exception: " + ex.ToString(), "Sorry"); }
                 }
             }//End of filter
             
@@ -83,21 +117,31 @@ namespace WorkDB
 
             try
             {
+                rtBoxData.AppendText("Qtn: " + rtBoxData.Text.Substring(fVal + 5, 15) + "\n");
                 txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
                 String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                 txtClient.Text = myLines[2] + myLines[3] + myLines[4];
                 txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
-                txtValue.Text = rtBoxData.Text.Substring(aedVal-14, 32);
-            } catch (Exception ex)
+                txtValue.Text = rtBoxData.Text.Substring(aedVal - 14, 32);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Some exception: " + ex.ToString(), "Sorry");
             }
-            
+
+            //try
+            //{
+            //    txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
+            //    String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            //    txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+            //    txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+            //    txtValue.Text = rtBoxData.Text.Substring(aedVal-14, 32);
+            //} catch (Exception ex)
+            //{
+            //    MessageBox.Show("Some exception: " + ex.ToString(), "Sorry");
+            //}
+
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

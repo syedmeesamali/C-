@@ -170,3 +170,4 @@ F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.Word_Import.resources
 D:\repos\CSharp\13_WorkDB\bin\Debug\Xceed.Document.NET.dll
 D:\repos\CSharp\13_WorkDB\bin\Debug\Xceed.Words.NET.dll
 D:\repos\CSharp\13_WorkDB\obj\Debug\WorkDB.Word_Import.resources
+F:\Repos\CSharp\13_WorkDB\obj\Debug\WorkDB.csprojAssemblyReference.cache

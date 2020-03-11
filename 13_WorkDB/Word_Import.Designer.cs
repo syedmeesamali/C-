@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Word_Import));
             this.btnImport = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.txtClear = new System.Windows.Forms.Button();
             this.txtQtn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.txtValue = new System.Windows.Forms.TextBox();
             this.btnGet = new System.Windows.Forms.Button();
             this.rtBoxData = new System.Windows.Forms.RichTextBox();
+            this.rtbResult = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnImport
@@ -56,23 +56,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(602, 12);
+            this.btnExit.Location = new System.Drawing.Point(395, 11);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(151, 26);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "&Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // txtClear
-            // 
-            this.txtClear.Location = new System.Drawing.Point(219, 11);
-            this.txtClear.Name = "txtClear";
-            this.txtClear.Size = new System.Drawing.Size(151, 26);
-            this.txtClear.TabIndex = 3;
-            this.txtClear.Text = "&Clear Text";
-            this.txtClear.UseVisualStyleBackColor = true;
-            this.txtClear.Click += new System.EventHandler(this.txtClear_Click);
             // 
             // txtQtn
             // 
@@ -142,7 +132,7 @@
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(410, 9);
+            this.btnGet.Location = new System.Drawing.Point(216, 11);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(151, 26);
             this.btnGet.TabIndex = 12;
@@ -156,15 +146,24 @@
             this.rtBoxData.Location = new System.Drawing.Point(18, 59);
             this.rtBoxData.Name = "rtBoxData";
             this.rtBoxData.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtBoxData.Size = new System.Drawing.Size(622, 474);
+            this.rtBoxData.Size = new System.Drawing.Size(453, 474);
             this.rtBoxData.TabIndex = 13;
             this.rtBoxData.Text = "";
+            // 
+            // rtbResult
+            // 
+            this.rtbResult.Location = new System.Drawing.Point(496, 59);
+            this.rtbResult.Name = "rtbResult";
+            this.rtbResult.Size = new System.Drawing.Size(182, 474);
+            this.rtbResult.TabIndex = 14;
+            this.rtbResult.Text = "";
             // 
             // Word_Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 555);
+            this.Controls.Add(this.rtbResult);
             this.Controls.Add(this.rtBoxData);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.label4);
@@ -175,7 +174,6 @@
             this.Controls.Add(this.txtClient);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQtn);
-            this.Controls.Add(this.txtClear);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnImport);
             this.Font = new System.Drawing.Font("SansSerif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
@@ -191,7 +189,6 @@
         #endregion
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button txtClear;
         private System.Windows.Forms.TextBox txtQtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -202,5 +199,6 @@
         private System.Windows.Forms.TextBox txtValue;
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.RichTextBox rtBoxData;
+        private System.Windows.Forms.RichTextBox rtbResult;
     }
 }
