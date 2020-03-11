@@ -77,7 +77,8 @@ namespace IMS_Final
                                     stockoutList.Cust_Name = cust_ID;
                                     stockoutList.Prod_ID = (ws.Cells[rowSales, colSales].Value).ToString();
                                     stockoutList.Prod_Name = ws.Cells[rowSales, colSales + 3].Value.ToString();
-                                    stockoutList.Boxes = float.Parse((ws.Cells[rowSales, colSales + 6].Value).ToString());
+                                    //Updated to pick the EUROPEAN format of comma instead of period (11-03-2020)
+                                    stockoutList.Boxes = float.Parse(( ws.Cells[rowSales, colSales + 6].Value).ToString().Replace(',','.'), System.Globalization.CultureInfo.InvariantCulture );
                                     stockoutList.Pcs = float.Parse((ws.Cells[rowSales, colSales + 9].Value).ToString());
                                     stockoutList.Price = float.Parse((ws.Cells[rowSales, colSales + 11].Value).ToString());
                                     stockout.Add(stockoutList);
