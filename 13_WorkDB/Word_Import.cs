@@ -33,56 +33,56 @@ namespace WorkDB
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
             { Filter = "Import Word Document|*.docx" }) //Filter for the type of files to show
             {
+                openFileDialog.Multiselect = true;
                 openFileDialog.Title = "Select word document to import: ";
                 if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
                 {
-                    FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
-                    try
+                    foreach (string file in openFileDialog.FileNames)
                     {
-                        using (var document = DocX.Load(fileName.FullName))
+                        FileInfo fileName = new FileInfo("" + file);
+                        try
                         {
-                            rtBoxData.Text = document.Paragraphs[0].Text;
-                            for (int j = 1; j < document.Paragraphs.Count; j++)
+                            using (var document = DocX.Load(fileName.FullName))
                             {
-                                rtBoxData.AppendText(Environment.NewLine + document.Paragraphs[j].Text);
+                                rtBoxData.Text = document.Paragraphs[0].Text;
+                                for (int j = 1; j < document.Paragraphs.Count; j++)
+                                {
+                                    rtBoxData.AppendText(Environment.NewLine + document.Paragraphs[j].Text);
+                                }
                             }
                         }
-                    } catch (Exception ex)
-                    { MessageBox.Show(ex.ToString()); }
+                        catch (Exception ex)
+                        { MessageBox.Show(ex.ToString()); }
+                        //Below is the portion to extract the actual final value from the each loaded file.
+                        try {
+                            string ref1 = "Ref:";
+                            string ref2 = "Project:";
+                            string ref3 = "Subject:";
+                            string ref4 = "AED";
+                            int fVal = FindMyText(ref1, 1);
+                            int pVal = FindMyText(ref2, 1);
+                            int sVal = FindMyText(ref3, 1);
+                            int aedVal = FindMyText(ref4, 1);
+                            rtbResult.AppendText("---(NEW RECORD)----" + "\n");
+                            String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                            string resultVal;
+                            resultVal = "[" + rtBoxData.Text.Substring(fVal + 5, 15) + "], [" + myLines[2] +
+                                myLines[3] + myLines[4] + "], [" +
+                                rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9) + "], [" +
+                                rtBoxData.Text.Substring(aedVal - 14, 32) + "]\n";
+                            resultVal = resultVal.Replace("\n", string.Empty);
+                            rtbResult.AppendText(resultVal);
+                            rtbResult.AppendText("\n\n");
 
-                    //Below is the portion to extract the actual final value from the each loaded file.
-
-                    try
-                    {
-                        string ref1 = "Ref:";
-                        string ref2 = "Project:";
-                        string ref3 = "Subject:";
-                        string ref4 = "AED";
-                        int fVal = FindMyText(ref1, 1);
-                        int pVal = FindMyText(ref2, 1);
-                        int sVal = FindMyText(ref3, 1);
-                        int aedVal = FindMyText(ref4, 1);
-                        rtbResult.AppendText("---(NEW RECORD)----" + "\n");
-                        //rtbResult.AppendText("Qtn: [" + rtBoxData.Text.Substring(fVal + 5, 15) + "], ");
-                        String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                        //rtbResult.AppendText("Client: [" + myLines[2] + myLines[3] + myLines[4] + "], ");
-                        //rtbResult.AppendText("Project: [" + rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9) + "], ");
-                        //rtbResult.AppendText("Value: [" + rtBoxData.Text.Substring(aedVal - 14, 32) + "]\n");
-                        string resultVal;
-                        resultVal = "[" + rtBoxData.Text.Substring(fVal + 5, 15) + "], [" + myLines[2] +
-                            myLines[3] + myLines[4] + "], [" +
-                            rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9) + "], [" +
-                            rtBoxData.Text.Substring(aedVal - 14, 32) + "]\n";
-                        resultVal = resultVal.Replace("\n", string.Empty);
-                        rtbResult.AppendText(resultVal);
-
-                        txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
-                        txtClient.Text = myLines[2] + myLines[3] + myLines[4];
-                        txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
-                        txtValue.Text = rtBoxData.Text.Substring(aedVal - 14, 32);
-                    }
-                    catch (Exception ex)
-                    { MessageBox.Show("Some exception: " + ex.ToString(), "Sorry"); }
+                            txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
+                            txtClient.Text = myLines[2] + myLines[3] + myLines[4];
+                            txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
+                            txtValue.Text = rtBoxData.Text.Substring(aedVal - 14, 32);
+                        }
+                        catch (Exception ex)
+                        { MessageBox.Show("Some exception: " + ex.ToString(), "Sorry"); }
+                        rtBoxData.Text = "";
+                    } //End of foreach
                 }
             }//End of filter
             

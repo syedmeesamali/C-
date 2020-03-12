@@ -161,7 +161,7 @@ namespace IMS_Final
                             stockinList.Expiry = Convert.ToDateTime(ws.Cells[rowPurchase, colPurchase + 3].Value.ToString());
                             stockinList.Sup_ID = ws.Cells[rowPurchase, colPurchase + 4].Value.ToString();
                             stockinList.Sup_Name = ws.Cells[rowPurchase, colPurchase + 5].Value.ToString();
-                            stockinList.Units = float.Parse(ws.Cells[rowPurchase, colPurchase + 6].Value.ToString());
+                            stockinList.Units = float.Parse(ws.Cells[rowPurchase, colPurchase + 6].Value.ToString().Replace(',', '.'), System.Globalization.CultureInfo.InvariantCulture);
                             stockinList.Cost = float.Parse(ws.Cells[rowPurchase, colPurchase + 7].Value.ToString());
                             stockin.Add(stockinList);
                         }
