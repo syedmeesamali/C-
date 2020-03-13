@@ -1,6 +1,6 @@
 # CSharp Development
 
-**Point of Sale System** Development in CSharp.
-- Database prepared in MS SQL Server
-- Main Login form in CSharp using Windows WPF Forms
-- Dashboard form in CSharp using Windows WPF Forms
+**1. Inventory reporting management system** in CSharp.
+*2. LocalDB based projects*
+3. Excel .xls format to .xlsx conversion
+4. Data extraction from DOCX files
