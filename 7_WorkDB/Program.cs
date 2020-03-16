@@ -16,8 +16,8 @@ namespace WorkDB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmMain());
-            Application.Run(new Word_Import());
+            Application.Run(new frmMain());
+            //Application.Run(new Word_Import());
         }
     }
 }
