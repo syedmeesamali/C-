@@ -13,7 +13,8 @@ namespace WorkDB
     public partial class frmMain : Form
     {
         private List<TaskLog> TaskLogs = new List<TaskLog>();
-        
+        private List<Word> Words = new List<Word>();
+
         public frmMain()
         {
             InitializeComponent();
@@ -112,6 +113,53 @@ namespace WorkDB
         {
             Word_Import word_Import = new Word_Import();
             word_Import.Show();
+        }
+
+        private void importQuotationsDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog()
+            { Filter = "Excel 2003-2016 workbooks|*.xlsx" }) //Filter for the type of files to show
+            {
+                openFileDialog.Title = "Select input file for Log Data:";
+                if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
+                {
+                    try
+                    {
+                        FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                        ExcelPackage package = new ExcelPackage(fileName);
+                        ExcelWorksheet ws = package.Workbook.Worksheets[1];
+                        int colLogs = 1;
+
+                        for (int rowLogs = 2; rowLogs < 2000; rowLogs++) //Hard-coded start as well
+                        {
+                            if (ws.Cells[rowLogs, 1].Value != null)
+                            {
+                                DateTime parsedDate;
+                                TaskLog taskLogs = new TaskLog();
+                                parsedDate = DateTime.FromOADate(float.Parse((ws.Cells[rowLogs, colLogs].Value).ToString()));
+                                taskLogs.Date = parsedDate;
+                                taskLogs.ProjectName = ws.Cells[rowLogs, colLogs + 1].Value.ToString();
+                                taskLogs.Place = ws.Cells[rowLogs, colLogs + 2].Value.ToString();
+                                taskLogs.Type = ws.Cells[rowLogs, colLogs + 3].Value.ToString();
+                                taskLogs.Status = ws.Cells[rowLogs, colLogs + 4].Value.ToString();
+                                taskLogs.Remarks = ws.Cells[rowLogs, colLogs + 5]?.Value?.ToString();
+                                TaskLogs.Add(taskLogs);
+                            }
+                        } //End of for loop to input Excel data
+                    }
+                    catch (Exception ex)
+                    { MessageBox.Show(ex.ToString()); }
+                }
+
+                dataGridView1.DataSource = TaskLogs;
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[2].Width = 100;
+                dataGridView1.Columns[3].Width = 120;
+                dataGridView1.Columns[4].Width = 150;
+                dataGridView1.Columns[5].Width = 350;
+                dataGridView1.Refresh();
+            }//End of filter
         }
     }
 }

@@ -710,7 +710,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/3yn5I40MSkwlTCEH8+8bwU1N9yfRm+whkp+Lk807uI=</dsig:DigestValue>
+        <dsig:DigestValue>pT6tn74un6M6raLxecroSo5jrxwf61piFhPTiPQ1yTQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -810,7 +810,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EWQ8XRh9Qewkjbw3C2JFVmwToVAeV600hidPyIptmnU=</dsig:DigestValue>
+      <dsig:DigestValue>AumzWOS8etO2iQBI1wG+dLlrCNSumTbhbGlytvYIdCs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Work_log.ldf" size="8388608" writeableType="applicationData">
@@ -819,7 +819,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/tcnsIGCbhbZuPw5dlqmb28Km8KS2fRYwC6YJE6o5Y8=</dsig:DigestValue>
+      <dsig:DigestValue>MtagsJlc+y0CSkfksG07VAEV9jc1W+QnovCFM9WzwIc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WorkDB.exe.config" size="517">

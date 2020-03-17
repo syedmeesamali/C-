@@ -33,12 +33,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskLogReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importWordFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnImport = new System.Windows.Forms.Button();
-            this.importWordFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importQuotationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importDataToolStripMenuItem,
+            this.importQuotationsDataToolStripMenuItem,
             this.taskLogReportToolStripMenuItem,
             this.importWordFileToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -68,21 +70,28 @@
             // importDataToolStripMenuItem
             // 
             this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.importDataToolStripMenuItem.Text = "&Import Data (Excel)";
             this.importDataToolStripMenuItem.Click += new System.EventHandler(this.importDataToolStripMenuItem_Click);
             // 
             // taskLogReportToolStripMenuItem
             // 
             this.taskLogReportToolStripMenuItem.Name = "taskLogReportToolStripMenuItem";
-            this.taskLogReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.taskLogReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.taskLogReportToolStripMenuItem.Text = "Task-Log Report";
             this.taskLogReportToolStripMenuItem.Click += new System.EventHandler(this.taskLogReportToolStripMenuItem_Click);
+            // 
+            // importWordFileToolStripMenuItem
+            // 
+            this.importWordFileToolStripMenuItem.Name = "importWordFileToolStripMenuItem";
+            this.importWordFileToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.importWordFileToolStripMenuItem.Text = "Word File Import";
+            this.importWordFileToolStripMenuItem.Click += new System.EventHandler(this.importWordFileToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -122,12 +131,12 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // importWordFileToolStripMenuItem
+            // importQuotationsDataToolStripMenuItem
             // 
-            this.importWordFileToolStripMenuItem.Name = "importWordFileToolStripMenuItem";
-            this.importWordFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.importWordFileToolStripMenuItem.Text = "Word File Import";
-            this.importWordFileToolStripMenuItem.Click += new System.EventHandler(this.importWordFileToolStripMenuItem_Click);
+            this.importQuotationsDataToolStripMenuItem.Name = "importQuotationsDataToolStripMenuItem";
+            this.importQuotationsDataToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.importQuotationsDataToolStripMenuItem.Text = "Import Quotations Data";
+            this.importQuotationsDataToolStripMenuItem.Click += new System.EventHandler(this.importQuotationsDataToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -163,6 +172,7 @@
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.ToolStripMenuItem taskLogReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importWordFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importQuotationsDataToolStripMenuItem;
     }
 }
 
