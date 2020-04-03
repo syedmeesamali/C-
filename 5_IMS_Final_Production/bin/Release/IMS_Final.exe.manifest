@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EPPlus.dll" size="1299456">
-      <assemblyIdentity name="EPPlus" version="4.5.3.3" publicKeyToken="EA159FDAA78159A1" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EPPlus.dll" size="1827328">
+      <assemblyIdentity name="EPPlus" version="5.0.4.0" publicKeyToken="EA159FDAA78159A1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CInMCqJU13xKaRTimLij2fKqrV0RffS6NYaO0VldV/o=</dsig:DigestValue>
+        <dsig:DigestValue>UG6IQQRDV6vTl0yNVm9YGH7SzFKpdEkGLJNhnjm8g8M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WGImhiu90sioc5bk5dTSu2kDN3U/42BBlBte8asoQJY=</dsig:DigestValue>
+        <dsig:DigestValue>JN5yB8uX3tlA+Votl+wQ7LBh0qH8GFb0R1k3EYvJSoo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -715,14 +715,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Z.Dapper.Plus.dll" size="914432">
-      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.5.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Z.Dapper.Plus.dll" size="942592">
+      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.7.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1/4s1P4WnSUU2dbT1gA8gN8sfZaOHk3/sSPKA40Cz9I=</dsig:DigestValue>
+        <dsig:DigestValue>//nCTjimqVUK2Cd58R2JH4iD3KWMxwKCr6/0tc056vg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
