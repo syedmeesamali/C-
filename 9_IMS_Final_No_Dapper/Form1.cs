@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
 using OfficeOpenXml;
-//using Z.Dapper.Plus;
+using FastMember;
 
 namespace IMS_Final
 {
@@ -192,6 +192,7 @@ namespace IMS_Final
                     {
                         using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                         //{ db.BulkInsert(stockin); }
+
                         MessageBox.Show("Purchase Data Imported successfully!");
                     }
                     else
@@ -264,9 +265,18 @@ namespace IMS_Final
                     List<Products> products = dataGridView1.DataSource as List<Products>;
                     if (products != null)
                     {
-                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                        //{ db.BulkInsert(products); }
-                        MessageBox.Show("Products Data with Re-Order Imported successfully!");
+                        using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
+                        {
+                            conn.Open();
+                            MessageBox.Show("Connection opened: " + conn.ToString());
+                            using (var bcp = new SqlBulkCopy(conn))
+                            using (var reader = ObjectReader.Create(products, "Prod_ID", "Prod_Name", "Re_Order"))
+                            {
+                                bcp.DestinationTableName = "Products";
+                                bcp.WriteToServer(reader);
+                            }
+                            MessageBox.Show("Products Data with Re-Order Imported successfully!");
+                        }
                     }
                     else
                     { MessageBox.Show("Data is null or some issue!"); }

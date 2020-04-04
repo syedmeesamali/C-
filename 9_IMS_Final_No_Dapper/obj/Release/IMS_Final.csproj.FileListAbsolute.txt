@@ -671,7 +671,6 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.ReportViewer.Common.
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.ReportViewer.Design.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.ReportViewer.WinForms.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.SqlServer.Types.dll
-D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Z.Dapper.Plus.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\EnvDTE.dll
@@ -683,7 +682,6 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.VisualStudio.TextMan
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.MSXML.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\EPPlus.xml
-D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Z.Dapper.Plus.xml
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
@@ -750,3 +748,5 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.application
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.CopyComplete
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.exe
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.pdb
+D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csprojAssemblyReference.cache
+D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\FastMember.dll

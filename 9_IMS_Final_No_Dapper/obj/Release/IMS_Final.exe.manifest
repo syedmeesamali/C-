@@ -67,14 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="2695096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FastMember.dll" size="26624">
+      <assemblyIdentity name="FastMember" version="1.5.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>StlUCSD18WV0kud+Rk6djGyYEUMyRYqIZ09mNj3d3bg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMS_Final.exe" size="2695608">
       <assemblyIdentity name="IMS_Final" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gcXig81K9Q7iCySo3tJvvOQOK2mBXSwRktqMiVb1zZc=</dsig:DigestValue>
+        <dsig:DigestValue>AaQhiNtKFc9LxSz5VMPPipXJLGZ2lmxyLTI2My7q2y4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -714,18 +726,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Z.Dapper.Plus.dll" size="942592">
-      <assemblyIdentity name="Z.Dapper.Plus" version="3.0.7.0" publicKeyToken="59B66D028979105B" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>//nCTjimqVUK2Cd58R2JH4iD3KWMxwKCr6/0tc056vg=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
   <file name="3g_icons (11).ico" size="122884">
     <hash>
       <dsig:Transforms>
@@ -795,7 +795,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>o3hbHHlHU7yrhW2WIDZvaB5tcNKEamfUKd3wtwX6Xpc=</dsig:DigestValue>
+      <dsig:DigestValue>7W9BOHEEQos3tgTf9DpQc7ExyuYOsIDcHE5vAPmksHw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="2097152" writeableType="applicationData">
@@ -804,7 +804,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>PorLEx+B/V0BzbgZFbJFS5NYDSof0K+BiKpa7FuWemI=</dsig:DigestValue>
+      <dsig:DigestValue>fePRXTw9flmeWM4Dms/O2CKaCS6UoCQTktDZ0aJSd20=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
