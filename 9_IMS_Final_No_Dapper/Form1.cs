@@ -106,20 +106,30 @@ namespace IMS_Final
             {
                 try
                 {
-                    //DapperPlusManager.Entity<Stockout>().Table("StockoutTable");
-                    //DapperPlusManager.Entity<ExcelLoaded>().Table("ExcelFiles");
                     List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
-                    //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
+                    List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
                     if (excelLoaded != null)
                     {
-                        using (SqlConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
+                        using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                         {
-                            SqlBulkCopy objbulk = new SqlBulkCopy(db);
-                            //db.BulkInsert(stockout);
-                            //db.BulkInsert(excelLoaded);
+                            conn.Open();
+                            using (var bcp = new SqlBulkCopy(conn))
+                            using (var reader = ObjectReader.Create(stockout, "", "Prod_ID", "Prod_Name",
+                                "Date", "Invoice", "Cust_Name", "Boxes", "Pcs", "Price"))
+                            {
+                                bcp.DestinationTableName = "StockoutTable";
+                                bcp.WriteToServer(reader);
+                            }
+                            MessageBox.Show("Stockin Data Imported successfully!");
+                            using (var bcp = new SqlBulkCopy(conn))
+                            using (var reader2 = ObjectReader.Create(excelLoaded, "", "LoadedFileName"))
+                            {
+                                bcp.DestinationTableName = "ExcelFiles";
+                                bcp.WriteToServer(reader2);
+                            }
+                            MessageBox.Show("Stockin Data Imported successfully!");
+                          }
                         }
-                        MessageBox.Show("Purchase Data Imported successfully!");
-                    }
                     else
                     {
                         MessageBox.Show("Stockout or Excel-loaded is null and there is some error!");
@@ -186,14 +196,21 @@ namespace IMS_Final
             {
                 try
                 {
-                    //DapperPlusManager.Entity<Stockin>().Table("StockinTable");
                     List<Stockin> stockin = dataGridView1.DataSource as List<Stockin>;
                     if (stockin != null)
                     {
-                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
-                        //{ db.BulkInsert(stockin); }
-
-                        MessageBox.Show("Purchase Data Imported successfully!");
+                        using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
+                        {
+                            conn.Open();
+                            using (var bcp = new SqlBulkCopy(conn))
+                            using (var reader = ObjectReader.Create(stockin, "", "Prod_ID", "Prod_Name", 
+                                "Date", "Sup_ID", "Sup_Name", "Expiry", "Units", "Cost"))
+                            {
+                                bcp.DestinationTableName = "StockinTable";
+                                bcp.WriteToServer(reader);
+                            }
+                            MessageBox.Show("Stockin Data Imported successfully!");
+                        }
                     }
                     else
                     { MessageBox.Show("Stockin is still null or there is some issue!"); }
@@ -261,14 +278,12 @@ namespace IMS_Final
             {
                 try
                 {
-                    //DapperPlusManager.Entity<Stockin>().Table("Products");
                     List<Products> products = dataGridView1.DataSource as List<Products>;
                     if (products != null)
                     {
                         using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                         {
                             conn.Open();
-                            MessageBox.Show("Connection opened: " + conn.ToString());
                             using (var bcp = new SqlBulkCopy(conn))
                             using (var reader = ObjectReader.Create(products, "", "Prod_ID", "Prod_Name", "Re_Order"))
                             {
