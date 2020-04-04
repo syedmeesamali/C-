@@ -270,7 +270,7 @@ namespace IMS_Final
                             conn.Open();
                             MessageBox.Show("Connection opened: " + conn.ToString());
                             using (var bcp = new SqlBulkCopy(conn))
-                            using (var reader = ObjectReader.Create(products, "Prod_ID", "Prod_Name", "Re_Order"))
+                            using (var reader = ObjectReader.Create(products, "", "Prod_ID", "Prod_Name", "Re_Order"))
                             {
                                 bcp.DestinationTableName = "Products";
                                 bcp.WriteToServer(reader);
