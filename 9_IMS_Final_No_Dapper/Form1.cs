@@ -107,8 +107,8 @@ namespace IMS_Final
                 try
                 {
                     List<Stockout> stockout = dataGridView1.DataSource as List<Stockout>;
-                    List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
-                    if (excelLoaded != null)
+                    //List<ExcelLoaded> excelLoaded = listBox1.DataSource as List<ExcelLoaded>;
+                    if (stockout != null)
                     {
                         using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StocksDB.mdf;Integrated Security=True"))
                         {
@@ -120,14 +120,14 @@ namespace IMS_Final
                                 bcp.DestinationTableName = "StockoutTable";
                                 bcp.WriteToServer(reader);
                             }
-                            MessageBox.Show("Stockin Data Imported successfully!");
-                            using (var bcp = new SqlBulkCopy(conn))
-                            using (var reader2 = ObjectReader.Create(excelLoaded, "", "LoadedFileName"))
-                            {
-                                bcp.DestinationTableName = "ExcelFiles";
-                                bcp.WriteToServer(reader2);
-                            }
-                            MessageBox.Show("Stockin Data Imported successfully!");
+                            MessageBox.Show("Sales Data Imported successfully!");
+                            //using (var bcp2 = new SqlBulkCopy(conn))
+                            //using (var reader2 = ObjectReader.Create(excelLoaded, "", "LoadedFileName"))
+                            //{
+                            //    bcp2.DestinationTableName = "ExcelFiles";
+                            //    bcp2.WriteToServer(reader2);
+                            //}
+                            //MessageBox.Show("Excel Files Imported successfully!");
                           }
                         }
                     else
