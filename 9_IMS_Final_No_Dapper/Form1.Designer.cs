@@ -48,11 +48,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnView = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnImportProducts = new System.Windows.Forms.Button();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -121,35 +122,35 @@
             // stockReportFormToolStripMenuItem
             // 
             this.stockReportFormToolStripMenuItem.Name = "stockReportFormToolStripMenuItem";
-            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockReportFormToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.stockReportFormToolStripMenuItem.Text = "&Main Reports Form";
             this.stockReportFormToolStripMenuItem.Click += new System.EventHandler(this.stockReportFormToolStripMenuItem_Click);
             // 
             // clearProductsToolStripMenuItem
             // 
             this.clearProductsToolStripMenuItem.Name = "clearProductsToolStripMenuItem";
-            this.clearProductsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearProductsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.clearProductsToolStripMenuItem.Text = "Clear Products";
             this.clearProductsToolStripMenuItem.Click += new System.EventHandler(this.clearProductsToolStripMenuItem_Click);
             // 
             // clearStockinToolStripMenuItem
             // 
             this.clearStockinToolStripMenuItem.Name = "clearStockinToolStripMenuItem";
-            this.clearStockinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearStockinToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.clearStockinToolStripMenuItem.Text = "Clear Stockin";
             this.clearStockinToolStripMenuItem.Click += new System.EventHandler(this.clearStockinToolStripMenuItem_Click);
             // 
             // clearStockoutToolStripMenuItem
             // 
             this.clearStockoutToolStripMenuItem.Name = "clearStockoutToolStripMenuItem";
-            this.clearStockoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearStockoutToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.clearStockoutToolStripMenuItem.Text = "Clear Stockout";
             this.clearStockoutToolStripMenuItem.Click += new System.EventHandler(this.clearStockoutToolStripMenuItem_Click);
             // 
             // clearFilesLoadedToolStripMenuItem
             // 
             this.clearFilesLoadedToolStripMenuItem.Name = "clearFilesLoadedToolStripMenuItem";
-            this.clearFilesLoadedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearFilesLoadedToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.clearFilesLoadedToolStripMenuItem.Text = "Clear FilesLoaded";
             this.clearFilesLoadedToolStripMenuItem.Click += new System.EventHandler(this.clearFilesLoadedToolStripMenuItem_Click);
             // 
@@ -217,14 +218,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(880, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(392, 524);
-            this.listBox1.TabIndex = 4;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -244,14 +237,22 @@
             this.btnImportProducts.UseVisualStyleBackColor = true;
             this.btnImportProducts.Click += new System.EventHandler(this.btnImportProducts_Click);
             // 
+            // dgv2
+            // 
+            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv2.Location = new System.Drawing.Point(881, 56);
+            this.dgv2.Name = "dgv2";
+            this.dgv2.Size = new System.Drawing.Size(391, 526);
+            this.dgv2.TabIndex = 7;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.Controls.Add(this.dgv2);
             this.Controls.Add(this.btnImportProducts);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.dataGridView1);
@@ -265,6 +266,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,7 +288,6 @@
         private System.Windows.Forms.ToolStripMenuItem instructionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filesLoadedToolStripMenuItem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem importProductListToolStripMenuItem;
         private System.Windows.Forms.Button btnImportProducts;
@@ -294,6 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem clearStockinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearStockoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearFilesLoadedToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgv2;
     }
 }
 

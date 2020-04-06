@@ -748,5 +748,5 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.application
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.CopyComplete
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.exe
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.pdb
-D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csprojAssemblyReference.cache
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\FastMember.dll
+D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csprojAssemblyReference.cache
