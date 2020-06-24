@@ -101,11 +101,6 @@ namespace WorkDB
         //Search for particular text in the main box
         private void btnGet_Click(object sender, EventArgs e)
         {
-            //rtBoxData.Find("Ref: ", RichTextBoxFinds.MatchCase);
-            //rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
-            //rtBoxData.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
-            //rtBoxData.SelectionColor = Color.Red;
-            //rtBoxData.SelectionBackColor = Color.Yellow;
             string ref1 = "Ref:";
             string ref2 = "Project:";
             string ref3 = "Subject:";
@@ -128,19 +123,6 @@ namespace WorkDB
             {
                 MessageBox.Show("Some exception: " + ex.ToString(), "Sorry");
             }
-
-            //try
-            //{
-            //    txtQtn.Text = rtBoxData.Text.Substring(fVal + 5, 15);
-            //    String[] myLines = rtBoxData.Text.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-            //    txtClient.Text = myLines[2] + myLines[3] + myLines[4];
-            //    txtProject.Text = rtBoxData.Text.Substring(pVal + 9, sVal - pVal - 9);
-            //    txtValue.Text = rtBoxData.Text.Substring(aedVal-14, 32);
-            //} catch (Exception ex)
-            //{
-            //    MessageBox.Show("Some exception: " + ex.ToString(), "Sorry");
-            //}
-
         }
 
     }

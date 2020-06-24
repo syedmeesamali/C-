@@ -11,8 +11,8 @@ namespace WorkDB
         {
             InitializeComponent();
         }
-        SqlDataAdapter adapt;
-        DataTable dt;
+        SqlDataAdapter adapt;   //For sql data connection
+        DataTable dt;           //Sql data table
         private void Report_tasklog_Load(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");
