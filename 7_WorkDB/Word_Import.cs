@@ -17,13 +17,20 @@ namespace WorkDB
         public int FindMyText(string text, int start)
         {
             int returnValue = -1;
-            if (text.Length > 0 && start >= 0)
+            try
             {
-                int indexToText =rtBoxData.Find(text, start, RichTextBoxFinds.MatchCase);
-                if (indexToText >= 0)
+                if (text.Length > 0 && start >= 0)
                 {
-                    returnValue = indexToText;
+                    int indexToText = rtBoxData.Find(text, start, RichTextBoxFinds.MatchCase);
+                    if (indexToText >= 0)
+                    {
+                        returnValue = indexToText;
+                    }
                 }
+                
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return returnValue;
         }

@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importQuotationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskLogReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importWordFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnImport = new System.Windows.Forms.Button();
-            this.importQuotationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,13 @@
             this.importDataToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.importDataToolStripMenuItem.Text = "&Import Data (Excel)";
             this.importDataToolStripMenuItem.Click += new System.EventHandler(this.importDataToolStripMenuItem_Click);
+            // 
+            // importQuotationsDataToolStripMenuItem
+            // 
+            this.importQuotationsDataToolStripMenuItem.Name = "importQuotationsDataToolStripMenuItem";
+            this.importQuotationsDataToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.importQuotationsDataToolStripMenuItem.Text = "Import Quotations Data";
+            this.importQuotationsDataToolStripMenuItem.Click += new System.EventHandler(this.importQuotationsDataToolStripMenuItem_Click);
             // 
             // taskLogReportToolStripMenuItem
             // 
@@ -131,13 +138,6 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // importQuotationsDataToolStripMenuItem
-            // 
-            this.importQuotationsDataToolStripMenuItem.Name = "importQuotationsDataToolStripMenuItem";
-            this.importQuotationsDataToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.importQuotationsDataToolStripMenuItem.Text = "Import Quotations Data";
-            this.importQuotationsDataToolStripMenuItem.Click += new System.EventHandler(this.importQuotationsDataToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +152,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

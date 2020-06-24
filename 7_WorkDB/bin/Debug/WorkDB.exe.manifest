@@ -703,14 +703,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="512440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkDB.exe" size="512952">
       <assemblyIdentity name="WorkDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cu/8+0BdUIOhyyAjFbrjkAcHHkOWDOrIXie9oaL5B9Y=</dsig:DigestValue>
+        <dsig:DigestValue>xbE8UAofdHu/a7dBCuMf1H61tnEJzStEOcNnVUbfPj4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -810,7 +810,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>T9O71WrSL9psXK69fzu7KjwZ8oJGxaeFShqTlPv+jdw=</dsig:DigestValue>
+      <dsig:DigestValue>33JA5R8k2o89EkdGHCy5DILsgR7KQ+R0SOa8rEMGagQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Work_log.ldf" size="8388608" writeableType="applicationData">
@@ -819,7 +819,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OgWt0u0BcKM4+Xohd3zqPJPdP/l5khejQ9QH5I9Dil4=</dsig:DigestValue>
+      <dsig:DigestValue>gYVyQ4LchPh8n1zaIH+0K7Vxs69IFFqZ/N0vG1HSppU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WorkDB.exe.config" size="517">

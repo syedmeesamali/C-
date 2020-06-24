@@ -37,6 +37,7 @@ namespace WorkDB
                    try
                         {
                             FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; //Important line
                             ExcelPackage package = new ExcelPackage(fileName);
                             ExcelWorksheet ws = package.Workbook.Worksheets[1];
                             int colLogs = 1;
@@ -126,6 +127,7 @@ namespace WorkDB
                     try
                     {
                         FileInfo fileName = new FileInfo("" + openFileDialog.FileName);
+                        ExcelPackage.LicenseContext = LicenseContext.NonCommercial; //Important line
                         ExcelPackage package = new ExcelPackage(fileName);
                         ExcelWorksheet ws = package.Workbook.Worksheets[1];
                         int colLogs = 1;
@@ -160,6 +162,11 @@ namespace WorkDB
                 dataGridView1.Columns[5].Width = 350;
                 dataGridView1.Refresh();
             }//End of filter
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
