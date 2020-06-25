@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -15,6 +14,7 @@ namespace WorkDB
         private List<TaskLog> TaskLogs = new List<TaskLog>();
         private List<Word> Words = new List<Word>();
 
+        //Main dispaly form - refresh the datagrid as well
         public frmMain()
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace WorkDB
             Application.Exit();
         }
 
+        //Import data item in the tool strip
         private void importDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -62,7 +63,6 @@ namespace WorkDB
                         catch (Exception ex)
                         { MessageBox.Show(ex.ToString()); }
                     }
-
                 dataGridView1.DataSource = TaskLogs;
                 dataGridView1.Columns[0].Width = 100;
                 dataGridView1.Columns[1].Width = 200;

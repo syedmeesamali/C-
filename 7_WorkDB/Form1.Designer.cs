@@ -40,6 +40,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnImport = new System.Windows.Forms.Button();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskLogReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.combinedReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +52,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -113,7 +118,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -137,6 +142,34 @@
             this.btnImport.Text = "&Import Data to Database";
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.emailsReportToolStripMenuItem,
+            this.taskLogReportToolStripMenuItem1,
+            this.combinedReportToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // emailsReportToolStripMenuItem
+            // 
+            this.emailsReportToolStripMenuItem.Name = "emailsReportToolStripMenuItem";
+            this.emailsReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.emailsReportToolStripMenuItem.Text = "Emails Report";
+            // 
+            // taskLogReportToolStripMenuItem1
+            // 
+            this.taskLogReportToolStripMenuItem1.Name = "taskLogReportToolStripMenuItem1";
+            this.taskLogReportToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.taskLogReportToolStripMenuItem1.Text = "Task Log Report";
+            // 
+            // combinedReportToolStripMenuItem
+            // 
+            this.combinedReportToolStripMenuItem.Name = "combinedReportToolStripMenuItem";
+            this.combinedReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.combinedReportToolStripMenuItem.Text = "Combined Report";
             // 
             // frmMain
             // 
@@ -174,6 +207,10 @@
         private System.Windows.Forms.ToolStripMenuItem taskLogReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importWordFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importQuotationsDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taskLogReportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem combinedReportToolStripMenuItem;
     }
 }
 
