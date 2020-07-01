@@ -189,7 +189,6 @@ F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.SqlServer.Types.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Xceed.Document.NET.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Xceed.Words.NET.dll
-F:\Repos\CSharp\7_WorkDB\bin\Debug\Z.Dapper.Plus.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\EnvDTE.dll
@@ -201,7 +200,6 @@ F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dl
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\Microsoft.MSXML.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\EPPlus.xml
-F:\Repos\CSharp\7_WorkDB\bin\Debug\Z.Dapper.Plus.xml
 F:\Repos\CSharp\7_WorkDB\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 F:\Repos\CSharp\7_WorkDB\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
@@ -254,3 +252,4 @@ F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.csproj.CopyComplete
 F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.exe
 F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.pdb
 F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.csproj.CoreCompileInputs.cache
+F:\Repos\CSharp\7_WorkDB\bin\Debug\FastMember.dll

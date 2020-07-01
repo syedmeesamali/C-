@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="WorkDB.exe.manifest" size="48905">
+    <dependentAssembly dependencyType="install" codebase="WorkDB.exe.manifest" size="48863">
       <assemblyIdentity name="WorkDB.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7Kj9jV++Yz7Y2vfEY0vnUCGJDXGp/eXtu4KuBUVo1QA=</dsig:DigestValue>
+        <dsig:DigestValue>PTKtfcjA8M6MOtEW1d4q7XlVVBz572MB1BGs1rLjYbc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

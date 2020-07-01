@@ -171,7 +171,6 @@
             this.btnImport.TabIndex = 3;
             this.btnImport.Text = "&Import Task Log to DB";
             this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnEmails
             // 

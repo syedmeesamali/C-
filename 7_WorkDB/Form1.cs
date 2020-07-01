@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using FastMember;
 using OfficeOpenXml;
-using Z.Dapper.Plus;
 
 namespace WorkDB
 {
@@ -13,7 +14,7 @@ namespace WorkDB
     {
         private List<TaskLog> TaskLogs = new List<TaskLog>();   //List for tasklogs
         private List<Word> Words = new List<Word>();            //List for word data
-        private List<Emails> Emails = new List<Emails>();       //List for emails data
+        private List<Emails> EmailList = new List<Emails>();       //List for emails data
 
         //Main dispaly form - refresh the datagrid as well
         public frmMain()
@@ -22,11 +23,36 @@ namespace WorkDB
             dataGridView1.Refresh();
         }
 
-
-        //Import the emails data and dispaly in the DGV
+        //Import the emails data the the database table
         private void importEmailsDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Are you sure you want to import Stock-in data to database?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            { try
+                {   List<Emails> emailsList = dataGridView1.DataSource as List<Emails>;
+                    if (emailsList != null)
+                    {
+                        using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True"))
+                        {
+                            conn.Open();
+                            using (var bcp = new SqlBulkCopy(conn))
+                            using (var reader = ObjectReader.Create(emailsList, "", "Date", "Project",
+                                "Title"))
+                            {
+                                bcp.DestinationTableName = "Emails";
+                                bcp.WriteToServer(reader);
+                            }
+                            MessageBox.Show("Emails Data Imported to SQL Server DB Successfully!");
+                        }
+                    }
+                    else
+                    { MessageBox.Show("Stockin is still null or there is some issue!"); }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         //Import the final project data sheet
@@ -68,29 +94,7 @@ namespace WorkDB
                 dataGridView1.Columns[5].Width = 350;
                 dataGridView1.Refresh();
             }//End of filter
-        }
-
-        //Import task-log to the database
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Task-Log data to database?", "Confirmation", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {   try
-                {   DapperPlusManager.Entity<TaskLog>().Table("TaskLog"); //Dapper based method
-                    List<TaskLog> taskLogs = dataGridView1.DataSource as List<TaskLog>;
-                    if (taskLogs != null)
-                    {
-                        using (IDbConnection db = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Repos\CSharp\13_WorkDB\Work.mdf;Integrated Security=True"))
-                        { db.BulkInsert(taskLogs); }
-                        MessageBox.Show("Tasklog Data Imported successfully!");
-                    }  else
-                    { MessageBox.Show("Tasklog is still null or there is some issue!"); }
-                }  catch (Exception ex)
-                { MessageBox.Show(ex.Message, "Some error occurred! Please check parameters!", MessageBoxButtons.OK, MessageBoxIcon.Error);                 }
-                }
-        }
-
-        
+        }      
 
         //About button
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,11 +158,49 @@ namespace WorkDB
             }//End of filter
         }
 
-        
-        //Import the emails to the database table already defined
+
+        //#####################################################
+        //------------IMPORT EMAILS WITH PROJECT REFERENCE----
+        //#####################################################
         private void btnEmails_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will import the emails");
+            using (OpenFileDialog openFileDialog = new OpenFileDialog()
+            { Filter = "Excel 97-2003 workbooks|*.xlsx" }) //Filter for the type of files to show
+            {
+                openFileDialog.Multiselect = false;
+                openFileDialog.Title = "Select emails excel file";
+                if (openFileDialog.ShowDialog() == DialogResult.OK) //If result is OK
+                {   foreach (string file in openFileDialog.FileNames)
+                    {   try
+                        {
+                            FileInfo fileName = new FileInfo("" + file);
+                            
+                            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; //Important line
+                            ExcelPackage package = new ExcelPackage(fileName);
+                            ExcelWorksheet ws = package.Workbook.Worksheets[0];
+                            int colData = 1;
+                            //string pattern = "dd/MM/yyyy";
+                            //DateTime parsedDate;
+                            for (int rowData = 2; rowData < 1500; rowData++) //Hard-coded start as well
+                            {
+                                if (ws.Cells[rowData, colData].Value != null)
+                                {
+                                    Emails mailsList = new Emails();
+                                    //string date_val = (ws.Cells[rowData, colData + 1].Value).ToString();
+                                    //DateTime.TryParseExact(date_val, pattern, null, DateTimeStyles.None, out parsedDate);
+                                    mailsList.Date = (ws.Cells[rowData, colData + 1].Value).ToString();
+                                    mailsList.Project = (ws.Cells[rowData, colData + 2].Value).ToString();
+                                    mailsList.Title = (ws.Cells[rowData, colData + 3].Value).ToString();
+                                    EmailList.Add(mailsList);
+                                }
+                            } //End of for loop to input Excel data
+                        } catch (Exception ex)
+                        { MessageBox.Show(ex.ToString()); }
+                    }
+                    dataGridView1.DataSource = EmailList;
+                    dataGridView1.Refresh();
+                }
+            }//End of filter and input for the data to be imported
         }
 
         //Exit

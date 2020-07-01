@@ -4,8 +4,9 @@ namespace WorkDB
 {
     class Emails
     {
-        private DateTime Date { get; set; }
-        private string Project { get; set; }
-        private string Title { get; set; }
+        public string Date { get; set; }
+        //public DateTime Date { get; set; }
+        public string Project { get; set; }
+        public string Title { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
