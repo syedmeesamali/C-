@@ -13,6 +13,8 @@ namespace WorkDB
         }
         SqlDataAdapter adapt;   //For sql data connection
         DataTable dt;           //Sql data table
+
+        //Load the full tasks table upon load of form
         private void Report_tasklog_Load(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");

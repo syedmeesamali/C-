@@ -110,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Emails.cs" />
+    <Compile Include="Emails_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emails_Report.Designer.cs">
+      <DependentUpon>Emails_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Word_Import.Designer.cs">
       <DependentUpon>Word_Import.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Emails_Report.resx">
+      <DependentUpon>Emails_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using FastMember;
@@ -214,6 +212,13 @@ namespace WorkDB
         {
             Report_tasklog report_Tasklog = new Report_tasklog();
             report_Tasklog.Show();
+        }
+
+        //Show the emails report - Most important report of whole program
+        private void emailsReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Emails_Report report_Emails = new Emails_Report();
+            report_Emails.Show();
         }
     }
 }

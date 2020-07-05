@@ -253,3 +253,4 @@ F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.exe
 F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.pdb
 F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.csproj.CoreCompileInputs.cache
 F:\Repos\CSharp\7_WorkDB\bin\Debug\FastMember.dll
+F:\Repos\CSharp\7_WorkDB\obj\Debug\WorkDB.Emails_Report.resources

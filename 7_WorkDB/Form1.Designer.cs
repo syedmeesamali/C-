@@ -121,20 +121,21 @@
             // emailsReportToolStripMenuItem
             // 
             this.emailsReportToolStripMenuItem.Name = "emailsReportToolStripMenuItem";
-            this.emailsReportToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.emailsReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.emailsReportToolStripMenuItem.Text = "Emails Report";
+            this.emailsReportToolStripMenuItem.Click += new System.EventHandler(this.emailsReportToolStripMenuItem_Click);
             // 
             // taskLogReportToolStripMenuItem1
             // 
             this.taskLogReportToolStripMenuItem1.Name = "taskLogReportToolStripMenuItem1";
-            this.taskLogReportToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
+            this.taskLogReportToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.taskLogReportToolStripMenuItem1.Text = "Task Log Report";
             this.taskLogReportToolStripMenuItem1.Click += new System.EventHandler(this.taskLogReportToolStripMenuItem1_Click);
             // 
             // combinedReportToolStripMenuItem
             // 
             this.combinedReportToolStripMenuItem.Name = "combinedReportToolStripMenuItem";
-            this.combinedReportToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.combinedReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.combinedReportToolStripMenuItem.Text = "Combined Report";
             // 
             // helpToolStripMenuItem
