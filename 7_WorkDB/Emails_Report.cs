@@ -47,5 +47,22 @@ namespace WorkDB
             dataGridView1.Columns[3].Width = 200;
             conn.Close();
         }
+
+        //Search as per the labels field
+        private void txtLabel_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Work.mdf;Integrated Security=True");
+            conn.Open();
+            adapt = new SqlDataAdapter("SELECT * FROM Emails " +
+                "WHERE Title Like '%" + txtLabel + "%'", conn);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 100;
+            dataGridView1.Columns[2].Width = 150;
+            dataGridView1.Columns[3].Width = 200;
+            conn.Close();
+        }
     }
 }
