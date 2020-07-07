@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace WorkDB
+﻿namespace WorkDB
 {
     class Emails
     {
+        public string UID { get; set; }
         public string Date { get; set; }
         //public DateTime Date { get; set; }
         public string Project { get; set; }

@@ -24,7 +24,7 @@ namespace WorkDB
         //Import the emails data the the database table
         private void importEmailsDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Stock-in data to database?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to import Emails data to database?", "Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             { try
                 {   List<Emails> emailsList = dataGridView1.DataSource as List<Emails>;
@@ -34,17 +34,18 @@ namespace WorkDB
                         {
                             conn.Open();
                             using (var bcp = new SqlBulkCopy(conn))
-                            using (var reader = ObjectReader.Create(emailsList, "", "Date", "Project",
+                            using (var reader = ObjectReader.Create(emailsList, "", "UID", "Date", "Project",
                                 "Title"))
                             {
                                 bcp.DestinationTableName = "Emails";
                                 bcp.WriteToServer(reader);
                             }
                             MessageBox.Show("Emails Data Imported to SQL Server DB Successfully!");
+                            dataGridView1.Refresh();
                         }
                     }
                     else
-                    { MessageBox.Show("Stockin is still null or there is some issue!"); }
+                    { MessageBox.Show("Emails is still null or there is some issue!"); }
                 }
                 catch (Exception ex)
                 {
@@ -177,15 +178,12 @@ namespace WorkDB
                             ExcelPackage package = new ExcelPackage(fileName);
                             ExcelWorksheet ws = package.Workbook.Worksheets[0];
                             int colData = 1;
-                            //string pattern = "dd/MM/yyyy";
-                            //DateTime parsedDate;
                             for (int rowData = 2; rowData < 1500; rowData++) //Hard-coded start as well
                             {
                                 if (ws.Cells[rowData, colData].Value != null)
                                 {
-                                    Emails mailsList = new Emails();
-                                    //string date_val = (ws.Cells[rowData, colData + 1].Value).ToString();
-                                    //DateTime.TryParseExact(date_val, pattern, null, DateTimeStyles.None, out parsedDate);
+                                    Emails mailsList = new Emails(); //Declare list to store all values
+                                    mailsList.UID = (ws.Cells[rowData, colData].Value).ToString();
                                     mailsList.Date = (ws.Cells[rowData, colData + 1].Value).ToString();
                                     mailsList.Project = (ws.Cells[rowData, colData + 2].Value).ToString();
                                     mailsList.Title = (ws.Cells[rowData, colData + 3].Value).ToString();
