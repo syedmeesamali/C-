@@ -1,0 +1,1 @@
+char smtp_send_auth(int s,char *login,char *password);
