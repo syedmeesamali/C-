@@ -1,0 +1,6 @@
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.dll
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.pdb
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.AssemblyReference.cache
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.CoreCompileInputs.cache
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
+D:\repos\CSharp\10_RPI\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
