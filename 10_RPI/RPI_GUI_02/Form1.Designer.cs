@@ -29,60 +29,70 @@ namespace RPI_GUI_02
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSerial = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.textSerial = new System.Windows.Forms.TextBox();
+            this.labelSerial = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSerial
             // 
-            this.button1.Location = new System.Drawing.Point(91, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Click Me";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSerial.Location = new System.Drawing.Point(41, 88);
+            this.btnSerial.Name = "btnSerial";
+            this.btnSerial.Size = new System.Drawing.Size(189, 50);
+            this.btnSerial.TabIndex = 0;
+            this.btnSerial.Text = "Send Data To Serial Port";
+            this.btnSerial.UseVisualStyleBackColor = true;
+            this.btnSerial.Click += new System.EventHandler(this.btnSerial_Click);
             // 
-            // button2
+            // btnExit
             // 
-            this.button2.Location = new System.Drawing.Point(314, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Say Hi";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExit.Location = new System.Drawing.Point(43, 196);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(162, 54);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button3
+            // textSerial
             // 
-            this.button3.Location = new System.Drawing.Point(234, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 54);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textSerial.Location = new System.Drawing.Point(41, 47);
+            this.textSerial.Name = "textSerial";
+            this.textSerial.Size = new System.Drawing.Size(317, 20);
+            this.textSerial.TabIndex = 3;
+            // 
+            // labelSerial
+            // 
+            this.labelSerial.AutoSize = true;
+            this.labelSerial.Location = new System.Drawing.Point(40, 31);
+            this.labelSerial.Name = "labelSerial";
+            this.labelSerial.Size = new System.Drawing.Size(239, 13);
+            this.labelSerial.TabIndex = 4;
+            this.labelSerial.Text = "Enter Text below to send to Serial Port of Arduino";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 287);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(416, 287);
+            this.Controls.Add(this.labelSerial);
+            this.Controls.Add(this.textSerial);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSerial);
             this.Name = "Form1";
             this.Text = "Simple GUI for RPI 3B+";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSerial;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox textSerial;
+        private System.Windows.Forms.Label labelSerial;
     }
 }
 
