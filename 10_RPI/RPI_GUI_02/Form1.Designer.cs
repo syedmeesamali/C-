@@ -29,70 +29,102 @@ namespace RPI_GUI_02
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSerial = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.btnBase = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.textSerial = new System.Windows.Forms.TextBox();
-            this.labelSerial = new System.Windows.Forms.Label();
+            this.btnArm1 = new System.Windows.Forms.Button();
+            this.btnArm2 = new System.Windows.Forms.Button();
+            this.btnCloseGrip = new System.Windows.Forms.Button();
+            this.btnOpenGrip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnSerial
+            // btnBase
             // 
-            this.btnSerial.Location = new System.Drawing.Point(41, 88);
-            this.btnSerial.Name = "btnSerial";
-            this.btnSerial.Size = new System.Drawing.Size(189, 50);
-            this.btnSerial.TabIndex = 0;
-            this.btnSerial.Text = "Send Data To Serial Port";
-            this.btnSerial.UseVisualStyleBackColor = true;
-            this.btnSerial.Click += new System.EventHandler(this.btnSerial_Click);
+            this.btnBase.Location = new System.Drawing.Point(202, 23);
+            this.btnBase.Name = "btnBase";
+            this.btnBase.Size = new System.Drawing.Size(111, 50);
+            this.btnBase.TabIndex = 0;
+            this.btnBase.Text = "Move Base - 1";
+            this.btnBase.UseVisualStyleBackColor = true;
+            this.btnBase.Click += new System.EventHandler(this.btnBase_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(43, 196);
+            this.btnExit.Location = new System.Drawing.Point(165, 248);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(162, 54);
+            this.btnExit.Size = new System.Drawing.Size(193, 54);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // textSerial
+            // btnArm1
             // 
-            this.textSerial.Location = new System.Drawing.Point(41, 47);
-            this.textSerial.Name = "textSerial";
-            this.textSerial.Size = new System.Drawing.Size(317, 20);
-            this.textSerial.TabIndex = 3;
+            this.btnArm1.Location = new System.Drawing.Point(74, 93);
+            this.btnArm1.Name = "btnArm1";
+            this.btnArm1.Size = new System.Drawing.Size(111, 50);
+            this.btnArm1.TabIndex = 3;
+            this.btnArm1.Text = "Move Arm1 - 2";
+            this.btnArm1.UseVisualStyleBackColor = true;
+            this.btnArm1.Click += new System.EventHandler(this.btnArm1_Click);
             // 
-            // labelSerial
+            // btnArm2
             // 
-            this.labelSerial.AutoSize = true;
-            this.labelSerial.Location = new System.Drawing.Point(40, 31);
-            this.labelSerial.Name = "labelSerial";
-            this.labelSerial.Size = new System.Drawing.Size(239, 13);
-            this.labelSerial.TabIndex = 4;
-            this.labelSerial.Text = "Enter Text below to send to Serial Port of Arduino";
+            this.btnArm2.Location = new System.Drawing.Point(326, 93);
+            this.btnArm2.Name = "btnArm2";
+            this.btnArm2.Size = new System.Drawing.Size(111, 50);
+            this.btnArm2.TabIndex = 4;
+            this.btnArm2.Text = "Move Arm2 - 3";
+            this.btnArm2.UseVisualStyleBackColor = true;
+            this.btnArm2.Click += new System.EventHandler(this.btnArm2_Click);
+            // 
+            // btnCloseGrip
+            // 
+            this.btnCloseGrip.Location = new System.Drawing.Point(202, 169);
+            this.btnCloseGrip.Name = "btnCloseGrip";
+            this.btnCloseGrip.Size = new System.Drawing.Size(111, 50);
+            this.btnCloseGrip.TabIndex = 5;
+            this.btnCloseGrip.Text = "Close Gripper - 5";
+            this.btnCloseGrip.UseVisualStyleBackColor = true;
+            this.btnCloseGrip.Click += new System.EventHandler(this.btnCloseGrip_Click);
+            // 
+            // btnOpenGrip
+            // 
+            this.btnOpenGrip.Location = new System.Drawing.Point(202, 93);
+            this.btnOpenGrip.Name = "btnOpenGrip";
+            this.btnOpenGrip.Size = new System.Drawing.Size(111, 50);
+            this.btnOpenGrip.TabIndex = 6;
+            this.btnOpenGrip.Text = "Open Gripper - 4";
+            this.btnOpenGrip.UseVisualStyleBackColor = true;
+            this.btnOpenGrip.Click += new System.EventHandler(this.btnOpenGrip_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 287);
-            this.Controls.Add(this.labelSerial);
-            this.Controls.Add(this.textSerial);
+            this.ClientSize = new System.Drawing.Size(529, 330);
+            this.Controls.Add(this.btnOpenGrip);
+            this.Controls.Add(this.btnCloseGrip);
+            this.Controls.Add(this.btnArm2);
+            this.Controls.Add(this.btnArm1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnSerial);
+            this.Controls.Add(this.btnBase);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple GUI for RPI 3B+";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSerial;
+        private System.Windows.Forms.Button btnBase;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textSerial;
-        private System.Windows.Forms.Label labelSerial;
+        private System.Windows.Forms.Button btnArm1;
+        private System.Windows.Forms.Button btnArm2;
+        private System.Windows.Forms.Button btnCloseGrip;
+        private System.Windows.Forms.Button btnOpenGrip;
     }
 }
 
