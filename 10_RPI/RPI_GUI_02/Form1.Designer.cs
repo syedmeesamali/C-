@@ -111,6 +111,7 @@ namespace RPI_GUI_02
             this.Controls.Add(this.btnBase);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple GUI for RPI 3B+";
             this.ResumeLayout(false);
