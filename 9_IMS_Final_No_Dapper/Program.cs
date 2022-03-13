@@ -14,9 +14,9 @@ namespace IMS_Final
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
             //Application.Run(new frmMain());
-            Application.Run(new StockReportsForm());
+            //Application.Run(new StockReportsForm());
         }
     }
 }

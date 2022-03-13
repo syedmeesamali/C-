@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LoginForm
@@ -18,11 +12,9 @@ namespace LoginForm
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        //Main code to check the password in database
+        //Database is: AttachDbFilename=|DataDirectory|\Database1.mdf
+        //Will be connected via SqlConnection and connection string
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (isValid())
@@ -45,6 +37,7 @@ namespace LoginForm
             }
         }
 
+        //Check the validity of password i.e. empty or not
         private bool isValid()
         {
             if (txtUserName.Text.TrimStart() == string.Empty)
@@ -57,6 +50,11 @@ namespace LoginForm
                 return false;
             }
             return true;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

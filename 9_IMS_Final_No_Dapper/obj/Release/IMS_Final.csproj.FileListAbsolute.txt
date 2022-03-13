@@ -741,8 +741,6 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.Reports.StockReportS
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.StockReportsForm.resources
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.Reports.Summary_Stock.resources
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.GenerateResource.cache
-D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\RdlCompile.cache
-D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\RdlCompile.compiled
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.exe.manifest
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.application
 D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.CopyComplete
@@ -754,4 +752,3 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.TrustInfo.xml
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\System.ComponentModel.Annotations.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
-D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.AssemblyReference.cache

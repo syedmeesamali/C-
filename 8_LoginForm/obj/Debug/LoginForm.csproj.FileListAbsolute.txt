@@ -10,3 +10,16 @@ D:\repos\CSharp\LoginForm\obj\Debug\LoginForm.exe
 D:\repos\CSharp\LoginForm\obj\Debug\LoginForm.pdb
 D:\repos\CSharp\LoginForm\bin\Debug\Database1.mdf
 D:\repos\CSharp\LoginForm\bin\Debug\Database1_log.ldf
+D:\repos\CSharp\8_LoginForm\bin\Debug\Database1.mdf
+D:\repos\CSharp\8_LoginForm\bin\Debug\Database1_log.ldf
+D:\repos\CSharp\8_LoginForm\bin\Debug\LoginForm.exe.config
+D:\repos\CSharp\8_LoginForm\bin\Debug\LoginForm.exe
+D:\repos\CSharp\8_LoginForm\bin\Debug\LoginForm.pdb
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.csproj.AssemblyReference.cache
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.Form1.resources
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.LoginForm.resources
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.exe
+D:\repos\CSharp\8_LoginForm\obj\Debug\LoginForm.pdb
