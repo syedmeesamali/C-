@@ -111,3 +111,4 @@ D:\repos\CSharp\1_IMS_Dashboard\IMS_System\obj\Debug\IMS_System.csproj.CoreCompi
 D:\repos\CSharp\1_IMS_Dashboard\IMS_System\obj\Debug\IMS_System.csproj.CopyComplete
 D:\repos\CSharp\1_IMS_Dashboard\IMS_System\obj\Debug\IMS_System.exe
 D:\repos\CSharp\1_IMS_Dashboard\IMS_System\obj\Debug\IMS_System.pdb
+D:\repos\CSharp\1_IMS_Dashboard\IMS_System\obj\Debug\IMS_System.csproj.SuggestedBindingRedirects.cache

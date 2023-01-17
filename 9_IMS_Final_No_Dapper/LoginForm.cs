@@ -22,7 +22,7 @@ namespace IMS_Final
 
             if (txtPassword.Text.TrimStart() == string.Empty | txtPassword.Text.Length < 8)
             {
-                MessageBox.Show("Password is required!", "Error");
+                MessageBox.Show("Something wrong or incorrent password!", "Error");
                 return false;
             }
 

@@ -752,3 +752,5 @@ D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.TrustInfo.xml
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\System.ComponentModel.Annotations.dll
 D:\repos\CSharp\9_IMS_Final_No_Dapper\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.AssemblyReference.cache
+D:\repos\CSharp\9_IMS_Final_No_Dapper\obj\Release\IMS_Final.csproj.SuggestedBindingRedirects.cache
