@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aZFpD14QTs4xHLOKA+p47a8jX7X+eEmraCw3Q1SukLw=</dsig:DigestValue>
+        <dsig:DigestValue>DYsH7m8f6SrQYxdYVaVTEg7e+d/1unAzceer9mmA6ZU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -759,13 +759,13 @@
       <dsig:DigestValue>wF8OYoRtcwgQk6IlfYTPYYgxy9JPWS9wbsNUe+j3Tgo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="IMS_Final.exe.config" size="878">
+  <file name="IMS_Final.exe.config" size="911">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r69c7KfqNJ0ZxcFtSZDig5/4hy317TzfqOYrEdPyt90=</dsig:DigestValue>
+      <dsig:DigestValue>tl4wAqVRkwBIqWpgSKVAEZ8RWIvelwAQQGPJFJuPe2Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">
@@ -819,7 +819,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mrqwa31eb12jHdpEa2ALorTdDp59xbkYKk0Qbfi/EHw=</dsig:DigestValue>
+      <dsig:DigestValue>Rr0WkhxAF170FG0cx0UgePuGB6ORuVVhGirGmpTpYEA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StocksDB_log.ldf" size="2097152" writeableType="applicationData">
@@ -828,7 +828,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>m7yXaeKxQ6Xjj96XfzqO34EHEBWloVHOJCTi6muhPa4=</dsig:DigestValue>
+      <dsig:DigestValue>Bgw0W9EQRUSzIncOS0H/rkkK735eWbNx+jZr+xM9yns=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
