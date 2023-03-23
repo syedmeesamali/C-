@@ -10,9 +10,9 @@ namespace My_Logger
         private void cmdLog_Click(object sender, EventArgs e)
         {
             var logger = new Logger();
+            logger.Log(cmdLog.Text);
             logger.Log("Action 1");
-            logger.Log("Action 2");
-            logger.ExportToHtml(".\report.html");
+            logger.ExportToHtml("report.html"); //Use default path
         }
 
         private void cmdExit_Click(object sender, EventArgs e)

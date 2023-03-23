@@ -5,28 +5,35 @@ using System.IO;
 class Logger
 {
     private EventLog eventLog;
+    string filePath = @"D:\SYED\Logs\report.html"; // specify your desired file path here
 
     public Logger()
     {
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyLog");
+        using (EventLog session = new EventLog("MyNewLog")) {
+            session.Source = "MySource";
+            session.WriteEntry("Log entry message", EventLogEntryType.Information);
         }
-
-        eventLog = new EventLog();
-        eventLog.Source = "MySource";
-        eventLog.Log = "MyLog";
-    }
+    } //End of logger constructor
 
     public void Log(string message)
     {
-        eventLog.WriteEntry(message);
-    }
+        string eventLogName = "MyNewLog";
+        string eventLogSource = "MySource";
+
+        if (!EventLog.SourceExists(eventLogSource)) {
+            EventLog.CreateEventSource(eventLogSource, eventLogName);
+        }
+        using (EventLog eventLog = new EventLog(eventLogName)) {
+            eventLog.Source = eventLogSource;
+            eventLog.WriteEntry(message);
+            MessageBox.Show(eventLog.Source);
+        }
+    } //End of log
 
     public void ExportToHtml(string filePath)
     {
         var entries = eventLog.Entries;
-
+        
         using (var writer = new StreamWriter(filePath))
         {
             writer.WriteLine("<html><body>");
