@@ -56,7 +56,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 456);
+            ClientSize = new Size(488, 260);
             Controls.Add(cmdExit);
             Controls.Add(cmdLog);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -64,6 +64,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Logger Form";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
