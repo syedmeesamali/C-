@@ -1,8 +1,0 @@
-﻿  StdAfx.cpp
-D:\repos\CSharp\12_KL_Source\MainWnd\stdafx.h(5,1): warning C4005: 'WINVER': macro redefinition
-D:\repos\CSharp\12_KL_Source\MainWnd\StdAfx.cpp : message : see previous definition of 'WINVER'
-D:\repos\CSharp\12_KL_Source\MainWnd\stdafx.h(6,1): warning C4005: 'WINVER': macro redefinition
-D:\repos\CSharp\12_KL_Source\MainWnd\stdafx.h(5): message : see previous definition of 'WINVER'
-D:\repos\CSharp\12_KL_Source\MainWnd\stdafx.h(16,1): warning C4005: '_WIN32_WINNT': macro redefinition
-D:\repos\CSharp\12_KL_Source\MainWnd\StdAfx.cpp : message : see previous definition of '_WIN32_WINNT'
-D:\repos\CSharp\12_KL_Source\MainWnd\stdafx.h(20,10): fatal error C1083: Cannot open include file: 'afxwin.h': No such file or directory
