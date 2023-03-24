@@ -3,6 +3,7 @@ namespace My_Logger
     public partial class Form1 : Form
     {
 
+        string filePath = @"D:\Logs\report.html"; // specify your desired file path here
         Loggy logger = new Loggy();
         public Form1()
         {
@@ -12,7 +13,8 @@ namespace My_Logger
 
         private void cmdLog_Click(object sender, EventArgs e)
         {
-            logger.ExportToHtml("report.html"); //Use default path
+            logger.ExportToHtml(filePath); //Use default path
+            MessageBox.Show("Export done!");
         }
 
         private void cmdExit_Click(object sender, EventArgs e)

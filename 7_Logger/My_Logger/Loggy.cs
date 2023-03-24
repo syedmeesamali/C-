@@ -8,7 +8,7 @@ namespace My_Logger
     {
         EventLog eventLog;
         List<string> LogVals = new List<string>();
-        string filePath = @"D:\ALI\Logs\report.html"; // specify your desired file path here
+        
 
         public void Log(string message)
         {
@@ -25,11 +25,11 @@ namespace My_Logger
                 eventLog.WriteEntry(message);
 
                 var entries = eventLog.Entries;
-
+                DateTime now = DateTime.Now;
                 foreach (EventLogEntry entry in entries)
                 {
                     LogVals.Add("Event ID: {0}" + entry.InstanceId);
-                    LogVals.Add("Entry type: {0}" + entry.EntryType);
+                    LogVals.Add("Time of occurence: " + now.ToString("F"));
                     LogVals.Add("Message: {0}" + entry.Message);
                 }
             }
@@ -40,14 +40,14 @@ namespace My_Logger
             using (var writer = new StreamWriter(filePath))
             {
                 writer.WriteLine("<html><body>");
-                writer.WriteLine("<table>");
-                writer.WriteLine("<tr><th>Event ID</th><th>Message</th></tr>");
+                writer.WriteLine("<table border='1' style='border-collapse:collapse'>");
+                writer.WriteLine("<tr><th>Event Details</th></tr>");
 
                 foreach (var entry in LogVals)
                 {
                     writer.WriteLine("<tr>");
-                    writer.WriteLine($"<td>{entry}</td>");
-                    writer.WriteLine("</tr>");
+                    writer.Write($"<td>{entry}</td>");
+                    writer.Write("</tr>");
                 }
 
                 writer.WriteLine("</table>");
