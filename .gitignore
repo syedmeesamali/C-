@@ -66,7 +66,7 @@ _ReSharper*/
 *.DotSettings.user
 
 # Click-Once directory
-publish/
+#publish/
 
 # Publish Web Output
 *.Publish.xml
@@ -110,8 +110,8 @@ UpgradeLog*.XML
 UpgradeLog*.htm
 
 # SQL Server files
-App_Data/*.mdf
-App_Data/*.ldf
+#App_Data/*.mdf
+#App_Data/*.ldf
 
 # =========================
 # Windows detritus
